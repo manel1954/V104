@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+sleep 10
 SCRIPTS_version="V104"
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
