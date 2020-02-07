@@ -368,7 +368,7 @@ clear
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
                                 cd home/pi
-                                git clone http://github.com/ea4aoj/AMBEServer
+                                git clone https://github.com/ea3eiz/AMBE_SERVER
                                 cd home/pi/AMBEServer
                                 sleep 2
                                 make
