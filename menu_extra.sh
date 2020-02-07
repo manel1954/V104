@@ -372,7 +372,7 @@ clear
                                 cd home/pi/AMBE_SERVER
                                 sleep 2
                                 make
-                                cd /home/pi/V104
+                                cd /home/pi/V104/Desktop
                                 sudo cp Abrir_ambe_server.desktop /home/pi/Desktop
                                 echo ""
                                 exit;
