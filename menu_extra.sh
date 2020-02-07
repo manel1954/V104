@@ -367,7 +367,7 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
-                                cd home/pi
+                                cd /home/pi
                                 git clone https://github.com/ea3eiz/AMBE_SERVER
                                 cd home/pi/AMBE_SERVER
                                 sleep 2
