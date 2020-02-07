@@ -369,7 +369,7 @@ clear
                                 [sS]* ) echo ""
                                 cd home/pi
                                 git clone https://github.com/ea3eiz/AMBE_SERVER
-                                cd home/pi/AMBEServer
+                                cd home/pi/AMBE_SERVER
                                 sleep 2
                                 make
                                 cd /home/pi/V104
