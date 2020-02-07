@@ -374,6 +374,8 @@ clear
                                 make
                                 cd /home/pi/V104/Desktop
                                 sudo cp Abrir_ambe_server.desktop /home/pi/Desktop
+
+                                sudo cp editar_ambe_server.desktop /home/pi/Desktop
                                 echo ""
                                 exit;
                                 break;;
