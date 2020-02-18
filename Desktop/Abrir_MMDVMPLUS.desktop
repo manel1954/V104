@@ -1,12 +1,16 @@
 [Desktop Entry]
 Encoding=UTF-8
-TryExec=lxterminal
+Comment=SoftWare
 Exec=sh -c 'cd /home/pi/V104;lxterminal --geometry=72x15 -e sudo sh ejecutar_DMRPLUS.sh'
-Icon=/home/pi/V104/ICONO_DMRPLUS_OFF.png
-Type=Application
-StartupNotify=false
-Categories=GTK;Utility;TerminalEmulator;
+Icon=/home/pi/V104/ICONO_DMRPLUS_OFF.pngIcon=/home/path/to/pixmaps/software.xpm
+Comment[es_ES]=EA3EIZ
+Comment[es_ES]=EA3EIZ
+Comment[es_ES]=EA3EIZ
+Comment[es_ES]=EA3EIZ
+Name=Abrir DMR+
+GenericName=Abrir DMR+
 Terminal=false
-Name[es_ES]=Abrir DMR+
+Type=Application
+Categories=Encryption;Encryption Tools;Utility;
 Hidden=false
 Comment[es_ES]=EA3EIZ
