@@ -233,3 +233,5 @@ cd /home/pi
 cp RXF_NXDN.desktop /home/pi/Desktop
 rm /home/pi/RXF_NXDN.desktop
 #=================================================================================
+
+sudo chmod 777 -R /home/pi/Desktop
