@@ -1,6 +1,7 @@
 ﻿#!/bin/bash
 sleep 10
 # path usuario
+usuario="/home/pi"
 usuario="$usuario"
 SCRIPTS_version="V104"
 #pone todos los status de inicio en OFF
