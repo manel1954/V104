@@ -1,4 +1,8 @@
 #!/bin/bash
+# path usuario
+usuario="/home/pi"
+usuario=$(awk "NR==1" $usuario/.config/autostart/usuario)
+SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 #Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
@@ -33,15 +37,15 @@ echo " *                                                                   *"
 echo " *********************************************************************"
 sleep 3
 
-sudo cp /home/pi/Desktop/Activar_NextionDriver.desktop /home/pi
-sudo sed -i "4c Exec=sh -c 'cd /home/pi/V10;lxterminal --geometry=72x15 -e sudo sh Desactivar_NextionDriver.sh'" /home/pi/Activar_NextionDriver.desktop
-sudo sed -i "5c Icon=/home/pi/V10/ICONO_NEXTIONDRIVER_ON.png" /home/pi/Activar_NextionDriver.desktop
-sudo sed -i "10c Name[es_ES]=Desactivar NextionDriver" /home/pi/Activar_NextionDriver.desktop
-cd /home/pi
-sudo cp Activar_NextionDriver.desktop /home/pi/Desktop
+sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario
+sudo sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh Desactivar_NextionDriver.sh'" $usuario/Activar_NextionDriver.desktop
+sudo sed -i "5c Icon=/$usuario/$SCRIPTS_version/ICONO_NEXTIONDRIVER_ON.png" $usuario/Activar_NextionDriver.desktop
+sudo sed -i "10c Name[es_ES]=Desactivar NextionDriver" $usuario/Activar_NextionDriver.desktop
+cd $usuario
+sudo cp Activar_NextionDriver.desktop $usuario/Desktop
 sudo rm Activar_NextionDriver.desktop
 
-sudo sed -i "4c Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" /home/pi/.config/autostart/nextiondriver.desktop
+sudo sed -i "4c Exec=sh -c 'cd $usuario/NextionDriver/;sudo ./NextionDriver -c $usuario/MMDVMHost/MMDVM.ini'" $usuario/.config/autostart/nextiondriver.desktop
 
 sudo reboot
 
