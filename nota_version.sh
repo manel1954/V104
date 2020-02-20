@@ -1,4 +1,5 @@
 #!/bin/bash
+actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 NUMERO_VERSION=`expr substr $SCRIPTS_version 2 2`
 ROJO="\033[1;31m"
@@ -10,16 +11,23 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   ************************************************************************************"
 echo -n "${CIAN}"
-echo "                             NOTAS DE LA VERSIÓN V.02.07.$NUMERO_VERSION"
+echo "                      NOTAS DE LA VERSIÓN: ${AMARILLO}V$NUMERO_VERSION ${CIAN}Actualización: ${AMARILLO}$actualizacion"
 echo -n "${VERDE}"                                                                                 
 echo "   ************************************************************************************"
 echo "\33[1;36m   Gracias por descargar la imagen de ADER V.02.07.$NUMERO_VERSION"
-echo ""
+
+echo "${BLANCO}"
+info=$(cat /etc/os-release > /home/pi/info.txt)
+info=$(awk "NR==1" /home/pi/info.txt)
+echo "   $info"
+echo -n "${AMARILLO}"
+
 echo "\33[1;32m   Imagen multi plataforma para \33[1;33mRADIO AFICIONADOS."
-echo "\33[1;32m"
-echo "   Imagen Linux basada en Debian Stretch."
+
+echo -n "${AMARILLO}"
+
 echo ""
-echo "   Participants in de proyect:"
+echo "   Project participants:"
 echo "${BLANCO}   -EA3EIZ (Programer & Designer) -EA3EG (Innovative & System Tester)"
 
 echo ""
