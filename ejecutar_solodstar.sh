@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo systemctl stop ircddbgateway.service
 modo=$(awk "NR==18" /home/pi/status.ini)
 if [ "$modo" = 'DVSWITCH=ON' ];then
 echo "\033[1;31m" #ROJO
