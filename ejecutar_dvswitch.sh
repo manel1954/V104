@@ -107,25 +107,25 @@ echo "     CERRANDO solo FUSION"
 echo "*******************************"
 fi
 
-ircDDB=$(awk "NR==1" /home/pi/status.ini)
-if [ "$ircDDB" = 'D-STAR=ON' ];then
-sudo sh cerrar_d-star.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "CERRANDO ircDDB & DstarRepeater"
-echo "*******************************"
-fi
+#ircDDB=$(awk "NR==1" /home/pi/status.ini)
+#if [ "$ircDDB" = 'D-STAR=ON' ];then
+#sudo sh cerrar_d-star.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "CERRANDO ircDDB & DstarRepeater"
+#echo "*******************************"
+#fi
 
-DstarRepeater=$(awk "NR==9" /home/pi/status.ini)
-if [ "$DstarRepeater" = 'dstarrepeater=ON' ];then
-sudo sh cerrar_dstarrepeater_30.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "    CERRANDO DstarRepeater"
-echo "*******************************"
-fi
+#DstarRepeater=$(awk "NR==9" /home/pi/status.ini)
+#if [ "$DstarRepeater" = 'dstarrepeater=ON' ];then
+#sudo sh cerrar_dstarrepeater_30.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "    CERRANDO DstarRepeater"
+#echo "*******************************"
+#fi
 
 ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
 if [ "$ysf2dmr" = 'YSF2DMR=ON' ];then
