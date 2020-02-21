@@ -21,7 +21,7 @@ sudo cp Abrir_ircDDBGateway.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_ircDDBGateway.desktop
 
-sed -i "69c Enable=0" /opt/MMDVMBridge/MMDVMBridge.ini
+sed -i "62c Enable=0" /opt/MMDVMBridge/MMDVMBridge.ini
 sudo systemctl restart ircddbgateway
 
 sudo ircddbgateway -gui
