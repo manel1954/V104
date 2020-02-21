@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 TryExec=lxterminal
-Exec=sh -c 'cd /home/pi/V104; sudo sh ejecutar_d-star.sh'
+Exec=sh -c 'cd /home/pi/V104;lxterminal -e sudo sh ejecutar_d-star.sh'
 Icon=/home/pi/V104/DSTAR.png
 Type=Application
 StartupNotify=false
