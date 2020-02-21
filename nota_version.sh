@@ -1,7 +1,6 @@
 #!/bin/bash
 actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-NUMERO_VERSION=`expr substr $SCRIPTS_version 2 2`
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -11,7 +10,7 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   ************************************************************************************"
 echo -n "${CIAN}"
-echo "                      NOTAS DE LA VERSIÓN: ${AMARILLO}V$NUMERO_VERSION ${CIAN}Actualización: ${AMARILLO}$actualizacion"
+echo "                      NOTAS DE LA VERSIÓN: ${AMARILLO}SCRIPTS_version ${CIAN}Actualización: ${AMARILLO}$actualizacion"
 echo -n "${VERDE}"                                                                                 
 echo "   ************************************************************************************"
 echo "\33[1;36m   Gracias por descargar la imagen de ADER V.02.07.$NUMERO_VERSION"
@@ -28,7 +27,7 @@ echo -n "${AMARILLO}"
 
 echo ""
 echo "   Project participants:"
-echo "${BLANCO}   -EA3EIZ (Programer & Designer) -EA3EG (Innovative & System Tester)"
+echo "${BLANCO}   -EA3EIZ (Developer and designer programmer) -EA3EG (Innovative & System Tester) -EA4AOJ (Linux expert)"
 
 echo ""
 echo "\33[1;33m   - Utilizar adecuadamente los puertos de los correspondientes Módems."
