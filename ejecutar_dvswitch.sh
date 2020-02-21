@@ -87,15 +87,15 @@ echo "       CERRANDO RADIO"
 echo "*******************************"
 fi
 
-solodstar=$(awk "NR==13" /home/pi/status.ini)
-if [ "$solodstar" = 'SOLODSTAR=ON' ];then
-sudo sh cerrar_solodstar.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "    CERRANDO solo D-STAR"
-echo "*******************************"
-fi
+#solodstar=$(awk "NR==13" /home/pi/status.ini)
+#if [ "$solodstar" = 'SOLODSTAR=ON' ];then
+#sudo sh cerrar_solodstar.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "    CERRANDO solo D-STAR"
+#echo "*******************************"
+#fi
 
 solofusion=$(awk "NR==12" /home/pi/status.ini)
 if [ "$solofusion" = 'SOLOFUSION=ON' ];then
@@ -184,7 +184,6 @@ fi
 #15-DMR2YSF=OFF
 #16-DMR2NXDN=OFF
 #17-NXDN=OFF
-
 
 sleep 2
 
