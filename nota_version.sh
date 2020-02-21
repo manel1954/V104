@@ -27,7 +27,8 @@ echo -n "${AMARILLO}"
 
 echo ""
 echo "   Project participants:"
-echo "${BLANCO}   -EA3EIZ (Developer and designer programmer) -EA3EG (Innovative & System Tester)"# -EA4AOJ (Linux expert)"
+echo "${BLANCO}   -EA3EIZ (Developer and designer programmer) -EA3EG (Innovative & System Tester)"
+# -EA4AOJ (Linux expert)
 
 echo ""
 echo "\33[1;33m   - Utilizar adecuadamente los puertos de los correspondientes Módems."
