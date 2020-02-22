@@ -39,7 +39,7 @@ sed -i "5c $frecuencia" /home/pi/INFO_RXF
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
-sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal -e sudo sh cerrar_solodstar.sh" /home/pi/Abrir_solodstar.desktop
+sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal -e sudo sh cerrar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR_ON.png" /home/pi/Abrir_solodstar.desktop
 sed -i "11c Name[es_ES]=Cerrar solo D-STAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=ON" /home/pi/status.ini
@@ -64,7 +64,7 @@ else
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
-sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal -e sudo sh cerrar_solodstar.sh" /home/pi/Abrir_solodstar.desktop
+sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal -e sudo sh cerrar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR_ON.png" /home/pi/Abrir_solodstar.desktop
 sed -i "11c Name[es_ES]=Cerrar solo D-STAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=ON" /home/pi/status.ini
