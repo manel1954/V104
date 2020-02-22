@@ -9,9 +9,10 @@ echo "*              EN DVSWITCH               *"
 echo "******************************************"
 sleep 5
 #else
+clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 echo "***********************************************"
-echo "*             ABRIENDO SOLO D-STAR            * "
+echo "*             ABRIENDO SOLO D-STAR            *"
 echo "***********************************************"
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"

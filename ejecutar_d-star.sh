@@ -9,6 +9,10 @@ echo "*              EN DVSWITCH               *"
 echo "******************************************"
 sleep 5
 #else
+clear
+echo "***********************************************"
+echo "*             ABRIENDO D-STAR                 *"
+echo "***********************************************"
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDBGateway.desktop /home/pi
@@ -22,7 +26,7 @@ sleep 1
 sudo rm /home/pi/Abrir_ircDDBGateway.desktop
 
 
-sed -i "62c Enable=0" /opt/MMDVMBridge/MMDVMBridge.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 
