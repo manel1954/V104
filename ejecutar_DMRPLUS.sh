@@ -54,13 +54,12 @@ echo "***********************************************"
 sleep 1
 sudo ./MMDVMPLUS MMDVMPLUS.ini
 
-#cd /home/pi/Desktop
-#sudo cp Abrir_MMDVMPLUS.desktop /home/pi
-#sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_plus_30.sh'" /home/pi/Abrir_MMDVMPLUS.desktop
-#sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRPLUS.png" /home/pi/Abrir_MMDVMPLUS.desktop
-#sed -i "10c Name[es_ES]=Abrir DMR+" /home/pi/Abrir_MMDVMPLUS.desktop
-#sed -i "6c MMDVMPLUS=OFF" /home/pi/status.inicd /home/pi
-#sudo cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
-#sleep 1
-#sudo rm /home/pi/Abrir_MMDVMPLUS.desktop
-fi
+cd /home/pi/Desktop
+sudo cp Abrir_MMDVMPLUS.desktop /home/pi
+sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_DMRPLUS.sh'" /home/pi/Abrir_MMDVMPLUS.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRPLUS_OFF.png" /home/pi/Abrir_MMDVMPLUS.desktop
+sed -i "10c Name[es_ES]=Abrir DMR+" /home/pi/Abrir_MMDVMPLUS.desktop
+sed -i "6c MMDVMPLUS=OFF" /home/pi/status.inicd /home/pi
+sudo cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_MMDVMPLUS.desktop
