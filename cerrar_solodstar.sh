@@ -1,4 +1,9 @@
 #!/bin/bash
+
+sed -i "62c Enable=1" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sudo systemctl stop ircddbgateway
+sudo systemctl restart mmdvm_bridge.service
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp AbrirsoloDstar.desktop /home/pi
@@ -16,4 +21,5 @@ sudo rm /home/pi/AbrirsoloDstar.desktop
 sudo killall MMDVMDSTAR
 sudo killall ircddbgateway
 sudo killall MMDVMBM
+
 
