@@ -47,7 +47,7 @@ sudo cp AbrirsoloDstar.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/AbrirsoloDstar.desktop
 
-sed -i "62c Enable=0" /opt/MMDVMBridge/MMDVMBridge.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 
