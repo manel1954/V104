@@ -1,9 +1,8 @@
 #!/bin/bash
-
 while true
 do
 clear
-SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+SCRIPTS_version=$(awk "NR==1" ~/.config/autostart/version)
 AUTOARRANQUE="AUTOARRANQUE"
 AUTOARRANQUE=$AUTOARRANQUE$SCRIPTS_version
 ROJO="\033[1;31m"
@@ -69,7 +68,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         sudo cp /opt/Analog_Bridge/dmr.ini /opt/Analog_Bridge/Analog_Bridge.ini
-                        cd /home/pi
+                        cd ~
                         sudo sh configuracion_inis_neutros.sh                 
                         break;;
                         [nN]* ) echo ""
@@ -92,18 +91,18 @@ clear
                         sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
                         sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
                         sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
-                        sudo cp DExtra_Hosts.txt /home/pi/dv4mini/xref.ip
+                        sudo cp DExtra_Hosts.txt ~/dv4mini/xref.ip
 
-                        cd /home/pi/$SCRIPTS_version
+                        cd ~/$SCRIPTS_version
                         sudo git pull
 clear
 sleep 1
-                        sudo rm -R  /home/pi/$AUTOARRANQUE
-                        cd /home/pi/
+                        sudo rm -R  ~/$AUTOARRANQUE
+                        cd ~/
 clear
 sleep 1
-                        cd /home/pi/$SCRIPTS_version/Desktop
-                        sudo cp * /home/pi/Desktop
+                        cd ~/$SCRIPTS_version/Desktop
+                        sudo cp * ~/Desktop
 
                         #clear                                                              
                         exit;
@@ -122,7 +121,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-                        cd /home/pi/$SCRIPTS_version/
+                        cd ~/$SCRIPTS_version/
                         sudo sh actualiza_YSF_YSF2DMR_DMR2YSF_DMR2NXDN_NXDNClients.sh                  
                         break;;
                         [nN]* ) echo ""
@@ -187,7 +186,7 @@ clear
 		    			case $ejecutar1 in
 						[sS]* ) echo ""
 						echo ">>>>>>>>> EMPAREJAR BLUETOOTH >>>>>>>>"
-                        cd /home/pi/SCRIPTS_version
+                        cd ~/SCRIPTS_version
                         evince ./EMPAREJAR_BLUETOOTH.pdf
                         clear
                         exit;
@@ -214,7 +213,7 @@ clear
 						echo "\33[1;33m" #amarillo
 			            echo "PEGA LA MAC DE TU BLUETOOTH aquí y pulsa Enter"	          		            
 			            read mac
-						sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sudo sh actualizar_02_07_06.sh;sudo rfcomm bind /dev/rfcomm0 $mac'" /home/pi/.config/autostart/actualizar.desktop
+						sed -i "4c Exec=sh -c 'cd ~/$SCRIPTS_version;sudo sh actualizar_02_07_06.sh;sudo rfcomm bind /dev/rfcomm0 $mac'" ~/.config/autostart/actualizar.desktop
 						clear
 						echo ""
 						echo ""
@@ -249,7 +248,7 @@ clear
 						echo "\33[1;33m" #amarillo
 			            echo "PEGA LA MAC DE TU BLUETOOTH aquí y pulsa Enter"	          		            
 			            read mac
-						sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sudo sh actualizar_02_07_06.sh;sudo rfcomm bind /dev/rfcomm1 $mac'" /home/pi/.config/autostart/actualizar.desktop
+						sed -i "4c Exec=sh -c 'cd ~/$SCRIPTS_version;sudo sh actualizar_02_07_06.sh;sudo rfcomm bind /dev/rfcomm1 $mac'" ~/.config/autostart/actualizar.desktop
 						clear
 						echo ""
 						echo ""
@@ -272,36 +271,57 @@ done;;
 while true
 do
 clear
-                        
-						
-						#comprueba si el fichero existe
-                        if [ -d /home/pi/.anydesk ];
-                        then
+                        echo "${VERDE}"
+                        echo "*************************************************"
+                        echo "*  ${ROJO}ADVERTENCIA!!!${VERDE}                               *"
+                        echo "*  ${ROJO}AL INSTALAR ANYDESK SE REINICIARÁ EL SISTEMA${VERDE} *"
+                        echo "*************************************************"
+                        echo "${CIAN}" 
+                        read -p 'Quieres instalar Anydesk ? S/N ' actualizar                                              
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        cd ~
+                        sudo rm -R .anydesk
                         clear
                         echo "${VERDE}"
                         echo "*******************************************"
-                        echo "*       ANYDESK YA ESTÁ INSTALADO         *"
+                        echo "*           INSTALANDO ANYDESK            *"
                         echo "*******************************************"
-                        sleep 5
-                        instalarsi="N"
-                        else
-                        instalarsi="S"
-                        fi
-                        #================================
-
-                        case $instalarsi in
-                        [sS]* ) echo ""
-                        echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
-
-                        cd /home/pi/Downloads
-                        wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
-                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb
-                        sudo apt-get -f install
-                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb
-                        echo "Anydesk Instalado"
+                        sleep 2  
+                        echo "${GRIS}"                    
+                        cd ~/Downloads
+                        sudo apt-get purge anydesk
+                        wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
+                        clear
+                        sudo dpkg -i anydesk_5.5.3-1_armhf.deb
+                        clear
+                        echo "${VERDE}"
+                        echo "*******************************************"
+                        echo "*        SE HA INSTALADO ANYDESK          *"
+                        echo "*******************************************"
                         sleep 2
+                        clear
+                        echo "${ROJO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${AMARILLO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${ROJO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
+                        sudo reboot
                         break;;
-                        [nN]* ) echo ""
+                        [nN]* ) 
+                        echo ""
 clear
 exit;
 break;;
@@ -367,15 +387,15 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
-                                cd /home/pi
+                                cd ~
                                 git clone https://github.com/ea3eiz/AMBE_SERVER
                                 cd home/pi/AMBE_SERVER
                                 sleep 2
                                 make
-                                cd /home/pi/V104/Desktop
-                                sudo cp Abrir_ambe_server.desktop /home/pi/Desktop
+                                cd ~/V104/Desktop
+                                sudo cp Abrir_ambe_server.desktop ~/Desktop
 
-                                sudo cp editar_ambe_server.desktop /home/pi/Desktop
+                                sudo cp editar_ambe_server.desktop ~/Desktop
                                 echo ""
                                 exit;
                                 break;;
@@ -393,12 +413,12 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>> Actualizar YCS Para Conectar Por Protocolo FCS >>>"
-                        sudo rm -R /home/pi/YSFClients
-                        cd /home/pi
+                        sudo rm -R ~/YSFClients
+                        cd ~
                         git clone https://github.com/g4klx/YSFClients
-                        cd /home/pi/YSFClients/YSFGateway
+                        cd ~/YSFClients/YSFGateway
                         make
-                        sudo cp /home/pi/V104/FCSRooms.txt /home/pi/YSFClients/YSFGateway                                                             
+                        sudo cp ~/V104/FCSRooms.txt ~/YSFClients/YSFGateway                                                             
                         clear                                                              
                         exit;
                         break;;
