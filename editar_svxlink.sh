@@ -449,7 +449,7 @@ clear
 			[sS]* ) echo ""
 			echo "ok quitando beep del echolink>>>>>"
 			sleep 3
-			sed -i '549c #if {$CFG_REMOTE_RGR_SOUND && !$is_open && !$listen_only_active} {' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			sed -i '549c ifxxx {$CFG_REMOTE_RGR_SOUND && !$is_open && !$listen_only_active} {' /usr/local/share/svxlink/events.d/EchoLink.tcl
 			sed -i '550c #playSilence 200' /usr/local/share/svxlink/events.d/EchoLink.tcl
 			sed -i '551c #playTone 1000 100 100' /usr/local/share/svxlink/events.d/EchoLink.tcl
 			sed -i '552c #}' /usr/local/share/svxlink/events.d/EchoLink.tcl
