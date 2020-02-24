@@ -54,7 +54,7 @@ var1= sed -n '194p'  /usr/local/etc/svxlink/svxlink.conf
 echo "\33[1;36m   16)\33[1;32m Utilizar para conectarse a la conferencia *ADER*\33[1;33m"
 echo "\33[1;36m   17)\33[1;32m Utilizar para conectarse a la conferencia *CZR-ESP*\33[1;33m"
 echo "\33[1;36m   18)\33[1;32m Utilizar para conectarse a la conferencia *REM-ESP*\33[1;33m"
-echo "\33[1;36m   19)\33[1;32m Utilizar si el modem es sound card o similar (este está por defecto)\33[1;33m"
+echo "\33[1;36m   19)\33[1;32m (No activado) Utilizar si el modem es sound card o similar (este está por defecto)\33[1;33m"
 echo "\33[1;36m   20)\33[1;32m Utilizar si el modem lo haces con transistor y resistencia\33[1;33m"
 echo "\33[1;36m   21)\33[1;32m Poner Roger Beep\33[1;33m"
 echo "\33[1;36m   22)\33[1;32m Quitar Roger Beep\33[1;33m"
