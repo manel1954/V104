@@ -32,7 +32,7 @@ var1= sed -n '19p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "       "
 var1= sed -n '20p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "       "
-var1= sed -n '201p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+var1= sed -n '21p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo "\33[1;32m"
 echo "\33[1;36m    8)\33[1;32m Abrir fichero ModuleEchoLink.conf para hacer cualquier otro cambio\33[1;33m"
 echo ""
