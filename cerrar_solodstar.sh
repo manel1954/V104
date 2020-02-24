@@ -2,7 +2,7 @@
 
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo systemctl restart ircddbgateway
-sudo systemctl restart mmdvm_bridge.service
+sudo systemctl restart mmdvm_bridge
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
