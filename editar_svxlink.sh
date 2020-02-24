@@ -50,7 +50,7 @@ var1= sed -n '196p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   14)\33[0m Cambiar a VOX        - \33[1;33m"
 var1= sed -n '186p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   15)\33[0m Modificar VOX_THRESH - \33[1;33m"
-var1= sed -n '168p'  /usr/local/etc/svxlink/svxlink.conf
+var1= sed -n '194p'  /usr/local/etc/svxlink/svxlink.conf
 echo "\33[1;36m   16)\33[1;32m Utilizar para conectarse a la conferencia *ADER*\33[1;33m"
 echo "\33[1;36m   17)\33[1;32m Utilizar para conectarse a la conferencia *CZR-ESP*\33[1;33m"
 echo "\33[1;36m   18)\33[1;32m Utilizar para conectarse a la conferencia *REM-ESP*\33[1;33m"
@@ -302,7 +302,7 @@ do
                         actualizar=S 
                         case $actualizar in
 			[sS]* ) echo ""
-sed -i "168c VOX_THRESH=$tono" /usr/local/etc/svxlink/svxlink.conf
+sed -i "194c VOX_THRESH=$tono" /usr/local/etc/svxlink/svxlink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
