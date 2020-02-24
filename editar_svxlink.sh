@@ -48,7 +48,7 @@ var1= sed -n '255p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   13)\33[0m Cambiar a TONOS      - \33[1;33m"
 var1= sed -n '170p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   14)\33[0m Cambiar a VOX        - \33[1;33m"
-var1= sed -n '160p'  /usr/local/etc/svxlink/svxlink.conf
+var1= sed -n '186p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   15)\33[0m Modificar VOX_THRESH - \33[1;33m"
 var1= sed -n '168p'  /usr/local/etc/svxlink/svxlink.conf
 echo "\33[1;36m   16)\33[1;32m Utilizar para conectarse a la conferencia *ADER*\33[1;33m"
@@ -260,14 +260,14 @@ do
                         case $actualizar in
 			[sS]* ) echo ""
 
-sed -i "160c SQL_DET=CTCSS" /usr/local/etc/svxlink/svxlink.conf
-sed -i "170c CTCSS_FQ=$tono" /usr/local/etc/svxlink/svxlink.conf
-sed -i "169c CTCSS_MODE=3" /usr/local/etc/svxlink/svxlink.conf
-sed -i "171c CTCSS_SNR_OFFSET=0" /usr/local/etc/svxlink/svxlink.conf
-sed -i "172c CTCSS_OPEN_THRESH=6" /usr/local/etc/svxlink/svxlink.conf
-sed -i "173c CTCSS_CLOSE_THRESH=4" /usr/local/etc/svxlink/svxlink.conf
-sed -i "174c CTCSS_BPF_LOW=60" /usr/local/etc/svxlink/svxlink.conf
-sed -i "175c CTCSS_BPF_HIGH=80" /usr/local/etc/svxlink/svxlink.conf
+sed -i "186c SQL_DET=CTCSS" /usr/local/etc/svxlink/svxlink.conf
+sed -i "196c CTCSS_FQ=$tono" /usr/local/etc/svxlink/svxlink.conf
+sed -i "195c CTCSS_MODE=3" /usr/local/etc/svxlink/svxlink.conf
+sed -i "197c CTCSS_SNR_OFFSET=0" /usr/local/etc/svxlink/svxlink.conf
+sed -i "198c CTCSS_OPEN_THRESH=6" /usr/local/etc/svxlink/svxlink.conf
+sed -i "199c CTCSS_CLOSE_THRESH=4" /usr/local/etc/svxlink/svxlink.conf
+sed -i "200c CTCSS_BPF_LOW=60" /usr/local/etc/svxlink/svxlink.conf
+sed -i "201c CTCSS_BPF_HIGH=80" /usr/local/etc/svxlink/svxlink.conf
 
 			break;;
 			[nN]* ) echo ""
@@ -282,13 +282,13 @@ do
                         case $actualizar in
 			[sS]* ) echo ""
 
-sed -i "160c SQL_DET=VOX" /usr/local/etc/svxlink/svxlink.conf
-sed -i "169c #CTCSS_MODE=3" /usr/local/etc/svxlink/svxlink.conf
-sed -i "171c #CTCSS_SNR_OFFSET=0" /usr/local/etc/svxlink/svxlink.conf
-sed -i "172c #CTCSS_OPEN_THRESH=6" /usr/local/etc/svxlink/svxlink.conf
-sed -i "173c #CTCSS_CLOSE_THRESH=4" /usr/local/etc/svxlink/svxlink.conf
-sed -i "174c #CTCSS_BPF_LOW=60" /usr/local/etc/svxlink/svxlink.conf
-sed -i "175c #CTCSS_BPF_HIGH=80" /usr/local/etc/svxlink/svxlink.conf
+sed -i "186c SQL_DET=VOX" /usr/local/etc/svxlink/svxlink.conf
+sed -i "195c #CTCSS_MODE=3" /usr/local/etc/svxlink/svxlink.conf
+sed -i "197c #CTCSS_SNR_OFFSET=0" /usr/local/etc/svxlink/svxlink.conf
+sed -i "198c #CTCSS_OPEN_THRESH=6" /usr/local/etc/svxlink/svxlink.conf
+sed -i "199c #CTCSS_CLOSE_THRESH=4" /usr/local/etc/svxlink/svxlink.conf
+sed -i "200c #CTCSS_BPF_LOW=60" /usr/local/etc/svxlink/svxlink.conf
+sed -i "201c #CTCSS_BPF_HIGH=80" /usr/local/etc/svxlink/svxlink.conf
 
 			break;;
 			[nN]* ) echo ""
