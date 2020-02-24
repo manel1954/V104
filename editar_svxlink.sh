@@ -46,7 +46,7 @@ var1= sed -n '183p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   12)\33[0m Cambiar audio [Tx1]  - \33[1;33m"
 var1= sed -n '255p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   13)\33[0m Cambiar a TONOS      - \33[1;33m"
-var1= sed -n '170p'  /usr/local/etc/svxlink/svxlink.conf
+var1= sed -n '196p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   14)\33[0m Cambiar a VOX        - \33[1;33m"
 var1= sed -n '186p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   15)\33[0m Modificar VOX_THRESH - \33[1;33m"
