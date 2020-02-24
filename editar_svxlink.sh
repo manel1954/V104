@@ -149,7 +149,7 @@ done;;
 6) echo ""
 while true
 do
-           	        read -p 'Pulsar enter para deshabilitar proxy ' proxy
+           	        #read -p 'Pulsar enter para deshabilitar proxy ' proxy
                         actualizar=S 
                         case $actualizar in
 			[sS]* ) echo ""
@@ -184,7 +184,7 @@ while true
 do
 
 
-           	          read -p 'Pulsa enter para abrir el fichero ModuleEchoLink.conf: ' var2
+           	          #read -p 'Pulsa enter para abrir el fichero ModuleEchoLink.conf: ' var2
                               actualizar=S 
                               case $actualizar in
 			[sS]* ) echo ""
