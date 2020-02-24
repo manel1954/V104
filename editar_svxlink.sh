@@ -24,7 +24,7 @@ var1= sed -n '17p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "\33[1;36m    4)\33[0m Información donde está conectado - \33[1;33m"
 var1= sed -n '18p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "\33[1;36m    5)\33[0m ID conferencia donde se conecta  - \33[1;33m"
-var1= sed -n '25p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+var1= sed -n '26p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo "\33[1;36m    6)\33[1;32m Deshabilitar proxy  \33[1;33m"
 echo "\33[1;36m    7)\33[1;32m Habilitar proxy     \33[1;33m"
 echo -n "\33[1;33m       "
@@ -140,7 +140,7 @@ do
                         case $actualizar in
 			[sS]* ) echo ""
 			echo "Introduce password licencia Echolink:"
-           sed -i "25c AUTOCON_ECHOLINK_ID=$id" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+           sed -i "26c AUTOCON_ECHOLINK_ID=$id" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
