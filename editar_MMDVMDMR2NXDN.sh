@@ -73,7 +73,7 @@ mode=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$mode"
 
 echo -n "\33[1;36m  10)\33[0m Modificar ID          - \33[1;33m"
-idd=`grep -n "Id=" $usuario/MMDVMHost/$DIRECTORIO`
+idd=`grep -n "^Id=" $usuario/MMDVMHost/$DIRECTORIO`
 idd1=`expr substr $idd 3 30`
 echo "${VERDE}$idd1"
 
