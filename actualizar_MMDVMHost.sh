@@ -169,6 +169,9 @@ GRIS="\033[0m"
             #DMR2NXDN.ini
             sed -i "10c Id=1234567" /home/pi/DMR2NXDN/DMR2NXDN.ini
 
+            #MMDVMDMR2NXDN.ini
+            sed -i "3c Id=1234567" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #NXDNGateway.ini
             sed -i "11c RXFrequency=435000000" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
