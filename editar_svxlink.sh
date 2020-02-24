@@ -168,11 +168,11 @@ do
                         actualizar=S 
                         case $actualizar in
 			[sS]* ) echo -n ""
-sed -i "18c PROXY_SERVER=$ip" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "19c PROXY_SERVER=$ip" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
                         read -p 'Entrar puerto del proxy ' puerto
-sed -i "19c PROXY_PORT=$puerto" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "20c PROXY_PORT=$puerto" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
                         read -p 'Entrar password del proxy ' passproxy
-sed -i "20c PROXY_PASSWORD=$passproxy" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "21c PROXY_PASSWORD=$passproxy" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 
                         break;;
 			[nN]* ) echo ""
