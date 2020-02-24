@@ -43,7 +43,7 @@ echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento d
 
 						mmdvm=$(awk "NR==22" /home/pi/MMDVMHost/Version.h)
 						var10=`echo "$mmdvm" | tr -d '[[:space:]]'`
-						var10=`expr substr $var10 20 18`
+						var10=`expr substr $var10 20 16`
 						echo "\33[1;32m" #color verde
 						echo -n "   Versión del MMDVMHOST: "
 						echo -n "\33[1;37m" #color blanco
