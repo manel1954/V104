@@ -9,7 +9,7 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 DIRECTORIO="YSF2DMR.ini"
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
-                    # Datos para el panel de control
+                    # Datos para el panel de control 
                     frec=$(awk "NR==2" $usuario/YSF2DMR/YSF2DMR.ini)
                     sed -i "24c $frec" $usuario/info_panel_control.ini
                     tg=$(awk "NR==30" $usuario/YSF2DMR/YSF2DMR.ini)
@@ -77,18 +77,10 @@ letra=c
 linea_sed_9=$numero_linea$letra
 echo "$LocalPort"
 
-echo -n "\33[1;36m  10)\33[0m Modificar ID          - \33[1;33m"
-var1=`grep -n -m 1 "\[DMR Network\]" $usuario/YSF2DMR/YSF2DMR.ini`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
-buscar=":"
-largo_linea=`expr index $var2 $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-Idds=$(awk "NR==$numero_linea" $usuario/YSF2DMR/YSF2DMR.ini)
-letra=c
-linea_sed_10=$numero_linea$letra
-echo "$Idds"
+echo -n "${CIAN}  10)${GRIS} Modificar ID          - ${AMARILLO}"
+idd=`grep -n "^Id=" $usuario/YSF2DMR/YSF2DMR.ini`
+idd1=`expr substr $idd 3 30`
+echo "$idd1"
 
 echo -n "\33[1;36m  11)\33[0m Talkgroup             - \33[1;33m"
 var2=`grep -n -m 1 "StartupDstId" $usuario/YSF2DMR/YSF2DMR.ini`
