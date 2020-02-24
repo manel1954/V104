@@ -15,7 +15,11 @@ echo "                    *              EN DVSWITCH               *"
 echo "                    ******************************************"
 sleep 3
 clear
-
+echo "${VERDE}"
+clear
+echo "                    ***********************************************"
+echo "                    *             ABRIENDO SOLO D-STAR            * "
+echo "                    ***********************************************"
 #Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"
@@ -43,7 +47,7 @@ cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
 sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
 sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR_ON.png" /home/pi/Abrir_solodstar.desktop
-sed -i "11c Name[es_ES]=Cerrar solo D-STAR" /home/pi/Abrir_solodstar.desktop
+sed -i "11c Name[es_ES]=CerrarXX solo D-STAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_solodstar.desktop /home/pi/Desktop
@@ -57,12 +61,6 @@ sudo systemctl restart mmdvm_bridge.service
 
 # Ejecuta Solo D-STAR
 cd /home/pi/MMDVMHost
-echo "\33[1;32m"
-clear
-echo "                    ***********************************************"
-echo "                    *             ABRIENDO SOLO D-STAR            * "
-echo "                    ***********************************************"
-sleep 1
 sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 
 # Cierra el icono Abrir Solo Dstar si no hay conecta
