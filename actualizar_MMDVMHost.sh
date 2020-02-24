@@ -148,11 +148,11 @@ GRIS="\033[0m"
             sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
             sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
 
-            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini
-            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
-            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
-            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
-            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+            sed -i "27c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "27c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
+            sed -i "27c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "27c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "27c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
 
             sed -i "5c Latitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini
             sed -i "5c Latitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
