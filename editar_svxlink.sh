@@ -82,7 +82,7 @@ do
                         case $actualizar in
 			[sS]* ) echo ""
 			echo "Introduce tu indicativo:"
-                        sed -i "14c CALLSIGN=$indicativo" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+                        sed -i "15c CALLSIGN=$indicativo" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
