@@ -55,6 +55,7 @@ sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 
+# Ejecuta Solo D-STAR
 cd /home/pi/MMDVMHost
 echo "\33[1;32m"
 clear
