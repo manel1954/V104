@@ -36,7 +36,7 @@ GRIS="\033[0m"
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI="ADER10"\"
+                    PI="ADER104"\"
                     HOY1=$HOY$PI
                     PUNTO=";"   
                     
@@ -58,13 +58,13 @@ GRIS="\033[0m"
                     
                     # Crea los ejecutables para estas aplicaciones 
                     cd /home/pi/MMDVMHost
-                    sudo cp MMDVMHost MMDVMBM
-                    sudo cp MMDVMHost MMDVMPLUS
-                    sudo cp MMDVMHost MMDVMDSTAR
-                    sudo cp MMDVMHost MMDVMFUSION
-                    sudo cp MMDVMHost DMR2NXDN
-                    sudo cp MMDVMHost DMR2YSF
-                    sudo cp MMDVMHost MMDVMNXDN
+                    cp MMDVMHost MMDVMBM
+                    cp MMDVMHost MMDVMPLUS
+                    cp MMDVMHost MMDVMDSTAR
+                    cp MMDVMHost MMDVMFUSION
+                    cp MMDVMHost DMR2NXDN
+                    cp MMDVMHost DMR2YSF
+                    cp MMDVMHost MMDVMNXDN
                     #=================================================
 
                     # Rutina solo para el LIBRE ======================
