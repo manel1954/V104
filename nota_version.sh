@@ -28,7 +28,6 @@ echo -n "${AMARILLO}"
 echo ""
 echo "   Project participants:"
 echo "${BLANCO}   -EA3EIZ (Developer and designer programmer) -EA3EG (Innovative & System Tester)"
-# -EA4AOJ (Linux expert)
 
 echo ""
 echo "\33[1;33m   - Utilizar adecuadamente los puertos de los correspondientes Módems."
@@ -43,7 +42,7 @@ echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento d
 
 						mmdvm=$(awk "NR==22" /home/pi/MMDVMHost/Version.h)
 						var10=`echo "$mmdvm" | tr -d '[[:space:]]'`
-						var10=`expr substr $var10 20 14`
+						var10=`expr substr $var10 20 15`
 						echo "\33[1;32m" #color verde
 						echo -n "   Versión del MMDVMHOST: "
 						echo -n "\33[1;37m" #color blanco
