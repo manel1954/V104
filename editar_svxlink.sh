@@ -16,7 +16,7 @@ echo "   ***********************************************************************
 echo ""
 echo "\33[1;31m   ModuleEchoLink.conf"
 echo -n "\33[1;36m    1)\33[0m Indicativo Echolink más  L ó R   - \33[1;33m"
-var1= sed -n '14p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+var1= sed -n '15p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "\33[1;36m    2)\33[0m Password del indicativo Echolink - \33[1;33m"
 var1= sed -n '15p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "\33[1;36m    3)\33[0m Información en pantalla Echolink - \33[1;33m"
