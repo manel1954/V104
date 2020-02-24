@@ -315,8 +315,8 @@ do
             actualizar=S 
             case $actualizar in
 			[sS]* ) echo ""
-sed -i "17c LOCATION=Connect to *CZR-ESP*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-sed -i "25c AUTOCON_ECHOLINK_ID=3268" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "18c LOCATION=Connect to *CZR-ESP*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "26c AUTOCON_ECHOLINK_ID=3268" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -328,8 +328,8 @@ do
             actualizar=S 
             case $actualizar in
 			[sS]* ) echo ""
-sed -i "17c LOCATION=Connect to *ADER*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-sed -i "25c AUTOCON_ECHOLINK_ID=840690" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "18c LOCATION=Connect to *ADER*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "26c AUTOCON_ECHOLINK_ID=840690" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -343,8 +343,8 @@ do
             actualizar=S 
             case $actualizar in
 			[sS]* ) echo ""
-sed -i "17c LOCATION=Connect to *REM-ESP*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-sed -i "25c AUTOCON_ECHOLINK_ID=3386" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "18c LOCATION=Connect to *REM-ESP*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "26c AUTOCON_ECHOLINK_ID=3386" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
