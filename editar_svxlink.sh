@@ -18,11 +18,11 @@ echo "\33[1;31m   ModuleEchoLink.conf"
 echo -n "\33[1;36m    1)\33[0m Indicativo Echolink más  L ó R   - \33[1;33m"
 var1= sed -n '15p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "\33[1;36m    2)\33[0m Password del indicativo Echolink - \33[1;33m"
-var1= sed -n '15p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-echo -n "\33[1;36m    3)\33[0m Información en pantalla Echolink - \33[1;33m"
 var1= sed -n '16p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-echo -n "\33[1;36m    4)\33[0m Información donde está conectado - \33[1;33m"
+echo -n "\33[1;36m    3)\33[0m Información en pantalla Echolink - \33[1;33m"
 var1= sed -n '17p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+echo -n "\33[1;36m    4)\33[0m Información donde está conectado - \33[1;33m"
+var1= sed -n '18p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "\33[1;36m    5)\33[0m ID conferencia donde se conecta  - \33[1;33m"
 var1= sed -n '25p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo "\33[1;36m    6)\33[1;32m Deshabilitar proxy  \33[1;33m"
@@ -97,7 +97,7 @@ do
                         case $actualizar in
 			[sS]* ) echo ""
 			echo "Introduce password licencia Echolink:"
-           sed -i "15c PASSWORD=$password1" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+           sed -i "16c PASSWORD=$password1" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -112,7 +112,7 @@ do
 			[sS]* ) echo ""
 			echo "Introduce password licencia Echolink:"
 
-           sed -i "16c SYSOPNAME=$sysop" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+           sed -i "17c SYSOPNAME=$sysop" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -126,7 +126,7 @@ do
                         case $actualizar in
 			[sS]* ) echo ""
 			echo "Introduce password licencia Echolink:"
-           sed -i "17c LOCATION=$location" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+           sed -i "18c LOCATION=$location" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
