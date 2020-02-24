@@ -10,10 +10,10 @@ GRIS="\033[0m"
 
 echo "${ROJO}"
 echo "                    ******************************************"
-echo "*        ESTO DESACTIVARÁ D-STAR         *"
-echo "*              EN DVSWITCH               *"
-echo "               ******************************************"
-sleep 5
+echo "                    *        ESTO DESACTIVARÁ D-STAR         *"
+echo "                    *              EN DVSWITCH               *"
+echo "                    ******************************************"
+sleep 3
 clear
 
 #Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF
@@ -59,9 +59,9 @@ sudo systemctl restart mmdvm_bridge.service
 cd /home/pi/MMDVMHost
 echo "\33[1;32m"
 clear
-echo "***********************************************"
-echo "*             ABRIENDO SOLO D-STAR            * "
-echo "***********************************************"
+echo "                    ***********************************************"
+echo "                    *             ABRIENDO SOLO D-STAR            * "
+echo "                    ***********************************************"
 sleep 1
 sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 
