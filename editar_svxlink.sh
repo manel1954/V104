@@ -308,6 +308,19 @@ sed -i "194c VOX_THRESH=$tono" /usr/local/etc/svxlink/svxlink.conf
 			break;;
 esac
 done;;
+16) echo ""
+while true
+do
+            actualizar=S 
+            case $actualizar in
+			[sS]* ) echo ""
+sed -i "18c LOCATION=Connect to *ADER*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "26c AUTOCON_ECHOLINK_ID=840690" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
 17) echo ""
 while true
 do
@@ -322,21 +335,6 @@ sed -i "26c AUTOCON_ECHOLINK_ID=3268" /usr/local/etc/svxlink/svxlink.d/ModuleEch
 			break;;
 esac
 done;;
-16) echo ""
-while true
-do
-            actualizar=S 
-            case $actualizar in
-			[sS]* ) echo ""
-sed -i "18c LOCATION=Connect to *ADER*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-sed -i "26c AUTOCON_ECHOLINK_ID=840690" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-
-
 18) echo ""
 while true
 do
@@ -350,7 +348,7 @@ sed -i "26c AUTOCON_ECHOLINK_ID=3386" /usr/local/etc/svxlink/svxlink.d/ModuleEch
 			break;;
 esac
 done;;
-19) echo ""
+19bloqueado) echo ""
 while true
 do
             actualizar=S 
@@ -367,7 +365,7 @@ sed -i "21c #echo "out" > /sys/class/gpio/gpio17/direction" /etc/rc.local
 			break;;
 esac
 done;;
-20) echo ""
+20bloqueado) echo ""
 while true
 do
             actualizar=S 
@@ -385,7 +383,7 @@ sed -i "21c echo "out" > /sys/class/gpio/gpio17/direction" /etc/rc.local
 			break;;
 esac
 done;;
-21) echo ""
+21bloqueado) echo ""
 while true
 do
 clear
@@ -404,7 +402,7 @@ clear
 			break;;
 esac
 done;;
-22) echo ""
+22bloqueado) echo ""
 while true
 do
 clear
@@ -422,7 +420,7 @@ clear
 			break;;
 esac
 done;;
-23) echo ""
+23bloqueado) echo ""
 while true
 do
 clear
@@ -451,10 +449,10 @@ clear
 			[sS]* ) echo ""
 			echo "ok quitando beep del echolink>>>>>"
 			sleep 3
-			sed -i '515c #if {!$is_open} {' /usr/local/share/svxlink/events.d/EchoLink.tcl
-			sed -i '516c #playSilence 200' /usr/local/share/svxlink/events.d/EchoLink.tcl
-			sed -i '517c #playTone 1000 100 100' /usr/local/share/svxlink/events.d/EchoLink.tcl
-			sed -i '518c #}' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			sed -i '549c #if {$CFG_REMOTE_RGR_SOUND && !$is_open && !$listen_only_active} {' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			sed -i '550c #playSilence 200' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			sed -i '551c #playTone 1000 100 100' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			sed -i '552c #}' /usr/local/share/svxlink/events.d/EchoLink.tcl
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
