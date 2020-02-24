@@ -15,7 +15,7 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   *****************************************************"
 echo "   *           ACTUALIZANDO POSIBLES CAMBIOS           *"
-echo "   *              EN LA IMAGEN V.02.07.$version              *"
+echo "   *              EN LA IMAGEN ADER V.02.07.$SCRIPTS_version              *"
 echo "   *****************************************************"
 sleep 2
 #Actualiza reflectores
@@ -29,7 +29,7 @@ sleep 2
                         git pull
                         sleep 3
 
-#Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF                        
+#Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF                         
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/
 sudo cp RXF_BM.desktop $usuario/
