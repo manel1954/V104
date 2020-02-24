@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo systemctl stop ircddbgateway.service
 modo=$(awk "NR==18" /home/pi/status.ini)
-if [ "$modo" = 'DVSWITCH=ON' ];then
+if [ "$modo" = 'DVSWITCH=OFF' ];then
 echo "\033[1;31m" #ROJO
 echo "******************************************"
 echo "*        ESTO DESACTIVARÁ D-STAR         *"
