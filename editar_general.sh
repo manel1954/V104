@@ -54,7 +54,7 @@ url1=`expr substr $url 4 30`
 echo "$url1"
 
 echo -n "\33[1;36m   6)\33[0m Modificar ID          - \33[1;33m"
-idd=`grep -n "Id=" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini`
+idd=`grep -n "^Id=" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini`
 idd1=`expr substr $idd 3 30`
 echo "$idd1"
 
