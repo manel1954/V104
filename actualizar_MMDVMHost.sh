@@ -44,7 +44,7 @@ GRIS="\033[0m"
 
 
 
-sudo cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
+                    cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
 
 
 
