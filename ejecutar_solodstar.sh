@@ -59,7 +59,7 @@ echo "***********************************************"
 echo "*             ABRIENDO SOLO D-STAR            * "
 echo "***********************************************"
 sleep 1
-sudo ./MMDVMDSTAR MMDVMDSTAR.ini & sudo ircddbgateway -gui
+sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 else
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
