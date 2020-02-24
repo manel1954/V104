@@ -28,11 +28,11 @@ var1= sed -n '26p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo "\33[1;36m    6)\33[1;32m Deshabilitar proxy  \33[1;33m"
 echo "\33[1;36m    7)\33[1;32m Habilitar proxy     \33[1;33m"
 echo -n "\33[1;33m       "
-var1= sed -n '18p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-echo -n "       "
 var1= sed -n '19p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo -n "       "
 var1= sed -n '20p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+echo -n "       "
+var1= sed -n '201p'  /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
 echo "\33[1;32m"
 echo "\33[1;36m    8)\33[1;32m Abrir fichero ModuleEchoLink.conf para hacer cualquier otro cambio\33[1;33m"
 echo ""
@@ -153,9 +153,9 @@ do
                         actualizar=S 
                         case $actualizar in
 			[sS]* ) echo ""
-sed -i "18c #PROXY_SERVER=dirección o ip" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-sed -i "19c #PROXY_PORT=número puerto" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
-sed -i "20c #PROXY_PASSWORD=password" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "19c #PROXY_SERVER=dirección o ip" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "20c #PROXY_PORT=número puerto" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "21c #PROXY_PASSWORD=password" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
                         break;;
 			[nN]* ) echo ""
 			break;;
