@@ -50,7 +50,7 @@ sudo cp Abrir_solodstar.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_solodstar.desktop
 
-# Pone Enable=0 de [Dstar Network]
+# Pone Enable=0 en [Dstar Network]
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
