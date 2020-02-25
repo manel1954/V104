@@ -32,8 +32,6 @@ echo "${BLANCO}   -EA3EG  (Innovative & System Tester)"
 echo "${BLANCO}   -EA4AOJ (Technical & Developer)"
 
 echo ""
-echo "\33[1;33m   - Utilizar adecuadamente los puertos de los correspondientes Módems."
-echo ""
 echo -n "${VERDE}"
 echo "   Esta imagen utiliza programas de terceros de:" 
 echo "   Jonathan Naylor G4KLX, David Palm PA7LIM, José Uribe (Andy) CA6JAU, ON7LDS,"
@@ -46,8 +44,14 @@ echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento d
 						var10=`echo "$mmdvm" | tr -d '[[:space:]]'`
 						var10=`expr substr $var10 20 15`
 						echo "\33[1;32m" #color verde
+						
 						echo -n "   Versión del MMDVMHOST: "
-						echo -n "\33[1;37m" #color blanco
+						echo -n "${BLANCO}"
+						dia=`expr substr $var10 7 2`
+						mes=`expr substr $var10 5 2`
+						ano=`expr substr $var10 1 4`
+						version=`expr substr $var10 9 7`
+						var10=$dia$mes$ano
                         echo "$var10"
                         echo -n "\33[1;32m   Temperatura de la CPU: \33[1;37m"
 						tem=$(cat /sys/class/thermal/thermal_zone0/temp)
