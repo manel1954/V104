@@ -51,7 +51,7 @@ echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento d
 						mes=`expr substr $var10 5 2`
 						ano=`expr substr $var10 1 4`
 						version=`expr substr $var10 9 7`
-						var10=$dia."-".$mes$ano
+						var10=$dia"-"$mes"-"$ano" "$version
                         echo "$var10"
                         echo -n "\33[1;32m   Temperatura de la CPU: \33[1;37m"
 						tem=$(cat /sys/class/thermal/thermal_zone0/temp)
