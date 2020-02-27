@@ -123,7 +123,7 @@ clear
                         [sS]* ) echo ""
                         clear
                         cd /home/pi/$SCRIPTS_version/
-                        sudo sh actualiza_YSF_YSF2DMR_DMR2YSF_DMR2NXDN_NXDNClients.sh                  
+                        sh actualiza_YSF_YSF2DMR_DMR2YSF_DMR2NXDN_NXDNClients.sh                  
                         break;;
                         [nN]* ) echo ""
                         clear
