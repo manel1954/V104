@@ -208,6 +208,7 @@ sleep 3
                         echo "************************************************************"
                         sleep 4
                         clear
+                        sudo rm -R /home/pi/MMDVM_CM
                         else
                         sed -i "5c $version_NXDNClients_actual" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini  
                         echo "${VERDE}DESCARGANDO E INSTALANDO EL ÚLTIMO NXDNClients${CIAN}"
@@ -218,5 +219,6 @@ sleep 3
                         cd /home/pi/NXDNClients/NXDNGateway
                         make clean
                         make
+                        sudo rm -R /home/pi/MMDVM_CM
                         fi                 
                         
