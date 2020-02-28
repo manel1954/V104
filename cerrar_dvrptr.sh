@@ -1,4 +1,8 @@
 #!/bin/bash
+
+
+sudo su | ps aux | grep dvrptr.exe | grep -v grep | awk '{print $2}' | xargs kill
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 cp Abrir_Dvrptr.desktop /home/pi
