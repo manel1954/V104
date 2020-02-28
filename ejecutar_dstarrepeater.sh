@@ -17,7 +17,7 @@ clear
 echo "${VERDE}"
 clear
 echo "                  ***********************************************"
-echo "                  *            ABRIENDO ircDDBGateway           * "
+echo "                  *            ABRIENDO dstarrepeater           * "
 echo "                  ***********************************************"
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDB.desktop /home/pi
