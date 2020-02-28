@@ -33,6 +33,11 @@ sudo rm /home/pi/Abrir_ircDDB.desktop
 
 
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/dmrplus.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/especial.ini
+
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 
