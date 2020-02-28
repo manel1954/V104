@@ -88,6 +88,7 @@ sudo cp $usuario/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono e
 
 sudo chmod 777 -R $usuario/Desktop
 cd $usuario
+sleep 2
 sh colocar_iconos.sh
 exit;                
                         break;;
