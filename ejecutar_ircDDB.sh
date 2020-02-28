@@ -22,7 +22,7 @@ echo "                  ***********************************************"
 
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDBGateway.desktop /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_d-star.sh'" /home/pi/Abrir_ircDDBGateway.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_ircDDB.sh'" /home/pi/Abrir_ircDDBGateway.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_IRCDDB_ON.png" /home/pi/Abrir_ircDDBGateway.desktop
 sed -i "10c Name[es_ES]=Cerrar ircDDB" /home/pi/Abrir_ircDDBGateway.desktop
 sed -i "1c D-STAR=ON" /home/pi/status.ini
