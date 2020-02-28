@@ -29,7 +29,7 @@ if [ "$seguir" = 'S' -o "$seguir" = 's' ];then
 
 
 
-sudo sh ejecutar_d-star.sh
+sudo sh ejecutar_d-star.sh &
 
 clear
 echo "${BLANCO}"
