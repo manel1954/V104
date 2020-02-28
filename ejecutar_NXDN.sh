@@ -49,5 +49,17 @@ sudo lxterminal --geometry=80x12 -e ./MMDVMNXDN MMDVMNXDN.ini &
 
 cd /home/pi/NXDNClients/NXDNGateway
 sudo ./NXDNGateway NXDNGateway.ini
+
+cd /home/pi/Desktop
+sudo cp Abrir_NXDN.desktop /home/pi
+sudo sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_DMRPLUS.sh'" /home/pi/Abrir_NXDN.desktop
+sudo sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRPLUS_OFF.png" /home/pi/Abrir_NXDN.desktop
+sudo sed -i "10c Name[es_ES]=Abrir DMR+" /home/pi/Abrir_NXDN.desktop
+sudo sed -i "6c MMDVMPLUS=OFF" /home/pi/status.ini
+cd /home/pi
+sudo cp Abrir_NXDN.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_NXDN.desktop
+
 fi
 
