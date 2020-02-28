@@ -108,11 +108,11 @@ echo ""
 echo "${AMARILLO}"
 echo "  **********************************************************************"
 echo "  *                                                                    *"
-echo "  * Una vez terminado este proceso, puedes grabar con los item ${CIAN}2) ó 3)${AMARILLO} *"
+echo "  * Una vez terminado este proceso, puedes grabar con los item ${CIAN}2) ${AMARILLO} o ${CIAN} 3)${AMARILLO} *"
 echo "  *                                                                    *"
 echo "  **********************************************************************"
 echo "${CIAN}"
-echo "  Pulsa una tecla para volver al menú"
+echo -n "  Pulsa una tecla para volver al menú "
 read continuar
 
                         break;;
