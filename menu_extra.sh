@@ -61,7 +61,7 @@ clear
                         break;;
 esac
 done;;
-inis) echo ""
+a) echo ""
 while true
 do
 clear                     
