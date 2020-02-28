@@ -28,3 +28,17 @@ sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_ircDDB.desktop
 
+sleep 1
+
+cd /home/pi/Desktop
+sudo cp Abrir_dstarrepeater.desktop /home/pi
+sleep 1
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh ejecutar_dstarrepeater.sh'" /home/pi/Abrir_dstarrepeater.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/repeater.png" /home/pi/Abrir_dstarrepeater.desktop
+sed -i "10c Name[es_ES]=Abrir D-STAR Repeater" /home/pi/Abrir_dstarrepeater.desktop
+sed -i "9c dstarrepeater=OFF" /home/pi/status.ini
+sleep 1
+cd /home/pi
+sudo cp Abrir_dstarrepeater.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_dstarrepeater.desktop
