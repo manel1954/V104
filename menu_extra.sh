@@ -84,7 +84,9 @@ sudo cp $usuario/Activar_dvswitch.desktop $usuario/Desktop #deja el icono en el 
 sudo cp $usuario/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono en el estado que se reinició
 #sudo cp $usuario/Abrir_ircDDBGateway.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
 #sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
-                 
+
+sudo chmod 777 -R $usuario/Desktop
+                
                         break;;
                         [nN]* ) echo ""
                         clear
