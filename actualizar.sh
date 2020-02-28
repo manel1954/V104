@@ -249,3 +249,9 @@ rm $usuario/RXF_NXDN.desktop
 #=================================================================================
 
 sudo chmod 777 -R $usuario/Desktop
+
+sudo sh colocar_iconos.sh 
+
+
+
+
