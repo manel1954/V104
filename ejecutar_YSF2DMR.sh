@@ -51,10 +51,10 @@ sudo ./MMDVMFUSION MMDVMFUSION.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_YSF2DMR.desktop /home/pi
-sudo sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_DMRPLUS.sh'" /home/pi/Abrir_YSF2DMR.desktop
-sudo sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRPLUS_OFF.png" /home/pi/Abrir_YSF2DMR.desktop
-sudo sed -i "10c Name[es_ES]=Abrir DMR+" /home/pi/Abrir_YSF2DMR.desktop
-sudo sed -i "6c MMDVMPLUS=OFF" /home/pi/status.ini
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version/;lxterminal --geometry=80x20 -e sudo sh ejecutar_YSF2DMR.sh'" /home/pi/Abrir_YSF2DMR.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_YSF2DMR_ON.png" /home/pi/Abrir_YSF2DMR.desktop
+sed -i "10c Name[es_ES]=Abrir YSF2DMR" /home/pi/Abrir_YSF2DMR.desktop
+sed -i "14c YSF2DMR=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_YSF2DMR.desktop /home/pi/Desktop
 sleep 1
