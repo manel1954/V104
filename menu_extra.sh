@@ -85,7 +85,10 @@ sudo cp $usuario/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono e
 #sudo cp $usuario/Abrir_ircDDBGateway.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
 #sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
 
+
 sudo chmod 777 -R $usuario/Desktop
+cd $usuario
+sh colocar_iconos.sh
 exit;                
                         break;;
                         [nN]* ) echo ""
