@@ -55,9 +55,9 @@ sudo ./NXDNGateway NXDNGateway.ini
 cd /home/pi/Desktop
 sudo cp Abrir_DMR2NXDN.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_DMR2NXDN.sh'" /home/pi/Abrir_DMR2NXDN.desktop
-sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMR2NXDN_ON.png" /home/pi/Abrir_DMR2NXDN.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMR2NXDN_OFF.png" /home/pi/Abrir_DMR2NXDN.desktop
 sed -i "10c Name[es_ES]=Abrir DMR2NXDN" /home/pi/Abrir_DMR2NXDN.desktop
-sed -i "16c DMR2NXDN=ON" /home/pi/status.ini
+sed -i "16c DMR2NXDN=OFF" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_DMR2NXDN.desktop /home/pi/Desktop
 sleep 1
