@@ -68,8 +68,8 @@ clear
                         instalarsi=S
                         case $instalarsi in
                         [sS]* ) echo ""
-cd $/home/pi/$SCRIPTS_version/Desktop
-cp * $/home/pi/Desktop
+cd /home/pi/$SCRIPTS_version/Desktop
+cp * /home/pi/Desktop
 sleep 1
                  
                         break;;
