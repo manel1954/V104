@@ -17,7 +17,7 @@ clear
 echo "${VERDE}"
 clear
 echo "                  ***********************************************"
-echo "                  *             ABRIENDO SOLO D-STAR            * "
+echo "                  *            ABRIENDO ircDDBGateway           * "
 echo "                  ***********************************************"
 
 cd /home/pi/Desktop
@@ -36,7 +36,7 @@ sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 
-sudo ircddbgateway -gui
+sudo ircddbgateway -gui &
 
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDBGateway.desktop /home/pi
