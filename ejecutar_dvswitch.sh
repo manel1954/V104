@@ -27,18 +27,18 @@ echo -n "   "
 read -p 'Quieres activar DVSWITCH? S/N ' seguir   
 if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
 
-sudo cp /home/pi/Desktop/Abrir_dstarrepeater.desktop /home/pi
-sed -i "9c Terminal=true" /home/pi/Abrir_dstarrepeater.desktop
-sudo cp /home/pi/Abrir_dstarrepeater.desktop /home/pi/Desktop
-sleep 1
-sudo rm /home/pi/Abrir_dstarrepeater.desktop
+#sudo cp /home/pi/Desktop/Abrir_dstarrepeater.desktop /home/pi
+#sed -i "9c Terminal=true" /home/pi/Abrir_dstarrepeater.desktop
+#sudo cp /home/pi/Abrir_dstarrepeater.desktop /home/pi/Desktop
+#sleep 1
+#sudo rm /home/pi/Abrir_dstarrepeater.desktop
 
-sudo cp /home/pi/Desktop/Abrir_ircDDB.desktop /home/pi
-sed -i "9c Terminal=true" /home/pi/Abrir_ircDDB.desktop
-cd 
-sudo cp /home/pi/Abrir_ircDDB.desktop /home/pi/Desktop
-sleep 1
-sudo rm /home/pi/Abrir_ircDDB.desktop
+#sudo cp /home/pi/Desktop/Abrir_ircDDB.desktop /home/pi
+#sed -i "9c Terminal=true" /home/pi/Abrir_ircDDB.desktop
+#cd 
+#sudo cp /home/pi/Abrir_ircDDB.desktop /home/pi/Desktop
+#sleep 1
+#sudo rm /home/pi/Abrir_ircDDB.desktop
 
 cd /home/pi/$SCRIPTS_version
 bm=$(awk "NR==7" /home/pi/status.ini)
