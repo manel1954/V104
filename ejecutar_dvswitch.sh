@@ -27,21 +27,18 @@ echo -n "   "
 read -p 'Quieres activar DVSWITCH? S/N ' seguir   
 if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
 
-
-sudo cp /home/pi/Desktop/Abrir_D-STARRepeater.desktop /home/pi
-sed -i "9c Terminal=true" /home/pi/Abrir_D-STARRepeater.desktop
-sudo cp /home/pi/Abrir_D-STARRepeater.desktop /home/pi/Desktop
+sudo cp /home/pi/Desktop/Abrir_dstarrepeater.desktop /home/pi
+sed -i "9c Terminal=true" /home/pi/Abrir_dstarrepeater.desktop
+sudo cp /home/pi/Abrir_dstarrepeater.desktop /home/pi/Desktop
 sleep 1
-sudo rm /home/pi/Abrir_D-STARRepeater.desktop
+sudo rm /home/pi/Abrir_dstarrepeater.desktop
 
-sudo cp /home/pi/Desktop/Abrir_ircDDBGateway.desktop /home/pi
-sed -i "9c Terminal=true" /home/pi/Abrir_ircDDBGateway.desktop
+sudo cp /home/pi/Desktop/Abrir_ircDDB.desktop /home/pi
+sed -i "9c Terminal=true" /home/pi/Abrir_ircDDB.desktop
 cd 
-sudo cp /home/pi/Abrir_ircDDBGateway.desktop /home/pi/Desktop
+sudo cp /home/pi/Abrir_ircDDB.desktop /home/pi/Desktop
 sleep 1
-sudo rm /home/pi/Abrir_ircDDBGateway.desktop
-
-
+sudo rm /home/pi/Abrir_ircDDB.desktop
 
 cd /home/pi/$SCRIPTS_version
 bm=$(awk "NR==7" /home/pi/status.ini)
@@ -84,16 +81,6 @@ echo "       CERRANDO RADIO"
 echo "*******************************"
 fi
 
-#solodstar=$(awk "NR==13" /home/pi/status.ini)
-#if [ "$solodstar" = 'SOLODSTAR=ON' ];then
-#sudo sh cerrar_solodstar.sh
-#clear
-#echo "${VERDE}"
-#echo "*******************************"
-#echo "    CERRANDO solo D-STAR"
-#echo "*******************************"
-#fi
-
 solofusion=$(awk "NR==12" /home/pi/status.ini)
 if [ "$solofusion" = 'SOLOFUSION=ON' ];then
 sudo sh cerrar_solofusion.sh
@@ -103,26 +90,6 @@ echo "*******************************"
 echo "     CERRANDO solo FUSION"
 echo "*******************************"
 fi
-
-#ircDDB=$(awk "NR==1" /home/pi/status.ini)
-#if [ "$ircDDB" = 'D-STAR=ON' ];then
-#sudo sh cerrar_d-star.sh
-#clear
-#echo "${VERDE}"
-#echo "*******************************"
-#echo "CERRANDO ircDDB & DstarRepeater"
-#echo "*******************************"
-#fi
-
-#DstarRepeater=$(awk "NR==9" /home/pi/status.ini)
-#if [ "$DstarRepeater" = 'dstarrepeater=ON' ];then
-#sudo sh cerrar_dstarrepeater_30.sh
-#clear
-#echo "${VERDE}"
-#echo "*******************************"
-#echo "    CERRANDO DstarRepeater"
-#echo "*******************************"
-#fi
 
 ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
 if [ "$ysf2dmr" = 'YSF2DMR=ON' ];then
@@ -164,24 +131,6 @@ echo "CERRANDO NXDN"
 echo "*******************************"
 fi
 
-#01-D-STAR=OFF
-#02-BlueDV=OFF
-#03-YSF=OFF
-#04-DV4mini=OFF
-#05-MMDVM=OFF
-#06-MMDVMPLUS=OFF
-#07-MMDVMBM=OFF
-#08-SVXLINK=OFF
-#09-dstarrepeater=OFF
-#10-MMDVMLIBRE=OFF
-#11-AMBE_SERVER=OFF
-#12-SOLOFUSION=OFF
-#13-SOLODSTAR=OFF
-#14-YSF2DMR=OFF
-#15-DMR2YSF=OFF
-#16-DMR2NXDN=OFF
-#17-NXDN=OFF
-
 sleep 2
 
 cd /home/pi/Desktop
@@ -203,7 +152,6 @@ sudo systemctl restart ircddbgateway.service
 sudo systemctl restart md380-emu.service
 sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
-
 
 clear
 echo "${BLANCO}"
