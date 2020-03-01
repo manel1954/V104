@@ -33,12 +33,12 @@ echo "\33[1;36m   6)\33[1;37m Anclar el puerto rfcomm0 para conectar el Bluetoot
 echo "\33[1;36m   7)\33[1;37m Anclar el puerto rfcomm1 para conectar el Bluetooth para siempre"
 echo "\33[1;32m      =================="
 echo ""
-echo "\33[1;36m   8)\33[1;37m Instalar Anydesk"
-echo "\33[1;36m   9)\33[1;37m Grabar pantalla Nextion"
-echo "\33[1;36m  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
-echo "\33[1;36m  11)${AMARILLO} Actualizar YCS Para Conectar Por Protocolo FCS"
+echo "{AMARILLO}   8)\33[1;37m Instalar Anydesk"
+echo "{BLANCO}   9)\33[1;37m Grabar pantalla Nextion"
+echo "{VERDE}  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
+#echo "\33[1;36m  11)${AMARILLO} Actualizar YCS Para Conectar Por Protocolo FCS"
 echo ""
-echo "\33[1;36m  12)\33[1;31m Reiniciar Sistema"
+echo "\33[1;36m  11)\33[1;31m Reiniciar Sistema"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
@@ -426,7 +426,7 @@ exit;
 break;;
 esac
 done;;
-11) echo ""
+11bloqueado) echo ""
 while true
 do
 clear
@@ -449,7 +449,7 @@ clear
                         break;;
 esac
 done;;
-12) echo ""
+11) echo ""
 while true
 do
 clear
