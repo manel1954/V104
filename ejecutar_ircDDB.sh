@@ -31,7 +31,7 @@ sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_ircDDB.desktop
 
-
+# Pone Enable=0 en [Dstar Network]
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/brandmeister_esp.ini
@@ -41,7 +41,6 @@ sed -i "62c Enable=0" /opt/MMDVM_Bridge/especial.ini
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 
-#sudo ircddbgateway -gui
 
 
 

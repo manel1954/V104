@@ -56,6 +56,11 @@ sudo rm /home/pi/Abrir_solodstar.desktop
 
 # Pone Enable=0 en [Dstar Network]
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/dmrplus.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/especial.ini
+
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 
@@ -63,7 +68,7 @@ sudo systemctl restart mmdvm_bridge.service
 cd /home/pi/MMDVMHost
 sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 
-# Cierra el icono Abrir Solo Dstar si no hay conexión
+# Cierra el icono Abrir Solo Dstar si no hay conexión 
 cd /home/pi/Desktop
 sudo cp Abrir_solodstar.desktop /home/pi
 sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal -e sudo sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
