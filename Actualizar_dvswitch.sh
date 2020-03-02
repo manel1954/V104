@@ -25,8 +25,10 @@ echo " * <<<<<<<<<<<<<<<<<< ACTUALIZANDO DVSWITCH   >>>>>>>>>>>>>>>>>>>>>> *"
 echo " *                                                                   *"
 echo " *********************************************************************"
 sleep 3
-
-
+version=$(awk "NR==11" $usuario/info.txt)
+version=`expr substr $version 17 5`
+echo "$version"
+read a
 break;;
 [nN]*) 
 exit ;;
