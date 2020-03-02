@@ -26,9 +26,15 @@ echo " *                                                                   *"
 echo " *********************************************************************"
 sleep 3
 version=$(awk "NR==11" $usuario/info.txt)
-version=`expr substr $version 17 5`
+version=`expr substr $version 18 5`
 echo "$version"
 read a
+if [$version = "6.0.2"]
+then
+	echo "la versión no ha cambiado"
+else
+	echo "la version ha cambiado"
+fi
 break;;
 [nN]*) 
 exit ;;
