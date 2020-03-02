@@ -101,32 +101,13 @@ done;;
 1) echo ""
 while true
 do
-clear
-                        ejecutar1=S
-                        case $ejecutar1 in
+clear                     
+                        instalarsi=S
+                        case $instalarsi in
                         [sS]* ) echo ""
-                        echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-
-                        #Actualiza reflectores
-                        cd /usr/local/share/opendv/
-                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
-                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
-                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
-                        sudo cp DExtra_Hosts.txt /home/pi/dv4mini/xref.ip
-
-                        cd /home/pi/$SCRIPTS_version
-                        sudo git pull
-clear
-sleep 1
-                        sudo rm -R  /home/pi/$AUTOARRANQUE
-                        cd /home/pi/
-clear
-sleep 1
-                        cd /home/pi/$SCRIPTS_version/Desktop
-                        sudo cp * /home/pi/Desktop
-
-                        #clear                                                              
-                        exit;
+                        clear
+                        cd /home/pi/$SCRIPTS_version/
+                        sh Actualizar_dvswitch.sh                  
                         break;;
                         [nN]* ) echo ""
                         clear
