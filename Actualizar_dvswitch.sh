@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 # path usuario
 usuario="/home/pi"
 usuario=$(awk "NR==1" $usuario/.config/autostart/usuario)
@@ -10,6 +11,8 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+
+echo "${AMARILLO}"
 echo -n " Quieres Actualizar Dvswitch S/N ? "
 read activar
 case "$activar" in
