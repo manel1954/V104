@@ -30,7 +30,7 @@ version=`expr substr $version 18 5`
 echo "$version"
 read a
 
-if [ $version = "6.0.2" ]
+if [ $version = 6.0.2 ]
 then
 	echo "la versión no ha cambiado"
 else
