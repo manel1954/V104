@@ -25,7 +25,11 @@ echo " * <<<<<<<<<<<<<<<<<< ACTUALIZANDO DVSWITCH   >>>>>>>>>>>>>>>>>>>>>> *"
 echo " *                                                                   *"
 echo " *********************************************************************"
 sleep 3
+
 cd /var/www/html/Actualizar_DV_ADER_104
+sudo rm -r Actualizar_DV_ADER_V104
+git clone http://github.com/ea3eiz/Actualizar_DV_ADER_V104
+sudo chmod 777 -R Actualizar_DV_ADER_V104
 sh Actualizar_DV_ADER_V104.sh
 break;;
 [nN]*) 
