@@ -1,6 +1,7 @@
 #!/bin/bash
+            cp /home/pi/datos_dvswitch /home/pi/Downloads
             cd /home/pi/MMDVMHost
-                        cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
+            cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
             cp -f MMDVM.ini /home/pi/Downloads
             cp -f MMDVM.ini_copia /home/pi/Downloads
             cp -f MMDVM.ini_copia2 /home/pi/Downloads
