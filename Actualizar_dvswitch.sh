@@ -27,6 +27,7 @@ case "$activar" in
 version=$(awk "NR==11" $usuario/info.txt)
 version=`expr substr $version 18 5`
 echo "$version"
+read a
 if [ $version = 6.0.2 ]
 then
 	echo "Ya tienes la última versión"
