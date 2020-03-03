@@ -185,12 +185,12 @@ GRIS="\033[0m"
             sed -i "12c Id=1234567" /home/pi/DMR2YSF/DMR2YSF.ini
 
             sed -i "2c Callsign=G9BF" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-            sed -i "13c RXFrequency=435000000" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-            sed -i "14c TXFrequency=435000000" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-            sed -i "19c Name=Nowhere" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+            sed -i "15c RXFrequency=435000000" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+            sed -i "16c TXFrequency=435000000" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+            sed -i "21c Name=Nowhere" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
             sed -i "5c Id=1234567" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-            sed -i "16c Longitude=0.0" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-            sed -i "17c Latitude=0.0" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+            sed -i "18c Longitude=0.0" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+            sed -i "19c Latitude=0.0" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 
 
 
