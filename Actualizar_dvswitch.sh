@@ -25,14 +25,16 @@ case "$activar" in
 [sS]* )
 
 version=$(awk "NR==10" $usuario/info.ini)
-echo "$version"
-read a
 
-echo "$version"
-read a
 if [ $version = 10 ]
 then
-	echo "Ya tienes la última versión"
+clear
+echo "${BLANCO}"
+echo " *********************************************************************"
+echo " *                                                                   *"
+echo " *                  YA TIENES LA ÚLTIMA VERSIÓN                      *"
+echo " *                                                                   *"
+echo " *********************************************************************"
 	sleep 3
 else
 	echo "Hay una nueva versión y se está actualizando"
