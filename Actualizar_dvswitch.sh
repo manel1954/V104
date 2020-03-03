@@ -24,13 +24,13 @@ read activar
 case "$activar" in
 [sS]* )
 
-version=$(awk "NR==11" $usuario/info.txt)
+version=$(awk "NR==10" $usuario/info.ini)
 echo "$version"
 read a
-version=`expr substr $version 18 5`
+
 echo "$version"
 read a
-if [ $version = 6.0.2 ]
+if [ $version = 10 ]
 then
 	echo "Ya tienes la última versión"
 	sleep 3
