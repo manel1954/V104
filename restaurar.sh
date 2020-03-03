@@ -1,5 +1,6 @@
 #!/bin/bash
 cd /var/www/html/upload/files
+sudo mkdir /home/pi/Downloads
 sudo chmod -R 777 /home/pi/Downloads
 cp copia.tar.gz /home/pi
 cd /home/pi/Downloads
