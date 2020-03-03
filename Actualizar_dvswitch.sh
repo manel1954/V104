@@ -29,6 +29,19 @@ version=$(awk "NR==10" $usuario/info.ini)
 if [ $version = 10 ]
 then
 clear
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
 echo "${BLANCO}"
 echo " *********************************************************************"
 echo " *                                                                   *"
