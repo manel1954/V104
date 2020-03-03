@@ -25,6 +25,8 @@ case "$activar" in
 [sS]* )
 
 version=$(awk "NR==11" $usuario/info.txt)
+echo "$version"
+read a
 version=`expr substr $version 18 5`
 echo "$version"
 read a
