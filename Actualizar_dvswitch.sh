@@ -47,10 +47,10 @@ echo " * *${AMARILLO}                       YA TIENES LA ÚLTIMA VERSIÓN ${BLAN
 echo " * *                                                                      * *"
 echo " * ************************************************************************ *"
 echo " ****************************************************************************"
-	sleep 3
+	sleep 5
 else
 	echo "Hay una nueva versión y se está actualizando"
-	sleep 3
+	sleep 5
 fi
 break;;
 [nN]*) 
