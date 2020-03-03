@@ -198,10 +198,7 @@ sleep 3
             cp -f MMDVMBM.ini /home/pi/MMDVMHost
             cp -f MMDVMBM.ini_copia /home/pi/MMDVMHost
             cp -f MMDVMBM.ini_copia2 /home/pi/MMDVMHost
-            cp -f MMDVMBM.ini_copia3 /home/pi/MMDVMHost
-            cp -f MMDVMLIBRE.ini /home/pi/MMDVMHost
-            cp -f MMDVMLIBRE.ini_uno /home/pi/MMDVMHost
-            cp -f MMDVMLIBRE.ini_dos /home/pi/DoMMDVMHost     
+            cp -f MMDVMBM.ini_copia3 /home/pi/MMDVMHost     
             cp -f MMDVMPLUS.ini /home/pi/MMDVMHost
             cp -f MMDVMPLUS.ini_copia /home/pi/MMDVMHost
             cp -f MMDVMPLUS.ini_copia2 /home/pi/MMDVMHost
