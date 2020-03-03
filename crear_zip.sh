@@ -119,6 +119,6 @@ tar -zcvf copia.tar.gz Downloads
 cp  copia.tar.gz /var/www/html/upload/files
 sudo rm copia.tar.gz
 
-sudo sed -i "19c COPIAS=ON" /home/pi/status.ini
+
 
 
