@@ -44,9 +44,10 @@ clear
             echo "     Realizando la copia de seguridad"
             echo "*****************************************"
             sleep 5
-            sudo rm -R /home/pi/Downloads/
+            sudo rm -R /home/pi/Downloads
             cd /home/pi
-            mkdir Downloads
+            sudo mkdir Downloads
+            sudo chmod 777 -R Downloads
             cp /home/pi/datos_dvswitch /home/pi/Downloads
             cd /home/pi/MMDVMHost
             cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
