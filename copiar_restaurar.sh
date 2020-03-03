@@ -45,7 +45,8 @@ clear
             echo "*****************************************"
             sleep 5
             sudo rm -R /home/pi/Downloads/
-            sudo chmod -R 777 /home/pi/Downloads
+            cd /home/pi
+            mkdir Downloads
             cp /home/pi/datos_dvswitch /home/pi/Downloads
             cd /home/pi/MMDVMHost
             cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
@@ -57,10 +58,7 @@ clear
             cp -f MMDVMBM.ini /home/pi/Downloads
             cp -f MMDVMBM.ini_copia /home/pi/Downloads
             cp -f MMDVMBM.ini_copia2 /home/pi/Downloads
-            cp -f MMDVMBM.ini_copia3 /home/pi/Downloads
-            cp -f MMDVMLIBRE.ini /home/pi/Downloads
-            cp -f MMDVMLIBRE.ini_uno /home/pi/Downloads
-            cp -f MMDVMLIBRE.ini_dos /home/pi/Downloads      
+            cp -f MMDVMBM.ini_copia3 /home/pi/Downloads      
             cp -f MMDVMPLUS.ini /home/pi/Downloads
             cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
             cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
