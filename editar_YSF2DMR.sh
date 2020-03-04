@@ -79,7 +79,7 @@ echo "$LocalPort"
 
 echo -n "${CIAN}  10)${GRIS} Modificar ID          - ${AMARILLO}"
 idd=`grep -n "^Id=" $usuario/YSF2DMR/YSF2DMR.ini`
-idd1=`expr substr $idd 3 30`
+idd1=`expr substr $idd 4 30`
 echo "$idd1"
 
 echo -n "\33[1;36m  11)\33[0m Talkgroup             - \33[1;33m"
