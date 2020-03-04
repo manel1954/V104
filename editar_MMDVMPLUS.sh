@@ -301,7 +301,7 @@ ScreenLayout1=`expr substr $ScreenLayout 5 30`
 echo -n "$ScreenLayout1"
 fi
 
-# i) NXDN Enable=
+# i) NXDN Enable= 
 var=`grep -n -m 1 "\[NXDN\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
