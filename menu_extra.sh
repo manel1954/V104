@@ -283,6 +283,7 @@ clear
                         read -p 'Quieres instalar Anydesk ? S/N ' actualizar                                              
                         case $actualizar in
                         [sS]* ) echo ""
+                        sudo killall anydesk
                         sudo apt-get purge anydesk
                         sudo rm -R /home/pi/.anydesk
                         sudo rm -R /root/.anydesk
