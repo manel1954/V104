@@ -274,18 +274,53 @@ done;;
 while true
 do
 clear
-                        ejecutar1=S
-                        case $ejecutar1 in
+                        echo "${VERDE}"
+                        echo "*************************************************"
+                        echo "*  ${ROJO}ADVERTENCIA!!!${VERDE}                               *"
+                        echo "*  ${ROJO}AL INSTALAR ANYDESK SE REINICIARÁ EL SISTEMA${VERDE} *"
+                        echo "*************************************************"
+                        echo "${CIAN}" 
+                        read -p 'Quieres instalar Anydesk ? S/N ' actualizar                                              
+                        case $actualizar in
                         [sS]* ) echo ""
-                        echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
+                        clear
+                        echo "${VERDE}"
+                        echo "*******************************************"
+                        echo "*           INSTALANDO ANYDESK            *"
+                        echo "*******************************************"
+                        sleep 2  
                         sudo rm -R /home/pi/.anydesk
                         cd /home/pi/Downloads
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb
-                        echo "Anydesk Instalado"
+                        
+                        echo "${VERDE}"
+                        echo "*******************************************"
+                        echo "*        SE HA INSTALADO ANYDESK          *"
+                        echo "*******************************************"
                         sleep 2
+                        clear
+                        echo "${ROJO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${AMARILLO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${ROJO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
+                        sudo reboot
                         break;;
-                        [nN]* ) echo ""
+                        [nN]* ) 
+                        echo ""
 clear
 exit;
 break;;
