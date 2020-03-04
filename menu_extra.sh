@@ -294,7 +294,8 @@ clear
                         echo "${GRIS}"                    
                         cd /home/pi/Downloads
                         sudo apt-get purge anydesk
-                        wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
+                        wget https://download.anydesk.com/rpi/anydesk_5.5.4-1_armhf.deb
+                        #wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
                         clear
                         sudo dpkg -i anydesk_5.5.3-1_armhf.deb
                         clear
