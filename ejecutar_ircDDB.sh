@@ -40,7 +40,7 @@ sed -i "62c Enable=0" /opt/MMDVM_Bridge/especial.ini
 
 sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
-sleep 10
+sleep 2
 
 
 
