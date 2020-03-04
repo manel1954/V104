@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
-sudo rm -R /home/pi/.anydesk
-# path usuario 
+
+# path usuario
 usuario="/home/pi"
 usuario="$usuario"
 SCRIPTS_version="V104"
