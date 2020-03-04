@@ -297,7 +297,7 @@ clear
                         wget https://download.anydesk.com/rpi/anydesk_5.5.4-1_armhf.deb
                         #wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
                         clear
-                        sudo dpkg -i anydesk_5.5.3-1_armhf.deb
+                        sudo dpkg -i anydesk_5.5.4-1_armhf.deb
                         clear
                         echo "${VERDE}"
                         echo "*******************************************"
