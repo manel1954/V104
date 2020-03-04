@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-sleep 2
+sleep 10
 # path usuario
 usuario="/home/pi"
 usuario="$usuario"
