@@ -81,6 +81,8 @@ echo -n "${CIAN}  10)${GRIS} Modificar ID          - ${AMARILLO}"
 idd=`grep -n "^Id=" $usuario/YSF2DMR/YSF2DMR.ini`
 buscar=":"
 largo_linea=`expr index $idd $buscar`
+echo "largo linea $largo_linea"
+read a
 numero_linea=`expr substr $idd 1 $largo_linea`
 
 Idds=$(awk "NR==$numero_linea" $usuario/YSF2DMR/YSF2DMR.ini)
