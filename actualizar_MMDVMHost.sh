@@ -68,11 +68,11 @@ GRIS="\033[0m"
                     #=================================================
 
                     # Rutina solo para el LIBRE ======================
-                    cd /home/pi/$SCRIPTS_version
-                    cp MMDVMHostLIBRE /home/pi/MMDVMHost
-                    cp MMDVMLIBRE.ini /home/pi/MMDVMHost
-                    cd /home/pi/MMDVMHost
-                    sudo chmod +x MMDVMHostLIBRE
+                    #cd /home/pi/$SCRIPTS_version
+                    #cp MMDVMHostLIBRE /home/pi/MMDVMHost
+                    #cp MMDVMLIBRE.ini /home/pi/MMDVMHost
+                    #cd /home/pi/MMDVMHost
+                    #sudo chmod +x MMDVMHostLIBRE
                     #=================================================
 
                     
