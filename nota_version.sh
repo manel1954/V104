@@ -18,6 +18,7 @@ echo "\33[1;36m   Gracias por descargar la imagen de ${AMARILLO}ADER $SCRIPTS_ve
 echo "${BLANCO}"
 info=$(cat /etc/os-release > /home/pi/info.txt)
 info=$(awk "NR==1" /home/pi/info.txt)
+info=`expr substr $info 12 30`
 echo "   $info"
 echo -n "${AMARILLO}"
 
