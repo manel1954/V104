@@ -25,7 +25,7 @@ sed -i "13c SOLODSTAR=OFF" $usuario/status.ini
 sed -i "14c YSF2DMR=OFF" $usuario/status.ini
 sed -i "15c DMR2YSF=OFF" $usuario/status.ini
 sed -i "16c DMR2NXDN=OFF" $usuario/status.ini
-sed -i "17c NXDN=OFF" $usuario/status.in
+sed -i "17c NXDN=OFF" $usuario/status.ini
 
 #=================================================================================
 
