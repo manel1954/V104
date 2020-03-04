@@ -105,9 +105,6 @@ GRIS="\033[0m"
                     cp MMDVM.ini MMDVMFUSION.ini_copia2
                     cp MMDVM.ini MMDVMFUSION.ini_copia3                 
 
-                    cp MMDVMLIBRE.ini MMDVMLIBRE.ini_uno
-                    cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
-
                     cp MMDVM.ini TODOS_LOS_INIS.ini
 
                     cp MMDVM.ini MMDVMDMR2YSF.ini
