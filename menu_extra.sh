@@ -271,84 +271,24 @@ break;;
 esac
 done;;
 8) echo ""
+6) echo ""
 while true
 do
 clear
-                        echo "${VERDE}"
-                        echo "*************************************************"
-                        echo "*  ${ROJO}ADVERTENCIA!!!${VERDE}                               *"
-                        echo "*  ${ROJO}AL INSTALAR ANYDESK SE REINICIARÁ EL SISTEMA${VERDE} *"
-                        echo "*************************************************"
-                        echo "${CIAN}" 
-                        read -p 'Quieres instalar Anydesk ? S/N ' actualizar                                              
-                        case $actualizar in
+                        ejecutar1=S
+                        case $ejecutar1 in
                         [sS]* ) echo ""
-                        
-                        cd /home/pi
-                        sudo rm -R .anydesk
-                        sudo rm -R /root/.anydesk
-                        cd /home/pi/Downloads
-                        sudo apt-get purge anydesk
-                        wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
-                        clear
-                        sudo dpkg -i anydesk_5.5.3-1_armhf.deb
-
-
-
-
-
-
-
-
-
-
-
-
-                        #sudo apt-get --purge remove anydesk
-                        #sudo rm -R /home/pi/.anydesk
-                        #sudo rm -R /root/.anydesk
-                        #clear
-                        #echo "${VERDE}"
-                        #echo "*******************************************"
-                        #echo "*           INSTALANDO ANYDESK            *"
-                        #echo "*******************************************"
-                        #sleep 2  
-                        #echo "${GRIS}"                    
-                        #cd /home/pi/Downloads
-                        #wget https://download.anydesk.com/rpi/anydesk_5.5.4-1_armhf.deb
-                        #clear
-                        #sudo dpkg -i anydesk_5.5.4-1_armhf.deb
-                        clear
-                        echo "${VERDE}"
-                        echo "*******************************************"
-                        echo "*        SE HA INSTALADO ANYDESK          *"
-                        echo "*******************************************"
+                        echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
+                        sudo rm -R ~/.anydesk
+                        cd ~/Downloads
+                        wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb
+                        sudo apt-get -f install
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb
+                        echo "Anydesk Instalado"
                         sleep 2
-                        clear
-                        echo "${ROJO}"
-                        echo "*******************************************"
-                        echo "*        SE REINICIARÁ EL SISTEMA         *"
-                        echo "*******************************************"
-                        sleep 2
-                        clear
-                        echo "${AMARILLO}"
-                        echo "*******************************************"
-                        echo "*        SE REINICIARÁ EL SISTEMA         *"
-                        echo "*******************************************"
-                        sleep 2
-                        clear
-                        echo "${ROJO}"
-                        echo "*******************************************"
-                        echo "*        SE REINICIARÁ EL SISTEMA         *"
-                        echo "*******************************************"
-                        sleep 2
-                        #sudo systemctl stop anydesk
-                        #sudo systemctl disable anydesk
-                        #sudo anydesk --tray
-                        #sudo reboot
                         break;;
-                        [nN]* ) 
-                        echo ""
+                        [nN]* ) echo ""
 clear
 exit;
 break;;
