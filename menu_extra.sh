@@ -283,8 +283,9 @@ clear
                         read -p 'Quieres instalar Anydesk ? S/N ' actualizar                                              
                         case $actualizar in
                         [sS]* ) echo ""
-                        cd /home/pi
-                        sudo rm -R .anydesk
+                        sudo apt-get purge anydesk
+                        sudo rm -R /home/pi/.anydesk
+                        sudo rm -R /root/.anydesk
                         clear
                         echo "${VERDE}"
                         echo "*******************************************"
@@ -293,9 +294,7 @@ clear
                         sleep 2  
                         echo "${GRIS}"                    
                         cd /home/pi/Downloads
-                        sudo apt-get purge anydesk
                         wget https://download.anydesk.com/rpi/anydesk_5.5.4-1_armhf.deb
-                        #wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
                         clear
                         sudo dpkg -i anydesk_5.5.4-1_armhf.deb
                         clear
@@ -322,7 +321,6 @@ clear
                         echo "*        SE REINICIARÁ EL SISTEMA         *"
                         echo "*******************************************"
                         sleep 2
-                        sudo killall anydesk
                         break;;
                         [nN]* ) 
                         echo ""
