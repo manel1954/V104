@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-sleep 10
+
 # path usuario
 usuario="/home/pi"
 usuario="$usuario"
@@ -28,7 +28,7 @@ sed -i "16c DMR2NXDN=OFF" $usuario/status.ini
 sed -i "17c NXDN=OFF" $usuario/status.ini
 
 #=================================================================================
-
+sleep 10
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 
 sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario #deja el icono en el estado que se reinició
