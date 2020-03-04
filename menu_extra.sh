@@ -342,10 +342,10 @@ clear
                         echo "*        SE REINICIARÁ EL SISTEMA         *"
                         echo "*******************************************"
                         sleep 2
-                        sudo systemctl stop anydesk
-                        sudo systemctl disable anydesk
-                        sudo anydesk --tray
-                    sudo reboot
+                        #sudo systemctl stop anydesk
+                        #sudo systemctl disable anydesk
+                        #sudo anydesk --tray
+                        #sudo reboot
                         break;;
                         [nN]* ) 
                         echo ""
