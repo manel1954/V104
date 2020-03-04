@@ -283,20 +283,41 @@ clear
                         read -p 'Quieres instalar Anydesk ? S/N ' actualizar                                              
                         case $actualizar in
                         [sS]* ) echo ""
-                        sudo apt-get --purge remove anydesk
-                        sudo rm -R /home/pi/.anydesk
+                        
+                        cd /home/pi
+                        sudo rm -R .anydesk
                         sudo rm -R /root/.anydesk
-                        clear
-                        echo "${VERDE}"
-                        echo "*******************************************"
-                        echo "*           INSTALANDO ANYDESK            *"
-                        echo "*******************************************"
-                        sleep 2  
-                        echo "${GRIS}"                    
                         cd /home/pi/Downloads
-                        wget https://download.anydesk.com/rpi/anydesk_5.5.4-1_armhf.deb
+                        sudo apt-get purge anydesk
+                        wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
                         clear
-                        sudo dpkg -i anydesk_5.5.4-1_armhf.deb
+                        sudo dpkg -i anydesk_5.5.3-1_armhf.deb
+
+
+
+
+
+
+
+
+
+
+
+
+                        #sudo apt-get --purge remove anydesk
+                        #sudo rm -R /home/pi/.anydesk
+                        #sudo rm -R /root/.anydesk
+                        #clear
+                        #echo "${VERDE}"
+                        #echo "*******************************************"
+                        #echo "*           INSTALANDO ANYDESK            *"
+                        #echo "*******************************************"
+                        #sleep 2  
+                        #echo "${GRIS}"                    
+                        #cd /home/pi/Downloads
+                        #wget https://download.anydesk.com/rpi/anydesk_5.5.4-1_armhf.deb
+                        #clear
+                        #sudo dpkg -i anydesk_5.5.4-1_armhf.deb
                         clear
                         echo "${VERDE}"
                         echo "*******************************************"
