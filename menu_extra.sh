@@ -322,7 +322,7 @@ clear
                         echo "*        SE REINICIARÁ EL SISTEMA         *"
                         echo "*******************************************"
                         sleep 2
-                        #sudo reboot
+                        sudo killall anydesk
                         break;;
                         [nN]* ) 
                         echo ""
