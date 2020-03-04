@@ -271,7 +271,6 @@ break;;
 esac
 done;;
 8) echo ""
-6) echo ""
 while true
 do
 clear
