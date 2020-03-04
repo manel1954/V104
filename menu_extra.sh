@@ -323,7 +323,7 @@ clear
                         sleep 2
                         sudo systemctl stop anydesk
                         sudo systemctl disable anydesk
-                        anydesk --tray
+                        sudo anydesk --tray
                         break;;
                         [nN]* ) 
                         echo ""
