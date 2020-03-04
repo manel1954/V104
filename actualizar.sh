@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-sudo rm -R /root/.anydesk
+sudo rm -R /home/pi/.anydesk
 # path usuario 
 usuario="/home/pi"
 usuario="$usuario"
