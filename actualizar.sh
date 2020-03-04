@@ -1,5 +1,8 @@
 ﻿#!/bin/bash
-
+                        sudo systemctl stop anydesk
+                        sudo systemctl disable anydesk
+                        anydesk --tray
+                        break;;
 # path usuario
 usuario="/home/pi"
 usuario="$usuario"
