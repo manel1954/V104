@@ -278,11 +278,9 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
-                        sudo rm -R ~/.anydesk
-                        cd ~/Downloads
+                        sudo rm -R /home/pi/.anydesk
+                        cd /home/pi/Downloads
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
-                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb
-                        sudo apt-get -f install
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb
                         echo "Anydesk Instalado"
                         sleep 2
