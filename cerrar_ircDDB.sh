@@ -7,8 +7,8 @@ sudo killall remotecontrol
 sudo killall dstarrepeater
 
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
-sudo systemctl restart ircddbgateway
-sudo systemctl restart mmdvm_bridge
+#sudo systemctl restart ircddbgateway
+#sudo systemctl restart mmdvm_bridge
 
 sleep 1
 
