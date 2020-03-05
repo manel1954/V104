@@ -470,7 +470,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			[sS]* ) echo ""
-                              sudo geany /usr/local/etc/svxlink/svxlink.conf
+                              geany /usr/local/etc/svxlink/svxlink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
