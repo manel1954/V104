@@ -155,10 +155,7 @@ sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el ind
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVM.ini_copia
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVM.ini_copia2
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVM.ini_copia3
-                        #iNDICATIVO LIBRE
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+                        
 
 #Indicativo YSF
 loc1=`grep -n "^Callsign=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
@@ -239,10 +236,7 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE+
-            sed -i "12c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "12c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "12c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+            
 
 #RXFrequency YSF
 loc1=`grep -n "^RXFrequency=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
@@ -317,11 +311,7 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #libre
-            sed -i "13c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "13c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "13c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
-
+            
 #TXFrequency YSF
 loc1=`grep -n "^TXFrequency=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
@@ -385,10 +375,7 @@ do
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE
-            sed -i "18c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "18c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "18c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+            
 
 #Name YSF
 loc=`grep -n "^Name=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
@@ -462,10 +449,7 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE
-            sed -i "20c URL=$tu_url" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "20c URL=$tu_url" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "20c URL=$tu_url" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+            
             #YSF2DMR
             sed -i "10c URL=$tu_url" /home/pi/YSF2DMR/YSF2DMR.ini
             sed -i "10c URL=$tu_url" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
@@ -525,10 +509,7 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE
-            sed -i "54c Id=$tu_id" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "54c Id=$tu_id" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "54c Id=$tu_id" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+            
 
 #Id YSF
 loc1=`grep -n "^Id=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
@@ -605,10 +586,7 @@ do
             sed -i "31c Enable=$baliza" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "31c Enable=$baliza" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "31c Enable=$baliza" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE
-            sed -i "30c Enable=$baliza" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "30c Enable=$baliza" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "30c Enable=$baliza" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+            
             #MMDVMDMR2YSF
             sed -i "31c Enable=$baliza" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
 
@@ -730,10 +708,7 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
             sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE
-            sed -i "3c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "3c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "3c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+            
 
             #MMDVMDMR2YSF
             sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
@@ -788,10 +763,7 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVM.ini_copia3           
-            #LIBRE
-            sed -i "4c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "4c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "4c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+            
 
             #MMDVMDMR2YSF
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
@@ -845,11 +817,7 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
             sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE
-            sed -i "15c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "15c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "15c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
-
+            
 #Latitude YSF
 loc1=`grep -n "^Latitude=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
@@ -920,10 +888,7 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
             sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE
-            sed -i "16c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "16c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "16c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+            
 
 #Longitude YSF
 loc1=`grep -n "^Longitude=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
@@ -991,9 +956,7 @@ do
             sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVM.ini_copia3
            
-            sed -i "48c Module=$module" /home/pi/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "48c Module=$module" /home/pi/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "48c Module=$module" /home/pi/MMDVMHost/MMDVMLIBRE.ini_dos
+          
 
             #MMDVMDMR2YSF
             sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
