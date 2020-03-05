@@ -44,9 +44,9 @@ var1= sed -n '22p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   10)\33[0m Intervalo Baliza     - \33[1;33m"
 var1= sed -n '23p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   11)\33[0m Cambiar audio [Rx1]  - \33[1;33m"
-var1= sed -n '183p'  /usr/local/etc/svxlink/svxlink.conf
+var1= sed -n '158p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   12)\33[0m Cambiar audio [Tx1]  - \33[1;33m"
-var1= sed -n '255p'  /usr/local/etc/svxlink/svxlink.conf
+var1= sed -n '224p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   13)\33[0m Cambiar a TONOS      - \33[1;33m"
 var1= sed -n '196p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   14)\33[0m Cambiar a VOX        - \33[1;33m"
@@ -232,7 +232,7 @@ do
                         actualizar=S 
                         case $actualizar in
 			[sS]* ) echo ""
-           sed -i "183c AUDIO_DEV=alsa:plughw:$audiorx" /usr/local/etc/svxlink/svxlink.conf
+           sed -i "158c AUDIO_DEV=alsa:plughw:$audiorx" /usr/local/etc/svxlink/svxlink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -245,7 +245,7 @@ do
                         actualizar=S 
                         case $actualizar in
 			[sS]* ) echo ""
-           sed -i "255c AUDIO_DEV=alsa:plughw:$audiotx" /usr/local/etc/svxlink/svxlink.conf
+           sed -i "224c AUDIO_DEV=alsa:plughw:$audiotx" /usr/local/etc/svxlink/svxlink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;
