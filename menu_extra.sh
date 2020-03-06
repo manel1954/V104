@@ -449,6 +449,23 @@ echo ""
                         break;;
 esac
 done;;
+b) echo ""
+while true
+do
+clear                     
+                        instalarsi=S
+                        case $instalarsi in
+                        [sS]* ) echo ""
+                        clear
+                        cd /home/pi/$SCRIPTS_version/
+                        sh editar_sala_dmr2ysf.sh                  
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        exit;
+                        break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
