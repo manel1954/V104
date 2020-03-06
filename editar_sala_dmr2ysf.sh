@@ -57,17 +57,7 @@ do
                           sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
                           numero_sala=`expr substr $sala 1 5`
-
-
-
-
-echo "numero de linea: $numero_linea"
-echo "sala: $sala"
-echo "numero de sala: $numero_sala"
-
-
-                          read a
-                          sudo sed -i "5c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "5c $numero_sala ;" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "1c $tg" /home/pi/tg_ysf.txt
                           sudo sed -i "1c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
 			                    break;;
