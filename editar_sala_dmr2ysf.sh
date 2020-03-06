@@ -58,10 +58,7 @@ do
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
                           numero_sala=`expr substr $sala 1 5`
 
-buscar=":"
-largo_linea=`expr index $sala1 $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $sala1 1 $largo_linea`
+
 
 
 echo "numero de linea: $numero_linea"
