@@ -60,10 +60,12 @@ largo_linea=`expr index $sala1 $buscar` #comprueba el largo incluyendo los dos p
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
 numero_linea=`expr substr $sala1 1 $largo_linea` # recoge el numero de linea ejemplo (74)
 #numero_linea_fusion=`expr $numero_linea - 1` # y le resta uno quedando como: ejemplo (73)
+numero_sala=`expr substr $sala1 1 5`
 echo "linea entera: $sala"
 echo ""
 echo "linea entera: $sala1"
 echo "Número de linea: $numero_linea"
+echo "Número de sala $numero_sala"
 read a
 
                         sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
