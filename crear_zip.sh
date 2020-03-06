@@ -1,7 +1,8 @@
 #!/bin/bash
 sudo rm -R /home/pi/Downloads
-sudo mkdir /home/pi/Downloads
-sudo chmod 777 -R /home/pi/Downloads
+cd /home/pi
+sudo mkdir Downloads
+sudo chmod 777 -R Downloads
 
             sudo cp /home/pi/datos_dvswitch /home/pi/Downloads
             sudo cd /home/pi/MMDVMHost
