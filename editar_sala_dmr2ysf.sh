@@ -26,7 +26,7 @@ echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
 
 
 
-TG=$(awk "NR==1" /home/pi/DMR2YSF/tg_ysf.txt)
+TG=$(awk "NR==1" /home/pi/tg_ysf.txt)
 SALA=$(awk "NR==1" /home/pi/nombre_salas_ysf.txt)
 
 
@@ -58,9 +58,7 @@ do
 sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 sala=`echo "$sala" | tr -d '[[:space:]]'`
 numero_sala=`expr substr $sala 1 5`
-echo "Número de sala $numero_sala"
-echo "$sed_sala"
-read a
+
 
                         sed -i "5c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
                         sed -i "1c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
