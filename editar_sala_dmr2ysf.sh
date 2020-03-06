@@ -23,7 +23,6 @@ echo ""
 echo -n "\33[1;36m   1)\33[0m Modificar TG para entrar en la sala  - \33[1;33m"
 
 
-usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 
 
 
