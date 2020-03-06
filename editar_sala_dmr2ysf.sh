@@ -21,15 +21,13 @@ echo -n "${VERDE}"
 echo "   **************************************************************************"
 echo ""
 echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
-
-
-
-
-
 TG=$(awk "NR==1" /home/pi/tg_ysf.txt)
 SALA=$(awk "NR==1" /home/pi/nombre_salas_ysf.txt)
+echo "TG: $TG  SALA: $SALA"
 
-
+echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
+TG=$(awk "NR==2" /home/pi/tg_ysf.txt)
+SALA=$(awk "NR==2" /home/pi/nombre_salas_ysf.txt)
 echo "TG: $TG  SALA: $SALA"
 
 
@@ -44,100 +42,43 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-#buscar=":"
-#largo=`expr index $ind $buscar`
-#echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           echo "Ej. para sala de Ader: TGxx;32027"
            	              read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
                           read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-
-
-sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-sala=`echo "$sala" | tr -d '[[:space:]]'`
-numero_sala=`expr substr $sala 1 5`
-
-
-                        sed -i "5c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
-                        sed -i "1c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
-                 
-			                 break;;
-			  [nN]* ) echo ""
-			  break;;
+                          sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          numero_sala=`expr substr $sala 1 5`
+                          sed -i "5c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sed -i "1c $tg" /home/pi/tg_ysf.txt
+                          sed -i "1c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
 esac
 done;;
 2) echo ""
 while true
 do
-buscar=":"
-largo=`expr index $rxf $buscar`
-echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
-
-           	          read -p 'Introduce RXFrequency:        ' frecuenciarx
-                          
-                          linea=$linea$letra
+                          echo "Ej. para sala de Ader: TGxx;32027"
+                          read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           actualizar=S 
                           case $actualizar in
-			  [sS]* ) echo ""
-
-            sed -i "$linea RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
-            #DMR+
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia3
-            #BM
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia3
-            #Radio
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia2
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia3
-            
-
-#RXFrequency YSF
-loc1=`grep -n "^RXFrequency=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
-buscar=":"
-largo_linea=`expr index $loc1 $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $loc1 1 $largo_linea`
-letrac=c
-numero_linea_letrac=$numero_linea$letrac
-sed -i "$numero_linea_letrac RXFrequency=$frecuenciarx" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-            
-            #YSF2DMR
-            sed -i "2c RXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini
-            sed -i "2c RXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01            
-            sed -i "2c RXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
-            sed -i "2c RXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
-            sed -i "2c RXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
-             #MMDVMDMR2YSF.ini
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
-
-            #MMDVMDMR2NXDN.ini
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
-
-            #MMDVMNXDN.ini
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMNXDN.ini
-
-            #NXDNGateway.ini
-            sed -i "11c RXFrequency=$frecuenciarx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
-
-            #SOLODSTAR
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDSTAR.ini
-            #SOLO FUSION
-            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMFUSION.ini
-			break;;
-			[nN]* ) echo ""
-			break;;
+                          [sS]* ) echo ""
+                          sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          numero_sala=`expr substr $sala 1 5`
+                          sed -i "6c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sed -i "2c $tg" /home/pi/tg_ysf.txt
+                          sed -i "2c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
-
 0) echo ""
 clear
 echo "\33[1;33m   **************************************************"
