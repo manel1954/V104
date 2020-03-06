@@ -61,7 +61,7 @@ echo "Número de sala $numero_sala"
 echo "$sed_sala"
 read a
 
-                        sed -i "5C $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sed -i "5c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
                  
 			                 break;;
 			  [nN]* ) echo ""
