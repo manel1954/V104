@@ -32,9 +32,7 @@ TG=$(awk "NR==5" /home/pi/DMR2YSF/TG-YSFList.txt)
 echo "$TG"
 
 echo -n "\33[1;36m   2)\33[0m Modificar número de la sala a la cual entrar - \33[1;33m"
-rxf=`grep -n "RXFrequency" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini`
-rxf1=`expr substr $rxf 4 30`
-echo "$rxf1"
+
 
 
 echo ""
