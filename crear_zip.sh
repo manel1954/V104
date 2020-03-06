@@ -19,7 +19,7 @@
             sudo cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
             sudo cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
             sudo cp -f MMDVMNXDN.ini /home/pi/Downloads
-
+sleep 5
             cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/Downloads
             cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/Downloads
             cp -f /home/pi/DMR2YSF/DMR2YSF.ini  /home/pi/Downloads
