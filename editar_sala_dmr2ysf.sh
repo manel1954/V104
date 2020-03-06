@@ -47,7 +47,6 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-                          echo "Ej. para sala de Ader: TGxx;32027"
            	              read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
                           read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           actualizar=S 
@@ -69,18 +68,40 @@ done;;
 2) echo ""
 while true
 do
-                          echo "Ej. para sala de Ader: TGxx;32027"
                           read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
                           read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          numero_sala=`expr substr $sala 1 5`
-                          sudo sed -i "6c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "6c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "2c $tg" /home/pi/tg_ysf.txt
                           sudo sed -i "2c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+3) echo ""
+while true
+do
+                          read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "7c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "3c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "3c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
