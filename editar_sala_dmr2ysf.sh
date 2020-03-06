@@ -48,13 +48,13 @@ do
 #echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           echo "Ej. para sala de Ader: TGxx;32027"
            	              read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce número de la sala: ' sala
+                          read -p 'Introduce nombre de la sala: ' sala
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
 
 #sala=`grep -n "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-sala2=`grep "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sala2=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 sala2=`echo "$sala2" | tr -d '[[:space:]]'`
 #sala1=`echo "$sala" | tr -d '[[:space:]]'`
 #buscar=":"
