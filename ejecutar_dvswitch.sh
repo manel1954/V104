@@ -23,6 +23,7 @@ SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 #echo "${CIAN}"
 #echo -n "   "
 
+echo "${VERDE}"
 read -p 'Quieres activar DVSWITCH? S/N ' seguir   
 if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
 
@@ -130,7 +131,7 @@ if [ "$seguir" = 'S' -o "$seguir" = 's' ];then
 #echo "*******************************"
 #fi
 
-sleep 2
+#sleep 2
 
 cd /home/pi/Desktop
 sudo cp Activar_dvswitch.desktop /home/pi
@@ -140,7 +141,7 @@ sed -i "10c Name[es_ES]=Parar Dvswitch" /home/pi/Activar_dvswitch.desktop
 
 cd /home/pi
 sudo cp Activar_dvswitch.desktop /home/pi/Desktop
-sleep 2
+sleep 1
 sudo rm /home/pi/Activar_dvswitch.desktop
 
 sudo systemctl restart ysfgateway.service
