@@ -146,6 +146,9 @@ selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/brandmeister_esp.ini)
 
 reflector_dstar=$(awk "NR==18" /etc/ircddbgateway)
 
+read a
+
+
 # Copia todos los datos de Dvswitch
 sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
 sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
@@ -162,7 +165,7 @@ sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
 sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
 sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
 sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
-
+read a
                   echo ""
                   echo "Ok, se ha ejecutado correctamente"
                   echo ""
