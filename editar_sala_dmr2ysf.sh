@@ -27,8 +27,8 @@ echo -n "\33[1;36m   1)\33[0m Modificar TG para entrar en la sala  - \33[1;33m"
 
 
 TG=$(awk "NR==5" /home/pi/DMR2YSF/TG-YSFList.txt)
-read a
-TG=`expr substr $TG 3 30`
+
+#TG=`expr substr $TG 3 30`
 echo "$TG"
 
 echo -n "\33[1;36m   2)\33[0m Modificar número de la sala a la cual entrar - \33[1;33m"
