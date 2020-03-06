@@ -56,14 +56,12 @@ do
 
 sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 sala=`echo "$sala" | tr -d '[[:space:]]'`
-numero_sala=`expr substr $sala2 1 5`
-letra=c
-sed_sala=$numero_sala$letra
+numero_sala=`expr substr $sala 1 5`
 echo "Número de sala $numero_sala"
 echo "$sed_sala"
 read a
 
-                        sed -i "$sed_sala $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sed -i "5C $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
                  
 			                 break;;
 			  [nN]* ) echo ""
