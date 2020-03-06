@@ -67,6 +67,7 @@ echo ""
 echo "linea entera: $sala1"
 echo "Número de linea: $numero_linea"
 echo "Número de sala $numero_sala"
+echo "Número de sala $sala2"
 read a
 
                         sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
