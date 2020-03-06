@@ -90,7 +90,7 @@ echo "     CERRANDO solo FUSION"
 echo "*******************************"
 fi
 
-ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
+#ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
 #if [ "$ysf2dmr" = 'YSF2DMR=ON' ];then
 #sudo sh cerrar_YSF2DMR.sh
 #clear
@@ -100,7 +100,7 @@ ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
 #echo "*******************************"
 #fi
 
-dmr2ysf=$(awk "NR==15" /home/pi/status.ini)
+#dmr2ysf=$(awk "NR==15" /home/pi/status.ini)
 #if [ "$dmr2ysf" = 'DMR2YSF=ON' ];then
 #sudo sh cerrar_DMR2YSF.sh
 #clear
