@@ -91,14 +91,14 @@ echo "*******************************"
 fi
 
 ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
-if [ "$ysf2dmr" = 'YSF2DMR=ON' ];then
-sudo sh cerrar_YSF2DMR.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "      CERRANDO YSF2DMR"
-echo "*******************************"
-fi
+#if [ "$ysf2dmr" = 'YSF2DMR=ON' ];then
+#sudo sh cerrar_YSF2DMR.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "      CERRANDO YSF2DMR"
+#echo "*******************************"
+#fi
 
 dmr2ysf=$(awk "NR==15" /home/pi/status.ini)
 if [ "$dmr2ysf" = 'DMR2YSF=ON' ];then
