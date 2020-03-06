@@ -53,11 +53,12 @@ do
                           case $actualizar in
 			                    [sS]* ) echo ""
 
+fusion=`grep -n "LowDeviation" /home/pi/YSFClients/YSFGateway/YSFHosts.txt` # devuelve ejem: 74:Enable=1
 sala=`grep -n "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 buscar=":"
 largo_linea=`expr index $sala $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
-numero_linea=`expr substr $sala 1 $largo_linea` # recoge el numero de linea ejemplo (74)
+numero_linea=`expr substr $fusion 1 $largo_linea` # recoge el numero de linea ejemplo (74)
 numero_linea_fusion=`expr $numero_linea - 1` # y le resta uno quedando como: ejemplo (73)
 echo "pausa $sala$numero_linea_fusion"
 read a
