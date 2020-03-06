@@ -49,7 +49,7 @@ while true
 do
 buscar=":"
 largo=`expr index $ind $buscar`
-echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
+#echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           echo "Ej. para sala de Ader: TGxx;32027"
            	              read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
                           read -p 'Introduce número de la sala: ' sala
