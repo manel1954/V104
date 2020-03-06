@@ -56,9 +56,9 @@ do
                           sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
                           numero_sala=`expr substr $sala 1 5`
-                          sed -i "5c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sed -i "1c $tg" /home/pi/tg_ysf.txt
-                          sed -i "1c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "5c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "1c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "1c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
@@ -76,9 +76,9 @@ do
                           sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
                           numero_sala=`expr substr $sala 1 5`
-                          sed -i "6c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sed -i "2c $tg" /home/pi/tg_ysf.txt
-                          sed -i "2c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "6c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "2c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "2c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
