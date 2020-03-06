@@ -49,80 +49,17 @@ do
                           echo "Ej. para sala de Ader: TGxx;32027"
            	              read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
                           read -p 'Introduce número de la sala: ' sala
-                          letra=c
-                          if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $ind 1 1`
-                          else
-                          linea=`expr substr $ind 1 1`
-                          fi
-                          linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			        [sS]* ) echo ""
+			                    [sS]* ) echo ""
 
-                          #Convierte indicativo si se introduce en minúsculas a Mayúsculas
-                          tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
+sala=`grep -n "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+echo "pausa"
+read a
 
-			        tu_indicativo=`echo "$tu_indicativo" | tr -d '[[:space:]]'` # Anula los espacios
-                          sed -i "$linea Callsign=$tu_indicativo" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
-sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
-                        #iNDICATIVO PLUS
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia2
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia3
-                        #iNDICATIVO BM
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMBM.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMBM.ini_copia
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMBM.ini_copia2
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMBM.ini_copia3
-                        #iNDICATIVO RADIO
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVM.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVM.ini_copia
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVM.ini_copia2
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVM.ini_copia3
-                        
-
-#Indicativo YSF
-loc1=`grep -n "^Callsign=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
-buscar=":"
-largo_linea=`expr index $loc1 $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $loc1 1 $largo_linea`
-letrac=c
-numero_linea_letrac=$numero_linea$letrac
-sed -i "$numero_linea_letrac Callsign=$tu_indicativo" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-                        
-                        #iNDICATIVO YSF2DMR
-                        sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini
-                        sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
-                        sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
-                        sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
-                        sed -i "13c Callsign=$tu_indicativo" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
-
-                        #MMDVMDMR2YSF.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
-
-                        #MMDVMDMR2NXDN.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
-
-
-                        #MMDVMNXDN.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMNXDN.ini
-
-                        #NXDNGateway.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
-
-                        #DMR2YSF.ini
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/DMR2YSF/DMR2YSF.ini
-
-                        #iNDICATIVO SOLODSTAR
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDSTAR.ini
-                        #iNDICATIVO SOLOFUSION
-                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMFUSION.ini
-                        
-			  break;;
+                        sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
+                 
+			                 break;;
 			  [nN]* ) echo ""
 			  break;;
 esac
