@@ -457,6 +457,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
+                        lxterminal --geometry=125x30 -e less /home/pi/YSFClients/YSFGateway/YSFHosts.txt
                         cd /home/pi/$SCRIPTS_version/
                         sh editar_sala_dmr2ysf.sh                  
                         break;;
