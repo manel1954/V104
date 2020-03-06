@@ -53,8 +53,8 @@ do
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-                          sala1=`grep -n "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
                           numero_sala=`expr substr $sala 1 5`
 
