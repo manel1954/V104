@@ -9,19 +9,19 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-echo "${BLANCO}"
-echo "   ****************************************************************"
-echo "   * SI ACTIVAMOS EL DVSWITCH SE CERRARAN LOS SISTEMAS SIGUIENTES *"
-echo "   *       Y NO SE PODRAN VOLVER A UTILIZAR HASTA QUE NO          *"
-echo "   *                    CERREMOS EL DVSWITCH                      *"
-echo "   ****************************************************************"
-echo "${VERDE}"
-echo "   YSF2DMR"
-echo "   DMR2YSF"
-echo "   DMR2NXDN"
-echo "   NXDN"
-echo "${CIAN}"
-echo -n "   "
+#echo "${BLANCO}"
+#echo "   ****************************************************************"
+#echo "   * SI ACTIVAMOS EL DVSWITCH SE CERRARAN LOS SISTEMAS SIGUIENTES *"
+#echo "   *       Y NO SE PODRAN VOLVER A UTILIZAR HASTA QUE NO          *"
+#echo "   *                    CERREMOS EL DVSWITCH                      *"
+#echo "   ****************************************************************"
+#echo "${VERDE}"
+#echo "   YSF2DMR"
+#echo "   DMR2YSF"
+#echo "   DMR2NXDN"
+#echo "   NXDN"
+#echo "${CIAN}"
+#echo -n "   "
 
 read -p 'Quieres activar DVSWITCH? S/N ' seguir   
 if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
@@ -39,56 +39,56 @@ if [ "$seguir" = 'S' -o "$seguir" = 's' ];then
 #sleep 1
 #sudo rm /home/pi/Abrir_ircDDB.desktop
 
-cd /home/pi/$SCRIPTS_version
-bm=$(awk "NR==7" /home/pi/status.ini)
-if [ "$bm" = 'MMDVMBM=ON' ];then
-sudo sh cerrar_bm.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "         CERRANDO BM"
-echo "*******************************"
-fi
+#cd /home/pi/$SCRIPTS_version
+#bm=$(awk "NR==7" /home/pi/status.ini)
+#if [ "$bm" = 'MMDVMBM=ON' ];then
+#sudo sh cerrar_bm.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "         CERRANDO BM"
+#echo "*******************************"
+#fi
 
-plus=$(awk "NR==6" /home/pi/status.ini)
-if [ "$plus" = 'MMDVMPLUS=ON' ];then
-sudo sh cerrar_DMRPLUS.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "        CERRANDO BM"
-echo "*******************************"
-fi
+#plus=$(awk "NR==6" /home/pi/status.ini)
+#if [ "$plus" = 'MMDVMPLUS=ON' ];then
+#sudo sh cerrar_DMRPLUS.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "        CERRANDO BM"
+#echo "*******************************"
+#fi
 
-libre=$(awk "NR==10" /home/pi/status.ini)
-if [ "$libre" = 'MMDVMLIBRE=ON' ];then
-sudo sh cerrar_LIBRE.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "        CERRANDO LIBRE"
-echo "*******************************"
-fi
+#libre=$(awk "NR==10" /home/pi/status.ini)
+#if [ "$libre" = 'MMDVMLIBRE=ON' ];then
+#sudo sh cerrar_LIBRE.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "        CERRANDO LIBRE"
+#echo "*******************************"
+#fi
 
-radio=$(awk "NR==5" /home/pi/status.ini)
-if [ "$radio" = 'MMDVM=ON' ];then
-sudo sh cerrar_radio.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "       CERRANDO RADIO"
-echo "*******************************"
-fi
+#radio=$(awk "NR==5" /home/pi/status.ini)
+#if [ "$radio" = 'MMDVM=ON' ];then
+#sudo sh cerrar_radio.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "       CERRANDO RADIO"
+#echo "*******************************"
+#fi
 
-solofusion=$(awk "NR==12" /home/pi/status.ini)
-if [ "$solofusion" = 'SOLOFUSION=ON' ];then
-sudo sh cerrar_solofusion.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "     CERRANDO solo FUSION"
-echo "*******************************"
-fi
+#solofusion=$(awk "NR==12" /home/pi/status.ini)
+#if [ "$solofusion" = 'SOLOFUSION=ON' ];then
+#sudo sh cerrar_solofusion.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "     CERRANDO solo FUSION"
+#echo "*******************************"
+#fi
 
 #ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
 #if [ "$ysf2dmr" = 'YSF2DMR=ON' ];then
@@ -110,25 +110,25 @@ fi
 #echo "*******************************"
 #fi
 
-dmr2nxdn=$(awk "NR==16" /home/pi/status.ini)
-if [ "$dmr2nxdn" = 'DMR2NXDN=ON' ];then
-sudo sh cerrar_DMR2NXDN.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "      CERRANDO DMR2NXDN"
-echo "*******************************"
-fi
+#dmr2nxdn=$(awk "NR==16" /home/pi/status.ini)
+#if [ "$dmr2nxdn" = 'DMR2NXDN=ON' ];then
+#sudo sh cerrar_DMR2NXDN.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "      CERRANDO DMR2NXDN"
+#echo "*******************************"
+#fi
 
-nxdn=$(awk "NR==17" /home/pi/status.ini)
-if [ "$nxdn" = 'NXDN=ON' ];then
-sudo sh cerrar_NXDN.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "CERRANDO NXDN"
-echo "*******************************"
-fi
+#nxdn=$(awk "NR==17" /home/pi/status.ini)
+#if [ "$nxdn" = 'NXDN=ON' ];then
+#sudo sh cerrar_NXDN.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "CERRANDO NXDN"
+#echo "*******************************"
+#fi
 
 sleep 2
 
