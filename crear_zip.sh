@@ -1,24 +1,24 @@
 #!/bin/bash
 
-            cp /home/pi/datos_dvswitch /home/pi/Downloads
-            cd /home/pi/MMDVMHost
-            cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
-            cp -f MMDVM.ini /home/pi/Downloads
-            cp -f MMDVM.ini_copia /home/pi/Downloads
-            cp -f MMDVM.ini_copia2 /home/pi/Downloads
-            cp -f MMDVM.ini_copia3 /home/pi/Downloads
-            cp -f MMDVM.ini_original /home/pi/Downloads
+            sudo cp /home/pi/datos_dvswitch /home/pi/Downloads
+            sudo cd /home/pi/MMDVMHost
+            sudo cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
+            sudo cp -f MMDVM.ini /home/pi/Downloads
+            sudo cp -f MMDVM.ini_copia /home/pi/Downloads
+            sudo cp -f MMDVM.ini_copia2 /home/pi/Downloads
+            sudo cp -f MMDVM.ini_copia3 /home/pi/Downloads
+            sudo cp -f MMDVM.ini_original /home/pi/Downloads
             sudo cp -f MMDVMBM.ini /home/pi/Downloads
-            cp -f MMDVMBM.ini_copia /home/pi/Downloads
-            cp -f MMDVMBM.ini_copia2 /home/pi/Downloads
-            cp -f MMDVMBM.ini_copia3 /home/pi/Downloads      
-            cp -f MMDVMPLUS.ini /home/pi/Downloads
-            cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
-            cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
-            cp -f MMDVMPLUS.ini_copia3 /home/pi/Downloads
-            cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
-            cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
-            cp -f MMDVMNXDN.ini /home/pi/Downloads
+            sudo cp -f MMDVMBM.ini_copia /home/pi/Downloads
+            sudo cp -f MMDVMBM.ini_copia2 /home/pi/Downloads
+            sudo cp -f MMDVMBM.ini_copia3 /home/pi/Downloads      
+            sudo cp -f MMDVMPLUS.ini /home/pi/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia3 /home/pi/Downloads
+            sudo cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
+            sudo cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
+            sudo cp -f MMDVMNXDN.ini /home/pi/Downloads
 
             cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/Downloads
             cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/Downloads
