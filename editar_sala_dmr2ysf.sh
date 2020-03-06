@@ -28,6 +28,7 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 
 
 TG=$(wak "NR==5" /home/pi/DMR2YSF/TG-YSFList.txt)
+read a
 TG=`expr substr $TG 3 30`
 echo "$TG"
 
