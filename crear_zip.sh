@@ -3,8 +3,6 @@
             cd /home/pi
             sudo mkdir Downloads
             sudo chmod 777 -R Downloads
-            echo "pausa"
-            read a
             cp /home/pi/datos_dvswitch /home/pi/Downloads
             cd /home/pi/MMDVMHost
             cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
