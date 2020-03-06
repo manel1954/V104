@@ -55,6 +55,7 @@ do
 
 sala=`grep -n "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 sala2=`grep "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sala2=`echo "$sala2" | tr -d '[[:space:]]'`
 sala1=`echo "$sala" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $sala1 $buscar` #comprueba el largo incluyendo los dos puntos (:)
