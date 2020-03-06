@@ -26,10 +26,11 @@ echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
 
 
 
-TG=$(awk "NR==5" /home/pi/DMR2YSF/TG-YSFList.txt)
+TG=$(awk "NR==1" /home/pi/DMR2YSF/tg_ysf.txt)
+SALA=$(awk "NR==1" /home/pi/nombre_salas_ysf.txt)
 
-#TG=`expr substr $TG 3 30`
-echo "$TG"
+
+echo "TG: $TG  SALA: $SALA"
 
 
 
@@ -48,7 +49,7 @@ do
 #echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           echo "Ej. para sala de Ader: TGxx;32027"
            	              read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' sala
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
@@ -62,6 +63,7 @@ echo "$sed_sala"
 read a
 
                         sed -i "5c $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sed -i "1c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
                  
 			                 break;;
 			  [nN]* ) echo ""
