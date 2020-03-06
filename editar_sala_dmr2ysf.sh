@@ -54,12 +54,13 @@ do
 			                    [sS]* ) echo ""
 
 sala=`grep -n "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sala=`echo "$sala" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $sala $buscar` #comprueba el largo incluyendo los dos puntos (:)
-#largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
-#numero_linea=`expr substr $fusion 1 $largo_linea` # recoge el numero de linea ejemplo (74)
+largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
+numero_linea=`expr substr $fusion 1 $largo_linea` # recoge el numero de linea ejemplo (74)
 #numero_linea_fusion=`expr $numero_linea - 1` # y le resta uno quedando como: ejemplo (73)
-echo "pausa $largo_linea"
+echo "pausa $sala$numero_linea"
 read a
 
                         sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
