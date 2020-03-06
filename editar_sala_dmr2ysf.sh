@@ -53,25 +53,17 @@ do
                           case $actualizar in
 			                    [sS]* ) echo ""
 
-#sala=`grep -n "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-sala2=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-sala2=`echo "$sala2" | tr -d '[[:space:]]'`
-#sala1=`echo "$sala" | tr -d '[[:space:]]'`
-#buscar=":"
-#largo_linea=`expr index $sala $buscar` #comprueba el largo incluyendo los dos puntos (:)
-#largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
-#numero_linea=`expr substr $sala1 1 $largo_linea` # recoge el numero de linea ejemplo (74)
-#numero_linea_fusion=`expr $numero_linea - 1` # y le resta uno quedando como: ejemplo (73)
+
+sala=`grep "$sala" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sala=`echo "$sala" | tr -d '[[:space:]]'`
 numero_sala=`expr substr $sala2 1 5`
-echo "linea entera: $sala"
-echo ""
-echo "linea entera: $sala1"
-echo "Número de linea: $numero_linea"
+letra=c
+sed_sala=$numero_sala$letra
 echo "Número de sala $numero_sala"
-echo "Número de sala $sala2"
+echo "$sed_sala"
 read a
 
-                        sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
+                        sed -i "$sed_sala $numero_sala" /home/pi/DMR2YSF/TG-YSFList.txt
                  
 			                 break;;
 			  [nN]* ) echo ""
