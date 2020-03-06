@@ -54,7 +54,7 @@ do
 			                    [sS]* ) echo ""
 
 sala=`grep -n "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-echo "pausa"
+echo "pausa $sala"
 read a
 
                         sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
