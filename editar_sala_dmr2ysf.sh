@@ -56,7 +56,7 @@ do
 sala=`grep -n "ES ES ALMERIA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 sala1=`echo "$sala" | tr -d '[[:space:]]'`
 buscar=":"
-largo_linea=`expr index $sala $buscar` #comprueba el largo incluyendo los dos puntos (:)
+largo_linea=`expr index $sala1 $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
 numero_linea=`expr substr $sala1 1 $largo_linea` # recoge el numero de linea ejemplo (74)
 #numero_linea_fusion=`expr $numero_linea - 1` # y le resta uno quedando como: ejemplo (73)
