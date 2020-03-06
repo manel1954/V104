@@ -5,7 +5,7 @@ sudo mkdir Downloads
 sudo chmod 777 -R Downloads
 
             sudo cp /home/pi/datos_dvswitch /home/pi/Downloads
-            sudo cd /home/pi/MMDVMHost
+            cd /home/pi/MMDVMHost
             sudo cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
             sudo cp -f MMDVM.ini /home/pi/Downloads
             sudo cp -f MMDVM.ini_copia /home/pi/Downloads
@@ -23,7 +23,7 @@ sudo chmod 777 -R Downloads
             sudo cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
             sudo cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
             sudo cp -f MMDVMNXDN.ini /home/pi/Downloads
-sleep 5
+            
             cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/Downloads
             cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/Downloads
             cp -f /home/pi/DMR2YSF/DMR2YSF.ini  /home/pi/Downloads
