@@ -11,7 +11,7 @@
             cp -f MMDVM.ini_copia2 /home/pi/Downloads
             cp -f MMDVM.ini_copia3 /home/pi/Downloads
             cp -f MMDVM.ini_original /home/pi/Downloads
-            cp -f MMDVMBM.ini /home/pi/Downloads
+            sudo cp -f MMDVMBM.ini /home/pi/Downloads
             cp -f MMDVMBM.ini_copia /home/pi/Downloads
             cp -f MMDVMBM.ini_copia2 /home/pi/Downloads
             cp -f MMDVMBM.ini_copia3 /home/pi/Downloads      
