@@ -21,53 +21,53 @@ echo -n "${VERDE}"
 echo "   **************************************************************************"
 echo ""
 echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
-TG1=$(awk "NR==1" /home/pi/tg_ysf.txt)
-SALA1=$(awk "NR==1" /home/pi/nombre_salas_ysf.txt)
+TG1=$(awk "NR==1" /home/pi/.local/tg_ysf.txt)
+SALA1=$(awk "NR==1" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG1  SALA: $SALA1"
 
 echo -n "\33[1;36m   2)\33[0m Modificar TG y sala  - \33[1;33m"
-TG2=$(awk "NR==2" /home/pi/tg_ysf.txt)
-SALA2=$(awk "NR==2" /home/pi/nombre_salas_ysf.txt)
+TG2=$(awk "NR==2" /home/pi/.local/tg_ysf.txt)
+SALA2=$(awk "NR==2" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG2  SALA: $SALA2"
 
 echo -n "\33[1;36m   3)\33[0m Modificar TG y sala  - \33[1;33m"
-TG3=$(awk "NR==3" /home/pi/tg_ysf.txt)
-SALA3=$(awk "NR==3" /home/pi/nombre_salas_ysf.txt)
+TG3=$(awk "NR==3" /home/pi/.local/tg_ysf.txt)
+SALA3=$(awk "NR==3" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG3  SALA: $SALA3"
 
 echo -n "\33[1;36m   4)\33[0m Modificar TG y sala  - \33[1;33m"
-TG4=$(awk "NR==4" /home/pi/tg_ysf.txt)
-SALA4=$(awk "NR==4" /home/pi/nombre_salas_ysf.txt)
+TG4=$(awk "NR==4" /home/pi/.local/tg_ysf.txt)
+SALA4=$(awk "NR==4" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG4  SALA: $SALA4"
 
 echo -n "\33[1;36m   5)\33[0m Modificar TG y sala  - \33[1;33m"
-TG5=$(awk "NR==5" /home/pi/tg_ysf.txt)
-SALA5=$(awk "NR==5" /home/pi/nombre_salas_ysf.txt)
+TG5=$(awk "NR==5" /home/pi/.local/tg_ysf.txt)
+SALA5=$(awk "NR==5" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG5  SALA: $SALA5"
 
 echo -n "\33[1;36m   6)\33[0m Modificar TG y sala  - \33[1;33m"
-TG6=$(awk "NR==6" /home/pi/tg_ysf.txt)
-SALA6=$(awk "NR==6" /home/pi/nombre_salas_ysf.txt)
+TG6=$(awk "NR==6" /home/pi/.local/tg_ysf.txt)
+SALA6=$(awk "NR==6" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG6  SALA: $SALA6"
 
 echo -n "\33[1;36m   7)\33[0m Modificar TG y sala  - \33[1;33m"
-TG7=$(awk "NR==7" /home/pi/tg_ysf.txt)
-SALA7=$(awk "NR==7" /home/pi/nombre_salas_ysf.txt)
+TG7=$(awk "NR==7" /home/pi/.local/tg_ysf.txt)
+SALA7=$(awk "NR==7" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG7  SALA: $SALA7"
 
 echo -n "\33[1;36m   8)\33[0m Modificar TG y sala  - \33[1;33m"
-TG8=$(awk "NR==8" /home/pi/tg_ysf.txt)
-SALA8=$(awk "NR==8" /home/pi/nombre_salas_ysf.txt)
+TG8=$(awk "NR==8" /home/pi/.local/tg_ysf.txt)
+SALA8=$(awk "NR==8" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG8  SALA: $SALA8"
 
 echo -n "\33[1;36m   9)\33[0m Modificar TG y sala  - \33[1;33m"
-TG9=$(awk "NR==9" /home/pi/tg_ysf.txt)
-SALA9=$(awk "NR==9" /home/pi/nombre_salas_ysf.txt)
+TG9=$(awk "NR==9" /home/pi/.local/tg_ysf.txt)
+SALA9=$(awk "NR==9" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG9  SALA: $SALA9"
 
 echo -n "\33[1;36m  10)\33[0m Modificar TG y sala  - \33[1;33m"
-TG10=$(awk "NR==10" /home/pi/tg_ysf.txt)
-SALA10=$(awk "NR==10" /home/pi/nombre_salas_ysf.txt)
+TG10=$(awk "NR==10" /home/pi/.local/tg_ysf.txt)
+SALA10=$(awk "NR==10" /home/pi/.local/nombre_salas_ysf.txt)
 echo "TG: $TG10  SALA: $SALA10"
 
 echo ""
@@ -95,8 +95,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "1c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "1c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "1c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
@@ -116,8 +116,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "6c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "2c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "2c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "2c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "2c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -137,8 +137,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "7c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "3c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "3c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "3c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "3c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -158,8 +158,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "8c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "4c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "4c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "4c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "4c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -179,8 +179,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "9c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "5c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "5c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "5c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "5c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -200,8 +200,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "10c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "6c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "6c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "6c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "6c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -221,8 +221,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "11c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "7c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "7c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "7c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "7c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -242,8 +242,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "12c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "8c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "8c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "8c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "8c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -263,8 +263,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "13c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "9c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "9c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "9c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "9c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -284,8 +284,8 @@ do
                           nombre_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$nombre_sala
                           sudo sed -i "14c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "10c $tg" /home/pi/tg_ysf.txt
-                          sudo sed -i "10c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          sudo sed -i "10c $tg" /home/pi/.local/tg_ysf.txt
+                          sudo sed -i "10c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
