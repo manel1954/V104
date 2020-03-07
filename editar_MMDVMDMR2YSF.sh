@@ -1222,7 +1222,9 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""         
-                          lxterminal --geometry=125x30 -e less $usuario/YSFClients/YSFGateway/YSFHosts.txt & sudo geany $usuario/DMR2YSF/TG-YSFList.txt
+                          #lxterminal --geometry=125x30 -e less $usuario/YSFClients/YSFGateway/YSFHosts.txt & sudo geany $usuario/DMR2YSF/TG-YSFList.txt
+                          cd $usuario/$SCRIPTS_version
+                          sudo sh editar_sala_dmr2ysf.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
