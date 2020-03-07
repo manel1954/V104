@@ -1224,7 +1224,7 @@ do
                           [sS]* ) echo ""         
                           #lxterminal --geometry=125x30 -e less $usuario/YSFClients/YSFGateway/YSFHosts.txt & sudo geany $usuario/DMR2YSF/TG-YSFList.txt
                           cd $usuario/$SCRIPTS_version
-                          lxterminal --geometry=80x50 -e sudo sh editar_sala_dmr2ysf.sh
+                          lxterminal --geometry=80x30 -e sudo sh editar_sala_dmr2ysf.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
