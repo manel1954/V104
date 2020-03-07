@@ -117,7 +117,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sudo geany /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo geany /home/pi/DMR2YSF/TG-YSFList.txt &
                           break;;
                           [nN]* ) echo ""
                           break;;
