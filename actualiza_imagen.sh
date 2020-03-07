@@ -8,12 +8,12 @@ AUTOARRANQUE=$AUTOARRANQUE$SCRIPTS_version
 
 
 #Provisional cuando se suba la imagen quitar este bloque
-if [ -f /home/pi/.local/nombre_sala_ysf.txt ];
+if [ -f /home/pi/.local/nombre_salas_ysf.txt ];
 then
 echo "Sí, sí existe."
 else
 cd $usuario/$SCRIPTS_version
-cp nombre_sala_ysf.txt /home/pi/.local
+cp nombre_salas_ysf.txt /home/pi/.local
 fi
 
 if [ -f /home/pi/.local/tg_ysf.txt ];
@@ -21,7 +21,7 @@ then
 echo "Sí, sí existe."
 else
 cd $usuario/$SCRIPTS_version
-cp nombre_salas_ysf.txt /home/pi/.local
+cp tg_ysf.txt /home/pi/.local
 fi
 #fin Provisional cuando se suba la imagen quitar este bloque
 
