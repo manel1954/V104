@@ -72,12 +72,12 @@ echo "TG: $TG10  SALA: $SALA10"
 
 echo ""
 echo "${BLANCO}"
-echo "   11) Abrir listado de salas YSF para ver su nombre"
-echo "   12) Cerrar listado de salas YSF"
+echo "  11) Abrir listado de salas YSF para ver su nombre"
+echo "  12) Cerrar listado de salas YSF"
 echo ""
-echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo "  ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
-echo -n "\33[1;36m   Elige una opción: " 
+echo -n "\33[1;36m  Elige una opción: " 
 read escoger_menu
 
 case $escoger_menu in
