@@ -14,7 +14,7 @@ AMARILLO="\033[1;33m"
 echo "${VERDE}"
 echo "   **************************************************************************"
 echo -n "${CIAN}"
-echo "       EDITAR TG Y NÚMERO DE SALA PARA HABLAR POR ESA SALA YSF                  "
+echo "            EDITAR TG Y NÚMERO DE SALA PARA HABLAR POR ESA SALA YSF             "
 echo -n "${ROJO}"
 echo "                             $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
@@ -65,7 +65,7 @@ TG9=$(awk "NR==9" /home/pi/tg_ysf.txt)
 SALA9=$(awk "NR==9" /home/pi/nombre_salas_ysf.txt)
 echo "TG: $TG9  SALA: $SALA9"
 
-echo -n "\33[1;36m   10)\33[0m Modificar TG y sala  - \33[1;33m"
+echo -n "\33[1;36m  10)\33[0m Modificar TG y sala  - \33[1;33m"
 TG10=$(awk "NR==10" /home/pi/tg_ysf.txt)
 SALA10=$(awk "NR==10" /home/pi/nombre_salas_ysf.txt)
 echo "TG: $TG10  SALA: $SALA10"
