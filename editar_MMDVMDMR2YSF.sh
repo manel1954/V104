@@ -335,7 +335,7 @@ echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
 echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
 
 echo ""
-echo "\33[1;36m  30)${AMARILLO} Editar listado salas TG-YSFList \33[1;33m"
+echo "\33[1;36m  30)${AMARILLO} Editor memorias tg-sala \33[1;33m"
 echo ""
 echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
