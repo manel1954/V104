@@ -123,6 +123,19 @@ do
                           break;;
 esac
 done;;
+12) echo ""
+while true
+do
+                        
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sudo killall geany
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   **************************************************"
