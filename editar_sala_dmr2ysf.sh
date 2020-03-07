@@ -77,7 +77,7 @@ echo "${BLANCO}"
 echo "  ${CIAN}11) ${BLANCO}Abrir listado de salas YSF para ver su nombre"
 echo "  ${CIAN}12) ${BLANCO}Cerrar listado de salas YSF"
 echo ""
-echo "  ${ROJO}0) Salir "
+echo "   ${ROJO}0) Salir "
 echo ""
 echo -n "\33[1;36m  Elige una opción: " 
 read escoger_menu
