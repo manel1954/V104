@@ -35,6 +35,40 @@ TG3=$(awk "NR==3" /home/pi/tg_ysf.txt)
 SALA3=$(awk "NR==3" /home/pi/nombre_salas_ysf.txt)
 echo "TG: $TG3  SALA: $SALA3"
 
+echo -n "\33[1;36m   4)\33[0m Modificar TG y sala  - \33[1;33m"
+TG4=$(awk "NR==4" /home/pi/tg_ysf.txt)
+SALA4=$(awk "NR==4" /home/pi/nombre_salas_ysf.txt)
+echo "TG: $TG4  SALA: $SALA4"
+
+echo -n "\33[1;36m   5)\33[0m Modificar TG y sala  - \33[1;33m"
+TG5=$(awk "NR==5" /home/pi/tg_ysf.txt)
+SALA5=$(awk "NR==5" /home/pi/nombre_salas_ysf.txt)
+echo "TG: $TG5  SALA: $SALA5"
+
+echo -n "\33[1;36m   6)\33[0m Modificar TG y sala  - \33[1;33m"
+TG6=$(awk "NR==6" /home/pi/tg_ysf.txt)
+SALA6=$(awk "NR==6" /home/pi/nombre_salas_ysf.txt)
+echo "TG: $TG6  SALA: $SALA6"
+
+echo -n "\33[1;36m   7)\33[0m Modificar TG y sala  - \33[1;33m"
+TG7=$(awk "NR==7" /home/pi/tg_ysf.txt)
+SALA7=$(awk "NR==7" /home/pi/nombre_salas_ysf.txt)
+echo "TG: $TG7  SALA: $SALA7"
+
+echo -n "\33[1;36m   8)\33[0m Modificar TG y sala  - \33[1;33m"
+TG8=$(awk "NR==8" /home/pi/tg_ysf.txt)
+SALA8=$(awk "NR==8" /home/pi/nombre_salas_ysf.txt)
+echo "TG: $TG8  SALA: $SALA8"
+
+echo -n "\33[1;36m   9)\33[0m Modificar TG y sala  - \33[1;33m"
+TG9=$(awk "NR==9" /home/pi/tg_ysf.txt)
+SALA9=$(awk "NR==9" /home/pi/nombre_salas_ysf.txt)
+echo "TG: $TG9  SALA: $SALA9"
+
+echo -n "\33[1;36m   10)\33[0m Modificar TG y sala  - \33[1;33m"
+TG10=$(awk "NR==10" /home/pi/tg_ysf.txt)
+SALA10=$(awk "NR==10" /home/pi/nombre_salas_ysf.txt)
+echo "TG: $TG10  SALA: $SALA10"
 
 echo ""
 echo "${BLANCO}"
@@ -50,7 +84,7 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-           	              read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
+           	              read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
                           read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           actualizar=S 
                           case $actualizar in
@@ -71,7 +105,7 @@ done;;
 2) echo ""
 while true
 do
-                          read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
                           read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           actualizar=S 
                           case $actualizar in
@@ -92,7 +126,7 @@ done;;
 3) echo ""
 while true
 do
-                          read -p 'Introduce TG a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
                           read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           actualizar=S 
                           case $actualizar in
@@ -105,6 +139,153 @@ do
                           sudo sed -i "7c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "3c $tg" /home/pi/tg_ysf.txt
                           sudo sed -i "3c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+4) echo ""
+while true
+do
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "8c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "4c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "4c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+5) echo ""
+while true
+do
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "9c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "5c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "5c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+6) echo ""
+while true
+do
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "10c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "6c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "6c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+7) echo ""
+while true
+do
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "11c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "7c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "7c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+8) echo ""
+while true
+do
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "12c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "8c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "8c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+9) echo ""
+while true
+do
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "13c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "9c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "9c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+10) echo ""
+while true
+do
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
+                          nombre_sala=`expr substr $sala 1 5`
+                          listsala=$tg";"$nombre_sala
+                          sudo sed -i "14c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                          sudo sed -i "10c $tg" /home/pi/tg_ysf.txt
+                          sudo sed -i "10c $NOMBRE_SALA" /home/pi/nombre_salas_ysf.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
