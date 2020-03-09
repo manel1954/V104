@@ -337,7 +337,7 @@ echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
 echo ""
 echo "\33[1;36m  30)${AMARILLO} Editor memorias TG DMR - SALA YSF\33[1;33m"
 echo ""
-echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo "   ${ROJO}0) Salir"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu

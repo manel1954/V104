@@ -27,7 +27,7 @@ echo -n "\33[1;36m   3)\33[0m Modificar Baut rate      - \33[1;33m"
 var1= sed -n '3p'  $usuario/ambe_server.ini
 
 echo ""
-echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo "   ${ROJO}0) Salir"
 echo ""
 
 echo -n "\33[1;36m   Elige una opción: " 

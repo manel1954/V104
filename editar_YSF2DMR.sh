@@ -184,7 +184,7 @@ echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero YSF2DMR.ini para hacer cualquier cambio\33[1;33m"
 
 echo ""
-echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo "   ${ROJO}0) Salir"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu

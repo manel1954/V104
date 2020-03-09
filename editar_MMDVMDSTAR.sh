@@ -389,7 +389,7 @@ echo ""
 echo "${CIAN}  35)\33[1;31m Recuperar el fichero original MMDVM.ini${AMARILLO}"
 
 echo ""
-echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo "   ${ROJO}0) Salir"
 echo ""
 echo -n "${CIAN}   Elige una opción: " 
 read escoger_menu
