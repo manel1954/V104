@@ -427,7 +427,7 @@ echo "   *                                                                  *"
 echo "   *                         CERRANDO SCRIPT                          *"
 echo "   *                                                                  *"
 echo "   ********************************************************************"
-sleep 1
+sleep 2
 clear
 exit;;	
 esac
