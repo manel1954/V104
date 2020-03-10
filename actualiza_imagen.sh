@@ -15,7 +15,7 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   *************************************************************************"
 echo "   *                     ACTUALIZANDO POSIBLES CAMBIOS                     *"
-echo "   *                         EN LA IMAGEN ADER ${AMARILLO}$SCRIPTS_version${VERDE}                         *"
+echo "   *                         EN LA IMAGEN ADER ${AMARILLO}$SCRIPTS_version${VERDE}                        *"
 echo "   *************************************************************************"
 sleep 2
 #Actualiza reflectores
@@ -26,6 +26,7 @@ sleep 2
                         sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
+                        echo "   "
                         git pull
                         sleep 3
 
