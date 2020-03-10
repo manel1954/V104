@@ -351,16 +351,6 @@ clear
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
 
-echo "${ROJO}"
-echo "   *********************************************************"
-echo "   * ATENCIÒN!!! Si estás utilizando la Raspberry pi 3 B+  *"
-echo "   * Dicha máquina tiene los puertos USB de alta velocidad *"
-echo "   * por lo que tendrás que utilizar un ladrón de USB      *"
-echo "   * para poder rebajar la velocidad de los puertos USB    *"
-echo "   * y así poder grabar los pinchos sin ningun problema    *"
-echo "   *********************************************************"
-echo "${VERDE}"
-
 echo "${AMARILLO}"
 echo "   *********************************************************************"
 echo "   * Haz clik en el icono donde tengas conectado el pincho             *"
