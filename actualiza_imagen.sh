@@ -18,6 +18,7 @@ echo "   *                     ACTUALIZANDO POSIBLES CAMBIOS                    
 echo "   *                         EN LA IMAGEN ADER ${AMARILLO}$SCRIPTS_version${VERDE}                        *"
 echo "   *************************************************************************"
 sleep 2
+echo "${BLANCO}"
 #Actualiza reflectores
                         cd /usr/local/share/opendv/
                         sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
