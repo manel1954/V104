@@ -18,6 +18,7 @@ echo "   *                     ACTUALIZANDO POSIBLES CAMBIOS                    
 echo "   *                         EN LA IMAGEN ADER ${AMARILLO}$SCRIPTS_version${VERDE}                        *"
 echo "   *************************************************************************"
 echo "${CIAN}"
+
 sleep 2
 #Actualiza reflectores
                         cd /usr/local/share/opendv/
