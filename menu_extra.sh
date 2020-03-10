@@ -568,6 +568,7 @@ cp * $usuario/Desktop
 cd $usuario/$SCRIPTS_version
 git pull
 
+cd /home/pi
 sh colocar_iconos.sh
 
 echo ""
