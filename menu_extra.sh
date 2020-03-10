@@ -392,7 +392,14 @@ echo ""
                         sudo rm DMR2YSF.desktop
                         sudo rm DMR2NXDN.desktop
                         sudo rm NXDN.desktop
-
+clear
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
 echo "   ************************************************************************"
 echo "                  SE ESTÁ REALIZANDO LA RESTAURACIÓN   "
 echo "   ************************************************************************"
