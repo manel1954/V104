@@ -40,8 +40,9 @@ echo "${CIAN}  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
 echo ""
 echo "${CIAN}  11)${BLANCO} RESET (RESTAURA IMAGEN DE FABRICA)"
 echo ""
-echo "   ${ROJO}0) Salir"echo ""
-echo -n "\33[1;36m  Elige una opción: " 
+echo "   ${ROJO}0) Salir"
+echo ""
+echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -383,7 +384,7 @@ while true
 do
 clear
 echo "${ROJO}"
-echo "   ****************************************************"
+echo "   *****************************************************************************"
 echo "   *                                                  *"
 echo "   *       ESTO RESTAURARÁ LA IMAGE DE FABRICA        *"
 echo "   *         TAL CUAL LA GRABASTES EN SU DÍA          *"
@@ -391,7 +392,7 @@ echo "   *                                                  *"
 echo "   ****************************************************"
 echo ""
                     echo "${VERDE}"                                               
-                    read -p ' QUIERES SEGUIR S/N: ' seguir
+                    read -p '   QUIERES SEGUIR S/N: ' seguir
                     case $seguir in
                     [sS]* ) echo ""
                     echo ""
