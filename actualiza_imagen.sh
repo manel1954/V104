@@ -19,7 +19,7 @@ echo "   *                         EN LA IMAGEN ADER ${AMARILLO}$SCRIPTS_version
 echo "   *************************************************************************"
 sleep 2
 echo "${CIAN}"
-#Actualiza reflectores 
+#Actualiza reflectores
                         cd /usr/local/share/opendv/
                         sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
                         sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
