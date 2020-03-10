@@ -372,7 +372,26 @@ echo ""
                     cp /home/pi/.local/RESTAURAR/info_panel_control.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/status.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/autoarranque.ini /home/pi
-
+                        
+                        cd /home/pi/.config/autostart
+                        sudo rm IRCDDB.desktop
+                        sudo rm BM.desktop
+                        sudo rm BLUEDV.desktop
+                        sudo rm YSF.desktop
+                        sudo rm DV4MINI.desktop
+                        sudo rm RADIO.desktop
+                        sudo rm DMRPLUS.desktop
+                        sudo rm LIBRE.desktop
+                        sudo rm SVXLINK.desktop
+                        sudo rm DSTARSOLO_05.desktop
+                        sudo rm FUSIONSOLO.desktop
+                        sudo rm DVRPTR.desktop
+                        sudo rm YSF2DMR.desktop
+                        sudo rm dstarrepeater.desktop
+                        sudo rm AMBE_SERVER.desktop
+                        sudo rm DMR2YSF.desktop
+                        sudo rm DMR2NXDN.desktop
+                        sudo rm NXDN.desktop
 
 echo "   ************************************************************************"
 echo "                  SE ESTÁ REALIZANDO LA RESTAURACIÓN   "
