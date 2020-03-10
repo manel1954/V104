@@ -28,7 +28,7 @@ echo -n "${BLANCO}   "
 tac $(ls -1rt /home/pi/MMDVMHost/MMDVM-*.log | tail -n1 ) | grep "protocol" -m 1 | sed -n 's/description: /&\n/;s/.*\n//p'
 #echo "La versión se actualiza al abrir de nuevo MMMDVMHost"
 echo ""
-echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
+echo "   ${ROJO}0) Salir"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
