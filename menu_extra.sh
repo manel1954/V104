@@ -37,7 +37,7 @@ echo ""
 echo "${CIAN}   8)${AMARILLO} Instalar Anydesk"
 echo "${CIAN}   9)${BLANCO} Grabar pantalla Nextion"
 echo "${CIAN}  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
-echi
+echo ""
 echo "${CIAN}  11)${BLANCO} RESET (RESTAURA IMAGEN DE FABRICA)"
 echo ""
 echo "\33[1;36m  12)\33[1;31m Reiniciar Sistema"
