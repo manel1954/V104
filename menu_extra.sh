@@ -558,6 +558,11 @@ sudo sed -i "18c $reflector_dstar" /etc/ircddbgateway
 cd $usuario/$SCRIPTS_version/Desktop
 cp * $usuario/Desktop
 
+cd $usuario/$SCRIPTS_version
+git pull
+
+sh colocar_iconos.sh
+
 echo ""
 echo "${AMARILLO}"
 echo "   ************************************************************************"
