@@ -19,6 +19,7 @@ echo "   *                         EN LA IMAGEN ADER ${AMARILLO}$SCRIPTS_version
 echo "   *************************************************************************"
 sleep 2
 #Actualiza reflectores
+                        echo "   "
                         cd /usr/local/share/opendv/
                         sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
                         sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
@@ -26,7 +27,6 @@ sleep 2
                         sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
-                        echo "   "
                         git pull
                         sleep 3
 
