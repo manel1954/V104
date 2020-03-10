@@ -535,6 +535,8 @@ sudo sed -i "74c $selfcare" /opt/MMDVM_Bridge/brandmeister_esp.ini
 
 reflector_dstar=$(awk "NR==15" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "18c $reflector_dstar" /etc/ircddbgateway
+echo ""
+echo "${AMARILLO}"
 echo "   ************************************************************************"
 echo "${ROJO}"
 echo "                        REINICIANDO EL SISTEMA   "
