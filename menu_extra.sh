@@ -386,7 +386,7 @@ clear
 echo "${ROJO}"
 echo "   ************************************************************************"
 echo "   *                                                                      *"
-echo "   *                 ESTO RESTAURARÁ LA IMAGEN DE FABRICA                 *"
+echo "   *                   RESTAURAR LA IMAGEN DE FABRICA                     *"
 echo "   *                   TAL CUAL LA GRABASTES EN SU DÍA                    *"
 echo "   *                                                                      *"
 echo "   ************************************************************************"
