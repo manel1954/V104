@@ -40,9 +40,8 @@ echo "${CIAN}  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
 echo ""
 echo "${CIAN}  11)${BLANCO} RESET (RESTAURA IMAGEN DE FABRICA)"
 echo ""
-echo "\33[1;36m  12)\33[1;31m Reiniciar Sistema"
-echo ""
-echo -n "\33[1;36m   Elige una opción: " 
+echo "   ${ROJO}0) Salir"echo ""
+echo -n "\33[1;36m  Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -379,6 +378,31 @@ exit;
 break;;
 esac
 done;;
+11) echo ""
+while true
+do
+clear
+echo "${ROJO}"
+echo "   ****************************************************"
+echo "   *                                                  *"
+echo "   *       ESTO RESTAURARÁ LA IMAGE DE FABRICA        *"
+echo "   *         TAL CUAL LA GRABASTES EN SU DÍA          *"
+echo "   *                                                  *"
+echo "   ****************************************************"
+echo ""
+                    echo "${VERDE}"                                               
+                    read -p ' QUIERES SEGUIR S/N: ' seguir
+                    case $seguir in
+                    [sS]* ) echo ""
+                    echo ""
+                    break;;
+                    [nN]* ) 
+                    echo ""
+
+clear
+break;;
+esac
+done;;
 a) echo ""
 while true
 do
@@ -402,70 +426,6 @@ clear
 clear
 exit;
 break;;
-esac
-done;;
-11bloqueado) echo ""
-while true
-do
-clear
-                        ejecutar1=S
-                        case $ejecutar1 in
-                        [sS]* ) echo ""
-                        echo ">>> Actualizar YCS Para Conectar Por Protocolo FCS >>>"
-                        sudo rm -R /home/pi/YSFClients
-                        cd /home/pi
-                        git clone https://github.com/g4klx/YSFClients
-                        cd /home/pi/YSFClients/YSFGateway
-                        make
-                        sudo cp /home/pi/V104/FCSRooms.txt /home/pi/YSFClients/YSFGateway                                                             
-                        clear                                                              
-                        exit;
-                        break;;
-                        [nN]* ) echo ""
-                        clear
-                        exit;
-                        break;;
-esac
-done;;
-11) echo ""
-while true
-do
-clear
-echo " \33[1;31m  ************************************************************"
-echo "   *                                                          *"
-echo "   *     OJO!!   SE VA A REINICIAR EL SISTEMA                 *"
-echo "   *                                                          *"
-echo "   ************************************************************"
-echo ""
-                read -p '   Estás seguro de querer reiniciar ? Si/No: ' ejecutar13
-                    case $ejecutar13 in
-                        [sS]* ) echo ""
-                        echo "ok >>>>>"
-                        sudo reboot
-                        echo ""
-                        echo "Ok, se ha ejecutado correctamente"
-                        echo ""
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-b) echo ""
-while true
-do
-clear                     
-                        instalarsi=S
-                        case $instalarsi in
-                        [sS]* ) echo ""
-                        clear
-                        #lxterminal --geometry=125x30 -e less /home/pi/YSFClients/YSFGateway/YSFHosts.txt &
-                        cd /home/pi/$SCRIPTS_version/
-                        sh editar_sala_dmr2ysf.sh                  
-                        break;;
-                        [nN]* ) echo ""
-                        clear
-                        exit;
-                        break;;
 esac
 done;;
 0) echo ""
