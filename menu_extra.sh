@@ -384,12 +384,12 @@ while true
 do
 clear
 echo "${ROJO}"
-echo "   *****************************************************************************"
-echo "   *                                                  *"
-echo "   *       ESTO RESTAURARÁ LA IMAGE DE FABRICA        *"
-echo "   *         TAL CUAL LA GRABASTES EN SU DÍA          *"
-echo "   *                                                  *"
-echo "   ****************************************************"
+echo "   ************************************************************************"
+echo "   *                                                                      *"
+echo "   *                 ESTO RESTAURARÁ LA IMAGE DE FABRICA                  *"
+echo "   *                   TAL CUAL LA GRABASTES EN SU DÍA                    *"
+echo "   *                                                                      *"
+echo "   ************************************************************************"
 echo ""
                     echo "${VERDE}"                                               
                     read -p '   QUIERES SEGUIR S/N: ' seguir
