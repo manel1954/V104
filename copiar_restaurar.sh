@@ -190,7 +190,7 @@ echo "*********************************************"
 echo "*     SE ESTÁ REALIZANDO LA RESTAURACIÓN    *"
 echo "*********************************************"
 sleep 3
-            cd /home/pi/Downloads
+            cd /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f TODOS_LOS_INIS.ini /home/pi/MMDVMHost
             cp -f MMDVM.ini /home/pi/MMDVMHost
             cp -f MMDVM.ini_copia /home/pi/MMDVMHost
