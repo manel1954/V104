@@ -164,6 +164,7 @@ sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
 sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
 
 cp -r /home/pi/Downloads /home/pi/.local/COPIA_SEGURIDAD
+sudo chmod 777 -R /home/pi/.local/COPIA_SEGURIDAD
 
                   echo ""
                   echo "Ok, se ha ejecutado correctamente"
