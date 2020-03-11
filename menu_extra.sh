@@ -453,7 +453,8 @@ sleep 3
 
             sudo cp ircddbgateway /usr/local/etc/opendv
             sudo cp dstarrepeater /usr/local/etc/opendv
-
+            echo "Pausado"
+read A
             cp info_panel_control.ini /home/pi
 
 # Restaura todos los datos de Dvswitch
