@@ -367,7 +367,7 @@ echo ""
                     read -p '   QUIERES SEGUIR S/N: ' seguir
                     case $seguir in
                     [sS]* ) echo ""
-sudo rm -R /home/pi/Downloads
+sudo rm -r /home/pi/Downloads
 cd /home/pi
 
                     cp -R /home/pi/.local/RESTAURAR/Downloads /home/pi
