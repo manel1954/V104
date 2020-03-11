@@ -443,18 +443,18 @@ sleep 3
             cp -f NXDNGateway.ini /home/pi/NXDNClients/NXDNGateway
             cp -f DMR2YSF.ini /home/pi/DMR2YSF
 
-            sudo cp -f YSFGateway.ini /home/pi/YSFClients/YSFGateway/
+            sudo cp -f YSFGateway.ini /home/pi/YSFClients/YSFGateway
 
-            sudo cp -f BlueDVconfig.ini /home/pi/bluedv/
+            sudo cp -f BlueDVconfig.ini /home/pi/bluedv
 
-            sudo cp -f svxlink.conf /usr/local/etc/svxlink/
+            sudo cp -f svxlink.conf /usr/local/etc/svxlink
             
-            sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
+            sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d
 
-            sudo cp ircddbgateway /usr/local/etc/opendv/
-            sudo cp dstarrepeater /usr/local/etc/opendv/
+            sudo cp ircddbgateway /usr/local/etc/opendv
+            sudo cp dstarrepeater /usr/local/etc/opendv
 
-            cp info_panel_control.ini /home/pi/
+            cp info_panel_control.ini /home/pi
 
 # Restaura todos los datos de Dvswitch
 indicativo=$(awk "NR==1" /home/pi/Downloads/datos_dvswitch)          
