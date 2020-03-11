@@ -372,6 +372,8 @@ echo ""
                     cp /home/pi/.local/RESTAURAR/info_panel_control.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/status.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/autoarranque.ini /home/pi
+                    cp /home/pi/.local/RESTAURAR/tg_ysf.txt /home/pi
+                    cp /home/pi/.local/RESTAURAR/nombre_salas_ysf.txt /home/pi
                         
                         cd /home/pi/.config/autostart
                         sudo rm IRCDDB.desktop
@@ -574,6 +576,12 @@ cd /home/pi
 sh colocar_iconos.sh
 
 sudo rm -rf ~/.local/share/Trash/*
+
+sudo rm /var/www/html/upload/files/copia.tar.gz
+
+sudo rm .bash_history
+
+
 
 echo ""
 echo "${AMARILLO}"
