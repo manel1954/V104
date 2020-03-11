@@ -367,6 +367,9 @@ echo ""
                     read -p '   QUIERES SEGUIR S/N: ' seguir
                     case $seguir in
                     [sS]* ) echo ""
+sudo rm -R /home/pi/Downloads
+cd /home/pi
+mkdir Downloads
                     cp /home/pi/.local/RESTAURAR/Downloads/*.* /home/pi/Downloads
                     cp /home/pi/.local/RESTAURAR/INFO_RXF /home/pi
                     cp /home/pi/.local/RESTAURAR/info_panel_control.ini /home/pi
@@ -374,7 +377,8 @@ echo ""
                     cp /home/pi/.local/RESTAURAR/autoarranque.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/tg_ysf.txt /home/pi
                     cp /home/pi/.local/RESTAURAR/nombre_salas_ysf.txt /home/pi
-                        
+ echo "pausado 1"  
+ read a                     
                         cd /home/pi/.config/autostart
                         sudo rm IRCDDB.desktop
                         sudo rm BM.desktop
