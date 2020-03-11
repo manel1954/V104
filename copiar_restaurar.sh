@@ -163,7 +163,7 @@ sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
 sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
 sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
 
-cp -r /home/pi/Downloads /home/pi/.local/OPIA_SEGURIDAD
+cp -r /home/pi/Downloads /home/pi/.local/COPIA_SEGURIDAD
 
                   echo ""
                   echo "Ok, se ha ejecutado correctamente"
