@@ -367,18 +367,16 @@ echo ""
                     read -p '   QUIERES SEGUIR S/N: ' seguir
                     case $seguir in
                     [sS]* ) echo ""
-sudo rm -r /home/pi/Downloads
-cd /home/pi
-
+                    sudo rm -r /home/pi/Downloads
+                    cd /home/pi
                     cp -R /home/pi/.local/RESTAURAR/Downloads /home/pi
                     cp /home/pi/.local/RESTAURAR/INFO_RXF /home/pi
                     cp /home/pi/.local/RESTAURAR/info_panel_control.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/status.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/autoarranque.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/tg_ysf.txt /home/pi
-                    cp /home/pi/.local/RESTAURAR/nombre_salas_ysf.txt /home/pi
- echo "pausado 1"  
- read a                     
+                    cp /home/pi/.local/RESTAURAR/nombre_salas_ysf.txt /home/pi                       
+                        
                         cd /home/pi/.config/autostart
                         sudo rm IRCDDB.desktop
                         sudo rm BM.desktop
@@ -457,8 +455,7 @@ sleep 3
 
             sudo cp ircddbgateway /usr/local/etc/opendv
             sudo cp dstarrepeater /usr/local/etc/opendv
-            echo "Pausado"
-read A
+
             cp info_panel_control.ini /home/pi
 
 # Restaura todos los datos de Dvswitch
