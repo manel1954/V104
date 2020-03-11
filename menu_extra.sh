@@ -584,7 +584,7 @@ git pull
 cd /home/pi
 sh colocar_iconos.sh
 
-sudo rm -rf ~/.local/share/Trash/*
+sudo rm -rf /home/pi/.local/share/Trash/*
 
 sudo rm /var/www/html/upload/files/copia.tar.gz
 
