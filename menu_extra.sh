@@ -588,8 +588,7 @@ sudo rm /var/www/html/upload/files/copia.tar.gz
 
 sudo rm .bash_history
 
-
-
+clear
 echo ""
 echo "${AMARILLO}"
 echo "   ************************************************************************"
