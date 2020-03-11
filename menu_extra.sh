@@ -369,8 +369,8 @@ echo ""
                     [sS]* ) echo ""
 sudo rm -R /home/pi/Downloads
 cd /home/pi
-mkdir Downloads
-                    cp /home/pi/.local/RESTAURAR/Downloads/*.* /home/pi/Downloads
+
+                    cp -R /home/pi/.local/RESTAURAR/Downloads /home/pi
                     cp /home/pi/.local/RESTAURAR/INFO_RXF /home/pi
                     cp /home/pi/.local/RESTAURAR/info_panel_control.ini /home/pi
                     cp /home/pi/.local/RESTAURAR/status.ini /home/pi
