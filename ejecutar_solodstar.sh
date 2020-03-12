@@ -12,6 +12,7 @@ sudo systemctl stop mmdvm_bridge.service
 sudo systemctl stop nxdngateway.service
 else
 echo ""
+sudo systemctl restart mmdvm_bridge.service
 fi
 
 
