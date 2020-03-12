@@ -10,7 +10,7 @@ sudo cp Abrir_solodstar.desktop /home/pi
 sleep 1
 
 sed -i "6c Exec=sh -c 'cd /home/pi/V104/; sudo sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
-sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR.png" /home/pi/Abrir_solodstar.desktop
+sed -i "7c Icon=/home/pi/$SCRIPTS_version/SxOLO_D-STAR.png" /home/pi/Abrir_solodstar.desktop
 sed -i "11c Name[es_ES]=xAbrir solo D-STAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c OLODSTAR=OFF" /home/pi/status.ini
 sleep 1
