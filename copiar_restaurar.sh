@@ -75,7 +75,7 @@ clear
             #solo Dstar y solo Fusion
             cp -f MMDVMDSTAR.ini /home/pi/Downloads
             cp -f MMDVMFUSION.ini /home/pi/Downloads
-            #fin  Dstar y solo Fusion 
+            #fin  Dstar y solo Fusion  
 
             cd  /home/pi/YSF2DMR
             cp -f YSF2DMR.ini /home/pi/Downloads
@@ -86,6 +86,10 @@ clear
 
             cd  /home/pi/DMR2YSF
             cp -f TG-YSFList.txt /home/pi/Downloads
+            
+            cd /home/pi/.local
+            cp -f tg_ysf.txt /home/pi/Downloads
+            cp -f nombre_salas.ysf.txt /home/pi/Downloads
 
             cd  /home/pi/YSFClients/YSFGateway/
             cp -f YSFGateway.ini /home/pi/Downloads
@@ -219,6 +223,9 @@ sleep 3
             cp -f YSF2DMR.ini_copia_04 /home/pi/YSF2DMR
             
             cp -f TG-YSFList.txt /home/pi/DMR2YSF
+          
+            cp -f tg_ysf.txt /home/pi/.local
+            cp -f nombre_salas.ysf.txt /home/pi/.local
 
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
