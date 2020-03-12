@@ -40,7 +40,7 @@ sudo cp /home/pi/RXF_DSTAR.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/RXF_DSTAR.desktop                       
 sed -i "5c $frecuencia" /home/pi/INFO_RXF
-# FIN Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF
+# FIN Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF 
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
@@ -53,6 +53,25 @@ cd /home/pi
 sudo cp Abrir_solodstar.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_solodstar.desktop
+
+
+
+cd /home/pi/Desktop
+sudo cp Abrir_ircDDB.desktop /home/pi
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_ircDDB.sh'" /home/pi/Abrir_ircDDB.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_IRCDDB_ON.png" /home/pi/Abrir_ircDDB.desktop
+sed -i "10c Name[es_ES]=Cerrar ircDDB" /home/pi/Abrir_ircDDB.desktop
+sed -i "1c D-STAR=ON" /home/pi/status.ini
+cd /home/pi
+sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_ircDDB.desktop
+
+
+
+
+
+
 
 # Pone Enable=0 en [Dstar Network]
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
