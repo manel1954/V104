@@ -89,7 +89,7 @@ clear
             
             cd /home/pi/.local
             cp -f tg_ysf.txt /home/pi/Downloads
-            cp -f nombre_salas.ysf.txt /home/pi/Downloads
+            cp -f nombre_salas_ysf.txt /home/pi/Downloads
 
             cd  /home/pi/YSFClients/YSFGateway/
             cp -f YSFGateway.ini /home/pi/Downloads
@@ -225,7 +225,7 @@ sleep 3
             cp -f TG-YSFList.txt /home/pi/DMR2YSF
           
             cp -f tg_ysf.txt /home/pi/.local
-            cp -f nombre_salas.ysf.txt /home/pi/.local
+            cp -f nombre_salas_ysf.txt /home/pi/.local
 
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
