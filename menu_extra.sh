@@ -235,8 +235,8 @@ clear
 						echo "\33[1;33m" #amarillo
 			            echo "PEGA LA MAC DE TU BLUETOOTH aquí y pulsa Enter"	          		            
 			            read mac
-						sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sudo sh actualizar_02_07_06.sh;sudo rfcomm bind /dev/rfcomm1 $mac'" /home/pi/.config/autostart/actualizar.desktop
-						clear
+					    #sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sudo sh actualizar_02_07_06.sh;sudo rfcomm bind /dev/rfcomm1 $mac'" /home/pi/.config/autostart/actualizar.desktop
+                        sudo sed -i "3c sudo rfcomm bind /dev/rfcomm1 $mac" /home/pi/.local/bluetooth.shclear
 						echo ""
 						echo ""
 						echo ""
