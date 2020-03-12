@@ -55,8 +55,6 @@ sudo cp Abrir_solodstar.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_solodstar.desktop
 
-
-
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDB.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_ircDDB.sh'" /home/pi/Abrir_ircDDB.desktop
@@ -67,12 +65,6 @@ cd /home/pi
 sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_ircDDB.desktop
-
-
-
-
-
-
 
 # Pone Enable=0 en [Dstar Network]
 sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
@@ -88,3 +80,14 @@ sleep 2
 cd /home/pi/MMDVMHost
 sudo ircddbgateway -gui & sudo ./MMDVMDSTAR MMDVMDSTAR.ini
 
+# Cierra el icono Abrir Solo Dstar si no hay conexión 
+#cd /home/pi/Desktop
+#sudo cp Abrir_solodstar.desktop /home/pi
+#sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=80x15 -e sudo sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
+#sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR.png" /home/pi/Abrir_solodstar.desktop
+#sed -i "11c Name[es_ES]=Abrir solo D-STAR" /home/pi/Abrir_solodstar.desktop
+#sed -i "13c SOLODSTAR=ON" /home/pi/status.ini
+#cd /home/pi
+#sudo cp Abrir_solodstar.desktop /home/pi/Desktop
+#sleep 1
+#sudo rm /home/pi/Abrir_solodstar.desktop
