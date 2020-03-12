@@ -83,7 +83,7 @@ $tg = " TG: " . substr($tg, 13, 10);
 
 
     <link rel="shortcut icon" href="imagenes/favicon.png">
-<title>Panel Ea3eiz</title>
+<title>Panel Control</title>
 
             <link rel="stylesheet" href="css/bootstrap.min.css" >
             <link rel="stylesheet" href="css/custom.css" >
