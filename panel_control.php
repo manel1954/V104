@@ -130,22 +130,10 @@ $tg = " TG: " . substr($tg, 13, 10);
                 </div>
 
 <!-- ============================================================================================= -->
-
-    <div class="row">
- 
-<div class="col-md-4"></div>
-
-            <div class="col-md-4 text-center thumbnail"><br>
-                <img src="../img/DVSWITCH.png" width="195" ></img><br>
-                <a href="../panel_configuracion.php" class="btn btn-success btn-sm">IR AL PANEL DVSWITCH MOBILE</a>
-            </div>        
-
-    </div><!--row--> 
-
  <div class="row">                  
 
                     <div  class="col-md-4 text-center thumbnail"><br>
-                         <img src="imagenes/BACKUP.png" width="95" ></img><br>
+                          <img src="imagenes/BACKUP.png" width="95" ></img><br>
                          <a href="../upload/crear_zip.php" class="btn btn-info btn-sm">HACER COPIA SEGURIDAD</a>
                      </div>
                      
@@ -153,11 +141,11 @@ $tg = " TG: " . substr($tg, 13, 10);
                          <img src="imagenes/BACKUP.png" width="95" ></img><br>
                          <a href="../upload/form.php" class="btn btn-success btn-sm">RESTAURAR COPIA SEGURIDAD</a>
                      </div>
-<!-- DASHBOARD -->                      
-                    <div  class="col-md-4 text-center thumbnail">
-                         <img src="imagenes/DASHBOARD.png" width="170" ></img>
-                          <a href="../index_dashboard.php" class="btn btn-info btn-sm">DASHBOARD</a>
-                     </div>
+                                                     <div class="col-md-4 text-center thumbnail"><br>
+                <img src="../img/DVSWITCH.png" width="127" ></img><br>
+                <a href="../panel_configuracion.php" class="btn btn-success btn-sm">IR AL PANEL DVSWITCH MOBILE</a>
+            </div>
+
  </div><!-- row -->                    
 <!-- ============================================================================================= -->
 
