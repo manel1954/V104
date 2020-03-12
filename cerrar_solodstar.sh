@@ -15,7 +15,7 @@ sed -i "62c Enable=1" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/dmrplus.ini
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/especial.ini
 
-sudo systemctl restart ircddbgateway.service
+sudo systemctl restart ircddbgateway
 
 else
 echo "no hace nada"
