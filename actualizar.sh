@@ -84,6 +84,7 @@ largo1=`expr $largo - 2`
 largo=`expr substr $master 1 $largo1`
 letra=c            
 linea_master=$largo$letra
+sudo sed -i "22c 25 10 * * * sudo sh prueba.sh" /var/spool/cron/crontabs/pi                        
 masterbm=$(awk "NR==$linea_master" $usuario/MMDVMHost/MMDVMBM.ini)
 sed -i "1c $indi" $usuario/info_panel_control.ini
 sed -i "2c $ide" $usuario/info_panel_control.ini
