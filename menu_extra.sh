@@ -97,19 +97,18 @@ clear
                         
                         echo "${CIAN}"
                         echo "   Introduce la ip que quires fijar: ${AMARILLO}Ejp.192.168.1.15 ${BLANCO}"
+                        echo -n "   "
                         read ip
 
                         echo "${CIAN}"
                         echo "   Introduce la puerta de enlace de tu router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
+                        echo -n "   "
                         read gateway
                         
 echo "${VERDE}"
-echo "   Revisa los datos:"
-echo "   ================="
+echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+echo "   =============================================="
 
-echo "${CIAN}   Ip fija:   ${BLANCO}$ip"
-echo "${CIAN}   Ip router: ${BLANCO}$gateway"
-echo ""
 
                         echo "${VERDE}"
                         read -p '   Quieres grabar los datos? S/N ' seguir   
