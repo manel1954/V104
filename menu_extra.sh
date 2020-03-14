@@ -92,7 +92,7 @@ clear
 
                         echo "${VERDE}"
                         echo "   ************************************************************************" 
-                        echo "                      SCRIPT PARA ESTABLECER IP FIJA                       "
+                        echo "                   SCRIPT PARA ESTABLECER IP FIJA POR CABLE               "
                         echo "   ************************************************************************"
                         
                         echo "${CIAN}"
@@ -119,6 +119,71 @@ clear
                         sudo sed -i "13c gateway $gateway" /etc/network/interfaces
                         sudo sed -i "14c #" /etc/network/interfaces
                         sudo sed -i "15c #" /etc/network/interfaces
+
+                        clear
+                        echo "\v\v\v\v\v\v\v\v\v\v\v"
+                        echo "${VERDE}"
+                        echo "   ************************************************************************"
+                        echo "   *********************                              *********************" 
+                        echo "   *********************       GRABANDO IP FIJA       *********************"
+                        echo "   *********************                              *********************"
+                        echo "   ************************************************************************"
+                        sleep 5
+                        else
+                        clear
+                        echo "\v\v\v\v\v\v\v\v\v\v\v"
+                        echo "${ROJO}"
+                        echo "   ************************************************************************"
+                        echo "   *********************                              *********************" 
+                        echo "   *********************   NO SE GRABARON LOS DATOS   *********************"
+                        echo "   *********************                              *********************"
+                        echo "   ************************************************************************"
+                        sleep 5
+                        fi
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        exit;
+                        break;;
+esac
+done;;
+w) echo ""
+while true
+do
+clear                     
+                        instalarsi=S
+                        case $instalarsi in
+                        [sS]* ) echo ""
+                        clear
+
+                        echo "${VERDE}"
+                        echo "   ************************************************************************" 
+                        echo "                   SCRIPT PARA ESTABLECER IP FIJA POR WIFI                 "
+                        echo "   ************************************************************************"
+                        
+                        echo "${CIAN}"
+                        echo "   Introduce la ip que quires fijar: ${AMARILLO}Ejp.192.168.1.15 ${BLANCO}"
+                        echo -n "   "
+                        read ip
+
+                        echo "${CIAN}"
+                        echo "   Introduce la ip del router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
+                        echo -n "   "
+                        read gateway
+                        
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir   
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
+                        
+                        sudo sed -i "16c wlan0" /etc/network/interfaces
+                        sudo sed -i "17c iface wlan0 inet static" /etc/network/interfaces
+                        sudo sed -i "18c address $ip" /etc/network/interfaces
+                        sudo sed -i "19c netmask 255.255.255.0" /etc/network/interfaces
+                        sudo sed -i "20c gateway $gateway" /etc/network/interfaces
 
                         clear
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
