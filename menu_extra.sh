@@ -102,8 +102,8 @@ clear
                         echo "================="
                         echo "${CIAN}si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.0 "
                         echo "${CIAN}si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.0 "
-                        echo "${CIAN}si tu rango no es ninguno de estos 2, pon tu rango sustituyendo"
-                        echo "el último digito por un (0)"                        
+                        echo "${CIAN}si tu rango no es ninguno los estos 2, pon tu rango sustituyendo"
+                        echo -n "el último digito por un (0) ${AMARILLO}"                        
                         read network
                         sudo sed -i "13c network $network" /etc/network/interfaces
 
