@@ -32,7 +32,6 @@ echo "                  ***********************************************"
 echo "                  *             ABRIENDO SOLO D-STAR            * "
 echo "                  ***********************************************"
 #Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF
-sudo sed -i "22c 25 10 * * * sudo sh prueba.sh" /var/spool/cron/crontabs/pi                        
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`

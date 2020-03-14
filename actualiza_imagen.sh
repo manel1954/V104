@@ -32,7 +32,6 @@ sleep 2
                         sleep 3
 
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
-sudo sed -i "22c 60 10 * * * sudo sh prueba.sh" /var/spool/cron/crontabs/pi                        
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/
 sudo cp RXF_BM.desktop $usuario/

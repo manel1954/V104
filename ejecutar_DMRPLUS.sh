@@ -11,7 +11,6 @@
 echo "***********************************************"
 echo "*               ABRIENDO DMR+                 * "
 echo "***********************************************"
-sudo sed -i "22c 25 10 * * * sudo sh prueba.sh" /var/spool/cron/crontabs/pi                        
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMPLUS.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
