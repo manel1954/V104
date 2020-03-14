@@ -9,6 +9,7 @@
 #echo "******************************************"
 #sleep 5
 #else
+sudo sed -i "22c 25 10 * * * sudo sh prueba.sh" /var/spool/cron/crontabs/pi                        
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
