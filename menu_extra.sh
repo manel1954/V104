@@ -101,16 +101,15 @@ clear
                         read ip
 
                         echo "${CIAN}"
-                        echo "   Introduce la puerta de enlace de tu router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
+                        echo "   Introduce la ip del router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
                         echo -n "   "
                         read gateway
                         
-echo "${VERDE}"
-echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
-echo "   =============================================="
-
-
                         echo "${VERDE}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+
+                        echo "${CIAN}"
                         read -p '   Quieres grabar los datos? S/N ' seguir   
                         if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
                         
@@ -129,9 +128,18 @@ echo "   =============================================="
                         sleep 5
                         else
                         clear
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
                         echo "${ROJO}"
-                        echo "   ************************************************************************" 
-                        echo "                        NO SE HAN GRABADO LOS DATOS                          "
+                        echo "   ************************************************************************"
+                        echo "   *********************                              *********************" 
+                        echo "   *********************   NO SE GRABARON LOS DATOS   *********************"
+                        echo "   *********************                              *********************"
                         echo "   ************************************************************************"
                         sleep 5
                         fi
