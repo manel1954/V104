@@ -103,6 +103,14 @@ clear
                         echo -n "   Introduce la puerta de enlace de tu router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
                         read gateway
                         
+echo "${CIAN}"
+echo "Revisa los datos:"
+echo "================="
+
+echo "${CIAN}Ip fija: ${BLANCO}$ip"
+echo "${CIAN}Ip router: ${BLANCO}$gateway"
+echo ""
+
                         echo "${VERDE}"
                         read -p 'Quieres grabar los datos? S/N ' seguir   
                         if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
