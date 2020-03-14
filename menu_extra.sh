@@ -102,20 +102,29 @@ clear
                         echo "================="
                         echo "${CIAN}si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.0 "
                         echo "${CIAN}si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.0 "
-                        echo "${CIAN}si tu rango no es ninguno los estos 2, pon tu rango sustituyendo"
-                        echo -n "las xxx y el último digito un (0) ${AMARILLO} introduce xxx.xxx.x.0"                        
+                        echo "${CIAN}si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
+                        echo -n "las xxx y el último digito por un (0) ${AMARILLO} introduce xxx.xxx.x.0"                        
                         read network
                         sudo sed -i "13c network $network" /etc/network/interfaces
+
+                        echo ""
+                                                echo "${CIAN}"
+                        echo "Broadcast"
+                        echo "================="
+                        echo "${CIAN}si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.255 "
+                        echo "${CIAN}si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.255 "
+                        echo "${CIAN}si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
+                        echo -n "las xxx y el último digito por (255) ${AMARILLO} introduce xxx.xxx.x.255"                        
+                        read broadcast
+                        sudo sed -i "13c broadcast $broadcast" /etc/network/interfaces
 
                         echo -n "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
                         read ip
                         sudo sed -i "14c address $ip" /etc/network/interfaces
 
-                        echo -n "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
-                        read ip
-                        sudo sed -i "15c address $ip" /etc/network/interfaces
-
-
+                        echo -n "Introduce la puerta de enlace de tu router, Ejp.192.168.1.11: "
+                        read gateway
+                        sudo sed -i "15c gateway $gateway" /etc/network/interfaces
 
                         break;;
                         [nN]* ) echo ""
