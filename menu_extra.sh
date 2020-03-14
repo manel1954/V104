@@ -90,9 +90,31 @@ clear
                         [sS]* ) echo ""
                         clear
                         sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
+                        
                         echo -n "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
                         read ip
-                        sudo sed -i "11c address $id" /etc/network/interfaces
+                        sudo sed -i "11c address $ip" /etc/network/interfaces
+
+                        sudo sed -i "12c netmask 255.255.255.0" /etc/network/interfaces
+                        
+                        echo "${CIAN}"
+                        echo "Introduce network"
+                        ECHO "${BLANCO}"
+                        echo "si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.0 "
+                        echo "si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.0 "
+                        echo "si tu rango no es ninguno de estos 2, pon tu rango sustityendo el último digito por un (0)"                        read network
+                        sudo sed -i "13c network $network" /etc/network/interfaces
+
+                        echo -n "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
+                        read ip
+                        sudo sed -i "14c address $ip" /etc/network/interfaces
+
+                        echo -n "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
+                        read ip
+                        sudo sed -i "15c address $ip" /etc/network/interfaces
+
+
+
                         break;;
                         [nN]* ) echo ""
                         clear
