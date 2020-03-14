@@ -121,17 +121,7 @@ clear
                         sudo sed -i "15c #" /etc/network/interfaces
 
                         clear
-                        echo ""
-                        echo ""
-                        echo ""
-                        echo ""
-                        echo ""
-                        echo ""
-                        echo ""
-                        echo ""
-                        echo ""
-                        echo ""
-                        echo ""
+                        echo "\v\v\v\v\v\v\v\v\v\v\v"
                         echo "${VERDE}"
                         echo "   ************************************************************************"
                         echo "   *********************                              *********************" 
@@ -141,7 +131,7 @@ clear
                         sleep 5
                         else
                         clear
-                        echo "\v11"
+                        echo "\v\v\v\v\v\v\v\v\v\v\v"
                         echo "${ROJO}"
                         echo "   ************************************************************************"
                         echo "   *********************                              *********************" 
