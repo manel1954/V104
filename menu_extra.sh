@@ -91,7 +91,7 @@ clear
                         clear
                         sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
                         
-                        echo -n "Introduce la ip que quires fijar, ${AMARILLO}Ejp.192.168.1.15: "
+                        echo -n "Introduce la ip que quires fijar: ${AMARILLO}Ejp.192.168.1.15 "
                         read ip
                         sudo sed -i "11c address $ip" /etc/network/interfaces
 
