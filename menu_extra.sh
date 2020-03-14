@@ -104,15 +104,15 @@ clear
                         read gateway
                         
 echo "${CIAN}"
-echo "Revisa los datos:"
-echo "================="
+echo "   Revisa los datos:"
+echo "   ================="
 
-echo "${CIAN}Ip fija: ${BLANCO}$ip"
-echo "${CIAN}Ip router: ${BLANCO}$gateway"
+echo "${CIAN}   Ip fija: ${BLANCO}$ip"
+echo "${CIAN}   Ip router: ${BLANCO}$gateway"
 echo ""
 
                         echo "${VERDE}"
-                        read -p 'Quieres grabar los datos? S/N ' seguir   
+                        read -p '   Quieres grabar los datos? S/N ' seguir   
                         if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
                         
                         sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
