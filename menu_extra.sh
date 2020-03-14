@@ -95,45 +95,37 @@ clear
                         echo "                      SCRIPT PARA ESTABLECER IP FIJA                       "
                         echo "   ************************************************************************"
                         
-                        sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
-                        
                         echo "${CIAN}"
                         echo -n "   Introduce la ip que quires fijar: ${AMARILLO}Ejp.192.168.1.15 ${BLANCO}"
                         read ip
-                        sudo sed -i "11c address $ip" /etc/network/interfaces
-
-                        sudo sed -i "12c netmask 255.255.255.0" /etc/network/interfaces
-                        
-                        #echo "${CIAN}"
-                        #echo "   Introduce network"
-                        #echo "   ================="
-                        #echo "${CIAN}   si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.0 "
-                        #echo "${CIAN}   si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.0 "
-                        #echo "${CIAN}   si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
-                        #echo -n "   las xxx y el último digito por un (0) ${AMARILLO} introduce xxx.xxx.x.0 ${BLANCO}"                        
-                        #read network
-                        #sudo sed -i "13c network $network" /etc/network/interfaces
-
-                        #echo ""
-                        #echo "${CIAN}"
-                        #echo "   Broadcast"
-                        #echo "   ================="
-                        #echo "${CIAN}   si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.255 "
-                        #echo "${CIAN}   si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.255 "
-                        #echo "${CIAN}   si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
-                        #echo -n "   las xxx y el último digito por(255) ${AMARILLO}introduce xxx.xxx.x.255 ${BLANCO}"                        
-                        #read broadcast
-                        #sudo sed -i "14c broadcast $broadcast" /etc/network/interfaces
 
                         echo "${CIAN}"
                         echo -n "   Introduce la puerta de enlace de tu router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
                         read gateway
-                        sudo sed -i "15c gateway $gateway" /etc/network/interfaces
                         
                         echo "${VERDE}"
+                        read -p 'Quieres grabar los datos? S/N ' seguir   
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
+                        
+                        sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
+                        sudo sed -i "11c address $ip" /etc/network/interfaces
+                        sudo sed -i "12c netmask 255.255.255.0" /etc/network/interfaces
+                        sudo sed -i "13c gateway $gateway" /etc/network/interfaces
+                        sudo sed -i "14c #" /etc/network/interfaces
+                        sudo sed -i "15c #" /etc/network/interfaces
+
+
+                        echo "${VERDE}"
                         echo "   ************************************************************************" 
-                        echo "                     ESTABLECIENDO IP FIJA: $ip"
+                        echo "                        GRABANDO IP FIJA: $ip                              "
                         echo "   ************************************************************************"
+                        sleep 5
+                        else
+                        clear
+                        echo "${ROJO}"
+                        echo "   ************************************************************************" 
+                        echo "                        NO SE HAN GRABADO LOS DATOS                          "
+                        echo "   ************************************************************************"                        fi
                         sleep 5
                         break;;
                         [nN]* ) echo ""
