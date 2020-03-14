@@ -22,7 +22,7 @@ echo "                              $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ************************************************************************"
 #echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
-echo "\33[1;36m   1)${BLANCO} Actualizar Dvswitch"
+echo "\33[1;36m   1)${BLANCO} Establecer Ip fija"
 echo "\33[1;36m   2)${AMARILLO} Actualizar ${AMARILLO}YSF,${AMARILLO} YSF2DMR, DMR2YSF, DMR2NXDN y NXDNClients"
 echo ""
 echo "\33[1;32m      APARTADO BLUETOOTH"
@@ -89,8 +89,10 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
-                        cd /home/pi/$SCRIPTS_version/
-                        sh Actualizar_dvswitch.sh                  
+                        sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
+                        echo "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
+                        read ip
+                        sudo sed "11c address $id" /etc/network/interfaces
                         break;;
                         [nN]* ) echo ""
                         clear
