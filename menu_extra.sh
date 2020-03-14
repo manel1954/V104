@@ -116,13 +116,9 @@ clear
                         echo "${CIAN}si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
                         echo -n "las xxx y el último digito por (255) ${AMARILLO} introduce xxx.xxx.x.255 "                        
                         read broadcast
-                        sudo sed -i "13c broadcast $broadcast" /etc/network/interfaces
+                        sudo sed -i "14c broadcast $broadcast" /etc/network/interfaces
 
-                        echo -n "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
-                        read ip
-                        sudo sed -i "14c address $ip" /etc/network/interfaces
-
-                        echo -n "Introduce la puerta de enlace de tu router, Ejp.192.168.1.11: "
+                        echo -n "Introduce la puerta de enlace de tu router, Ejp.192.168.1.1: "
                         read gateway
                         sudo sed -i "15c gateway $gateway" /etc/network/interfaces
 
