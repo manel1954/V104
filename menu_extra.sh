@@ -127,6 +127,7 @@ clear
                         echo "                        NO SE HAN GRABADO LOS DATOS                          "
                         echo "   ************************************************************************"                        fi
                         sleep 5
+                        fi
                         break;;
                         [nN]* ) echo ""
                         clear
