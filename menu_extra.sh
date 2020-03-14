@@ -119,7 +119,8 @@ clear
                         sudo sed -i "13c gateway $gateway" /etc/network/interfaces
                         sudo sed -i "14c #" /etc/network/interfaces
                         sudo sed -i "15c #" /etc/network/interfaces
-
+                        
+                        clear
                         echo ""
                         echo ""
                         echo ""
