@@ -118,7 +118,8 @@ clear
                         read broadcast
                         sudo sed -i "14c broadcast $broadcast" /etc/network/interfaces
 
-                        echo -n "Introduce la puerta de enlace de tu router, Ejp.192.168.1.1: "
+                        echo "${CIAN}"
+                        echo -n "Introduce la puerta de enlace de tu router: Ejp.192.168.1.1 "
                         read gateway
                         sudo sed -i "15c gateway $gateway" /etc/network/interfaces
 
