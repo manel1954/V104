@@ -107,7 +107,7 @@ echo "${VERDE}"
 echo "   Revisa los datos:"
 echo "   ================="
 
-echo "${CIAN}   Ip fija: ${BLANCO}$ip"
+echo "${CIAN}   Ip fija:   ${BLANCO}$ip"
 echo "${CIAN}   Ip router: ${BLANCO}$gateway"
 echo ""
 
