@@ -97,6 +97,7 @@ clear
                         
                         sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
                         
+                        echo "${CIAN}"
                         echo -n "   Introduce la ip que quires fijar: ${AMARILLO}Ejp.192.168.1.15 ${BLANCO}"
                         read ip
                         sudo sed -i "11c address $ip" /etc/network/interfaces
@@ -120,7 +121,7 @@ clear
                         echo "${CIAN}   si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.255 "
                         echo "${CIAN}   si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.255 "
                         echo "${CIAN}   si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
-                        echo -n "   las xxx y el último digito por (255) ${AMARILLO} introduce xxx.xxx.x.255 ${BLANCO}"                        
+                        echo -n "   las xxx y el último digito por(255) ${AMARILLO}introduce xxx.xxx.x.255 ${BLANCO}"                        
                         read broadcast
                         sudo sed -i "14c broadcast $broadcast" /etc/network/interfaces
 
