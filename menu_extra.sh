@@ -98,10 +98,21 @@ clear
                         echo "${CIAN}"
                         echo -n "   Introduce la ip que quires fijar: ${AMARILLO}Ejp.192.168.1.15 ${BLANCO}"
                         read ip
+                        clear
 
+                        echo "${VERDE}"
+                        echo "   ************************************************************************" 
+                        echo "                      SCRIPT PARA ESTABLECER IP FIJA                       "
+                        echo "   ************************************************************************"
                         echo "${CIAN}"
                         echo -n "   Introduce la puerta de enlace de tu router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
                         read gateway
+                        clear
+
+                        echo "${VERDE}"
+                        echo "   ************************************************************************" 
+                        echo "                      SCRIPT PARA ESTABLECER IP FIJA                       "
+                        echo "   ************************************************************************"
                         
 echo "${VERDE}"
 echo "   Revisa los datos:"
