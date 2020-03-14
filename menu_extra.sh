@@ -122,7 +122,12 @@ clear
                         echo -n "Introduce la puerta de enlace de tu router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
                         read gateway
                         sudo sed -i "15c gateway $gateway" /etc/network/interfaces
-
+                        
+                        echo "${VERDE}"
+                        echo "   ************************************************************************" 
+                        echo "                     ESTABLECIENDO IP FIJA: $ip"
+                        echo "   ************************************************************************"
+                        sleep 3
                         break;;
                         [nN]* ) echo ""
                         clear
