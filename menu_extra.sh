@@ -104,26 +104,26 @@ clear
 
                         sudo sed -i "12c netmask 255.255.255.0" /etc/network/interfaces
                         
-                        echo "${CIAN}"
-                        echo "   Introduce network"
-                        echo "   ================="
-                        echo "${CIAN}   si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.0 "
-                        echo "${CIAN}   si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.0 "
-                        echo "${CIAN}   si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
-                        echo -n "   las xxx y el último digito por un (0) ${AMARILLO} introduce xxx.xxx.x.0 ${BLANCO}"                        
-                        read network
-                        sudo sed -i "13c network $network" /etc/network/interfaces
+                        #echo "${CIAN}"
+                        #echo "   Introduce network"
+                        #echo "   ================="
+                        #echo "${CIAN}   si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.0 "
+                        #echo "${CIAN}   si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.0 "
+                        #echo "${CIAN}   si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
+                        #echo -n "   las xxx y el último digito por un (0) ${AMARILLO} introduce xxx.xxx.x.0 ${BLANCO}"                        
+                        #read network
+                        #sudo sed -i "13c network $network" /etc/network/interfaces
 
-                        echo ""
-                                                echo "${CIAN}"
-                        echo "   Broadcast"
-                        echo "   ================="
-                        echo "${CIAN}   si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.255 "
-                        echo "${CIAN}   si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.255 "
-                        echo "${CIAN}   si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
-                        echo -n "   las xxx y el último digito por(255) ${AMARILLO}introduce xxx.xxx.x.255 ${BLANCO}"                        
-                        read broadcast
-                        sudo sed -i "14c broadcast $broadcast" /etc/network/interfaces
+                        #echo ""
+                        #echo "${CIAN}"
+                        #echo "   Broadcast"
+                        #echo "   ================="
+                        #echo "${CIAN}   si tu rango es 192.168.1.1 , ${AMARILLO}introduce 192.168.1.255 "
+                        #echo "${CIAN}   si tu rango es 192.168.0.1 , ${AMARILLO}introduce 192.168.0.255 "
+                        #echo "${CIAN}   si tu rango no es ninguno de los 2, pon tu rango sustituyendo"
+                        #echo -n "   las xxx y el último digito por(255) ${AMARILLO}introduce xxx.xxx.x.255 ${BLANCO}"                        
+                        #read broadcast
+                        #sudo sed -i "14c broadcast $broadcast" /etc/network/interfaces
 
                         echo "${CIAN}"
                         echo -n "   Introduce la puerta de enlace de tu router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
