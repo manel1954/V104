@@ -105,7 +105,7 @@ clear
                         echo -n "   "
                         read gateway
                         
-                        echo "${VERDE}"
+                        echo "${BLANCO}"
                         echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
                         echo "   =============================================="
 
