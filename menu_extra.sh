@@ -90,9 +90,9 @@ clear
                         [sS]* ) echo ""
                         clear
                         sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
-                        echo "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
+                        echo -n "Introduce Ip que quires fijar, Ejp.192.168.1.15: "
                         read ip
-                        sudo sed "11c address $id" /etc/network/interfaces
+                        sudo sed -i "11c address $id" /etc/network/interfaces
                         break;;
                         [nN]* ) echo ""
                         clear
