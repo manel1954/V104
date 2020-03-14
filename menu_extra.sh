@@ -89,6 +89,12 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         clear
+
+                        echo "${VERDE}"
+                        echo "   ************************************************************************" 
+                        echo "                      SCRIPT PARA ESTABLECER IP FIJA                       "
+                        echo "   ************************************************************************"
+                        
                         sudo sed -i "10c iface eth0 inet static" /etc/network/interfaces
                         
                         echo -n "Introduce la ip que quires fijar: ${AMARILLO}Ejp.192.168.1.15 ${BLANCO}"
@@ -127,7 +133,7 @@ clear
                         echo "   ************************************************************************" 
                         echo "                     ESTABLECIENDO IP FIJA: $ip"
                         echo "   ************************************************************************"
-                        sleep 3
+                        sleep 5
                         break;;
                         [nN]* ) echo ""
                         clear
