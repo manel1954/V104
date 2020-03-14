@@ -120,14 +120,36 @@ clear
                         sudo sed -i "14c #" /etc/network/interfaces
                         sudo sed -i "15c #" /etc/network/interfaces
 
-
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
                         echo "${VERDE}"
-                        echo "   ************************************************************************" 
-                        echo "                        GRABANDO IP FIJA: $ip                              "
+                        echo "   ************************************************************************"
+                        echo "   *********************                              *********************" 
+                        echo "   *********************       GRABANDO IP FIJA       *********************"
+                        echo "   *********************                              *********************"
                         echo "   ************************************************************************"
                         sleep 5
                         else
                         clear
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
+                        echo ""
                         echo ""
                         echo ""
                         echo ""
