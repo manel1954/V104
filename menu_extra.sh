@@ -103,7 +103,7 @@ clear
                         echo -n "   Introduce la puerta de enlace de tu router: ${AMARILLO}Ejp.192.168.1.1 ${BLANCO}"
                         read gateway
                         
-echo "${CIAN}"
+echo "${VERDE}"
 echo "   Revisa los datos:"
 echo "   ================="
 
