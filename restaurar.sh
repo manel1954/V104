@@ -19,19 +19,27 @@ echo "***************************************************"
             sudo chmod -R 777 /home/pi/Downloads
             cd /home/pi/Downloads
             cp -f TODOS_LOS_INIS.ini /home/pi/MMDVMHost
+
             cp -f MMDVM.ini /home/pi/MMDVMHost
             cp -f MMDVM.ini_copia /home/pi/MMDVMHost
             cp -f MMDVM.ini_copia2 /home/pi/MMDVMHost
             cp -f MMDVM.ini_copia3 /home/pi/MMDVMHost
             cp -f MMDVM.ini_original /home/pi/MMDVMHost
+
             cp -f MMDVMBM.ini /home/pi/MMDVMHost
             cp -f MMDVMBM.ini_copia /home/pi/MMDVMHost
             cp -f MMDVMBM.ini_copia2 /home/pi/MMDVMHost
-            cp -f MMDVMBM.ini_copia3 /home/pi/MMDVMHost     
+            cp -f MMDVMBM.ini_copia3 /home/pi/MMDVMHost 
+
             cp -f MMDVMPLUS.ini /home/pi/MMDVMHost
             cp -f MMDVMPLUS.ini_copia /home/pi/MMDVMHost
             cp -f MMDVMPLUS.ini_copia2 /home/pi/MMDVMHost
             cp -f MMDVMPLUS.ini_copia3 /home/pi/MMDVMHost
+
+            cp -f MMDVMESPECIAL.ini /home/pi/MMDVMHost
+            cp -f MMDVMESPECIAL.ini_copia /home/pi/MMDVMHost
+            cp -f MMDVMESPECIAL.ini_copia2 /home/pi/MMDVMHost
+            cp -f MMDVMESPECIAL.ini_copia3 /home/pi/MMDVMHost
 
             #solo Dstar
             cp -f MMDVMDSTAR.ini /home/pi/MMDVMHost
