@@ -48,32 +48,21 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
-a) echo ""
+1) echo ""
 while true
 do
 clear                     
                         instalarsi=S
                         case $instalarsi in
                         [sS]* ) echo ""
-#Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
-
-sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario #deja el icono en el estado que se reinició
-sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario #deja el icono en el estado que se reinició
-#sudo cp $usuario/Desktop/Abrir_ircDDBGateway.desktop $usuario #deja con el terminal en el estado que se reinició
-#sudo cp $usuario/Desktop/Abrir_D-STARRepeater.desktop $usuario #deja con el terminal en el estado que se reinició
-
-cd $usuario/$SCRIPTS_version/Desktop
-cp * $usuario/Desktop
-sleep 1
-
-sudo cp $usuario/Activar_dvswitch.desktop $usuario/Desktop #deja el icono en el estado que se reinició
-sudo cp $usuario/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono en el estado que se reinició
-#sudo cp $usuario/Abrir_ircDDBGateway.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
-#sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
-
-
-sudo chmod 777 -R $usuario/Desktop
-cd $usuario
+                        echo "\v\v\v\v\v\v\v\v\v\v\v"
+                        echo "${ROJO}"
+                        echo "   ************************************************************************"
+                        echo "   *********************                              *********************" 
+                        echo "   *********************    NO HAY ACTUALIZACIONES    *********************"
+                        echo "   *********************                              *********************"
+                        echo "   ************************************************************************"
+                        sleep 5
 sleep 2
 exit;                
                         break;;
