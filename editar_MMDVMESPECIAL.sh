@@ -10,10 +10,10 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
 #Editor MMDVMPLUS.ini
-DIRECTORIO="MMDVMPLUS.ini"
-DIRECTORIO_copia="MMDVMPLUS.ini_copia"
-DIRECTORIO_copia2="MMDVMPLUS.ini_copia2"
-DIRECTORIO_copia3="MMDVMPLUS.ini_copia3"
+DIRECTORIO="MMDVMESPECIAL.ini"
+DIRECTORIO_copia="MMDVMESPECIAL.ini_copia"
+DIRECTORIO_copia2="MMDVMESPECIAL.ini_copia2"
+DIRECTORIO_copia3="MMDVMESPECIAL.ini_copia3"
   #Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
 primero="11c"
 segundo="12c"
