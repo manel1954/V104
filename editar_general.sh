@@ -220,12 +220,15 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           else
                           linea=`expr substr $rxf 1 3`
                           fi
+                          lineaTX=linea+1
+                          lineaTX=$lineaTX$letra
                           linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
 
             sed -i "$linea RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
+            sed -i "$lineaTX TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
             #DMR+
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
