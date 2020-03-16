@@ -27,7 +27,7 @@ frecuencia=$frecuencia$puerto
 sed -i "11c Name=$frecuencia" /home/pi/RXF_ESPECIAL.desktop
 sleep 1
 sudo cp /home/pi/RXF_ESPECIAL.desktop /home/pi/Desktop
-sleep 1
+sleep 1s
 sudo rm /home/pi/RXF_ESPECIAL.desktop
 
 #Escribe en el fichero INFO_RXF para poner los datos en el icono INFO TXF                        
@@ -38,7 +38,7 @@ cd /home/pi/Desktop
 sudo cp Abrir_ESPECIAL.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x15 -e sudo sh cerrar_ESPECIAL.sh'" /home/pi/Abrir_ESPECIAL.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_ESPECIAL_ON.png" /home/pi/Abrir_ESPECIAL.desktop
-sed -i "10c Name[es_ES]=Cerrar BM" /home/pi/Abrir_ESPECIAL.desktop
+sed -i "10c Name[es_ES]=Cerrar Especial" /home/pi/Abrir_ESPECIAL.desktop
 
 
 #poner este en ini
