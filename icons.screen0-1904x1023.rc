@@ -109,21 +109,21 @@ col=10
 row=5
 col=3
 
-[/home/pi/Desktop/Abrir_MMDVMPLUS.desktop]
-row=4
-col=1
-
 [/home/pi/Desktop/Editar_BLUEDV.desktop]
 row=5
 col=7
 
-[/home/pi/Desktop/Editar_Radio.desktop]
-row=5
-col=2
+[/home/pi/Desktop/Abrir_MMDVMPLUS.desktop]
+row=4
+col=1
 
 [/home/pi/Desktop/editar_ambe_server.desktop]
 row=5
 col=15
+
+[/home/pi/Desktop/Editar_Radio.desktop]
+row=5
+col=2
 
 [/home/pi/Desktop/Editar_MMDVMDMR2NXDN.desktop]
 row=5
@@ -185,13 +185,17 @@ col=6
 row=5
 col=9
 
-[/home/pi/Desktop/RXF_DMRPLUS.desktop]
-row=6
-col=1
+[/home/pi/Desktop/Organiza_Iconos.desktop]
+row=2
+col=17
 
 [/home/pi/Desktop/Abrir_Radio.desktop]
 row=4
 col=2
+
+[/home/pi/Desktop/RXF_DMRPLUS.desktop]
+row=6
+col=1
 
 [/home/pi/Desktop/Actualizar_DV4mini.desktop]
 row=6
@@ -201,13 +205,13 @@ col=6
 row=4
 col=13
 
-[/home/pi/Desktop/Actualizar_BlueDV.DESKTOP]
-row=6
-col=7
-
 [/home/pi/Desktop/Actualizar_salas_YSF.desktop]
 row=6
 col=5
+
+[/home/pi/Desktop/Actualizar_BlueDV.DESKTOP]
+row=6
+col=7
 
 [/home/pi/Desktop/Editar_C4FM.desktop]
 row=5
@@ -248,10 +252,6 @@ col=16
 [/home/pi/Desktop/Nota_version.desktop]
 row=1
 col=3
-
-[/home/pi/Desktop/Organiza Iconos.desktop]
-row=2
-col=17
 
 [/home/pi/Desktop/Abrir_YSF.desktop]
 row=4
