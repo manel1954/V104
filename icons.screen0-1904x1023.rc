@@ -7,11 +7,11 @@ col=7
 
 [/home/pi/Desktop/Editar_svxlink.desktop]
 row=5
-col=14
+col=15
 
 [/home/pi/Desktop/Abrir_solodstar.desktop]
 row=4
-col=4
+col=5
 
 [/home/pi/Desktop/Reinciar_Imagen.desktop]
 row=1
@@ -19,19 +19,19 @@ col=6
 
 [/home/pi/Desktop/Abrir_solofusion.desktop]
 row=4
-col=3
+col=4
 
 [/home/pi/Desktop/Abrir_YSF2DMR.desktop]
 row=4
-col=10
+col=11
 
 [/home/pi/Desktop/Configurar_ircddb.desktop]
 row=5
-col=8
+col=9
 
 [/home/pi/Desktop/Editar_DExtra_Bluedv.desktop]
 row=7
-col=7
+col=8
 
 [/home/pi/Desktop/Borrar_Logs.desktop]
 row=1
@@ -43,15 +43,19 @@ col=9
 
 [/home/pi/Desktop/Abrir_Dialer.desktop]
 row=5
-col=6
+col=7
+
+[/home/pi/Desktop/Editar_ESPECIAL.desktop]
+row=5
+col=3
 
 [/home/pi/Desktop/Editar_solodstar.desktop]
 row=5
-col=4
+col=5
 
 [/home/pi/Desktop/Abrir_ircDDB.desktop]
 row=4
-col=8
+col=9
 
 [/home/pi/Desktop/Copiar_Restaurar.desktop]
 row=1
@@ -59,27 +63,27 @@ col=12
 
 [/home/pi/Desktop/RXF_DMR2YSF.desktop]
 row=6
-col=11
+col=12
 
 [/home/pi/Desktop/Abrir_Dvrptr.desktop]
 row=4
-col=16
+col=17
 
 [/home/pi/Desktop/Abrir_ambe_server.desktop]
 row=4
-col=15
+col=16
 
 [/home/pi/Desktop/Abrir_Qtel.desktop]
 row=6
-col=14
+col=15
 
 [/home/pi/Desktop/RXF_DMR2NXDN.desktop]
 row=6
-col=12
+col=13
 
 [/home/pi/Desktop/Editar_MMDVMDMR2YSF.desktop]
 row=5
-col=11
+col=12
 
 [/home/pi/Desktop/Md380_tools.desktop]
 row=1
@@ -87,7 +91,7 @@ col=11
 
 [/home/pi/Desktop/RXF_SOLOFUSION.desktop]
 row=6
-col=3
+col=4
 
 [/home/pi/Desktop/Editar_MMDVMBM.desktop]
 row=5
@@ -95,11 +99,11 @@ col=0
 
 [/home/pi/Desktop/Abrir_dstarrepeater.desktop]
 row=4
-col=9
+col=10
 
 [/home/pi/Desktop/Abrir_BlueDV.desktop]
 row=4
-col=7
+col=8
 
 [/home/pi/Desktop/Actualizar_IDS.desktop]
 row=1
@@ -107,11 +111,11 @@ col=10
 
 [/home/pi/Desktop/Editar_solofusion.desktop]
 row=5
-col=3
+col=4
 
 [/home/pi/Desktop/Editar_BLUEDV.desktop]
 row=5
-col=7
+col=8
 
 [/home/pi/Desktop/Abrir_MMDVMPLUS.desktop]
 row=4
@@ -119,7 +123,7 @@ col=1
 
 [/home/pi/Desktop/editar_ambe_server.desktop]
 row=5
-col=15
+col=16
 
 [/home/pi/Desktop/Editar_Radio.desktop]
 row=5
@@ -127,11 +131,11 @@ col=2
 
 [/home/pi/Desktop/Editar_MMDVMDMR2NXDN.desktop]
 row=5
-col=12
+col=13
 
 [/home/pi/Desktop/RXF_DSTAR.desktop]
 row=6
-col=4
+col=5
 
 [/home/pi/Desktop/RXF_BM.desktop]
 row=6
@@ -139,7 +143,7 @@ col=0
 
 [/home/pi/Desktop/Abrir_remote.desktop]
 row=6
-col=8
+col=9
 
 [/home/pi/Desktop/Editar_DMRPLUS.desktop]
 row=5
@@ -147,11 +151,11 @@ col=1
 
 [/home/pi/Desktop/Abrir_svxlink.desktop]
 row=4
-col=14
+col=15
 
 [/home/pi/Desktop/Abrir_DMR2YSF.desktop]
 row=4
-col=11
+col=12
 
 [/home/pi/Desktop/Menu_extra.desktop]
 row=1
@@ -159,7 +163,7 @@ col=8
 
 [/home/pi/Desktop/Abrir_DMR2NXDN.desktop]
 row=4
-col=12
+col=13
 
 [/home/pi/Desktop/Menu_Autoarranque.desktop]
 row=1
@@ -169,9 +173,13 @@ col=13
 row=1
 col=14
 
+[/home/pi/Desktop/RXF_ESPECIAL.desktop]
+row=6
+col=3
+
 [/home/pi/Desktop/Editar_deextra.desktop]
 row=7
-col=8
+col=9
 
 [/home/pi/Desktop/RXF_RADIO.desktop]
 row=6
@@ -179,11 +187,11 @@ col=2
 
 [/home/pi/Desktop/Abrir_dv4mini.desktop]
 row=4
-col=6
+col=7
 
 [/home/pi/Desktop/Editar_D-STAR_Repeater.desktop]
 row=5
-col=9
+col=10
 
 [/home/pi/Desktop/Organiza_Iconos.desktop]
 row=2
@@ -199,35 +207,39 @@ col=1
 
 [/home/pi/Desktop/Actualizar_DV4mini.desktop]
 row=6
-col=6
+col=7
 
 [/home/pi/Desktop/Abrir_NXDN.desktop]
 row=4
-col=13
+col=14
 
 [/home/pi/Desktop/Actualizar_salas_YSF.desktop]
 row=6
-col=5
+col=6
 
 [/home/pi/Desktop/Actualizar_BlueDV.DESKTOP]
 row=6
-col=7
+col=8
+
+[/home/pi/Desktop/Abrir_ESPECIAL.desktop]
+row=4
+col=3
 
 [/home/pi/Desktop/Editar_C4FM.desktop]
 row=5
-col=5
+col=6
 
 [/home/pi/Desktop/Editar_YSF2DMR.desktop]
 row=5
-col=10
+col=11
 
 [/home/pi/Desktop/Activar_dvswitch.desktop]
-row=4
+row=6
 col=17
 
 [/home/pi/Desktop/RXF_NXDN.desktop]
 row=6
-col=13
+col=14
 
 [/home/pi/Desktop/Actualiza_imagen.desktop]
 row=1
@@ -235,11 +247,11 @@ col=5
 
 [/home/pi/Desktop/Editar_NXDN.desktop]
 row=5
-col=13
+col=14
 
 [/home/pi/Desktop/RXF_YSF2DMR.desktop]
 row=6
-col=10
+col=11
 
 [/home/pi/Desktop/Abrir_MMDVMBM.desktop]
 row=4
@@ -247,7 +259,7 @@ col=0
 
 [/home/pi/Desktop/Activar_NextionDriver.desktop]
 row=5
-col=16
+col=17
 
 [/home/pi/Desktop/Nota_version.desktop]
 row=1
@@ -255,7 +267,7 @@ col=3
 
 [/home/pi/Desktop/Abrir_YSF.desktop]
 row=4
-col=5
+col=6
 
 [/home/pi/Desktop/Editar_General.desktop]
 row=2
