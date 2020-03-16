@@ -47,7 +47,7 @@ sudo cp Activar_NextionDriver.desktop $usuario/Desktop
 sudo rm Activar_NextionDriver.desktop
 
 sudo sed -i "4c #Exec=sh -c 'cd $usuario/NextionDriver/;sudo ./NextionDriver -c $usuario/MMDVMHost/MMDVM.ini'" $usuario/.config/autostart/nextiondriver.desktop
-sudo kiNextionDriverver
+
 sudo reboot
 
 break;;
