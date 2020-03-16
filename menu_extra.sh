@@ -55,7 +55,7 @@ clear
                         instalarsi=S
                         case $instalarsi in
                         [sS]* ) echo ""
-                        echo "\v\v\v\v\v\v\v\v\v\v\v"
+                        echo "\v\v\v\v\v\v\v\v\v\v"
                         echo "${ROJO}"
                         echo "   ************************************************************************"
                         echo "   *********************                              *********************" 
