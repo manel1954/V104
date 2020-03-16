@@ -223,6 +223,8 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           lineaTX=$linea+1
                           lineaTX=$lineaTX$letra
                           linea=$linea$letra
+echo "linea tx $lineaTX"
+                          read a
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
