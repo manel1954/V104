@@ -141,7 +141,7 @@ sed -i "10c Name[es_ES]=Parar Dvswitch" /home/pi/Activar_dvswitch.desktop
 
 cd /home/pi
 sudo cp Activar_dvswitch.desktop /home/pi/Desktop
-sleep 1
+sleep 2
 sudo rm /home/pi/Activar_dvswitch.desktop
 
 sudo systemctl restart ysfgateway.service
