@@ -102,7 +102,7 @@ clear
 esac
 done;;
 0) 
-echo echo "\v\v\v\v\v\v\v\v\v\v\v"
+echo "\v\v\v\v\v\v\v\v\v\v\v"
 clear
 echo "${AMARILLO}"
 echo "   ************************************************************************"
