@@ -65,6 +65,7 @@ GRIS="\033[0m"
                     cp MMDVMHost DMR2NXDN
                     cp MMDVMHost DMR2YSF
                     cp MMDVMHost MMDVMNXDN
+                    cp MMDVMHost MMDVMESPECIAL
                     #=================================================
 
                     # Rutina solo para el LIBRE ======================
@@ -103,7 +104,12 @@ GRIS="\033[0m"
                     cp MMDVM.ini MMDVMFUSION.ini
                     cp MMDVM.ini MMDVMFUSION.ini_copia
                     cp MMDVM.ini MMDVMFUSION.ini_copia2
-                    cp MMDVM.ini MMDVMFUSION.ini_copia3                 
+                    cp MMDVM.ini MMDVMFUSION.ini_copia3  
+
+                    cp MMDVM.ini MMDVMESPECIAL.ini
+                    cp MMDVM.ini MMDVMESPECIAL.ini_copia
+                    cp MMDVM.ini MMDVMESPECIAL.ini_copia2
+                    cp MMDVM.ini MMDVMESPECIAL.ini_copia3                
 
                     cp MMDVM.ini TODOS_LOS_INIS.ini
 
