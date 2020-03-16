@@ -19,7 +19,7 @@ mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMESPECIAL.ini)
 puerto=`expr substr $mode 11 9`
 puerto="  "$puerto
 cd /home/pi/Desktop
-sudo cp RXF_BM.desktop /home/pi
+sudo cp RXF_ESPECIAL.desktop /home/pi
 sleep 1
 frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMESPECIAL.ini)
 frecuencia=`expr substr $frecuencia 13 17`
