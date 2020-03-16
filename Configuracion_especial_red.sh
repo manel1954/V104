@@ -16,31 +16,17 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   ************************************************************************"
 echo -n "${CIAN}"
-echo "     Script para Actualizar, instalar programas y ejecutar aplicaciones    "
+echo "                      Script para Configuración de red    "
 echo -n "${ROJO}"
 echo "                              $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ************************************************************************"
 #echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
-echo "\33[1;36m   1)${BLANCO} Establecer Ip fija por cable"
-echo "\33[1;36m   2)${AMARILLO} Actualizar ${AMARILLO}YSF,${AMARILLO} YSF2DMR, DMR2YSF, DMR2NXDN y NXDNClients"
+echo "\33[1;36m   1)${BLANCO} Configurar ip fija por cable"
+echo "\33[1;36m   ${AMARILLO} Para configurar ip fija por Wifi se debe de utilizar el icono"
+echo "     superior derecho y elegir Editar conexiones...."
 echo ""
-echo "\33[1;32m      APARTADO BLUETOOTH"
-echo "\33[1;32m      =================="
-echo "\33[1;36m   3)\33[1;33m Activar el Bluetooth (en la imagen viene desactivado por defecto)"
-echo "\33[1;36m   4)\33[1;33m Desactivar Bluetooth (esto habilita el puerto /dev/ttyAMA0)"
-echo "\33[1;36m   5)\33[1;32m PDF con las instrucciones para emparejar el Bluetooth"
-echo "\33[1;36m   6)\33[1;37m Anclar el puerto rfcomm0 para conectar el Bluetooth para siempre"
-echo "\33[1;36m   7)\33[1;37m Anclar el puerto rfcomm1 para conectar el Bluetooth para siempre"
-echo "\33[1;32m      =================="
-echo ""
-echo "${CIAN}   8)${AMARILLO} Instalar Anydesk"
-echo "${CIAN}   9)${BLANCO} Grabar pantalla Nextion"
-echo "${CIAN}  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
-echo "${CIAN}  11)${VERDE} Configuración especial de Red"
 
-echo ""
-echo "${CIAN}  12)${BLANCO} RESET (RESTAURA IMAGEN DE FABRICA)"
 echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
@@ -461,22 +447,6 @@ echo "${VERDE}"
 echo -n "    Pulsa una tecla para seguir "
 read a
                                 sh flash_mmdvm_hs.sh
-                                echo ""
-                                break;;
-                                [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-11) echo ""
-while true
-do
-clear
-                                ejecutar1=S
-                                case $ejecutar1 in
-                                [sS]* ) echo ""
-                                sh Configuracion_especial_red.sh
                                 echo ""
                                 break;;
                                 [nN]* ) echo ""
