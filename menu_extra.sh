@@ -611,15 +611,8 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
-                                cd /home/pi
-                                git clone https://github.com/ea3eiz/AMBE_SERVER
-                                cd home/pi/AMBE_SERVER
-                                sleep 2
-                                make
-                                cd /home/pi/V104/Desktop
-                                sudo cp Abrir_ambe_server.desktop /home/pi/Desktop
-
-                                sudo cp editar_ambe_server.desktop /home/pi/Desktop
+                                sudo cp /home/pi/V104/Desktop/*.* /home/pi/Desktop
+                                sudo chmod 777 -R /home/pi/Desktop
                                 echo ""
                                 exit;
                                 break;;
