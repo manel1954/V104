@@ -132,14 +132,14 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			        [sS]* ) echo ""
+			                   [sS]* ) echo ""
 
                           #Convierte indicativo si se introduce en minúsculas a Mayúsculas
                           tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
 
-			        tu_indicativo=`echo "$tu_indicativo" | tr -d '[[:space:]]'` # Anula los espacios
+			                  tu_indicativo=`echo "$tu_indicativo" | tr -d '[[:space:]]'` # Anula los espacios
                           sed -i "$linea Callsign=$tu_indicativo" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
-sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
+                        sed -i "40c $tu_indicativo" /home/pi/info_panel_control.ini #escribe solo el indicativo
                         #iNDICATIVO PLUS
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
@@ -212,7 +212,7 @@ buscar=":"
 largo=`expr index $rxf $buscar`
 echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
 
-           	          read -p 'Introduce RXFrequency:        ' frecuenciarx
+           	              read -p 'Introduce RXFrequency:        ' frecuenciarx
                           letra=c
                           if [ $largo = 3 ]
                           then
@@ -225,7 +225,7 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			  [sS]* ) echo ""
+			                    [sS]* ) echo ""
 
             sed -i "$linea RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
             sed -i "$lineaTX TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini
@@ -245,16 +245,33 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia2
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia3
+
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia3
+
             #Radio
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia2
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia3
+
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVM.ini_copia3
+
             #ESPECIAL
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
+
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
 
 #RXFrequency YSF
 loc1=`grep -n "^RXFrequency=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
@@ -272,22 +289,36 @@ sed -i "$numero_linea_letrac RXFrequency=$frecuenciarx" /home/pi/YSFClients/YSFG
             sed -i "2c RXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
             sed -i "2c RXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
             sed -i "2c RXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            sed -i "3c TXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "3c TXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01            
+            sed -i "3c TXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "3c TXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "3c TXFrequency=$frecuenciarx" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
              #MMDVMDMR2YSF.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
-
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
             #MMDVMDMR2NXDN.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
 
             #MMDVMNXDN.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMNXDN.ini
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #NXDNGateway.ini
             sed -i "11c RXFrequency=$frecuenciarx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+            sed -i "12c TXFrequency=$frecuenciarx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #SOLODSTAR
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDSTAR.ini
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDSTAR.ini
+
             #SOLO FUSION
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMFUSION.ini
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMFUSION.ini
+
 			break;;
 			[nN]* ) echo ""
 			break;;
