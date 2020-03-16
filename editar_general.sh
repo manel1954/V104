@@ -231,6 +231,12 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia2
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia3
+
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMPLUS.ini_copia3
+
             #BM
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMBM.ini_copia
