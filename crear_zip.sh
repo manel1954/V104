@@ -7,14 +7,22 @@
             sudo cp -f MMDVM.ini_copia2 /home/pi/Downloads
             sudo cp -f MMDVM.ini_copia3 /home/pi/Downloads
             sudo cp -f MMDVM.ini_original /home/pi/Downloads
+
             sudo cp -f MMDVMBM.ini /home/pi/Downloads
             sudo cp -f MMDVMBM.ini_copia /home/pi/Downloads
             sudo cp -f MMDVMBM.ini_copia2 /home/pi/Downloads
-            sudo cp -f MMDVMBM.ini_copia3 /home/pi/Downloads      
+            sudo cp -f MMDVMBM.ini_copia3 /home/pi/Downloads
+
             sudo cp -f MMDVMPLUS.ini /home/pi/Downloads
             sudo cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
             sudo cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
             sudo cp -f MMDVMPLUS.ini_copia3 /home/pi/Downloads
+
+            sudo cp -f MMDVMESPECIAL.ini /home/pi/Downloads
+            sudo cp -f MMDVMESPECIAL.ini_copia /home/pi/Downloads
+            sudo cp -f MMDVMESPECIAL.ini_copia2 /home/pi/Downloads
+            sudo cp -f MMDVMESPECIAL.ini_copia3 /home/pi/Downloads
+
             sudo cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
             sudo cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
             sudo cp -f MMDVMNXDN.ini /home/pi/Downloads
