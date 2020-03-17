@@ -644,7 +644,7 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMR+</p>
               </head>
 
-              <br><br>
+              <br>
 
         <?php
         }    
