@@ -164,8 +164,8 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p><?php echo $Callsign." ".$Id." ".$frecuencia ?></p>
               <p><?php echo $Address ?></p>
 
-<p><img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE</p>
-
+<!-- <p><img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE</p>
+ -->
               </head>
         <?php
         }
@@ -176,8 +176,8 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p><?php echo $Address ?></p>
 
 
-<p><img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE</p>
-
+<!-- <p><img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE</p>
+ -->
               </head>
         <?php
         }    
@@ -197,8 +197,8 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p><?php echo $Callsign_plus." ".$Id_plus." ".$frecuencia_plus ?></p>
               <p><?php echo $Address_plus ?></p>
 
-<p><img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE</p>              
-              </head>
+<!-- <p><img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE</p>              
+ -->              </head>
         <?php
         }
         else {
@@ -207,8 +207,8 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p><?php echo $Callsign_plus." ".$Id_plus." ".$frecuencia_plus ?></p>
               <p><?php echo $Address_plus ?></p>
 
-<p><img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE</p>   
-
+<!-- <p><img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE</p>   
+ -->
               </head>
         <?php
         }    
@@ -239,8 +239,8 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p><?php echo $Callsign_Radio." ".$Id_Radio." ".$frecuencia_Radio ?></p>
               <p><?php echo $Address_Radio ?></p>
 
-<p><img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE</p>             
-              </head>
+<!-- <p><img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE</p>             
+ -->              </head>
         <?php
         }
         else {
@@ -249,8 +249,8 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p><?php echo $Callsign_Radio." ".$Id_Radio." ".$frecuencia_Radio ?></p>
               <p><?php echo $Address_Radio ?></p>
 
-<p><img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE</p>  
-
+<!-- <p><img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE</p>  
+ -->
               </head>
         <?php
         }    
@@ -268,8 +268,8 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p><?php echo $tg."  ".$frecuencia_2dmr ?></p> 
               <p><?php echo $Address_2dmr ?></p>
               <!-- <a href="panel_control.php" ><img src="imagenes/ON.png" width="90" onclick="cerrar_ysf2dmr()" alt=""/></a> --> 
-<p><img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE</p>
-              </head>
+<!-- <p><img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE</p>
+ -->              </head>
         <?php
         }
         else {
@@ -278,8 +278,8 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p><?php echo $tg."  ".$frecuencia_2dmr ?></p> 
               <p><?php echo $Address_2dmr ?></p>
               <!-- <a href="panel_control.php" ><img src="imagenes/OFF.png" width="90" onclick="iniciar_ysf2dmr()" alt=""/></a> -->
-<p><img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE</p>
-              </head>
+<!-- <p><img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE</p>
+ -->              </head>
         <?php
         }    
         ?>
