@@ -402,8 +402,23 @@ $tg = " TG: " . substr($tg, 13, 10);
         ?>
 
 
-
-
+        <?php
+              $ysf = exec('awk "NR==14{print;exit}" /home/pi/status.ini');
+              if ($ysf=="YSF2DMR=ON"){ 
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE - YSF2DMR</p>
+              </head>
+        <?php
+        }
+        else {
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - YSF2DMR</p>
+              </head>
+        <?php
+        }    
+        ?>
 
 
 
