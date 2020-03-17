@@ -87,7 +87,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMPLUS" /home/pi/autoarranque.ini`
 
-echo -n "\33[1;36m   107)\33[1;37m  Quitar ESPECIAL del autoarranque         - "
+echo -n "\33[1;36m   107)\33[1;37m  Quitar ESPECIAL del autoarranque       - "
 MMDVMLIBRE=`grep "MMDVMLIBRE" /home/pi/autoarranque.ini`
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "ON" ]
@@ -314,7 +314,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMPLUS" /home/pi/autoarranque.ini`
 
-echo -n "\33[1;36m   207)\33[1;33m  Poner ESPECIAL en autoarranque           - "
+echo -n "\33[1;36m   207)\33[1;33m  Poner ESPECIAL en autoarranque         - "
 MMDVMLIBRE=`grep "MMDVMLIBRE" /home/pi/autoarranque.ini`
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "OFF" ]
