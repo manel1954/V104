@@ -24,7 +24,7 @@ SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 #sudo rm /home/pi/Abrir_ircDDBGateway.desktop
 
 
-
+sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
 
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
@@ -41,4 +41,3 @@ sudo rm /home/pi/Activar_dvswitch.desktop
 
 
 
-sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
