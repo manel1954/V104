@@ -422,15 +422,29 @@ $tg = " TG: " . substr($tg, 13, 10);
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMR2YSF</p>
               </head>
 
-              <head> 
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/></p>
-              </head>
         <?php
         }    
         ?>
 
 
+        <?php
+              $ysf = exec('awk "NR==5{print;exit}" /home/pi/status.ini');
+              if ($ysf=="MMDVM=ON"){ 
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE - RADIO</p>
+              </head>
+        <?php
+        }
+        else {
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - RADIO</p>
+              </head>
 
+        <?php
+        }    
+        ?>
 
 
 
