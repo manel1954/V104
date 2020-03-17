@@ -8,9 +8,9 @@ sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_AMBE_SERVER_ON.png" /home/pi/Abr
 sed -i "10c Name[es_ES]=Cerrar AMBE SERVER" /home/pi/Abrir_ambe_server.desktop
 sed -i "11c AMBE_SERVER=ON" /home/pi/status.ini
 
-puerto_router=$(awk "NR==1" /home/pi/ambe_server.ini) 
-puerto_modem=$(awk "NR==2" /home/pi/ambe_server.ini)
-baut_rate=$(awk "NR==3" /home/pi/ambe_server.ini)
+puerto_router=$(awk "NR==1" /home/pi/.local/ambe_server.ini) 
+puerto_modem=$(awk "NR==2" /home/pi/.local/ambe_server.ini)
+baut_rate=$(awk "NR==3" /home/pi/.local/ambe_server.ini)
 cd /home/pi
 sudo cp Abrir_ambe_server.desktop /home/pi/Desktop
 sleep 2
