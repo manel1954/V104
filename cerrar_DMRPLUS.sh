@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo killall MMDVMPLUS
 cd /home/pi/Desktop
 sudo cp Abrir_MMDVMPLUS.desktop /home/pi
 sleep 1
@@ -12,4 +13,4 @@ cd /home/pi
 sudo cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_MMDVMPLUS.desktop
-sudo killall MMDVMPLUS
+
