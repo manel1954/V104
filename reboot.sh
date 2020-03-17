@@ -13,19 +13,29 @@ GRIS="\033[0m"
 echo "${AMARILLO}"
 echo " *********************************************************************"
 echo " *                                                                   *"
-echo " *                      REINICIAR RASPBERRY PI                       *"
+echo " *                       APAGAR RASPBERRY PI                         *"
 echo " *                                                                   *"
 echo " *********************************************************************"
 echo ""
 echo "${CIAN}"
-echo -n " Quieres Reiniciar S/N ? "
+echo -n " Quieres Apagarla S/N ? "
 read activar
 case "$activar" in
 [sS]* )
 clear
+echo "${VERDE}"
+echo " *********************************************************************"
+echo " *                                                                   *"
+echo " * <<<<<<<<<<<<<<<<<<  APAGANDO RASPBERRY PI  >>>>>>>>>>>>>>>>>>>>>> *"
+echo " *                                                                   *"
+echo " *********************************************************************"
+sleep 3
 
-sudo reboot
+sudo shutdown -h now
+
 break;;
 [nN]*) 
 exit ;;
 esac
+
+
