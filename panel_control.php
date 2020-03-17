@@ -558,7 +558,23 @@ $tg = " TG: " . substr($tg, 13, 10);
         }    
         ?>
 
-
+<?php
+              $ysf = exec('awk "NR==10{print;exit}" /home/pi/status.ini');
+              if ($ysf=="MMDVMESPECIAL=ON"){ 
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE - ESPECIAL</p>
+              </head>
+        <?php
+        }
+        else {
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - ESPECIAL</p>
+              </head>
+        <?php
+        }    
+        ?>
 
 
 
