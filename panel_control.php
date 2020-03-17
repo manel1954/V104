@@ -421,8 +421,9 @@ $tg = " TG: " . substr($tg, 13, 10);
               <head> 
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMR2YSF</p>
               </head>
+
               <head> 
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMR2YSF</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/></p>
               </head>
         <?php
         }    
@@ -592,7 +593,7 @@ $tg = " TG: " . substr($tg, 13, 10);
 
 <!-- APAGAR RASPBERRY PI === -->
                           <div  class="col-md-4 text-center thumbnail"><br>
-                          <img src="imagenes/RASPBERRY.png" width="196" ></img><br><br>
+                          <img src="imagenes/RASPBERRY.png" width="196" ></img><br><br><br>
                           <button class="btn btn-danger btn-md" onclick="pregunta_apagar_dispositivo()">APAGAR  - RASPBERRY PI</button>
                      </div>
           </div><!-- row -->
