@@ -448,6 +448,26 @@ $tg = " TG: " . substr($tg, 13, 10);
 
 
 
+        <?php
+              $ysf = exec('awk "NR==7{print;exit}" /home/pi/status.ini');
+              if ($ysf=="MMDVMBM=ON"){ 
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE - BRANDMEISTER</p>
+              </head>
+        <?php
+        }
+        else {
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - BRANDMEISTER</p>
+              </head>
+
+        <?php
+        }    
+        ?>
+
+
 
 
         </div>   
@@ -594,7 +614,24 @@ $tg = " TG: " . substr($tg, 13, 10);
         ?>
 
 
+        <?php
+              $ysf = exec('awk "NR==6{print;exit}" /home/pi/status.ini');
+              if ($ysf=="MMDVMPLUS=ON"){ 
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE - DMR+</p>
+              </head>
+        <?php
+        }
+        else {
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMR+</p>
+              </head>
 
+        <?php
+        }    
+        ?>
 
 
 
