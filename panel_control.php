@@ -643,16 +643,27 @@ $tg = " TG: " . substr($tg, 13, 10);
               <head> 
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMR+</p>
               </head>
-
-              <head> 
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OCULTO.png" width="23" alt=""/></p>
-              </head>
-
         <?php
         }    
         ?>
 
-
+        <?php
+              $ysf = exec('awk "NR==20{print;exit}" /home/pi/status.ini');
+              if ($ysf=="DVRPTR=ON"){ 
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_ON.png" width="23" alt=""/> - ONLINE - DVRPTR</p>
+              </head>
+        <?php
+        }
+        else {
+        ?>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DVRPTR</p>
+              </head>
+        <?php
+        }    
+        ?>
 
 
 
