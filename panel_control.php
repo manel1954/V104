@@ -644,7 +644,7 @@ $tg = " TG: " . substr($tg, 13, 10);
 
 <!-- APAGAR RASPBERRY PI === -->
                           <div  class="col-md-4 text-center thumbnail"><br>
-                          <img src="imagenes/RASPBERRY.png" width="202" ></img><br><br><br><br><br>
+                          <img src="imagenes/RASPBERRY.png" width="203" ></img><br><br><br><br><br>
                           <button class="btn btn-danger btn-md" onclick="pregunta_apagar_dispositivo()">APAGAR  - RASPBERRY PI</button>
                      </div>
           </div><!-- row -->
