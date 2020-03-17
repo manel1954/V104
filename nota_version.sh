@@ -16,8 +16,8 @@ echo "   ***********************************************************************
 echo "\33[1;36m   Gracias por descargar la imagen de ${AMARILLO}ADER $SCRIPTS_version"
 
 echo "${BLANCO}"
-info=$(cat /etc/os-release > /home/pi/info.txt)
-info=$(awk "NR==1" /home/pi/info.txt)
+info=$(cat /etc/os-release > /home/pi/.local/info.txt)
+info=$(awk "NR==1" /home/pi/.local/info.txt)
 echo "   $info"
 echo -n "${AMARILLO}"
 
