@@ -1,19 +1,7 @@
 #!/bin/bash
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sudo killall MMDVMDSTAR
+sudo killall ircddbgateway
+sudo killall MMDVMBM
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
 cd /home/pi/Desktop
@@ -26,7 +14,7 @@ sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
 sleep 1
 cd /home/pi
 sudo cp Abrir_solodstar.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_solodstar.desktop
 
 
@@ -40,13 +28,11 @@ sed -i "1c D-STAR=OFF" /home/pi/status.ini
 sleep 1
 cd /home/pi
 sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_ircDDB.desktop
 
 
-sudo killall MMDVMDSTAR
-sudo killall ircddbgateway
-sudo killall MMDVMBM
+
 
 
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
