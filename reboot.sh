@@ -25,7 +25,6 @@ case "$activar" in
 clear
 
 sudo reboot
-
 break;;
 [nN]*) 
 exit ;;
