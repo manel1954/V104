@@ -421,6 +421,9 @@ $tg = " TG: " . substr($tg, 13, 10);
               <head> 
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMR2YSF</p>
               </head>
+              <head> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="imagenes/ESTADO_OFF.png" width="23" alt=""/> - OFFLINE - DMR2YSF</p>
+              </head>
         <?php
         }    
         ?>
@@ -431,7 +434,6 @@ $tg = " TG: " . substr($tg, 13, 10);
 
 
 
-<br><br>
 
         </div>   
 
