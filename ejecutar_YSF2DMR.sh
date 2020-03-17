@@ -1,21 +1,12 @@
 #!/bin/bash
 
-#modo=$(awk "NR==18" /home/pi/status.ini)
-#if [ "$modo" = 'DVSWITCH=ON' ];then
-#echo "\033[1;31m" #ROJO
-#echo "******************************************"
-#echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
-#echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
-#echo "******************************************"
-#sleep 5
-#else
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMFUSION.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
 caracteres_linea=`expr $caracteres - 1`
 numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 mode=$(awk "NR==$numero_linea_port" /home/pi/MMDVMHost/MMDVMFUSION.ini)
-puerto=`expr substr $mode 14 9`
+puerto=`expr substr $mode 11 9`
 puerto="  "$puerto
 cd /home/pi/Desktop
 sudo cp RXF_YSF2DMR.desktop /home/pi
