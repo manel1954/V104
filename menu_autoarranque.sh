@@ -87,7 +87,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMPLUS" /home/pi/autoarranque.ini`
 
-echo -n "\33[1;36m   107)\33[1;37m  Quitar LIBRE del autoarranque         - "
+echo -n "\33[1;36m   107)\33[1;37m  Quitar ESPECIAL del autoarranque         - "
 MMDVMLIBRE=`grep "MMDVMLIBRE" /home/pi/autoarranque.ini`
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "ON" ]
@@ -314,7 +314,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMPLUS" /home/pi/autoarranque.ini`
 
-echo -n "\33[1;36m   207)\33[1;33m  Poner LIBRE en autoarranque           - "
+echo -n "\33[1;36m   207)\33[1;33m  Poner ESPECIAL en autoarranque           - "
 MMDVMLIBRE=`grep "MMDVMLIBRE" /home/pi/autoarranque.ini`
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "OFF" ]
@@ -600,7 +600,7 @@ clear
                         actualizar=S
                         case $actualizar in
                         [sS]* ) echo ""
-                        echo "Quitando LIBRE del autoarranque >>>>>"
+                        echo "Quitando ESPECIAL del autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/.config/autostart
                         sudo rm LIBRE.desktop
@@ -925,7 +925,7 @@ clear
                         actualizar=S
                         case $actualizar in
                         [sS]* ) echo ""
-                        echo "Poniendo LIBRE en el autoarranque >>>>>"
+                        echo "Poniendo ESPECIAL en el autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/AUTOARRANQUEV104
                         sudo cp LIBRE.desktop /home/pi/.config/autostart
