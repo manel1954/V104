@@ -1,6 +1,13 @@
 ﻿#!/bin/bash
 
+sudo systemctl stop ysfgateway.service
+sudo systemctl stop dmr2ysf.service
 
+sudo systemctl stop analog_bridge.service
+sudo systemctl stop ircddbgateway.service
+sudo systemctl stop md380-emu.service
+sudo systemctl stop mmdvm_bridge.service
+sudo systemctl stop nxdngateway.service
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
  
@@ -32,13 +39,6 @@ sudo cp Activar_dvswitch.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Activar_dvswitch.desktop
 
-sudo systemctl stop ysfgateway.service
-sudo systemctl stop dmr2ysf.service
 
-sudo systemctl stop analog_bridge.service
-sudo systemctl stop ircddbgateway.service
-sudo systemctl stop md380-emu.service
-sudo systemctl stop mmdvm_bridge.service
-sudo systemctl stop nxdngateway.service
 
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
