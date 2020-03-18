@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo killall MMDVMESPECIAL
 cd /home/pi/Desktop
 sudo cp Abrir_ESPECIAL.desktop /home/pi
 sleep 1
@@ -12,4 +13,4 @@ cd /home/pi
 sudo cp Abrir_ESPECIAL.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_ESPECIAL.desktop
-sudo killall MMDVMESPECIAL
+
