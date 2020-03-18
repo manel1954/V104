@@ -13,7 +13,12 @@ MARRON="\33[38;5;138m"
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
 
-
+echo "${ROJO}"
+echo " **********************************************************"
+echo " ***************  ESTO DESACTIVARÁ DSTAR   ****************"
+echo " ***************       EN DVSWITCH         ****************"
+echo " **********************************************************"
+sleep 2
 
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDB.desktop /home/pi
