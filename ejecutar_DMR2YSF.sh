@@ -53,7 +53,7 @@ sudo cp Abrir_DMR2YSF.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
-fi
+
 
  
   

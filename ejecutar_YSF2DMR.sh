@@ -51,4 +51,4 @@ sudo cp Abrir_YSF2DMR.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_YSF2DMR.desktop
 
-fi
+
