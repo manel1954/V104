@@ -25,7 +25,7 @@ echo " *************************************************************************
 echo " *************************   ABRIENDO ircDDBGateway    ************************"
 echo " ******************************************************************************"
 sleep 2
-exit;
+
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDB.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh cerrar_ircDDB.sh'" /home/pi/Abrir_ircDDB.desktop
@@ -49,7 +49,7 @@ sudo systemctl restart mmdvm_bridge.service
 sleep 2
 
 sudo ircddbgateway -gui
-
+exit;
 else
 echo "${VERDE}"
 echo " ******************************************************************************"
