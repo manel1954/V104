@@ -49,6 +49,7 @@ sudo systemctl restart mmdvm_bridge.service
 sleep 2
 
 sudo ircddbgateway -gui &
+sleep 5
 exit;
 else
 echo "${VERDE}"
