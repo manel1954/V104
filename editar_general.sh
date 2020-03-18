@@ -162,8 +162,18 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
 
-                        sudo sed -i "1c Callsign=$tu_indicativo C" /usr/local/etc/opendv/dstarrepeater
-                        sudo sed -i "2c gateway=$tu_indicativo H" /usr/local/etc/opendv/dstarrepeater
+                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
+                        sudo sed -i "2c gatewayCallsign=$tu_indicativo" /usr/local/etc/opendv/ircddbgateway
+
+                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        tu_indicativo=`echo "$tu_indicativo" | tr [:upper:] [:lower:]`
+                        sudo sed -i "95c gatewayCallsign=$tu_indicativo" /usr/local/etc/opendv/ircddbgateway
+
+                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
+                        sudo sed -i "116c gatewayCallsign=$tu_indicativo" /usr/local/etc/opendv/ircddbgateway
+
 
 
 #Indicativo YSF
