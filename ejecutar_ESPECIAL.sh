@@ -47,10 +47,11 @@ sudo rm /home/pi/Abrir_ESPECIAL.desktop
 cd /home/pi/MMDVMHost
 echo "${AMARILLO}"
 clear
-echo "\v\v\v\v\v\v"
+echo "\v\v\v\v"
 echo " ******************************************************************************"
 echo " ****************************  ABRIENDO ESPECIAL  ***************************** "
 echo " ******************************************************************************"
+read a
 sleep 2
 sudo ./MMDVMESPECIAL MMDVMESPECIAL.ini
 
