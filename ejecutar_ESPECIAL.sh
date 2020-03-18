@@ -18,7 +18,7 @@ puerto=`expr substr $mode 11 9`
 puerto="  "$puerto
 cd /home/pi/Desktop
 sudo cp RXF_ESPECIAL.desktop /home/pi
-sleep 1
+#sleep 1
 frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMESPECIAL.ini)
 frecuencia=`expr substr $frecuencia 13 17`
 frecuencia=$frecuencia$puerto
@@ -49,9 +49,8 @@ echo "${AMARILLO}"
 clear
 echo "\v\v\v\v"
 echo " ******************************************************************************"
-echo " ****************************  ABRIENDO ESPECIAL  ***************************** "
+echo " **************************    ABRIENDO ESPECIAL    *************************** "
 echo " ******************************************************************************"
-read a
 sleep 2
 sudo ./MMDVMESPECIAL MMDVMESPECIAL.ini
 
