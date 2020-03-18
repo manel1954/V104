@@ -923,6 +923,9 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
             sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
             sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
             sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
+
+            sudo sed -i "8c latitude=$tu_latitud" /usr/local/etc/opendv/ircddbgateway
+
 #Latitude YSF
 loc1=`grep -n "^Latitude=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
@@ -998,6 +1001,8 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
             sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia
             sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
             sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
+
+            sudo sed -i "9c longitude=$tu_longitud" /usr/local/etc/opendv/ircddbgateway
 
 #Longitude YSF
 loc1=`grep -n "^Longitude=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
