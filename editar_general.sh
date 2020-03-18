@@ -549,8 +549,8 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
             #SOLOFUSION
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMFUSION.ini
 
-            sudo sed -i "12c URL=$tu_url" /usr/local/etc/opendv/ircddbgateway
-            sudo sed -i "29c URL1=$tu_url" /usr/local/etc/opendv/ircddbgateway
+            sudo sed -i "12c url=$tu_url" /usr/local/etc/opendv/ircddbgateway
+            sudo sed -i "29c url1=$tu_url" /usr/local/etc/opendv/ircddbgateway
             
 			  break;;
 			  [nN]* ) echo ""
