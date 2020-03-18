@@ -42,7 +42,7 @@ sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 sleep 2
 
-
+ 
 
 
 
