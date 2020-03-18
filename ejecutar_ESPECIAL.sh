@@ -48,7 +48,7 @@ sudo rm /home/pi/Abrir_ESPECIAL.desktop
 
 cd /home/pi/MMDVMHost
 echo "${AMARILLO}"
-clear
+#clear
 echo "***********************************************"
 echo "*              ABRIENDO ESPECIAL              * "
 echo "***********************************************"
