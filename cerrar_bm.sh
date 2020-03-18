@@ -11,6 +11,6 @@ sed -i "7c MMDVMBM=OFF" /home/pi/status.ini
 cd /home/pi
 
 sudo cp Abrir_MMDVMBM.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_MMDVMBM.desktop
 
