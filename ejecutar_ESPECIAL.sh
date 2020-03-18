@@ -7,9 +7,7 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
-echo "***********************************************"
-echo "*              ABRIENDO ESPECIAL              * "
-echo "***********************************************"
+
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMESPECIAL.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -49,7 +47,8 @@ sudo rm /home/pi/Abrir_ESPECIAL.desktop
 cd /home/pi/MMDVMHost
 echo "${AMARILLO}"
 clear
-echo "***********************************************"
+echo "\v\v\v\v\v\v\v\v\v\v"
+echo "******************************************************************************"
 echo "*              ABRIENDO ESPECIAL              * "
 echo "***********************************************"
 sleep 1
