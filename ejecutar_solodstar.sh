@@ -14,7 +14,7 @@ if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
 
 echo "${ROJO}"
 echo "                  ******************************************"
-echo "                  *        ESTO DESACTIVARÁ D-STAR         *"
+echo "                  *        ESTO DESACTIVARÁ DSTAR          *"
 echo "                  *              EN DVSWITCH               *"
 echo "                  ******************************************"
 sleep 3
