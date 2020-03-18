@@ -21,7 +21,7 @@ sleep 3
 clear
 echo "${VERDE}"
 echo " ******************************************************************************"
-echo " **********************   ABRIENDO SOLO DSTARESPECIAL    **********************"
+echo " **************************   ABRIENDO SOLO DSTAR    **************************"
 echo " ******************************************************************************"
 sleep 2
 #Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF
@@ -98,7 +98,7 @@ else
 clear
 echo "${VERDE}"
 echo " ******************************************************************************"
-echo " **********************   ABRIENDO SOLO DSTARESPECIAL    **********************"
+echo " **************************   ABRIENDO SOLO DSTAR    **************************"
 echo " ******************************************************************************"
 sleep 2
 #Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF
