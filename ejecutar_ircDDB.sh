@@ -13,18 +13,7 @@ MARRON="\33[38;5;138m"
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
 
-echo "${ROJO}"
-echo "                  ******************************************"
-echo "                  *        ESTO DESACTIVARÁ D-STAR         *"
-echo "                  *              EN DVSWITCH               *"
-echo "                  ******************************************"
-sleep 3
-clear
-echo "${VERDE}"
-echo " ******************************************************************************"
-echo " *************************   ABRIENDO ircDDBGateway    ************************"
-echo " ******************************************************************************"
-sleep 2
+
 
 cd /home/pi/Desktop
 sudo cp Abrir_ircDDB.desktop /home/pi
@@ -48,9 +37,8 @@ sudo systemctl stop ircddbgateway
 sudo systemctl restart mmdvm_bridge.service
 sleep 2
 
-sudo ircddbgateway -gui &
-sleep 5
-exit;
+sudo ircddbgateway -gui
+
 else
 echo "${VERDE}"
 echo " ******************************************************************************"
