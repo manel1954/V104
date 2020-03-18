@@ -448,6 +448,8 @@ do
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
             
+            sudo sed -i "10c description1=$tu_ciudad" /usr/local/etc/opendv/ircddbgateway
+            sudo sed -i "27c description_1=$tu_ciudad" /usr/local/etc/opendv/ircddbgateway
 
 #Name YSF
 loc=`grep -n "^Name=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
@@ -546,6 +548,9 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMFUSION.ini
+
+            sudo sed -i "12c URL=$tu_ciudad" /usr/local/etc/opendv/ircddbgateway
+            sudo sed -i "29c URL1=$tu_ciudad" /usr/local/etc/opendv/ircddbgateway
             
 			  break;;
 			  [nN]* ) echo ""
