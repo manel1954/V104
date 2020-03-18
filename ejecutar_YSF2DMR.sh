@@ -35,10 +35,10 @@ sudo cp Abrir_YSF2DMR.desktop /home/pi/Desktop
 sudo rm /home/pi/Abrir_YSF2DMR.desktop
 
 cd /home/pi/YSF2DMR
-sudo lxterminal --geometry=80x12 -e ./YSF2DMR YSF2DMR.ini & 
+sudo lxterminal --geometry=80x15 -e ./YSF2DMR YSF2DMR.ini & 
 sleep 2
 cd /home/pi/MMDVMHost
-sudo ./MMDVMFUSION MMDVMFUSION.ini
+sudo lxterminal --geometry=80x15 -e ./MMDVMFUSION MMDVMFUSION.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_YSF2DMR.desktop /home/pi
