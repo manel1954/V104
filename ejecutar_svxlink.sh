@@ -22,6 +22,13 @@ sudo cp Abrir_svxlink.desktop /home/pi/Desktop
 sudo rm /home/pi/Abrir_svxlink.desktop
 
 echo "${BLANCO}"
+echo " ******************************************************************************"
+echo " ***************************    ABRIENDO SVXLINK    ***************************"
+echo " ******************************************************************************"
+sleep 2
+
+
+
 sudo svxlink
 
 cd /home/pi/Desktop
