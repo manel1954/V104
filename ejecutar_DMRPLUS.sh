@@ -1,7 +1,4 @@
 #!/bin/bash
-echo "***********************************************"
-echo "*               ABRIENDO DMR+                 * "
-echo "***********************************************"
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMPLUS.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -16,9 +13,9 @@ frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMPLUS.ini)
 frecuencia=`expr substr $frecuencia 13 9`
 frecuencia=$frecuencia$puerto
 sed -i "11c Name=$frecuencia" /home/pi/RXF_DMRPLUS.desktop
-sleep 1
+
 sudo cp /home/pi/RXF_DMRPLUS.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/RXF_DMRPLUS.desktop
 
 #Escribe en el fichero INFO_NXDN para poner los datos en los iconos INFO TXF  
@@ -33,16 +30,15 @@ sudo sed -i "10c Name[es_ES]=Cerrar DMR+" /home/pi/Abrir_MMDVMPLUS.desktop
 sudo sed -i "6c MMDVMPLUS=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_MMDVMPLUS.desktop
 
 cd /home/pi/MMDVMHost
 echo "\33[1;37m"
-clear
-echo "***********************************************"
-echo "*               ABRIENDO DMR+                 * "
-echo "***********************************************"
-sleep 1
+echo " ******************************************************************************"
+echo " ****************************    ABRIENDO DMR+    *****************************"
+echo " ******************************************************************************"
+sleep 2
 sudo ./MMDVMPLUS MMDVMPLUS.ini
 
 cd /home/pi/Desktop
