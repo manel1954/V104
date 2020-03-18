@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo killall MMDVMFUSION
+sudo killall YSFGateway
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_solofusion.desktop /home/pi
@@ -12,6 +14,5 @@ cd /home/pi
 sudo cp Abrir_solofusion.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_solofusion.desktop
-sudo killall MMDVMFUSION
-sudo killall YSFGateway
+
 
