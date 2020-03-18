@@ -9,15 +9,8 @@ AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
 
-
-
-
-
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
-
-
-
 
 echo "${ROJO}"
 echo "                  ******************************************"
@@ -27,10 +20,10 @@ echo "                  ******************************************"
 sleep 3
 clear
 echo "${VERDE}"
-clear
-echo "                  ***********************************************"
-echo "                  *             ABRIENDO SOLO D-STAR            * "
-echo "                  ***********************************************"
+echo " ******************************************************************************"
+echo " **********************   ABRIENDO SOLO DSTARESPECIAL    **********************"
+echo " ******************************************************************************"
+sleep 2
 #Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"
@@ -46,9 +39,9 @@ frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMDSTAR.ini)
 frecuencia=`expr substr $frecuencia 13 9`
 frecuencia=$frecuencia$puerto
 sed -i "11c Name=$frecuencia" /home/pi/RXF_DSTAR.desktop
-sleep 1
+
 sudo cp /home/pi/RXF_DSTAR.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/RXF_DSTAR.desktop                       
 sed -i "5c $frecuencia" /home/pi/INFO_RXF
 # FIN Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF 
@@ -62,7 +55,7 @@ sed -i "11c Name[es_ES]=Cerrar solo D-STAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_solodstar.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_solodstar.desktop
 
 cd /home/pi/Desktop
@@ -73,7 +66,7 @@ sed -i "10c Name[es_ES]=Cerrar ircDDB" /home/pi/Abrir_ircDDB.desktop
 sed -i "1c D-STAR=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_ircDDB.desktop
 
 # Pone Enable=0 en [Dstar Network]
@@ -98,30 +91,16 @@ sed -i "11c Name[es_ES]=Abrir solo D-STAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_solodstar.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_solodstar.desktop
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 else
 clear
 echo "${VERDE}"
-clear
-echo "                  ***********************************************"
-echo "                  *             ABRIENDO SOLO D-STAR            * "
-echo "                  ***********************************************"
+echo " ******************************************************************************"
+echo " **********************   ABRIENDO SOLO DSTARESPECIAL    **********************"
+echo " ******************************************************************************"
+sleep 2
 #Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"
@@ -137,9 +116,9 @@ frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMDSTAR.ini)
 frecuencia=`expr substr $frecuencia 13 9`
 frecuencia=$frecuencia$puerto
 sed -i "11c Name=$frecuencia" /home/pi/RXF_DSTAR.desktop
-sleep 1
+
 sudo cp /home/pi/RXF_DSTAR.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/RXF_DSTAR.desktop                       
 sed -i "5c $frecuencia" /home/pi/INFO_RXF
 # FIN Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF 
@@ -153,7 +132,7 @@ sed -i "11c Name[es_ES]=Cerrar solo D-STAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_solodstar.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_solodstar.desktop
 
 cd /home/pi/Desktop
@@ -164,7 +143,7 @@ sed -i "10c Name[es_ES]=Cerrar ircDDB" /home/pi/Abrir_ircDDB.desktop
 sed -i "1c D-STAR=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_ircDDB.desktop
 
 # Ejecuta Solo D-STAR
@@ -180,7 +159,7 @@ sed -i "11c Name[es_ES]=Abrir solo D-STAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_solodstar.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_solodstar.desktop
 fi
 

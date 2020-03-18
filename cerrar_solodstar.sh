@@ -31,14 +31,8 @@ sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
 
 sudo rm /home/pi/Abrir_ircDDB.desktop
 
-
-
-
-
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=ON' ];then
-
-
 
 # Pone Enable=1 en [Dstar Network]
 sed -i "62c Enable=1" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
