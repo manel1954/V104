@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo killall MMDVMBM
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_MMDVMBM.desktop /home/pi
@@ -12,4 +13,4 @@ sleep 1
 sudo cp Abrir_MMDVMBM.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_MMDVMBM.desktop
-sudo killall MMDVMBM
+
