@@ -14,9 +14,9 @@ frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMFUSION.ini)
 frecuencia=`expr substr $frecuencia 13 9`
 frecuencia=$frecuencia$puerto
 sed -i "11c Name=$frecuencia" /home/pi/RXF_YSF2DMR.desktop
-sleep 1
+
 sudo cp /home/pi/RXF_YSF2DMR.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/RXF_YSF2DMR.desktop
 
 #Escribe en el fichero INFO_RXF para poner los datos en los iconos INFO TXF  
@@ -25,13 +25,13 @@ sed -i "13c $frecuencia" /home/pi/INFO_RXF
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_YSF2DMR.desktop /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version/;lxterminal --geometry=80x20 -e sudo sh cerrar_YSF2DMR.sh'" /home/pi/Abrir_YSF2DMR.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version/;sudo sh cerrar_YSF2DMR.sh'" /home/pi/Abrir_YSF2DMR.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_YSF2DMR_ON.png" /home/pi/Abrir_YSF2DMR.desktop
 sed -i "10c Name[es_ES]=Cerrar YSF2DMR" /home/pi/Abrir_YSF2DMR.desktop
 sed -i "14c YSF2DMR=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_YSF2DMR.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_YSF2DMR.desktop
 
 cd /home/pi/YSF2DMR
@@ -48,7 +48,7 @@ sed -i "10c Name[es_ES]=Abrir YSF2DMR" /home/pi/Abrir_YSF2DMR.desktop
 sed -i "14c YSF2DMR=OFF" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_YSF2DMR.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_YSF2DMR.desktop
 
 fi

@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo killall MMDVMFUSION
+sudo killall YSF2DMR
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_YSF2DMR.desktop /home/pi
@@ -8,11 +10,7 @@ sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_YSF2DMR_OFF.png" /home/pi/Abrir_
 sed -i "10c Name[es_ES]=Abrir YSF2DMR" /home/pi/Abrir_YSF2DMR.desktop
 sed -i "14c YSF2DMR=OFF" /home/pi/status.ini
 cd /home/pi
-sleep 1
-sudo cp Abrir_YSF2DMR.desktop /home/pi/Desktop
-sleep 1
-sudo rm /home/pi/Abrir_YSF2DMR.desktop
 
-sudo killall MMDVMFUSION
-sudo killall YSF2DMR
-#
+sudo cp Abrir_YSF2DMR.desktop /home/pi/Desktop
+
+sudo rm /home/pi/Abrir_YSF2DMR.desktop
