@@ -162,7 +162,7 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia2
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMESPECIAL.ini_copia3
 
-                        sed -i "2c Callsign=$tu_indicativo" /usr/local/etc/opendv/dstarrepeater
+                        sudo sed -i "2c Callsign=$tu_indicativo" /usr/local/etc/opendv/dstarrepeater
 
 
 #Indicativo YSF
