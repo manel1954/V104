@@ -1,14 +1,5 @@
 #!/bin/bash
 
-#modo=$(awk "NR==18" /home/pi/status.ini)
-#if [ "$modo" = 'DVSWITCH=ON' ];then
-#echo "\033[1;31m" #ROJO
-#echo "******************************************"
-#echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
-#echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
-#echo "******************************************"
-#sleep 5
-#else
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -23,9 +14,9 @@ frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini)
 frecuencia=`expr substr $frecuencia 13 9`
 frecuencia=$frecuencia$puerto
 sed -i "11c Name=$frecuencia" /home/pi/RXF_DMR2YSF.desktop
-sleep 1
+
 sudo cp /home/pi/RXF_DMR2YSF.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/RXF_DMR2YSF.desktop
 
 #Escribe en el fichero INFO_RXF para poner los datos en los iconos INFO TXF
@@ -34,13 +25,13 @@ sed -i "14c $frecuencia" /home/pi/INFO_RXF
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_DMR2YSF.desktop /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh cerrar_DMR2YSF.sh'" /home/pi/Abrir_DMR2YSF.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;sudo sh cerrar_DMR2YSF.sh'" /home/pi/Abrir_DMR2YSF.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMR2YSF_ON.png" /home/pi/Abrir_DMR2YSF.desktop
 sed -i "10c Name[es_ES]=Cerrar DMR2YSF" /home/pi/Abrir_DMR2YSF.desktop
 sed -i "15c DMR2YSF=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_DMR2YSF.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
 cd /home/pi/DMR2YSF
@@ -53,13 +44,13 @@ sudo ./YSFGateway YSFGateway.ini
 
 cd /home/pi/Desktop
 sudo cp Abrir_DMR2YSF.desktop /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_DMR2YSF.sh'" /home/pi/Abrir_DMR2YSF.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=80x15 -e sudo sh ejecutar_DMR2YSF.sh'" /home/pi/Abrir_DMR2YSF.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMR2YSF_OFF.png" /home/pi/Abrir_DMR2YSF.desktop
 sed -i "10c Name[es_ES]=Abrir DMR2YSF" /home/pi/Abrir_DMR2YSF.desktop
 sed -i "15c DMR2YSF=OFF" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_DMR2YSF.desktop /home/pi/Desktop
-sleep 1
+
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
 fi
