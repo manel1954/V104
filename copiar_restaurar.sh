@@ -45,11 +45,12 @@ clear
             case $sino in
             s|S) 
             clear
-            echo "\33[1;32m" #color verde
-            echo "*********************************************"
-            echo "*     SE ESTÁ REALIZANDO LA COPIA           *"
-            echo "*********************************************"
-            sleep 3
+echo "${AMARILLO}"
+echo "\v\v\v\v\v\v\v"
+echo " ******************************************************************************"
+echo " ***********************  SE ESTÁ REALIZANDO LA COPIA  ************************"
+echo " ******************************************************************************"
+sleep 3
             sudo rm -R /home/pi/Downloads
             cd /home/pi
             sudo mkdir Downloads
@@ -190,14 +191,15 @@ exit;
 *)
 clear
 echo "${ROJO}"
+echo "\v\v\v\v\v\v\v"
 echo " ******************************************************************************"
-echo " **************************   ABRIENDO SOLO DSTAR    **************************"
+echo " ******************  NO SE HIZO COPIA, VOLVIENDO AL MENU  *********************"
 echo " ******************************************************************************"
 sleep 3
 
 ;;
 esac
-exit;
+#exit;
 break;
 done;;
 2) echo ""
@@ -210,10 +212,11 @@ clear
             s|S) 
             clear
             echo "\33[1;32m" #color verde
-            echo "*********************************************"
-            echo "*     SE ESTÁ REALIZANDO LA RESTAURACIÓN    *"
-            echo "*********************************************"
-            sleep 3
+echo "${AMARILLO}"
+echo " ******************************************************************************"
+echo " *******************  SE ESTÁ REALIZANDO LA RESTAURACIÓN  *********************"
+echo " ******************************************************************************"
+sleep 3
             cd /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f TODOS_LOS_INIS.ini /home/pi/MMDVMHost
 
@@ -388,15 +391,15 @@ exit;
 *)
 
 clear
-echo "\33[1;31m" #color rojo
-echo "*********************************************"
-echo "*        NO SE HIZO LA RESTAURACIÓN         *"
-echo "*********************************************"
+echo "${ROJO}"
+echo " ******************************************************************************"
+echo " *******************  NO SE RESTAURÓ, VOLVIENDO AL MENU  *********************"
+echo " ******************************************************************************"
 sleep 3
 
 ;;
 esac
-exit;
+#exit;
 break;
 done;;
 0) echo ""
