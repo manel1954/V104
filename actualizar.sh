@@ -207,6 +207,14 @@ cd $usuario
 cp RXF_RADIO.desktop $usuario/Desktop
 rm $usuario/RXF_RADIO.desktop
 
+frecuencia=$(awk "NR==6" $usuario/INFO_RXF)
+cd $usuario/Desktop/
+cp RXF_SOLOFUSION.desktop $usuario/
+sed -i "11c Name=$frecuencia" $usuario/RXF_SOLOFUSION.desktop
+cd $usuario
+cp RXF_SOLOFUSION.desktop $usuario/Desktop
+rm $usuario/RXF_SOLOFUSION.desktop
+
 frecuencia=$(awk "NR==5" $usuario/INFO_RXF)
 cd $usuario/Desktop/
 cp RXF_DSTAR.desktop $usuario/
