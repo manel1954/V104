@@ -46,9 +46,11 @@ clear
             s|S) 
             clear
 echo "${BLANCO}"
-echo "\v\v\v\v"
+echo "\v\v\v"
 echo " ******************************************************************************"
 echo " ***********************  SE ESTÁ REALIZANDO LA COPIA  ************************"
+echo -n "${BLANCO}"
+echo " ***********************   ESTO CERRARÁ EL TERMINAL    ************************"
 echo " ******************************************************************************"
 sleep 3
             sudo rm -R /home/pi/Downloads
