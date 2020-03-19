@@ -159,21 +159,21 @@ selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/brandmeister_esp.ini)
 reflector_dstar=$(awk "NR==18" /etc/ircddbgateway)
 
 # Copia todos los datos de Dvswitch
-sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "4c $id2" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "5c $Latitude" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "6c $Longitude" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "10c $password_especial" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "11c $port_especial" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
+sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
+sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
+sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
+sed -i "4c $id2" /home/pi/Downloads/datos_dvswitch
+sed -i "5c $Latitude" /home/pi/Downloads/datos_dvswitch
+sed -i "6c $Longitude" /home/pi/Downloads/datos_dvswitch
+sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
+sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
+sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
+sed -i "10c $password_especial" /home/pi/Downloads/datos_dvswitch
+sed -i "11c $port_especial" /home/pi/Downloads/datos_dvswitch
+sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
+sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
+sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
+sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
 
 cp -r /home/pi/Downloads /home/pi/.local/COPIA_SEGURIDAD
 sudo chmod 777 -R /home/pi/.local/COPIA_SEGURIDAD
