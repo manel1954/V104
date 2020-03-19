@@ -190,9 +190,7 @@ done;;
 while true
 do
 clear
-            ejecutar1=S
-            case $ejecutar1 in
-            [sS]* ) echo ""
+
 echo "\33[1;36m" #color cian
 read -p 'QUIERES SEGUIR ADELANTE S/N ? ' sino
   case $sino in
@@ -383,11 +381,7 @@ echo "*********************************************"
 sleep 3
       ;;
       esac
-                  echo ""
-                  echo "Ok, se ha ejecutado correctamente"
-                  echo ""
-                  break;;
-                  [nN]* ) echo ""
+
                   break;;
 esac
 done;;
