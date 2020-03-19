@@ -26,7 +26,7 @@ echo "${CIAN}  1)${BLANCO} Hacer copia de: BM, DMR+, RADIO, ESPECIAL, solo FUSIO
 echo "     BlueDV, ircDDB, DSTAR Repeater, YSF2DMR, DMR2YSF, DMR2NXDN, NXDN, SVXLINK"
 echo "     DVSWITCH Y Editor GENERAL.  "
 echo ""
-echo "${CIAN}  1)${VERDE} Restaurar copia de: BM, DMR+, ESPECIAL, RADIO, solo FUSION, solo DSTAR, YSF"
+echo "${CIAN}  1)${VERDE} Restaurar copia de:BM, DMR+, ESPECIAL, RADIO, solo FUSION, solo DSTAR, YSF"
 echo "     BlueDV, ircDDB, DSTAR Repeater, YSF2DMR, DMR2YSF, DMR2NXDN, NXDN, SVXLINK"
 echo "     DVSWITCH Y Editor GENERAL.  "
 echo ""
