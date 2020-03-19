@@ -49,8 +49,7 @@ echo "${BLANCO}"
 echo "\v\v\v"
 echo " ******************************************************************************"
 echo " ***********************  SE ESTÁ REALIZANDO LA COPIA  ************************"
-echo -n "${ROJO}"
-echo " *********************  AL ACABAR SE CERRARÁ EL TERMINAL  *********************"
+echo " *********************  ${ROJO}AL ACABAR SE CERRARÁ EL TERMINAL  ${BLANCO}*********************"
 echo " ******************************************************************************"
 sleep 3
             sudo rm -R /home/pi/Downloads
@@ -218,6 +217,7 @@ echo "${VERDE}"
 echo "\v\v\v\v"
 echo " ******************************************************************************"
 echo " *******************  SE ESTÁ REALIZANDO LA RESTAURACIÓN  *********************"
+echo " *********************  ${ROJO}AL ACABAR SE CERRARÁ EL TERMINAL  ${BLANCO}*********************"
 echo " ******************************************************************************"
 sleep 3
             cd /home/pi/.local/COPIA_SEGURIDAD/Downloads

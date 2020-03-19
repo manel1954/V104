@@ -67,7 +67,7 @@ sudo cp RXF_NXDN.desktop $usuario/Desktop
 sudo rm $usuario/RXF_NXDN.desktop
 
 clear
-echo "${AMARILLO}"
+echo "${VERDE}"
 echo "\v\v\v\v"
 echo "   *************************************************************************"
 echo "   *************************************************************************"
