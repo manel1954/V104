@@ -382,7 +382,7 @@ sleep 3
       ;;
       esac
 
-
+break;
 done;;
 0) echo ""
 clear
