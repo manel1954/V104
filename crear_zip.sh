@@ -105,21 +105,21 @@ selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/brandmeister_esp.ini)
 
 reflector_dstar=$(awk "NR==18" /etc/ircddbgateway)
 
-sed -i "1c $indicativo" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "2c $address_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "3c $id" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "4c $id2" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "5c $Latitude" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "6c $Longitude" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "7c $port" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "8c $location" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "9c $url" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "10c $password_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "11c $port_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "12c $sala_fcs" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "13c $sala_nxdn" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "14c $selfcare" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
-sed -i "15c $reflector_dstar" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
+sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
+sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
+sed -i "4c $id2" /home/pi/Downloads/datos_dvswitch
+sed -i "5c $Latitude" /home/pi/Downloads/datos_dvswitch
+sed -i "6c $Longitude" /home/pi/Downloads/datos_dvswitch
+sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
+sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
+sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
+sed -i "10c $password_especial" /home/pi/Downloads/datos_dvswitch
+sed -i "11c $port_especial" /home/pi/Downloads/datos_dvswitch
+sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
+sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
+sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
+sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
 
 cd /home/pi/
 tar -zcvf copia.tar.gz Downloads
