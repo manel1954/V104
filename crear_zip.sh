@@ -1,5 +1,5 @@
 #!/bin/bash
-            sudo cp /home/pi/datos_dvswitch /home/pi/Downloads
+            cp /home/pi/.local/datos_dvswitch /home/pi/Downloads
             cd /home/pi/MMDVMHost
             sudo cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
             sudo cp -f MMDVM.ini /home/pi/Downloads
@@ -105,22 +105,21 @@ selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/brandmeister_esp.ini)
 
 reflector_dstar=$(awk "NR==18" /etc/ircddbgateway)
 
-# Copia todos los datos de Dvswitch
-sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
-sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
-sed -i "4c $id2" /home/pi/Downloads/datos_dvswitch
-sed -i "5c $Latitude" /home/pi/Downloads/datos_dvswitch
-sed -i "6c $Longitude" /home/pi/Downloads/datos_dvswitch
-sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
-sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
-sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
-sed -i "10c $password_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "11c $port_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
-sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
-sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
-sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
+sed -i "1c $indicativo" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "2c $address_especial" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "3c $id" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "4c $id2" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "5c $Latitude" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "6c $Longitude" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "7c $port" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "8c $location" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "9c $url" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "10c $password_especial" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "11c $port_especial" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "12c $sala_fcs" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "13c $sala_nxdn" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "14c $selfcare" /home/pi/.local/Downloads/datos_dvswitch
+sed -i "15c $reflector_dstar" /home/pi/.local/Downloads/datos_dvswitch
 
 cd /home/pi/
 tar -zcvf copia.tar.gz Downloads
