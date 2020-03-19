@@ -36,14 +36,16 @@ case $escoger_menu in
 while true
 do
 clear
-            ejecutar1=S
-            case $ejecutar1 in
-            [sS]* ) echo ""
+            echo "\33[1;36m" #color cian
+            read -p 'QUIERES SEGUIR ADELANTE S/N ? ' sino
+            case $sino in
+            s|S) 
             clear
-            echo "*****************************************"
-            echo "     Realizando la copia de seguridad"
-            echo "*****************************************"
-            sleep 5
+            echo "\33[1;32m" #color verde
+            echo "*********************************************"
+            echo "*     SE ESTÁ REALIZANDO LA COPIA           *"
+            echo "*********************************************"
+            sleep 3
             sudo rm -R /home/pi/Downloads
             cd /home/pi
             sudo mkdir Downloads
@@ -178,29 +180,36 @@ sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
 cp -r /home/pi/Downloads /home/pi/.local/COPIA_SEGURIDAD
 sudo chmod 777 -R /home/pi/.local/COPIA_SEGURIDAD
 
-                  echo ""
-                  echo "Ok, se ha ejecutado correctamente"
-                  echo ""
-                  break;;
-                  [nN]* ) echo ""
-                  break;;
+exit;
+;;
+
+*)
+clear
+echo "\33[1;31m" #color rojo
+echo "*********************************************"
+echo "*             NO SE HIZO LA COPIA           *"
+echo "*********************************************"
+sleep 3
+
+;;
 esac
+exit;
+break;
 done;;
 2) echo ""
 while true
 do
 clear
-
-echo "\33[1;36m" #color cian
-read -p 'QUIERES SEGUIR ADELANTE S/N ? ' sino
-  case $sino in
-      s|S) 
-clear
-echo "\33[1;32m" #color verde
-echo "*********************************************"
-echo "*     SE ESTÁ REALIZANDO LA RESTAURACIÓN    *"
-echo "*********************************************"
-sleep 3
+            echo "\33[1;36m" #color cian
+            read -p 'QUIERES SEGUIR ADELANTE S/N ? ' sino
+            case $sino in
+            s|S) 
+            clear
+            echo "\33[1;32m" #color verde
+            echo "*********************************************"
+            echo "*     SE ESTÁ REALIZANDO LA RESTAURACIÓN    *"
+            echo "*********************************************"
+            sleep 3
             cd /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cp -f TODOS_LOS_INIS.ini /home/pi/MMDVMHost
 
@@ -372,17 +381,18 @@ sudo sed -i "18c $reflector_dstar" /etc/ircddbgateway
 
 exit;
 ;;
+*)
 
-      *)
-         clear
+clear
 echo "\33[1;31m" #color rojo
 echo "*********************************************"
 echo "*        NO SE HIZO LA RESTAURACIÓN         *"
 echo "*********************************************"
 sleep 3
-      ;;
-      esac
-      exit;
+
+;;
+esac
+exit;
 break;
 done;;
 0) echo ""
