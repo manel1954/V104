@@ -217,7 +217,7 @@ echo "${VERDE}"
 echo "\v\v\v\v"
 echo " ******************************************************************************"
 echo " *******************  SE ESTÁ REALIZANDO LA RESTAURACIÓN  *********************"
-echo " *********************  ${ROJO}AL ACABAR SE CERRARÁ EL TERMINAL  ${BLANCO}*********************"
+echo " *********************  ${ROJO}AL ACABAR SE CERRARÁ EL TERMINAL  ${VERDE}*********************"
 echo " ******************************************************************************"
 sleep 3
             cd /home/pi/.local/COPIA_SEGURIDAD/Downloads
