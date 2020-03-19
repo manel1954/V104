@@ -49,8 +49,8 @@ echo "${BLANCO}"
 echo "\v\v\v"
 echo " ******************************************************************************"
 echo " ***********************  SE ESTÁ REALIZANDO LA COPIA  ************************"
-echo -n "${BLANCO}"
-echo " ***********************   ESTO CERRARÁ EL TERMINAL    ************************"
+echo -n "${ROJO}"
+echo " *********************  AL ACABAR SE CERRARÁ EL TERMINAL  *********************"
 echo " ******************************************************************************"
 sleep 3
             sudo rm -R /home/pi/Downloads
