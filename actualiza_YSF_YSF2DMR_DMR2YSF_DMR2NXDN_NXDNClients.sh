@@ -15,7 +15,7 @@ GRIS="\033[0m"
                         git clone https://github.com/g4klx/YSFClients
                         cd /home/pi/YSFClients/YSFGateway
                         version_YSFClients_actual=$(awk "NR==22" /home/pi/YSFClients/YSFGateway/Version.h)
-                        version_YSFClients_instalada=$(awk "NR==1" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        version_YSFClients_instalada=$(awk "NR==1" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
                         if [ "$version_YSFClients_actual" = "$version_YSFClients_instalada" ];
                         #=================================
                         then 
@@ -28,7 +28,7 @@ GRIS="\033[0m"
                         sleep 4
                         clear
                         else
-                        sed -i "1c $version_YSFClients_actual" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
+                        sed -i "1c $version_YSFClients_actual" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
                         echo "${VERDE}DESCARGANDO E INSTALANDO EL ÚLTIMO YSFClients${CIAN}"
                         sleep 3
                         sudo rm -R /home/pi/YSFClients
@@ -74,7 +74,7 @@ sleep 3
 
                         #comprueba si la versión a cambiado
                         version_YSF2DMR_actual=$(awk "NR==23" /home/pi/YSF2DMR/Version.h)
-                        version_YSF2DMR_instalada=$(awk "NR==2" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        version_YSF2DMR_instalada=$(awk "NR==2" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
                         if [ "$version_YSF2DMR_actual" = "$version_YSF2DMR_instalada" ];
                         # =================================
                         then 
@@ -87,7 +87,7 @@ sleep 3
                         echo "***************************************"
                         sleep 4
                         else
-                        sed -i "2c $version_YSF2DMR_actual" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
+                        sed -i "2c $version_YSF2DMR_actual" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
                         echo "${ROJO}"
                         echo "*******************************************"
                         echo "*         INSTALANDO YSF2DMR              *"
@@ -115,7 +115,7 @@ sleep 3
 
                         #comprueba si la versión a cambiado
                         version_DMR2YSF_actual=$(awk "NR==23" /home/pi/DMR2YSF/Version.h)
-                        version_DMR2YSF_instalada=$(awk "NR==3" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        version_DMR2YSF_instalada=$(awk "NR==3" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
                         if [ "$version_DMR2YSF_actual" = "$version_DMR2YSF_instalada" ];
                         # =================================
                         then
@@ -129,7 +129,7 @@ sleep 3
                         sleep 4
                         
                         else
-                        sed -i "3c $version_DMR2YSF_actual" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
+                        sed -i "3c $version_DMR2YSF_actual" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
                         echo "${ROJO}"
                         echo "*******************************************"
                         echo "*         INSTALANDO DMR2YSF              *"
@@ -158,7 +158,7 @@ sleep 3
 
                         #comprueba si la versión a cambiado
                         version_DMR2NXDN_actual=$(awk "NR==23" /home/pi/DMR2NXDN/Version.h)
-                        version_DMR2NXDN_instalada=$(awk "NR==4" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        version_DMR2NXDN_instalada=$(awk "NR==4" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
                         if [ "$version_DMR2NXDN_actual" = "$version_DMR2NXDN_instalada" ];
                         # =================================
                         then
@@ -172,7 +172,7 @@ sleep 3
                         sleep 4
                         
                         else
-                        sed -i "4c $version_DMR2NXDN_actual" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
+                        sed -i "4c $version_DMR2NXDN_actual" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
                         echo "${ROJO}"
                         echo "*******************************************"
                         echo "*         INSTALANDO DMR2NXDN              *"
@@ -195,7 +195,7 @@ sleep 3
 
                         #comprueba si la versión a cambiado
                         version_NXDNClients_actual=$(awk "NR==22" /home/pi/NXDNClients/NXDNGateway/Version.h)
-                        version_NXDNClients_instalada=$(awk "NR==5" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        version_NXDNClients_instalada=$(awk "NR==5" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
                         if [ "$version_NXDNClients_actual" = "$version_NXDNClients_instalada" ];
                         # =================================
                         # =================================
@@ -210,7 +210,7 @@ sleep 3
                         clear
                         sudo rm -R /home/pi/MMDVM_CM
                         else
-                        sed -i "5c $version_NXDNClients_actual" /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini  
+                        sed -i "5c $version_NXDNClients_actual" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini  
                         echo "${VERDE}DESCARGANDO E INSTALANDO EL ÚLTIMO NXDNClients${CIAN}"
                         sleep 4
                         sudo rm -R /home/pi/NXDNClients
