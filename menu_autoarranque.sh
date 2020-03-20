@@ -476,9 +476,6 @@ trans=`grep "NXDN" /home/pi/.local/autoarranque.ini`
 
 echo "\33[0m "
 echo "\33[1;36m    27)\33[1;32m *** RESTABLECER LOS AUTOARRANQUES A ${RED}OFF ${VERDE}***"
-echo ""
-
-echo "\33[1;36m    28)\33[1;31m *** REINICIAR LA RASPBERRY PI ***"
 
 echo ""
 echo -n "\33[1;36m   Por favor, elige una opción: " 
@@ -1186,29 +1183,6 @@ sed -i "18c NXDN=OFF" /home/pi/.local/autoarranque.ini
 clear
 exit;
 break;;
-esac
-done;;
-28) echo ""
-while true
-do
-clear
-echo " \33[1;31m  ************************************************************"
-echo "   *                                                          *"
-echo "   *     OJO!!   SE VA A REINICIAR LA RASPBERRY PI            *"
-echo "   *                                                          *"
-echo "   ************************************************************"
-echo ""
-                		read -p '   Estás seguro de querer reiniciar ? Si/No: ' ejecutar13
-                    	case $ejecutar13 in
-                        [sS]* ) echo ""
-                        echo "ok >>>>>"
-                        sudo reboot
-                        echo ""
-                        echo "Ok, se ha ejecutado correctamente"
-                        echo ""
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
 esac
 done;;
 0) echo "."
