@@ -182,6 +182,17 @@ sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_IRCDDB_OFF.png" /home/pi/Abrir_i
 sed -i "10c Name[es_ES]=Abrir ircDDB" /home/pi/Abrir_ircDDB.desktop
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
 sleep 1
+
+# Pone Enable=0 en [Dstar Network]
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/dmrplus.ini
+sed -i "62c Enable=0" /opt/MMDVM_Bridge/especial.ini
+
+sudo systemctl stop ircddbgateway.service
+
+
 cd /home/pi
 sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
 
