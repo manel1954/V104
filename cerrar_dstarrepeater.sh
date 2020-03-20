@@ -8,7 +8,7 @@ sleep 1
 
 sed -i "4c Exec=sh -c 'cd /home/pi/V104; lxterminal --geometry=72x8 -e sudo sh ejecutar_dstarrepeater.sh; sudo dstarrepeater & sudo ircddbgateway -gui'" /home/pi/Abrir_dstarrepeater.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/repeater.png" /home/pi/Abrir_dstarrepeater.desktop
-sed -i "10c Name[es_ES]=Abrir D-STAR Repeater" /home/pi/Abrir_dstarrepeater.desktop
+sed -i "10c Name[es_ES]=Abrir DSTAR Repeater" /home/pi/Abrir_dstarrepeater.desktop
 sed -i "9c dstarrepeater=OFF" /home/pi/status.ini
 sleep 1
 cd /home/pi
