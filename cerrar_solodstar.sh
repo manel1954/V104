@@ -16,7 +16,7 @@ sed -i "11c Name[es_ES]=Abrir solo DSTAR" /home/pi/Abrir_solodstar.desktop
 sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_solodstar.desktop /home/pi/Desktop
-sleep 2
+sleep 3
 sudo rm /home/pi/Abrir_solodstar.desktop
 
 
@@ -30,7 +30,7 @@ sed -i "10c Name[es_ES]=Abrir ircDDB" /home/pi/Abrir_ircDDB.desktop
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_ircDDB.desktop /home/pi/Desktop
-sleep 2
+sleep 3
 sudo rm /home/pi/Abrir_ircDDB.desktop
 
 
