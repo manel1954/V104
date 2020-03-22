@@ -12,7 +12,7 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
-#   You should have received a copy of the GNU General Public License
+#   You should have received a copy of the GNU General Public License 
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
@@ -76,8 +76,7 @@ sudo killall MMDVMHost >/dev/null 2>&1
 eval sudo $DFU_RST $DEV_USB_SER 750
 
 # Upload the firmware
-eval sudo $DFU_UTIL -D mmdvm_f1bl.bin -d 1eaf:0003 -a 2 -R -R
-
+eval sudo $STM32FLASH -v -w mmdvm_f1bl.bin -g 0x0 -R -i 20,-21,21:-20,21 /dev/ttyAMA0
 echo
 echo "Please RESET your ZUMspot !"
 echo

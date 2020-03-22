@@ -179,12 +179,16 @@ a) echo ""
 while true
 do
 clear
-                        read -p 'Quieres grabar el firmware con bootloader en tu dispositivo por GPIO S/N ?: ' continuar
+                        read -p 'Quieres grabar el firmware en tu dispositivo S/N: ' continuar
                         case $continuar in
                         [sS]* ) echo ""
                         echo ""
                         cd /home/pi/MMDVM_HS/
-                        sudo make serial-bl devser=/dev/ttyAMA0
+                        cp /home/pi/$SCRIPTS_version/install_fw_librekit.sh /home/pi/MMDVM_HS/bin/
+                        cd /home/pi/MMDVM_HS/bin
+                        sleep 2
+                        sudo chmod 777 install_fw_librekit_gpio.sh
+                        ./install_fw_librekit_gpio.sh
                         break;;
                         [nN]* ) echo ""
                         clear
