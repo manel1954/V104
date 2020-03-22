@@ -14,11 +14,11 @@ GRIS="\033[0m"
 
 
 echo "${AMARILLO}"
-echo "  **********************************************************************"
-echo "  *                                                                    *"
-echo "  * Una vez terminado este proceso, puedes grabar con los item ${CIAN}2) ${AMARILLO} o ${CIAN} 3)${AMARILLO} *"
-echo "  *                                                                    *"
-echo "  **********************************************************************"
+echo "  ***********************************************************************"
+echo "  *                                                                     *"
+echo "  * Una vez terminado este proceso, puedes grabar con los item ${CIAN}2) ${AMARILLO} o ${CIAN} 3)${AMARILLO}*"
+echo "  *                                                                     *"
+echo "  ***********************************************************************"
 
 
 
