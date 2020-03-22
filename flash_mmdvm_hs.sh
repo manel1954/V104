@@ -9,18 +9,39 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+
+
+
+
+echo "${AMARILLO}"
+echo "  **********************************************************************"
+echo "  *                                                                    *"
+echo "  * Una vez terminado este proceso, puedes grabar con los item ${CIAN}2) ${AMARILLO} o ${CIAN} 3)${AMARILLO} *"
+echo "  *                                                                    *"
+echo "  **********************************************************************"
+
+
+
+
+
+
+
 echo "${VERDE}"
 echo "   ********************************************************************"
 echo "   *       Script para actualizar MMVDM_HS Libre Kit y ZUMSpot \33[1;33m    \33[1;32m   *"
 echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                               *"
 echo "   ********************************************************************"
-echo "${CIAN}   1)${VERDE} Descargar y compilar el último firmware MMDVM_HS disponible"
+echo "${CIAN}   1)${VERDE} Descargar y compilar el último firmware MMDVM_HS Libre Kit"
 echo ""
-echo "${CIAN}   2)${AMARILLO} Grabar firmware MMDVM_HS por el USB (host del STM)"
+echo "${CIAN}   2)${VERDE} Descargar y compilar el último firmware MMDVM_HS ZUMSpot"
 echo ""
-echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
+echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS Libre Kit por USB (host del STM)"
 echo ""
-echo "${CIAN}   4)${BLANCO} MENÚ ACTUALIZACIÓN ZUMSpot"
+echo "${CIAN}   4)${AMARILLO} Grabar firmware MMDVM_HS Libre Kit por USART_1 (adaptador usb-ttl)"
+echo ""
+echo "${CIAN}   5)${AMARILLO} Grabar firmware MMDVM_HS ZUMSpot (conector GPIO)"
+echo ""
+echo "${CIAN}   6)${BLANCO} MENÚ ACTUALIZACIÓN ZUMSpot"
 echo ""
 echo "   ${CIAN}Versión actual del firmware:"
 #echo "\33[1;36m   2)\33[1;37m Actualizar ZUMSpot por GPIO" 
@@ -122,12 +143,101 @@ read continuar
                         exit;
                         break;;
 esac
-done;;        
+done;;   
 2) echo ""
 while true
 do
 clear
-                        read -p 'Quieres grabar el firmware en tu dispositivo S/N: ' continuar
+                        echo "${VERDE}"
+                        read -p 'Quieres continuar con la descarga ? S/N: ' continuar
+                        case $continuar in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DESCARGANDO FIRMWARE "
+                        echo "${CIAN}"
+                        cd /home/pi/
+                        sudo rm -R MMDVM_HS 
+                        git clone https://github.com/juribeparada/MMDVM_HS
+                        cd MMDVM_HS/
+                        git submodule init
+                        git submodule update
+
+                        clear
+echo "${VERDE}"
+echo "   ******************************************"
+echo "   *                                        *"
+echo "   *     PROCESO DE DESCARGA FINALIZADO     *"
+echo "   *                                        *"
+echo "   ******************************************"
+sleep 3
+clear
+                        echo "${VERDE}"
+                        echo "Quieres editar el fichero de configuración Config.h ? S/N:"
+                        
+                        read siguiente
+                        if [ "$siguiente" = "S" -o "$siguiente" = "s" ]
+                        then
+                        echo "${AMARILLO}"
+                        echo "Haga los cambios necesarios y cierre el editor para continuar"
+                        sudo geany /home/pi/MMDVM_HS/Config.h
+clear
+echo "${ROJO}"
+echo "   ******************************************"
+echo "   *                                        *"
+echo "   *        PROCESO DE COMPILACIÓN          *"
+echo "   *                                        *"
+echo "   ******************************************"
+                        sleep 3
+echo "${CIAN}"
+                        make clean
+                        make
+                        else
+clear                                
+echo "${ROJO}"
+echo "   ******************************************"
+echo "   *                                        *"
+echo "   *        PROCESO DE COMPILACIÓN          *"
+echo "   *                                        *"
+echo "   ******************************************"
+                        sleep 3
+echo "${CIAN}"
+                        make clean
+                        make
+                        fi
+clear
+echo "${VERDE}"
+echo "   ******************************"
+echo "   *                            *"
+echo "   *     PROCESO TERMINADO      *"
+echo "   *                            *"
+echo "   ******************************"
+sleep 3
+clear
+echo ""
+echo ""
+echo ""
+echo ""
+echo "${AMARILLO}"
+echo "  **********************************************************************"
+echo "  *                                                                    *"
+echo "  * Una vez terminado este proceso, puedes grabar con los item ${CIAN}2) ${AMARILLO} o ${CIAN} 3)${AMARILLO} *"
+echo "  *                                                                    *"
+echo "  **********************************************************************"
+echo "${CIAN}"
+echo -n "  Pulsa una tecla para volver al menú "
+read continuar
+
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        exit;
+                        break;;
+esac
+done;;      
+3) echo ""
+while true
+do
+clear
+                        read -p 'Quieres grabar el firmware en tu dispositivo por el conector USB S/N ?: ' continuar
                         case $continuar in
                         [sS]* ) echo ""
                         echo ""
@@ -143,7 +253,7 @@ clear
                         break;;
 esac
 done;;
-3) echo ""
+4) echo ""
 while true
 do
 clear
@@ -159,27 +269,11 @@ clear
                         break;;
 esac
 done;;
-4) echo ""
+5) echo ""
 while true
 do
 clear
-                                ejecutar1=S
-                                case $ejecutar1 in
-                                [sS]* ) echo ""
-                                sh flash_zumspot.sh
-                                echo ""
-                                break;;
-                                [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-a) echo ""
-while true
-do
-clear
-                        read -p 'Quieres grabar el firmware en tu dispositivo S/N: ' continuar
+                        read -p 'Quieres grabar el firmware en tu dispositivo por GPIO S/N ?: ' continuar
                         case $continuar in
                         [sS]* ) echo ""
                         echo ""
@@ -193,6 +287,22 @@ clear
                         [nN]* ) echo ""
                         clear
                         break;;
+esac
+done;;
+6) echo ""
+while true
+do
+clear
+                                ejecutar1=S
+                                case $ejecutar1 in
+                                [sS]* ) echo ""
+                                sh flash_zumspot.sh
+                                echo ""
+                                break;;
+                                [nN]* ) echo ""
+clear
+exit;
+break;;
 esac
 done;;
 0) echo ""
