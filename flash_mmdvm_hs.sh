@@ -175,6 +175,22 @@ exit;
 break;;
 esac
 done;;
+a) echo ""
+while true
+do
+clear
+                        read -p 'Quieres grabar el firmware con bootloader en tu dispositivo por GPIO S/N ?: ' continuar
+                        case $continuar in
+                        [sS]* ) echo ""
+                        echo ""
+                        cd /home/pi/MMDVM_HS/
+                        sudo make serial-bl devser=/dev/ttyAMA0
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
