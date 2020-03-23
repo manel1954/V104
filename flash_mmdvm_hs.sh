@@ -27,7 +27,7 @@ echo "${CIAN}   4)${BLANCO} MENÚ ACTUALIZACIÓN ZUMSpot"
 echo "\v\v"
 echo "   ${ROJO}0) Menú Principal"
 echo "\v\v"
-echo "   ${CIAN}Versión actual del firmware:"
+echo "   ${VERDE}Versión actual del firmware:"
 echo -n "${BLANCO}   "
 tac $(ls -1rt /home/pi/MMDVMHost/MMDVM-*.log | tail -n1 ) | grep "protocol" -m 1 | sed -n 's/description: /&\n/;s/.*\n//p'
 #echo "La versión se actualiza al abrir de nuevo MMMDVMHost"
