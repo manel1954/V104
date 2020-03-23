@@ -106,11 +106,11 @@ read a
                         fi
 clear
 echo "${VERDE}"
-echo "   ******************************"
-echo "   *                            *"
-echo "   *     PROCESO TERMINADO      *"
-echo "   *                            *"
-echo "   ******************************"
+echo "            *******************************************************"
+echo "            *                                                     *"  
+echo "            *                  PROCESO FINALIZADO                 *"
+echo "            *                                                     *"
+echo "            *******************************************************"
 sleep 3
 clear
 echo ""
