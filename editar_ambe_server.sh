@@ -95,6 +95,7 @@ do
                          [sS]* ) echo ""
                          sudo git pull
                          sudo make
+                         read s
                          break;;
                          [nN]* ) echo ""
                          break;;
