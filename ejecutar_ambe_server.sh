@@ -16,7 +16,8 @@ sudo cp Abrir_ambe_server.desktop /home/pi/Desktop
 sleep 2
 sudo rm /home/pi/Abrir_ambe_server.desktop
 
-cd /home/pi/AMBEServer
+cd /home/pi/AMBE_SERVER
+
 sudo killall AMBEserver
 sleep 1
 ./AMBEserver -p $puerto_router -i $puerto_modem -s $baut_rate

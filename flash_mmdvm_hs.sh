@@ -9,7 +9,7 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
-
+MARRON="\33[38;5;138m"
 echo "${VERDE}"
 echo "   *************************************************************************"
 echo "   *           ${CIAN}Script para actualizar MMVDM_HS Libre Kit y ZUMSpot \33[1;33m    \33[1;32m    *"
@@ -18,7 +18,6 @@ echo "   ***********************************************************************
 echo ""
 echo "${CIAN}   1)${VERDE} Descargar y compilar el último firmware MMDVM_HS Libre Kit"
 echo ""
-
 echo "${CIAN}   2)${AMARILLO} Grabar firmware MMDVM_HS Libre Kit por USB (host del STM)"
 echo ""
 echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS Libre Kit por USART_1 (adaptador usb-ttl)"

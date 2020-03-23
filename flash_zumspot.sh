@@ -9,6 +9,7 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+MARRON="\33[38;5;138m"
 echo "${VERDE}"
 echo "   ********************************************************************"
 echo "   *              Script para actualizar ZUMSpot     \33[1;33m       \33[1;32m          *"
@@ -19,10 +20,16 @@ echo ""
 echo "${CIAN}   2)${AMARILLO} Grabar firmware MMDVM_HS ZUMSpot Modificado (conector GPIO)"
 echo ""
 echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS ZUMSpot Original (conector GPIO)"
+echo "\v\v"
+echo "   ${ROJO}0) Menú Principal"
+echo "\v\v"
+echo "   ${VERDE}Versión actual del firmware:"
+echo -n "${BLANCO}   "
+tac $(ls -1rt /home/pi/MMDVMHost/MMDVM-*.log | tail -n1 ) | grep "protocol" -m 1 | sed -n 's/description: /&\n/;s/.*\n//p'
+#echo "La versión se actualiza al abrir de nuevo MMMDVMHost"
 echo ""
-echo "${CIAN}   0)${ROJO} Volver "
-echo ""
-echo -n "${CIAN}   Elige una opción: " 
+
+echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -77,25 +84,39 @@ echo "${CIAN}"
                         else
 clear                                
 echo "${ROJO}"
-echo "   ******************************************"
-echo "   *                                        *"
-echo "   *        PROCESO DE COMPILACIÓN          *"
-echo "   *                                        *"
-echo "   ******************************************"
-                        sleep 3
+echo "\v\v\v\v\v\v\v\v"
+echo "            *******************************************************"
+echo "${AMARILLO}"
+echo "                           PROCESO DE COMPILACIÓN "
+echo "${VERDE}"
+echo "            SE COMPILARÁ MMDVM_HS SIN RESTRICCIONES DE FRECUENCIA  "
+echo "                              Y RSSI ACTIVADO "
+echo "${ROJO}"
+echo "            *******************************************************"
+echo ""
 echo "${CIAN}"
+echo -n "             Pulsa una tecla para continuar "
+read a
+
+                        
+
                         cp /home/pi/V104/Config_zumspot.h /home/pi/MMDVM_HS/Config.h
                         make clean
-                        make
+                        make 
                         fi
 clear
 echo "${VERDE}"
-echo "   ******************************"
-echo "   *                            *"
-echo "   *     PROCESO TERMINADO      *"
-echo "   *                            *"
-echo "   ******************************"
+echo "            *******************************************************"
+echo "            *                                                     *"  
+echo "            *                  PROCESO FINALIZADO                 *"
+echo "            *                                                     *"
+echo "            *******************************************************"
 sleep 3
+clear
+echo ""
+echo ""
+echo ""
+echo ""
                         break;;
                         [nN]* ) echo ""
                         clear
