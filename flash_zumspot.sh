@@ -22,7 +22,7 @@ echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS ZUMSpot Original (conecto
 echo ""
 echo "${CIAN}   0)${ROJO} Volver "
 echo ""
-echo -n "   Elige una opción: " 
+echo -n "${CIAN}   Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
