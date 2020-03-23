@@ -85,6 +85,7 @@ echo "${CIAN}"
                         else
 clear                                
 echo "${ROJO}"
+echo "\v\v\v\v\v\v\v\v"
 echo "            *******************************************************"
 echo "${AMARILLO}"
 echo "                           PROCESO DE COMPILACIÓN "
