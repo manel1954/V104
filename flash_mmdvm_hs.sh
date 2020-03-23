@@ -85,13 +85,18 @@ echo "${CIAN}"
                         else
 clear                                
 echo "${ROJO}"
-echo "   ******************************************"
-echo "   *                                        *"
-echo "   *        PROCESO DE COMPILACIÓN          *"
-echo "   *                                        *"
-echo "   ******************************************"
-                        sleep 3
+echo "   *******************************************************"
+echo "${AMARILLO}"
+echo "                  PROCESO DE COMPILACIÓN "
+echo "${VERDE}"
+echo "   SE COMPILARA MMDVM_HS SIN RESTRICCIONES DE FRECUENCIA  "
+echo "                     Y RSSI ACTIVADO "
+echo "${ROJO}"
+echo "   *******************************************************"
+sleep 5
 echo "${CIAN}"
+                        
+
                         cp /home/pi/V104/Config_librekit.h /home/pi/MMDVM_HS/Config.h
                         make clean
                         make bl
