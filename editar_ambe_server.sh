@@ -18,7 +18,7 @@ echo "${VERDE}"
 echo "   ************************************************************************"
 echo "   *        ${CIAN}Script Actualizar y Editar AMBE SERVER\33[1;33m       ${ROJO} by EA3EIZ          \33[1;32m     *"
 echo "   ************************************************************************"
-eco ""
+echo ""
 echo -n "\33[1;36m   1)\33[0m Modificar puerto ROUTER  - \33[1;33m"
 var1= sed -n '1p'  $usuario/.local/ambe_server.ini
 
