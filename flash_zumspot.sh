@@ -116,6 +116,11 @@ clear
                         sleep 2
                         sudo chmod 777 install_fw_librekit_gpio.sh
                         ./install_fw_librekit_gpio.sh
+                        echo "${BLANCO}"
+                        echo "SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN:"
+                        echo "${VERDE}"
+                        echo "" 
+                        read -p 'Pulsa una tecla para volver' continuar
                         break;;
                         [nN]* ) echo ""
                         clear
@@ -140,7 +145,7 @@ echo ">>>>>>>>> ACTUALIZAR FIRMWARE ZUMSpot"
     cd  /tmp/zumfirmware
     ./flash.sh
     echo ""
-    #rm -rf /tmp/zumfirmware 2> /dev/null
+    rm -rf /tmp/zumfirmware 2> /dev/null
     echo "${BLANCO}"
     echo "SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN:"
     echo "${VERDE}"

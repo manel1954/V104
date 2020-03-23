@@ -108,9 +108,7 @@ echo ""
 echo ""
 echo ""
 echo ""
-echo "${CIAN}"
-echo -n "  Pulsa una tecla para volver al menú "
-read continuar
+
 
                         break;;
                         [nN]* ) echo ""
@@ -133,6 +131,11 @@ clear
                         sleep 2
                         sudo chmod 777 install_fw_librekit.sh
                         ./install_fw_librekit.sh
+                        echo "${BLANCO}"
+                        echo "SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN:"
+                        echo "${VERDE}"
+                        echo "" 
+                        read -p 'Pulsa una tecla para volver' continuar
                         break;;
                         [nN]* ) echo ""
                         clear
