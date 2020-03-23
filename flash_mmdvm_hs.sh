@@ -85,16 +85,19 @@ echo "${CIAN}"
                         else
 clear                                
 echo "${ROJO}"
-echo "   *******************************************************"
+echo "        *******************************************************"
 echo "${AMARILLO}"
-echo "                  PROCESO DE COMPILACIÓN "
+echo "                       PROCESO DE COMPILACIÓN "
 echo "${VERDE}"
-echo "   SE COMPILARA MMDVM_HS SIN RESTRICCIONES DE FRECUENCIA  "
-echo "                     Y RSSI ACTIVADO "
+echo "        SE COMPILARA MMDVM_HS SIN RESTRICCIONES DE FRECUENCIA  "
+echo "                          Y RSSI ACTIVADO "
 echo "${ROJO}"
-echo "   *******************************************************"
-sleep 5
+echo "        *******************************************************"
+echo ""
 echo "${CIAN}"
+echo "        Pulsa una tecla para continuar"
+read a
+
                         
 
                         cp /home/pi/V104/Config_librekit.h /home/pi/MMDVM_HS/Config.h
