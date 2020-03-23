@@ -34,6 +34,9 @@ echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
 
+echo -n "${ROJO}"
+echo "   Debes actualizar Ambe Server si es la primera vez que lo utilizas"
+echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 
@@ -97,7 +100,15 @@ do
                          sudo git pull
                          sudo make clean
                          sudo make
-                         read s
+
+clear
+echo "${VERDE}"
+echo "\33[1;33m   **************************************************"
+echo "   *                                                *"
+echo "   *           AMBE SERVER ACTUALIZADO              *"
+echo "   *                                                *"
+echo "   **************************************************"
+sleep 2
                          break;;
                          [nN]* ) echo ""
                          break;;
