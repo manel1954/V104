@@ -12,7 +12,7 @@ GRIS="\033[0m"
 
 echo "${VERDE}"
 echo "   *************************************************************************"
-echo "   *           Script para actualizar MMVDM_HS Libre Kit y ZUMSpot \33[1;33m    \33[1;32m     *"
+echo "   *           ${CIAN}Script para actualizar MMVDM_HS Libre Kit y ZUMSpot \33[1;33m    \33[1;32m    *"
 echo "   *                             \33[1;31mby EA3EIZ\33[1;32m                                 *"
 echo "   *************************************************************************"
 echo ""
