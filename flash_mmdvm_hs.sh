@@ -135,7 +135,7 @@ clear
                         echo "SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN:"
                         echo "${VERDE}"
                         echo "" 
-                        read -p 'Pulsa una tecla para volver' continuar
+                        sleep 2
                         break;;
                         [nN]* ) echo ""
                         clear
