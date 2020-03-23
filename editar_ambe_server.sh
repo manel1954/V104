@@ -26,6 +26,8 @@ var1= sed -n '2p'  $usuario/.local/ambe_server.ini
 echo -n "\33[1;36m   3)\33[0m Modificar Baut rate      - \33[1;33m"
 var1= sed -n '3p'  $usuario/.local/ambe_server.ini
 
+echo -n "\33[1;36m   4)\33[0m Actualizar Ambe Server      - \33[1;33m"
+
 echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
@@ -81,6 +83,19 @@ do
                     break;;
                     [nN]* ) echo ""
                     break;;
+esac
+done;;
+4) echo ""
+while true
+do
+                         actualizar=S 
+                         case $actualizar in
+                         [sS]* ) echo ""
+                         sudo git pull
+                         sudo make
+                         break;;
+                         [nN]* ) echo ""
+                         break;;
 esac
 done;;
 0) echo ""
