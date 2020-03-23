@@ -66,7 +66,7 @@ echo "   ******************************************"
 sleep 3
 clear
                         echo "${VERDE}"
-                        echo "Quieres editar el fichero de configuración Config.h ? S/N:"
+                        echo -n "Quieres editar el fichero de configuración Config.h ? S/N: "
                         
                         read siguiente
                         if [ "$siguiente" = "S" -o "$siguiente" = "s" ]
@@ -149,7 +149,7 @@ echo "   ******************************************"
 sleep 3
 clear
                         echo "${VERDE}"
-                        echo "Quieres editar el fichero de configuración Config.h ? S/N:"
+                        echo -n "Quieres editar el fichero de configuración Config.h ? S/N: "
                         
                         read siguiente
                         if [ "$siguiente" = "S" -o "$siguiente" = "s" ]
