@@ -34,8 +34,8 @@ echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
 
-echo -n "${ROJO}"
-echo "   Debes actualizar Ambe Server si es la primera vez que lo utilizas"
+echo -n "${AMARILLO}"
+echo "   Nota: Debes actualizar Ambe Server si es la primera vez que lo utilizas"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
@@ -96,6 +96,7 @@ do
                          actualizar=S 
                          case $actualizar in
                          [sS]* ) echo ""
+                         clear
                          cd $usuario/AMBE_SERVER
                          sudo git pull
                          sudo make clean
