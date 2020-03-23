@@ -133,9 +133,9 @@ clear
                         ./install_fw_librekit.sh
                         echo "${BLANCO}"
                         echo "SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN:"
-                        echo "${VERDE}"
                         echo "" 
                         sleep 2
+                        exit;
                         break;;
                         [nN]* ) echo ""
                         clear
