@@ -93,6 +93,7 @@ do
                          actualizar=S 
                          case $actualizar in
                          [sS]* ) echo ""
+                         cd $usuario/AMBE_SERVER
                          sudo git pull
                          sudo make clean
                          sudo make
