@@ -19,9 +19,10 @@ echo ""
 echo "${CIAN}   2)${AMARILLO} Grabar firmware MMDVM_HS ZUMSpot Modificado (conector GPIO)"
 echo ""
 echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS ZUMSpot Original (conector GPIO)"
-echo "\33[1;36m   0)\33[1;34m Salir "
-echo "${ROJO}"
-echo -n "\33[1;36m   Elige una opción: " 
+echo ""
+echo "${CIAN}   0) Salir "
+echo ""
+echo -n "  Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
