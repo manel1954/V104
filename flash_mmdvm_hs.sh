@@ -10,22 +10,6 @@ AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
 
-
-
-
-echo "${AMARILLO}"
-echo "  ***********************************************************************"
-echo "  *                                                                     *"
-echo "  * Una vez terminado este proceso, puedes grabar con los item ${CIAN}2) ${AMARILLO} o ${CIAN} 3)${AMARILLO}*"
-echo "  *                                                                     *"
-echo "  ***********************************************************************"
-
-
-
-
-
-
-
 echo "${VERDE}"
 echo "   ********************************************************************"
 echo "   *       Script para actualizar MMVDM_HS Libre Kit y ZUMSpot \33[1;33m    \33[1;32m   *"
@@ -127,12 +111,6 @@ echo ""
 echo ""
 echo ""
 echo ""
-echo "${AMARILLO}"
-echo "  **********************************************************************"
-echo "  *                                                                    *"
-echo "  * Una vez terminado este proceso, puedes grabar con los item ${CIAN}2) ${AMARILLO} o ${CIAN} 3)${AMARILLO} *"
-echo "  *                                                                    *"
-echo "  **********************************************************************"
 echo "${CIAN}"
 echo -n "  Pulsa una tecla para volver al menú "
 read continuar
