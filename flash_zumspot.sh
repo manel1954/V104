@@ -144,9 +144,7 @@ echo ">>>>>>>>> ACTUALIZAR FIRMWARE ZUMSpot"
     echo "SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN:"
     echo "${VERDE}"
     echo "" 
-    read -p 'pulsa una tecla para reiniciar' continuar
-    sudo reboot
-                        exit;
+    read -p 'Pulsa una tecla para volver' continuar
                         break;;
                         [nN]* ) echo ""
                         clear
