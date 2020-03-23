@@ -92,6 +92,7 @@ echo "   *                                        *"
 echo "   ******************************************"
                         sleep 3
 echo "${CIAN}"
+                        cp /home/pi/V104/Config_librekit.h /home/pi/MMDVM_HS/Config.h
                         make clean
                         make bl
                         fi
