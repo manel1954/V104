@@ -28,7 +28,7 @@ echo -n "\33[1;36m   3)\33[0m Modificar Baut rate      - \33[1;33m"
 var1= sed -n '3p'  $usuario/.local/ambe_server.ini
 
 echo ""
-echo -n "\33[1;36m   4)${VERDE} Actualizar Ambe Server  \33[1;33m"
+echo "\33[1;36m   4)${VERDE} Actualizar Ambe Server  \33[1;33m"
 
 echo ""
 echo "   ${ROJO}0) Salir"
