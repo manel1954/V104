@@ -15,7 +15,7 @@ echo "   ***********************************************************************
 echo "   *                 ${CIAN}Script para actualizar ZUMSpot     \33[1;33m       \33[1;32m            *"
 echo "   *                             \33[1;31mby EA3EIZ\33[1;32m                                 *"
 echo "   *************************************************************************"
-ECHO ""
+echo ""
 echo "${CIAN}   1)${VERDE} Descargar y compilar el último firmware MMDVM_HS ZUMSpot"
 echo ""
 echo "${CIAN}   2)${AMARILLO} Grabar firmware MMDVM_HS ZUMSpot Modificado (conector GPIO)"
