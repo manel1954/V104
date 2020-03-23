@@ -94,6 +94,7 @@ do
                          case $actualizar in
                          [sS]* ) echo ""
                          sudo git pull
+                         sudo make clean
                          sudo make
                          read s
                          break;;
