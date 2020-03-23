@@ -73,11 +73,11 @@ clear
                         sudo geany /home/pi/MMDVM_HS/Config.h
 clear
 echo "${ROJO}"
-echo "   ******************************************"
-echo "   *                                        *"
-echo "   *        PROCESO DE COMPILACIÓN          *"
-echo "   *                                        *"
-echo "   ******************************************"
+echo "             *******************************************************"
+echo "             *                                                     *"  
+echo "             *                PROCESO DE COMPILACIÓN               *"
+echo "             *                                                     *"
+echo "             *******************************************************"
                         sleep 3
 echo "${CIAN}"
                         make clean
@@ -85,17 +85,17 @@ echo "${CIAN}"
                         else
 clear                                
 echo "${ROJO}"
-echo "        *******************************************************"
+echo "             *******************************************************"
 echo "${AMARILLO}"
-echo "                       PROCESO DE COMPILACIÓN "
+echo "                            PROCESO DE COMPILACIÓN "
 echo "${VERDE}"
-echo "        SE COMPILARA MMDVM_HS SIN RESTRICCIONES DE FRECUENCIA  "
-echo "                          Y RSSI ACTIVADO "
+echo "             SE COMPILARÁ MMDVM_HS SIN RESTRICCIONES DE FRECUENCIA  "
+echo "                               Y RSSI ACTIVADO "
 echo "${ROJO}"
-echo "        *******************************************************"
+echo "             *******************************************************"
 echo ""
 echo "${CIAN}"
-echo "        Pulsa una tecla para continuar"
+echo -n "             Pulsa una tecla para continuar"
 read a
 
                         
