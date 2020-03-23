@@ -157,7 +157,7 @@ done;;
 clear
 echo "\33[1;33m   ******************************"
 echo "   *                            *"
-echo "   *     CERRANDO SCRIPT        *"
+echo "   *     VOLVIENDO AL MENU      *"
 echo "   *                            *"
 echo "   ******************************"
 sleep 1
