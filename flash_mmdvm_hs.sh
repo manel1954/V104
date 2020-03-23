@@ -17,12 +17,15 @@ echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                 
 echo "   ********************************************************************"
 echo "${CIAN}   1)${VERDE} Descargar y compilar el último firmware MMDVM_HS Libre Kit"
 echo ""
-echo "${CIAN}   2)${VERDE} Descargar y compilar el último firmware MMDVM_HS ZUMSpot"
-echo ""
+
 echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS Libre Kit por USB (host del STM)"
 echo ""
 echo "${CIAN}   4)${AMARILLO} Grabar firmware MMDVM_HS Libre Kit por USART_1 (adaptador usb-ttl)"
 echo ""
+echo ""
+echo "${CIAN}   2)${VERDE} Descargar y compilar el último firmware MMDVM_HS ZUMSpot"
+echo ""
+
 echo "${CIAN}   5)${AMARILLO} Grabar firmware MMDVM_HS ZUMSpot (conector GPIO)"
 echo ""
 echo "${CIAN}   6)${BLANCO} MENÚ ACTUALIZACIÓN ZUMSpot"
