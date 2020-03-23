@@ -13,6 +13,7 @@ ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
+MARRON="\33[38;5;138m"
 echo "${VERDE}"
 echo "   ************************************************************************"
 echo "   *        Script para Editor AMBE SERVER\33[1;33m       ${ROJO} by EA3EIZ          \33[1;32m     *"
@@ -26,7 +27,8 @@ var1= sed -n '2p'  $usuario/.local/ambe_server.ini
 echo -n "\33[1;36m   3)\33[0m Modificar Baut rate      - \33[1;33m"
 var1= sed -n '3p'  $usuario/.local/ambe_server.ini
 
-echo -n "\33[1;36m   4)\33[0m Actualizar Ambe Server      - \33[1;33m"
+echo ""
+echo -n "\33[1;36m   4)${VERDE} Actualizar Ambe Server  \33[1;33m"
 
 echo ""
 echo "   ${ROJO}0) Salir"
