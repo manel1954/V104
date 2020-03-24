@@ -128,7 +128,7 @@ do
                           read -p 'Introduce número de sala: ' NUMERO_SALA
 
                           sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                       
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
                           numero_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$numero_sala
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
