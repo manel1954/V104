@@ -5,10 +5,12 @@ sudo chmod -R 777 /home/pi/Downloads
 cp copia.tar.gz /home/pi
 cd /home/pi/Downloads
 sudo rm *.*
-cd /home/pi/.local/COPIA_SEGURIDAD
+cd /home/pi
 tar -xvzf copia.tar.gz
 
 sudo rm copia.tar.gz
+
+cp -R -f Downloads /home/pi/.local/COPIA_SEGURIDAD/
 
 rm /home/pi/.local/Downloads/copia.tar.gz
 echo "\33[1;32m" #color verde
