@@ -112,6 +112,7 @@ case $escoger_menu in
 while true
 do
            	              
+                          echo "${AMARILLO}"
                           read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' t
                           clear
                           echo "${CIAN}"
@@ -120,12 +121,11 @@ do
                           echo "****************************************************"
                           
                           echo "${AMARILLO}"
-                          read -p 'Quieres modificar por el número de sala S/N ? 'nuno                     
+                          read -p 'Quieres modificar por el número de sala S/N ? ' nuno                     
                           case $nuno in
                           [sS]* ) echo ""
 
-                          echo -n "Introduce número de sala: "
-                          read NUMERO_SALA
+                          read -p 'Introduce número de sala: ' NUMERO_SALA
 
 
  
