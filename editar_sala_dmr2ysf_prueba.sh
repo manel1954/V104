@@ -124,8 +124,8 @@ do
                           case $nuno in
                           [sS]* ) echo ""
 
-
-                          read -p 'Introduce número de sala: ' NUMERO_SALA
+                          echo -n "Introduce número de sala: "
+                          read NUMERO_SALA
 
 
  
