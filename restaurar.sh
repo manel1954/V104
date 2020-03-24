@@ -5,7 +5,7 @@ sudo chmod -R 777 /home/pi/Downloads
 cp copia.tar.gz /home/pi
 cd /home/pi/Downloads
 sudo rm *.*
-cd /home/pi
+cd /home/pi/.local/COPIA_SEGURIDAD
 tar -xvzf copia.tar.gz
 
 sudo rm copia.tar.gz
