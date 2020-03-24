@@ -174,6 +174,8 @@ do
                           sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                        
                           numero_sala=`expr substr $sala 1 5`
+                          echo "numero de sala: $numero_sala"
+                          read a
                           listsala=$tg";"$numero_sala
                           sudo sed -i "6c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "2c $tg" /home/pi/.local/tg_ysf.txt
