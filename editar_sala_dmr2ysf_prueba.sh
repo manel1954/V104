@@ -29,11 +29,11 @@ echo -n "${CIAN} TG: ${AMARILLO} $TG1  ${CIAN} SALA: ${AMARILLO} $SALA1"
 
 
 
+    num_carac=`echo $SALA1 | wc -m`
 
 
 
 
-    num_carac= `wc -m $SALA1`
     echo $SALA1 "tiene" $num_carac "caracteres"
 
 read a
