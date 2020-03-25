@@ -135,7 +135,14 @@ numero_sala=`expr substr $sala1 1 5`
 clear
 if [ $NUMERO_SALA = $numero_sala ]
                           then                        
-clear
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir   
+                        elif [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
+
 sed -i "1c $sala" /home/pi/.local/sala.txt
 nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
                                                                                                                    
