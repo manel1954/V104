@@ -29,7 +29,7 @@ echo -n "${CIAN} TG: ${AMARILLO} $TG1  ${CIAN} SALA: ${AMARILLO} $SALA1"
 
 
 
-    num_carac=`echo $SALA1 | wc -m`
+    num_carac=`echo $TG1 | wc -m`
 
 
 
