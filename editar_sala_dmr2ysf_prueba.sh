@@ -131,7 +131,7 @@ do
                           echo "                UTILIZANDO NÚMERO DE SALA"
                           echo "*************************************************************"
 
-                          echo "${CIAN}"
+echo "${CIAN}"
 read -p 'Introduce número de sala: ' NUMERO_SALA
 sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 sed 's/ /_/g' /home/pi/.local/sala.txt
@@ -139,36 +139,25 @@ sala1=`echo "$sala" | tr -d '[[:space:]]'`
 clear
 numero_sala=`expr substr $sala1 1 5`
 clear
-#echo "Número de sala buscada: $numero_sala"
-#echo "NUMERO SALA ENCONTRADA: $NUMERO_SALA"
-#read a
 if [ $NUMERO_SALA = $numero_sala ]
-                          then                        
+                        then                        
 clear
 sed -i "1c $sala" /home/pi/.local/sala.txt
 nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
-#echo "Nombre de la sala: $nombre_sala"                         
-                                                                                              
-                          
-
+                         
+                                                                                                                       
                           listsala=$tg";"$numero_sala
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
                           sudo sed -i "1c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
-
-
 
                           else
                           clear
                           echo "LA SALA NO EXISTE"
                           sleep 3
                           fi
-                          
-
-
-
+                    
                           break;;
-
                           [nN]* ) echo ""
 
                           clear
