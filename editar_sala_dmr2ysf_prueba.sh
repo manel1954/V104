@@ -34,7 +34,7 @@ echo -n "${CIAN} TG: ${AMARILLO} $TG1  ${CIAN} SALA: ${AMARILLO} $SALA1"
 
 
 
-    echo $SALA1 "tiene" $num_carac "caracteres"
+    echo "Caracteres $num_carac"
 
 read a
 
