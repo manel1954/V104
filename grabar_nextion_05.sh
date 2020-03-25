@@ -1,21 +1,30 @@
 #!/bin/bash
 while true
 do
+
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
+
 clear
 echo "\33[1;32m   ********************************************************************"
-echo "   *      Script para Grabar pantallas Nextion \33[1;33mV.02.07.07             \33[1;32m*"
+echo "   *      ${CIAN}Script para Grabar pantallas Nextion \33[1;33mV.02.07.07             \33[1;32m*"
 echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                               *"
 echo "   ********************************************************************"
-echo '\33[1;36m   1)\33[1;32m Grabar pantalla Nextion 2.4" ADER (Compatible Nextion Driver)'
 echo ""
-echo '\33[1;36m   2)\33[1;32m Grabar pantalla Nextion 2.4" MMDVM ON7LDS original'
-echo '\33[1;36m   3)\33[1;32m Grabar pantalla Nextion 2.8" MMDVM ON7LDS original'
-echo '\33[1;36m   4)\33[1;32m Grabar pantalla Nextion 3.2" MMDVM ON7LDS original'
-echo '\33[1;36m   5)\33[1;32m Grabar pantalla Nextion 4.3" MMDVM ON7LDS original'
+echo '${BLANCO}   1)\33[1;32m Grabar pantalla Nextion 2.4" ADER (Compatible Nextion Driver)'
+echo ""
+echo '${GRIS}   2)\33[1;32m Grabar pantalla Nextion 2.4" MMDVM ON7LDS original'
+echo '${GRIS}   3)\33[1;32m Grabar pantalla Nextion 2.8" MMDVM ON7LDS original'
+echo '${GRIS}   4)\33[1;32m Grabar pantalla Nextion 3.2" MMDVM ON7LDS original'
+echo '${GRIS}   5)\33[1;32m Grabar pantalla Nextion 4.3" MMDVM ON7LDS original'
 echo ""
 
 echo ""
-echo "\33[1;36m   0)\33[1;34m Salir "
+echo "\33[1;36m   0)${ROJO} Salir "
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
