@@ -134,7 +134,7 @@ do
                           echo "${CIAN}"
 read -p 'Introduce número de sala: ' NUMERO_SALA
 sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-sed 's/ /_/g' /home/pi/.local/sala.txt
+#sed 's/ /_/g' /home/pi/.local/sala.txt
 clear
 sed -i "1c $sala" /home/pi/.local/sala.txt
 nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
