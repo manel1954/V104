@@ -26,7 +26,7 @@ echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
 TG1=$(awk "NR==1" /home/pi/.local/tg_ysf.txt)
 SALA1=$(awk "NR==1" /home/pi/.local/nombre_salas_ysf.txt)
 
-num_carac=`wc -c $SALA1`
+num_carac=wc -c $SALA1
 
 echo "Caracteres: $num_carac"
 read a
