@@ -111,28 +111,13 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-           	              clear
                           echo "${CIAN}"
-                          read -p 'Introduce TG que vas a utilizar para hablar por la sala: ' tg
-                          clear
-                          echo "${BLANCO}"
-                          echo "*************************************************************"
-                          echo "   PUEDES MODIFICAR INTRODUCIENDO NOMBRE O NÚMERO DE SALA"
-                          echo "*************************************************************"
-                          
-                          echo "${AMARILLO}"
-                          read -p 'Quieres modificar por el número de sala S/N ? ' nuno                     
-                          case $nuno in
+                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
+                          read -p 'Introduce número de sala: ' NUMERO_SALA
+                          actualizar=S 
+                          case $actualizar in
                           [sS]* ) echo ""
                           
-                          clear
-                          echo "${VERDE}"
-                          echo "*************************************************************"
-                          echo "                UTILIZANDO NÚMERO DE SALA"
-                          echo "*************************************************************"
-
-echo "${CIAN}"
-read -p 'Introduce número de sala: ' NUMERO_SALA
 sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 sed 's/ /_/g' /home/pi/.local/sala.txt
 sala1=`echo "$sala" | tr -d '[[:space:]]'`
@@ -140,12 +125,11 @@ clear
 numero_sala=`expr substr $sala1 1 5`
 clear
 if [ $NUMERO_SALA = $numero_sala ]
-                        then                        
+                          then                        
 clear
 sed -i "1c $sala" /home/pi/.local/sala.txt
 nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
-                         
-                                                                                                                       
+                                                                                                                   
                           listsala=$tg";"$numero_sala
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
@@ -159,22 +143,7 @@ nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
                     
                           break;;
                           [nN]* ) echo ""
-
-                          clear
-                          echo "${AMARILLO}"
-                          echo "*************************************************************"
-                          echo "                UTILIZANDO NOMBRE DE SALA"
-                          echo "*************************************************************"
-                          echo "${CIAN}"
-                          read -p 'Introduce nombre de sala: ' NOMBRE_SALA
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "1c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
-			                    break;;
+                          break;;
 			 
 esac
 done;;
