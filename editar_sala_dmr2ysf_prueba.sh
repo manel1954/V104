@@ -135,14 +135,10 @@ do
 
 read -p 'Introduce número de sala: ' NUMERO_SALA
 sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-#sed 's/ /_/g' hola.txt
-#sed -i "1c $sala" /home/pi/hola.txt
 sed 's/ /_/g' /home/pi/.local/sala.txt
 clear
 sed -i "1c $sala" /home/pi/.local/sala.txt
 nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
-
-
 echo "Nombre de la sala: $nombre_sala"
 
 read a
@@ -155,10 +151,10 @@ read a
 
 
                           numero_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
+                          listsala=$tg";"$NUMERO_SALA
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "1c $NUMERO_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          sudo sed -i "1c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
 
                           [nN]* ) echo ""
