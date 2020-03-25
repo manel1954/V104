@@ -116,9 +116,9 @@ do
                           read -p 'Introduce TG que vas a utilizar para hablar por la sala: ' tg
                           clear
                           echo "${BLANCO}"
-                          echo "****************************************************"
-                          echo "  PUEDES MODIFICAR POR NOMBRE O NÚMERO DE LA SALA"
-                          echo "****************************************************"
+                          echo "*************************************************************"
+                          echo "  PUEDES MODIFICAR INTRODUCIENDO NOMBRE O NÚMERO DE LA SALA"
+                          echo "*************************************************************"
                           
                           echo "${AMARILLO}"
                           read -p 'Quieres modificar por el número de sala S/N ? ' nuno                     
