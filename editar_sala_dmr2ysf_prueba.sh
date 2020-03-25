@@ -132,6 +132,7 @@ do
                           echo "*************************************************************"
 
                           echo "${CIAN}"
+
 read -p 'Introduce número de sala: ' NUMERO_SALA
 sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 sed 's/ /_/g' /home/pi/.local/sala.txt
@@ -139,6 +140,16 @@ clear
 sed -i "1c $sala" /home/pi/.local/sala.txt
 nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
 echo "Nombre de la sala: $nombre_sala"
+
+read a
+
+
+
+
+
+
+
+
                           numero_sala=`expr substr $sala 1 5`
                           listsala=$tg";"$NUMERO_SALA
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
