@@ -28,15 +28,15 @@ SALA1=$(awk "NR==1" /home/pi/.local/nombre_salas_ysf.txt)
 echo -n "${CIAN} TG: ${AMARILLO} $TG1  ${CIAN} SALA: ${AMARILLO} $SALA1"
 
 
-texto="cadena de caracteres muy muy larga"
-echo $texto | wc -m
-echo "largo: $texto"
+
+
+
+
+
+    num_carac= `wc -m SALA1`
+    echo $SALA1 "tiene" $num_carac "caracteres"
+
 read a
-
-
-
-
-
 
 
 
