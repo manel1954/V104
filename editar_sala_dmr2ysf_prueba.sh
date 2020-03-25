@@ -134,29 +134,30 @@ clear
 numero_sala=`expr substr $sala1 1 5`
 clear
 if [ $NUMERO_SALA = $numero_sala ]
-                          then 
+                        then 
 
 
                         echo "${BLANCO}"
                         echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
                         echo "   =============================================="
                         echo "${BLANCO}"
-                        echo "${GRIS}TG DMR: ${AMARILLO}$tg"
-                        echo "${GRIS}Número de la sala: ${AMARILLO}NUMERO_SALA"
+                        echo "${GRIS}   TG DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Número de la sala: ${AMARILLO}NUMERO_SALA"
                         echo "${CIAN}"
                         read -p '   Quieres grabar los datos? S/N ' seguir   
-                        elif [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
+                        elif [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
 
 sed -i "1c $sala" /home/pi/.local/sala.txt
 nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
                                                                                                                    
-                          listsala=$tg";"$numero_sala
-                          sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "1c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "1c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
 
-                          else
-                          clear
+                        else
+                        clear
 
 echo "${ROJO}"
 echo "\v\v\v\v\v"
