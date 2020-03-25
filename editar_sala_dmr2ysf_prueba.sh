@@ -151,10 +151,10 @@ nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
                                                                                               
                           
 
-                          listsala=$tg";"$nombre_sala
+                          listsala=$tg";"$numero_sala
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "1c $NUMERO_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          sudo sed -i "1c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
 
 
 
