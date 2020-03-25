@@ -27,6 +27,19 @@ TG1=$(awk "NR==1" /home/pi/.local/tg_ysf.txt)
 SALA1=$(awk "NR==1" /home/pi/.local/nombre_salas_ysf.txt)
 echo -n "${CIAN} TG: ${AMARILLO} $TG1  ${CIAN} SALA: ${AMARILLO} $SALA1"
 
+
+texto="cadena de caracteres muy muy larga"
+echo $texto | wc -m
+echo "largo: $texto"
+read a
+
+
+
+
+
+
+
+
 echo -n "\33[1;36m   2)\33[0m Modificar TG y sala  - \33[1;33m"
 TG2=$(awk "NR==2" /home/pi/.local/tg_ysf.txt)
 SALA2=$(awk "NR==2" /home/pi/.local/nombre_salas_ysf.txt)
