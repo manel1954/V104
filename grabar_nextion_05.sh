@@ -11,8 +11,8 @@ GRIS="\033[0m"
 
 clear
 echo "\33[1;32m   ************************************************************************"
-echo "   *      ${CIAN}      Script para Grabar pantallas Nextion \33[1;33mV.02.07.07             \33[1;32m*"
-echo "   *                                \33[1;31mby EA3EIZ\33[1;32m                              *"
+echo "   *      ${CIAN}      Script para Grabar pantallas Nextion \33[1;33mV.02.07.07           \33[1;32m*"
+echo "   *                                \33[1;31mby EA3EIZ\33[1;32m                             *"
 echo "   ************************************************************************"
 echo ""
 echo "${CIAN}   1)${AMARILLO} Grabar pantalla Nextion 2.4 ADER (Compatible Nextion Driver)"
