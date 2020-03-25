@@ -3,7 +3,7 @@ clear
 while true
 do
 clear
-#lxterminal --geometry=125x30 -e less /home/pi/YSFClients/YSFGateway/YSFHosts.txt & 
+#lxterminal --geometry=125x30 -e less /home/pi/YSFClients/YSFGateway/YSFHosts.txt &
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
 ROJO="\033[1;31m"
@@ -132,29 +132,14 @@ do
                           echo "*************************************************************"
 
                           echo "${CIAN}"
-
-read -p 'Introduce número de sala: ' NUMERO_SALA
-sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-sed 's/ /_/g' /home/pi/.local/sala.txt
-clear
-sed -i "1c $sala" /home/pi/.local/sala.txt
-nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
-echo "Nombre de la sala: $nombre_sala"
-
-read a
-
-
-
-
-
-
-
-
+                          read -p 'Introduce número de sala: ' NUMERO_SALA
+                          sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+                          sala=`echo "$sala" | tr -d '[[:space:]]'`
                           numero_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$NUMERO_SALA
+                          listsala=$tg";"$numero_sala
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "1c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+                          sudo sed -i "1c $NUMERO_SALA" /home/pi/.local/nombre_salas_ysf.txt
                           break;;
 
                           [nN]* ) echo ""
