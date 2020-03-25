@@ -15,12 +15,12 @@ echo "   *      ${CIAN}Script para Grabar pantallas Nextion \33[1;33mV.02.07.07 
 echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                               *"
 echo "   ********************************************************************"
 echo ""
-echo '${BLANCO}   1)\33[1;32m Grabar pantalla Nextion 2.4" ADER (Compatible Nextion Driver)'
+echo "${BLANCO}   1)\33[1;32m Grabar pantalla Nextion 2.4 ADER (Compatible Nextion Driver)"
 echo ""
-echo '${GRIS}   2)\33[1;32m Grabar pantalla Nextion 2.4" MMDVM ON7LDS original'
-echo '${GRIS}   3)\33[1;32m Grabar pantalla Nextion 2.8" MMDVM ON7LDS original'
-echo '${GRIS}   4)\33[1;32m Grabar pantalla Nextion 3.2" MMDVM ON7LDS original'
-echo '${GRIS}   5)\33[1;32m Grabar pantalla Nextion 4.3" MMDVM ON7LDS original'
+echo "${GRIS}   2)\33[1;32m Grabar pantalla Nextion 2.4 MMDVM ON7LDS original"
+echo "${GRIS}   3)\33[1;32m Grabar pantalla Nextion 2.8 MMDVM ON7LDS original"
+echo "${GRIS}   4)\33[1;32m Grabar pantalla Nextion 3.2 MMDVM ON7LDS original"
+echo "${GRIS}   5)\33[1;32m Grabar pantalla Nextion 4.3 MMDVM ON7LDS original"
 echo ""
 
 echo ""
