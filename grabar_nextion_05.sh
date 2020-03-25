@@ -3,7 +3,7 @@ while true
 do
 clear
 echo "\33[1;32m   ********************************************************************"
-echo "   *      Script para Grabar pantallas Nextion \33[1;33mV.02.07.06             \33[1;32m*"
+echo "   *      Script para Grabar pantallas Nextion \33[1;33mV.02.07.07             \33[1;32m*"
 echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                               *"
 echo "   ********************************************************************"
 echo '\33[1;36m   1)\33[1;32m Grabar pantalla Nextion 2.4" ADER (Compatible Nextion Driver)'
@@ -15,7 +15,7 @@ echo '\33[1;36m   5)\33[1;32m Grabar pantalla Nextion 4.3" MMDVM ON7LDS original
 echo ""
 
 echo ""
-echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
+echo "\33[1;36m   0)\33[1;34m Salir "
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
