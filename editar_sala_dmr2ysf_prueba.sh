@@ -26,13 +26,15 @@ echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
 TG1=$(awk "NR==1" /home/pi/.local/tg_ysf.txt)
 SALA1=$(awk "NR==1" /home/pi/.local/nombre_salas_ysf.txt)
 
-veces=`grep -o "," <<< "$SALA1" | wc -l`
+x="10029,0,0,0,209,,747,0,0,0,700,1,1,-1,0, ,0,746,1073815587"
 
-read a 
+veces=`grep -o "," <<< "$x" | wc -l`
+
+ 
 
 echo $veces
 
-
+read a
 
 
 
