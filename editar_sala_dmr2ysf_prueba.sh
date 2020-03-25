@@ -119,7 +119,7 @@ do
 
                           echo ""
                           echo "${CIAN}"
-                          echo "Introduce número de sala YSF: ${AMARILLO}" 
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
                           read NUMERO_SALA
                           
                           actualizar=S 
