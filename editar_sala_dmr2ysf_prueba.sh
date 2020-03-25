@@ -112,9 +112,16 @@ case $escoger_menu in
 while true
 do
                           clear
+                          echo ""
                           echo "${CIAN}"
-                          read -p 'Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ' tg
-                          read -p 'Introduce número de sala YSF: ' NUMERO_SALA
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
@@ -149,11 +156,11 @@ echo "   ***********************************************************************
 echo "   *************************************************************************"
 sleep 1
 clear
-echo "${BLANCO}"
+echo "${AMARILLO}"
 echo "\v\v\v\v\v"
 echo "   *************************************************************************"
 echo "   *************************************************************************"
-echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
 echo "   *************************************************************************"
 echo "   *************************************************************************"
 sleep 1
@@ -162,7 +169,7 @@ echo "${VERDE}"
 echo "\v\v\v\v\v"
 echo "   *************************************************************************"
 echo "   *************************************************************************"
-echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${VERDE}***************************"
 echo "   *************************************************************************"
 echo "   *************************************************************************"
 sleep 3
