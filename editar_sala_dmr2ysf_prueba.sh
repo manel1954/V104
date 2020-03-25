@@ -144,8 +144,9 @@ if [ $NUMERO_SALA = $numero_sala ]
                         echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
                         echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
                         echo "${CIAN}"
-                        read -p '   Quieres grabar los datos? S/N ' seguir   
-                        elif [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
                         then 
 
 sed -i "1c $sala" /home/pi/.local/sala.txt
