@@ -117,7 +117,7 @@ do
                           clear
                           echo "${BLANCO}"
                           echo "*************************************************************"
-                          echo "  PUEDES MODIFICAR INTRODUCIENDO NOMBRE O NÚMERO DE LA SALA"
+                          echo "   PUEDES MODIFICAR INTRODUCIENDO NOMBRE O NÚMERO DE SALA"
                           echo "*************************************************************"
                           
                           echo "${AMARILLO}"
@@ -125,9 +125,7 @@ do
                           case $nuno in
                           [sS]* ) echo ""
                           
-
-
-
+                          clear
                           echo "${VERDE}"
                           echo "*************************************************************"
                           echo "                UTILIZANDO NÚMERO DE SALA"
@@ -145,13 +143,14 @@ do
                           break;;
 
                           [nN]* ) echo ""
-clear
-                          echo "${AMARULLO}"
+
+                          clear
+                          echo "${AMARILLO}"
                           echo "*************************************************************"
-                          echo "              UTILIZANDO NOMBRE DE LA SALA"
+                          echo "                UTILIZANDO NOMBRE DE SALA"
                           echo "*************************************************************"
                           echo "${CIAN}"
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          read -p 'Introduce nombre de sala: ' NOMBRE_SALA
                           sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
                           nombre_sala=`expr substr $sala 1 5`
