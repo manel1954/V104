@@ -111,11 +111,11 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-           	              
-                          echo "${AMARILLO}"
+           	              clear
+                          echo "${CIAN}"
                           read -p 'Introduce TG que vas a utilizar para hablar por la sala: ' tg
                           clear
-                          echo "${CIAN}"
+                          echo "${BLANCO}"
                           echo "****************************************************"
                           echo "  PUEDES MODIFICAR POR NOMBRE O NÚMERO DE LA SALA"
                           echo "****************************************************"
@@ -124,9 +124,9 @@ do
                           read -p 'Quieres modificar por el número de sala S/N ? ' nuno                     
                           case $nuno in
                           [sS]* ) echo ""
-
+                          
+                          echo "${CIAN}"
                           read -p 'Introduce número de sala: ' NUMERO_SALA
-
                           sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
                           numero_sala=`expr substr $sala 1 5`
@@ -134,13 +134,11 @@ do
                           sudo sed -i "5c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
                           sudo sed -i "1c $tg" /home/pi/.local/tg_ysf.txt
                           sudo sed -i "1c $NUMERO_SALA" /home/pi/.local/nombre_salas_ysf.txt
-
- 
                           break;;
 
                           [nN]* ) echo ""
+                          echo "${CIAN}"
                           read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
-
                           sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
                           sala=`echo "$sala" | tr -d '[[:space:]]'`
                           nombre_sala=`expr substr $sala 1 5`
