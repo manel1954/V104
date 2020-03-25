@@ -22,7 +22,7 @@ read escoger_menu
 echo ""
 case $escoger_menu in
 
-a) echo ""
+6) echo ""
 while true
 do
 clear
