@@ -54,7 +54,8 @@ while true
 do
 cd /home/pi/V104
 lxterminal --geometry=80x30 -e sudo sh editar_sala_dmr2ysf_prueba.sh
-done;;
+break;;
+
 
 1) echo ""
 while true
