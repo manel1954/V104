@@ -49,7 +49,7 @@ read escoger_menu
 echo ""
 case $escoger_menu in
 
-a) echo ""
+b) echo ""
 while true
 do
 cd /home/pi/V104
