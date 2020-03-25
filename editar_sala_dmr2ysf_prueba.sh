@@ -134,11 +134,15 @@ clear
 numero_sala=`expr substr $sala1 1 5`
 clear
 if [ $NUMERO_SALA = $numero_sala ]
-                          then                        
+                          then 
+
+
                         echo "${BLANCO}"
                         echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
                         echo "   =============================================="
-
+                        echo "${BLANCO}"
+                        echo "${GRIS}TG DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}Número de la sala: ${AMARILLO}NUMERO_SALA"
                         echo "${CIAN}"
                         read -p '   Quieres grabar los datos? S/N ' seguir   
                         elif [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
