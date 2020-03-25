@@ -48,6 +48,14 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
+
+a) echo ""
+while true
+do
+cd /home/pi/V104
+lxterminal --geometry=80x30 -e sudo sh editar_sala_dmr2ysf_prueba.sh
+done;;
+
 1) echo ""
 while true
 do
