@@ -125,6 +125,14 @@ do
                           case $nuno in
                           [sS]* ) echo ""
                           
+
+
+
+                          echo "${VERDE}"
+                          echo "*************************************************************"
+                          echo "                UTILIZANDO NÚMERO DE SALA"
+                          echo "*************************************************************"
+
                           echo "${CIAN}"
                           read -p 'Introduce número de sala: ' NUMERO_SALA
                           sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
@@ -137,6 +145,11 @@ do
                           break;;
 
                           [nN]* ) echo ""
+clear
+                          echo "${AMARULLO}"
+                          echo "*************************************************************"
+                          echo "              UTILIZANDO NOMBRE DE LA SALA"
+                          echo "*************************************************************"
                           echo "${CIAN}"
                           read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
                           sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
