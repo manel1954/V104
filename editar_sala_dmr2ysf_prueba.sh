@@ -138,6 +138,7 @@ sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
 #sed 's/ /_/g' hola.txt
 #sed -i "1c $sala" /home/pi/hola.txt
 sed 's/ /_/g' /home/pi/.local/sala.txt
+clear
 sed -i "1c $sala" /home/pi/.local/sala.txt
 nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
 
