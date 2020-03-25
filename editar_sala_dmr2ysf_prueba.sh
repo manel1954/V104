@@ -142,7 +142,7 @@ if [ $NUMERO_SALA = $numero_sala ]
                         echo "   =============================================="
                         echo "${BLANCO}"
                         echo "${GRIS}   TG DMR: ${AMARILLO}$tg"
-                        echo "${GRIS}   Número de la sala: ${AMARILLO}NUMERO_SALA"
+                        echo "${GRIS}   Número de la sala: ${AMARILLO}$NUMERO_SALA"
                         echo "${CIAN}"
                         read -p '   Quieres grabar los datos? S/N ' seguir   
                         elif [ "$seguir" = 'S' -o "$seguir" = 's' ]
