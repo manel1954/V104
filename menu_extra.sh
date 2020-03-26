@@ -267,6 +267,7 @@ clear
                         cd /home/pi/Downloads
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb
+                        sudo apt-get install -f
                         clear
                         echo "${VERDE}"
                         echo "*******************************************"
