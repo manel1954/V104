@@ -229,12 +229,16 @@ if [ $NUMERO_SALA = $numero_sala ]
                         then 
 
 
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                        
+
                         echo "${BLANCO}"
                         echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
                         echo "   =============================================="
                         echo "${BLANCO}"
                         echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
-                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA \t$nombre_sala"
                         echo "${CIAN}"
                         read -p '   Quieres grabar los datos? S/N ' seguir  
                         fi 
