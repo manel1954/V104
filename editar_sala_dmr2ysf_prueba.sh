@@ -26,82 +26,77 @@ echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
 TG1=$(awk "NR==1" /home/pi/.local/tg_ysf.txt)
 SALA1=$(awk "NR==1" /home/pi/.local/nombre_salas_ysf.txt)
 #echo "${CIAN} TG: ${AMARILLO} $TG1  ${CIAN} SALA: ${AMARILLO} $SALA1"
-echo  "${CIAN}TG: $TG1\t${CIAN}SALA: ${AMARILLO}$SALA1"
-#num_carac=`echo $TG1 | wc -m`
-#echo "Caracteres $num_carac"
-#read a
+echo  "${CIAN}TG: ${AMARILLO}$TG1\t${CIAN}SALA: ${AMARILLO}$SALA1"
 
 echo -n "\33[1;36m   2)\33[0m Modificar TG y sala  - \33[1;33m"
 TG2=$(awk "NR==2" /home/pi/.local/tg_ysf.txt)
 SALA2=$(awk "NR==2" /home/pi/.local/nombre_salas_ysf.txt)
-#echo "${CIAN} TG: ${AMARILLO} $TG2  ${CIAN} SALA: ${AMARILLO} $SALA2"
-
-echo  "${CIAN}TG: $TG2\t${CIAN}SALA: ${AMARILLO}$SALA2"
+echo  "${CIAN}TG: ${AMARILLO}$TG2\t${CIAN}SALA: ${AMARILLO}$SALA2"
 
 echo -n "\33[1;36m   3)\33[0m Modificar TG y sala  - \33[1;33m"
 TG3=$(awk "NR==3" /home/pi/.local/tg_ysf.txt)
 SALA3=$(awk "NR==3" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG3  ${CIAN} SALA: ${AMARILLO} $SALA3"
+echo  "${CIAN}TG: ${AMARILLO}$TG3\t${CIAN}SALA: ${AMARILLO}$SALA3"
 
 echo -n "\33[1;36m   4)\33[0m Modificar TG y sala  - \33[1;33m"
 TG4=$(awk "NR==4" /home/pi/.local/tg_ysf.txt)
 SALA4=$(awk "NR==4" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG4  ${CIAN} SALA: ${AMARILLO} $SALA4"
+echo  "${CIAN}TG: ${AMARILLO}$TG4\t${CIAN}SALA: ${AMARILLO}$SALA4"
 
 echo -n "\33[1;36m   5)\33[0m Modificar TG y sala  - \33[1;33m"
 TG5=$(awk "NR==5" /home/pi/.local/tg_ysf.txt)
 SALA5=$(awk "NR==5" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG5  ${CIAN} SALA: ${AMARILLO} $SALA5"
+echo  "${CIAN}TG: ${AMARILLO}$TG5\t${CIAN}SALA: ${AMARILLO}$SALA5"
 
 echo -n "\33[1;36m   6)\33[0m Modificar TG y sala  - \33[1;33m"
 TG6=$(awk "NR==6" /home/pi/.local/tg_ysf.txt)
 SALA6=$(awk "NR==6" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG6  ${CIAN} SALA: ${AMARILLO} $SALA6"
+echo  "${CIAN}TG: ${AMARILLO}$TG6\t${CIAN}SALA: ${AMARILLO}$SALA6"
 
 echo -n "\33[1;36m   7)\33[0m Modificar TG y sala  - \33[1;33m"
 TG7=$(awk "NR==7" /home/pi/.local/tg_ysf.txt)
 SALA7=$(awk "NR==7" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG7  ${CIAN} SALA: ${AMARILLO} $SALA7"
+echo  "${CIAN}TG: ${AMARILLO}$TG7\t${CIAN}SALA: ${AMARILLO}$SALA7"
 
 echo -n "\33[1;36m   8)\33[0m Modificar TG y sala  - \33[1;33m"
 TG8=$(awk "NR==8" /home/pi/.local/tg_ysf.txt)
 SALA8=$(awk "NR==8" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG8  ${CIAN} SALA: ${AMARILLO} $SALA8"
+echo  "${CIAN}TG: ${AMARILLO}$TG8\t${CIAN}SALA: ${AMARILLO}$SALA8"
 
 echo -n "\33[1;36m   9)\33[0m Modificar TG y sala  - \33[1;33m"
 TG9=$(awk "NR==9" /home/pi/.local/tg_ysf.txt)
 SALA9=$(awk "NR==9" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG9  ${CIAN} SALA: ${AMARILLO} $SALA9"
+echo  "${CIAN}TG: ${AMARILLO}$TG9\t${CIAN}SALA: ${AMARILLO}$SALA9"
 
 echo -n "\33[1;36m  10)\33[0m Modificar TG y sala  - \33[1;33m"
 TG10=$(awk "NR==10" /home/pi/.local/tg_ysf.txt)
 SALA10=$(awk "NR==10" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG10  ${CIAN} SALA: ${AMARILLO} $SALA10"
+echo  "${CIAN}TG: ${AMARILLO}$TG10\t${CIAN}SALA: ${AMARILLO}$SALA10"
 
 echo -n "\33[1;36m  11)\33[0m Modificar TG y sala  - \33[1;33m"
 TG11=$(awk "NR==11" /home/pi/.local/tg_ysf.txt)
 SALA11=$(awk "NR==11" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG11  ${CIAN} SALA: ${AMARILLO} $SALA11"
+echo  "${CIAN}TG: ${AMARILLO}$TG11\t${CIAN}SALA: ${AMARILLO}$SALA11"
 
 echo -n "\33[1;36m  12)\33[0m Modificar TG y sala  - \33[1;33m"
 TG12=$(awk "NR==12" /home/pi/.local/tg_ysf.txt)
 SALA12=$(awk "NR==12" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG12  ${CIAN} SALA: ${AMARILLO} $SALA12"
+echo  "${CIAN}TG: ${AMARILLO}$TG12\t${CIAN}SALA: ${AMARILLO}$SALA12"
 
 echo -n "\33[1;36m  13)\33[0m Modificar TG y sala  - \33[1;33m"
 TG13=$(awk "NR==13" /home/pi/.local/tg_ysf.txt)
 SALA13=$(awk "NR==13" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG13  ${CIAN} SALA: ${AMARILLO} $SALA13"
+echo  "${CIAN}TG: ${AMARILLO}$TG13\t${CIAN}SALA: ${AMARILLO}$SALA13"
 
 echo -n "\33[1;36m  14)\33[0m Modificar TG y sala  - \33[1;33m"
 TG14=$(awk "NR==14" /home/pi/.local/tg_ysf.txt)
 SALA14=$(awk "NR==14" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG14  ${CIAN} SALA: ${AMARILLO} $SALA14"
+echo  "${CIAN}TG: ${AMARILLO}$TG14\t${CIAN}SALA: ${AMARILLO}$SALA14"
 
 echo -n "\33[1;36m  15)\33[0m Modificar TG y sala  - \33[1;33m"
 TG15=$(awk "NR==15" /home/pi/.local/tg_ysf.txt)
 SALA15=$(awk "NR==15" /home/pi/.local/nombre_salas_ysf.txt)
-echo "${CIAN} TG: ${AMARILLO} $TG15  ${CIAN} SALA: ${AMARILLO} $SALA15"
+echo  "${CIAN}TG: ${AMARILLO}$TG15\t${CIAN}SALA: ${AMARILLO}$SALA15"
 
 echo ""
 echo "${BLANCO}"
