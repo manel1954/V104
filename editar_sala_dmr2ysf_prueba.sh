@@ -36,7 +36,7 @@ TG2=$(awk "NR==2" /home/pi/.local/tg_ysf.txt)
 SALA2=$(awk "NR==2" /home/pi/.local/nombre_salas_ysf.txt)
 #echo "${CIAN} TG: ${AMARILLO} $TG2  ${CIAN} SALA: ${AMARILLO} $SALA2"
 
-echo -e "TG: $TG1\tSALA: $SALA1"
+echo -e "TG: $TG2\tSALA: $SALA2"
 
 echo -n "\33[1;36m   3)\33[0m Modificar TG y sala  - \33[1;33m"
 TG3=$(awk "NR==3" /home/pi/.local/tg_ysf.txt)
