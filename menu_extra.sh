@@ -264,7 +264,8 @@ clear
                         echo "*******************************************"
                         sleep 2  
                         sudo rm -R /home/pi/.anydesk
-                        cd /home/pi/Downloads
+                        mkdir /home/pi/.temp
+                        cd /home/pi/.temp
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb
                         sudo apt-get install -f
@@ -275,24 +276,23 @@ clear
                         echo "*******************************************"
                         sleep 2
                         clear
-                        echo "${ROJO}"
-                        echo "*******************************************"
-                        echo "*        SE REINICIARÁ EL SISTEMA         *"
-                        echo "*******************************************"
-                        sleep 2
-                        clear
-                        echo "${AMARILLO}"
-                        echo "*******************************************"
-                        echo "*        SE REINICIARÁ EL SISTEMA         *"
-                        echo "*******************************************"
-                        sleep 2
-                        clear
-                        echo "${ROJO}"
-                        echo "*******************************************"
-                        echo "*        SE REINICIARÁ EL SISTEMA         *"
-                        echo "*******************************************"
-                        sleep 2
-                        sudo reboot
+                        # echo "${ROJO}"
+                        # echo "*******************************************"
+                        # echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        # echo "*******************************************"
+                        # sleep 2
+                        # clear
+                        # echo "${AMARILLO}"
+                        # echo "*******************************************"
+                        # echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        # echo "*******************************************"
+                        # sleep 2
+                        # clear
+                        # echo "${ROJO}"
+                        # echo "*******************************************"
+                        # echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        # echo "*******************************************"
+                        #sudo reboot
                         break;;
                         [nN]* ) 
                         echo ""
