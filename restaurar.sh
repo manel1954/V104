@@ -9,7 +9,7 @@ cd /home/pi
 tar -xvzf copia.tar.gz
 sudo chmod 777 copia.tar.gz
 sleep 2
-sudo rm copia.tar.gz
+#sudo rm copia.tar.gz
 
 cp -R -f Downloads /home/pi/.local/COPIA_SEGURIDAD/
 
