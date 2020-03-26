@@ -546,219 +546,958 @@ done;;
 6) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "10c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "6c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "6c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "10c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "6c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "6c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
+esac
+done;;
+5) echo ""
+while true
+do
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "9c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "5c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "5c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+       
 esac
 done;;
 7) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "11c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "7c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "7c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "11c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "7c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "7c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
 8) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "12c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "8c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "8c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "12c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "8c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "8c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
 9) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "13c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "9c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "9c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "13c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "9c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "9c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
 10) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "14c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "10c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "10c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "14c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "10c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "10c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
-
-
-
-
-
-
-
-
 11) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "15c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "11c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "11c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "15c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "11c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "11c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
 12) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "16c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "12c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "12c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "16c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "12c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "12c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
 13) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "17c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "13c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "13c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "17c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "13c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "13c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
 14) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "18c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "14c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "14c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "18c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "14c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "14c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
 15) echo ""
 while true
 do
-                          read -p 'Introduce el TG que vas a utilizar para hablar por la sala: ' tg
-                          read -p 'Introduce nombre de la sala: ' NOMBRE_SALA
+                          clear
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce el TG DMR que vas a utilizar para hablar por la sala YSF: ${AMARILLO}"
+                          read tg
+
+                          echo ""
+                          echo "${CIAN}"
+                          echo -n "Introduce número de sala YSF: ${AMARILLO}" 
+                          read NUMERO_SALA
+                          
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sala1=`grep -n "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`grep "$NOMBRE_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
-                          sala=`echo "$sala" | tr -d '[[:space:]]'`
-                          nombre_sala=`expr substr $sala 1 5`
-                          listsala=$tg";"$nombre_sala
-                          sudo sed -i "19c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
-                          sudo sed -i "15c $tg" /home/pi/.local/tg_ysf.txt
-                          sudo sed -i "15c $NOMBRE_SALA" /home/pi/.local/nombre_salas_ysf.txt
+                          
+
+sala=`grep "$NUMERO_SALA" /home/pi/YSFClients/YSFGateway/YSFHosts.txt`
+sed 's/ /_/g' /home/pi/.local/sala.txt
+sala1=`echo "$sala" | tr -d '[[:space:]]'`
+clear
+numero_sala=`expr substr $sala1 1 5`
+clear
+if [ $NUMERO_SALA = $numero_sala ]
+                        then 
+
+
+                        echo "${BLANCO}"
+                        echo "   REVISA SI SON CORRECTOS LOS DATOS INTRODUCIDOS"
+                        echo "   =============================================="
+                        echo "${BLANCO}"
+                        echo "${GRIS}   TG   DMR: ${AMARILLO}$tg"
+                        echo "${GRIS}   Sala YSF: ${AMARILLO}$NUMERO_SALA"
+                        echo "${CIAN}"
+                        read -p '   Quieres grabar los datos? S/N ' seguir  
+                        fi 
+                        if [ "$seguir" = 'S' -o "$seguir" = 's' ]
+                        then 
+
+                        sed -i "1c $sala" /home/pi/.local/sala.txt
+                        nombre_sala=$(awk -F';' '{print $2}' /home/pi/.local/sala.txt)
+                                                                                                                   
+                        listsala=$tg";"$numero_sala
+                        sudo sed -i "19c $listsala" /home/pi/DMR2YSF/TG-YSFList.txt
+                        sudo sed -i "15c $tg" /home/pi/.local/tg_ysf.txt
+                        sudo sed -i "15c $nombre_sala" /home/pi/.local/nombre_salas_ysf.txt
+
+                        else
+                        clear
+
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${AMARILLO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${AMARILLO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 1
+clear
+echo "${ROJO}"
+echo "\v\v\v\v\v"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+echo "   **************************  ${BLANCO}LA SALA NO EXISTE ${ROJO}***************************"
+echo "   *************************************************************************"
+echo "   *************************************************************************"
+sleep 2
+
+                          fi
+                    
                           break;;
                           [nN]* ) echo ""
                           break;;
+       
 esac
 done;;
 16) echo ""
@@ -774,26 +1513,14 @@ do
                           break;;
 esac
 done;;
-17) echo ""
-while true
-do
-                        
-                          actualizar=S 
-                          case $actualizar in
-                          [sS]* ) echo ""
-                          sudo killall geany
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
-esac
-done;;
 0) echo ""
 clear
-echo "\33[1;33m   **************************************************"
-echo "   *                                                *"
-echo "   *     CERRANDO SCRIPT                            *"
-echo "   *                                                *"
-echo "   **************************************************"
+echo "${CIAN}"
+echo "   *************************************************************************"
+echo "                                                   "
+echo "                              VOLVIENDO AL MENÚ                  "
+echo "                                                  "
+echo "   *************************************************************************"
 sleep 1
 clear
 exit;;	
