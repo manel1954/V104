@@ -52,79 +52,77 @@ echo " ***********************  SE ESTÁ REALIZANDO LA COPIA  ******************
 echo " *********************  ${ROJO}AL ACABAR SE CERRARÁ EL TERMINAL  ${BLANCO}*********************"
 echo " ******************************************************************************"
 sleep 3
-            sudo rm -R /home/pi/Downloads
-            cd /home/pi
-            sudo mkdir Downloads
-            sudo chmod 777 -R Downloads
-            cp /home/pi/.local/datos_dvswitch /home/pi/Downloads
+            sudo rm /home/pi/.local/COPIA_SEGURIDAD/Downloads/*.*
+            
+            cp /home/pi/.local/datos_dvswitch /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cd /home/pi/MMDVMHost
-            cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
-            cp -f MMDVM.ini /home/pi/Downloads
-            cp -f MMDVM.ini_copia /home/pi/Downloads
-            cp -f MMDVM.ini_copia2 /home/pi/Downloads
-            cp -f MMDVM.ini_copia3 /home/pi/Downloads
-            cp -f MMDVM.ini_original /home/pi/Downloads
+            cp -f TODOS_LOS_INIS.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVM.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVM.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVM.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVM.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVM.ini_original /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            cp -f MMDVMBM.ini /home/pi/Downloads
-            cp -f MMDVMBM.ini_copia /home/pi/Downloads
-            cp -f MMDVMBM.ini_copia2 /home/pi/Downloads
-            cp -f MMDVMBM.ini_copia3 /home/pi/Downloads
+            cp -f MMDVMBM.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMBM.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMBM.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMBM.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            cp -f MMDVMPLUS.ini /home/pi/Downloads
-            cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
-            cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
-            cp -f MMDVMPLUS.ini_copia3 /home/pi/Downloads
+            cp -f MMDVMPLUS.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMPLUS.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMPLUS.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMPLUS.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            cp -f MMDVMESPECIAL.ini /home/pi/Downloads
-            cp -f MMDVMESPECIAL.ini_copia /home/pi/Downloads
-            cp -f MMDVMESPECIAL.ini_copia2 /home/pi/Downloads
-            cp -f MMDVMESPECIAL.ini_copia3 /home/pi/Downloads
+            cp -f MMDVMESPECIAL.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMESPECIAL.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMESPECIAL.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMESPECIAL.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
-            cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
-            cp -f MMDVMNXDN.ini /home/pi/Downloads
+            cp -f MMDVMDMR2NXDN.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMDMR2YSF.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMNXDN.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/Downloads
-            cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/Downloads
-            cp -f /home/pi/DMR2YSF/DMR2YSF.ini  /home/pi/Downloads
+            cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/DMR2YSF/DMR2YSF.ini  /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             #solo Dstar y solo Fusion
-            cp -f MMDVMDSTAR.ini /home/pi/Downloads
-            cp -f MMDVMFUSION.ini /home/pi/Downloads
+            cp -f MMDVMDSTAR.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMFUSION.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             #fin  Dstar y solo Fusion  
 
             cd  /home/pi/YSF2DMR
-            cp -f YSF2DMR.ini /home/pi/Downloads
-            cp -f YSF2DMR.ini_copia_01 /home/pi/Downloads
-            cp -f YSF2DMR.ini_copia_02 /home/pi/Downloads
-            cp -f YSF2DMR.ini_copia_03 /home/pi/Downloads
-            cp -f YSF2DMR.ini_copia_04 /home/pi/Downloads
+            cp -f YSF2DMR.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f YSF2DMR.ini_copia_01 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f YSF2DMR.ini_copia_02 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f YSF2DMR.ini_copia_03 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f YSF2DMR.ini_copia_04 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd  /home/pi/DMR2YSF
-            cp -f TG-YSFList.txt /home/pi/Downloads
+            cp -f TG-YSFList.txt /home/pi/.local/COPIA_SEGURIDAD/Downloads
             
             cd /home/pi/.local
-            cp -f tg_ysf.txt /home/pi/Downloads
-            cp -f nombre_salas_ysf.txt /home/pi/Downloads
-            cp -f autoarranque.ini /home/pi/Downloads
+            cp -f tg_ysf.txt /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f nombre_salas_ysf.txt /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f autoarranque.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             
             cd  /home/pi/YSFClients/YSFGateway/
-            cp -f YSFGateway.ini /home/pi/Downloads
+            cp -f YSFGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             
             cd /home/pi/bluedv/
-            cp -f BlueDVconfig.ini /home/pi/Downloads
+            cp -f BlueDVconfig.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd /usr/local/etc/svxlink/
-            cp -f svxlink.conf /home/pi/Downloads
+            cp -f svxlink.conf /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd /usr/local/etc/svxlink/svxlink.d/
-            cp -f ModuleEchoLink.conf /home/pi/Downloads
+            cp -f ModuleEchoLink.conf /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            cp /usr/local/etc/opendv/ircddbgateway /home/pi/Downloads
-            cp /usr/local/etc/opendv/dstarrepeater /home/pi/Downloads
+            cp /usr/local/etc/opendv/ircddbgateway /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp /usr/local/etc/opendv/dstarrepeater /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd /home/pi
-            cp info_panel_control.ini /home/pi/Downloads
+            cp info_panel_control.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
@@ -167,24 +165,24 @@ selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/brandmeister_esp.ini)
 
 reflector_dstar=$(awk "NR==18" /etc/ircddbgateway)
 
-# Copia todos los datos de Dvswitch /home/pi/Downloads
-sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
-sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
-sed -i "4c $id2" /home/pi/Downloads/datos_dvswitch
-sed -i "5c $Latitude" /home/pi/Downloads/datos_dvswitch
-sed -i "6c $Longitude" /home/pi/Downloads/datos_dvswitch
-sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
-sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
-sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
-sed -i "10c $password_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "11c $port_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
-sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
-sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
-sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
+# Copia todos los datos de Dvswitch /home/pi/.local/COPIA_SEGURIDAD/Downloads
+sed -i "1c $indicativo" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "2c $address_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "3c $id" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "4c $id2" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "5c $Latitude" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "6c $Longitude" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "7c $port" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "8c $location" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "9c $url" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "10c $password_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "11c $port_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "12c $sala_fcs" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "13c $sala_nxdn" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "14c $selfcare" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "15c $reflector_dstar" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 
-cp -r /home/pi/Downloads /home/pi/.local/COPIA_SEGURIDAD
+cp -r /home/pi/.local/COPIA_SEGURIDAD/Downloads /home/pi/.local/COPIA_SEGURIDAD
 sudo chmod 777 -R /home/pi/.local/COPIA_SEGURIDAD
 
 exit;
@@ -284,7 +282,7 @@ sleep 3
             cp info_panel_control.ini /home/pi/
 
 # Restaura todos los datos de Dvswitch
-indicativo=$(awk "NR==1" /home/pi/Downloads/datos_dvswitch)          
+indicativo=$(awk "NR==1" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)          
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/dmrplus.ini
@@ -295,7 +293,7 @@ sudo sed -i "95c ircddbUsername=$indicativo" /etc/ircddbgateway
 sudo sed -i "117c dplusLogin=$indicativo" /etc/ircddbgateway
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-id=$(awk "NR==3" /home/pi/Downloads/datos_dvswitch)
+id=$(awk "NR==3" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 id_nxdn=`expr substr $id 3 5`
 sudo sed -i "30c ID = $id" /opt/MMDVM_Bridge/DVSwitch.ini
 sudo sed -i "40c FallbackID = $id" /opt/MMDVM_Bridge/DVSwitch.ini
@@ -310,7 +308,7 @@ sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/ysf.ini
 sudo sed -i "43c ;; FallbackID = $id" /opt/Analog_Bridge/ysf.ini
 sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/FCS.ini
 
-id2=$(awk "NR==4" /home/pi/Downloads/datos_dvswitch)
+id2=$(awk "NR==4" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/dmrplus.ini
@@ -324,21 +322,21 @@ sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/ysf.ini
 sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/FCS.ini
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-Latitude=$(awk "NR==5" /home/pi/Downloads/datos_dvswitch)
+Latitude=$(awk "NR==5" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/especial.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-Longitude=$(awk "NR==6" /home/pi/Downloads/datos_dvswitch)
+Longitude=$(awk "NR==6" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/especial.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-port=$(awk "NR==7" /home/pi/Downloads/datos_dvswitch)
+port=$(awk "NR==7" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/Analog_Bridge.ini
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/dmr.ini
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/dstar.ini
@@ -353,7 +351,7 @@ sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/nxdn.ini
 sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/ysf.ini
 
 
-location=$(awk "NR==8" /home/pi/Downloads/datos_dvswitch)
+location=$(awk "NR==8" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/dmrplus.ini
@@ -361,34 +359,34 @@ sudo sed -i "14c $location" /opt/MMDVM_Bridge/especial.ini
 #sudo sed -i "17c $location" /opt/NXDNGateway.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-url=$(awk "NR==9" /home/pi/Downloads/datos_dvswitch)
+url=$(awk "NR==9" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/especial.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch)
+address_especial=$(awk "NR==2" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "70c $address_especial" /opt/MMDVM_Bridge/especial.ini
 
-password_especial=$(awk "NR==10" /home/pi/Downloads/datos_dvswitch)
+password_especial=$(awk "NR==10" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "74c $password_especial" /opt/MMDVM_Bridge/especial.ini
 
-port_especial=$(awk "NR==11" /home/pi/Downloads/datos_dvswitch)
+port_especial=$(awk "NR==11" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "71c $port_especial" /opt/MMDVM_Bridge/especial.ini
 
-sala_fcs=$(awk "NR==12" /home/pi/Downloads/datos_dvswitch)
+sala_fcs=$(awk "NR==12" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "40c txTg = $sala_fcs" /opt/Analog_Bridge/FCS.ini
 sudo sed -i "39c Startup=$sala_fcs" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 
 
-sala_nxdn=$(awk "NR==13" /home/pi/Downloads/datos_dvswitch)
+sala_nxdn=$(awk "NR==13" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "10c $sala_nxdn" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt
 
-selfcare=$(awk "NR==14" /home/pi/Downloads/datos_dvswitch)
+selfcare=$(awk "NR==14" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "74c $selfcare" /opt/MMDVM_Bridge/brandmeister_esp.ini
 
-reflector_dstar=$(awk "NR==15" /home/pi/Downloads/datos_dvswitch)
+reflector_dstar=$(awk "NR==15" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "18c $reflector_dstar" /etc/ircddbgateway
 
 exit;
