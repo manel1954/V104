@@ -26,7 +26,7 @@ echo -n "\33[1;36m   1)\33[0m Modificar TG y sala  - \33[1;33m"
 TG1=$(awk "NR==1" /home/pi/.local/tg_ysf.txt)
 SALA1=$(awk "NR==1" /home/pi/.local/nombre_salas_ysf.txt)
 #echo "${CIAN} TG: ${AMARILLO} $TG1  ${CIAN} SALA: ${AMARILLO} $SALA1"
-echo  "TG: $TG1\tSALA: $SALA1"
+echo  "${CIAN}TG: $TG1\t${CIAN}SALA: ${AMARILLO}$SALA1"
 #num_carac=`echo $TG1 | wc -m`
 #echo "Caracteres $num_carac"
 #read a
@@ -36,7 +36,7 @@ TG2=$(awk "NR==2" /home/pi/.local/tg_ysf.txt)
 SALA2=$(awk "NR==2" /home/pi/.local/nombre_salas_ysf.txt)
 #echo "${CIAN} TG: ${AMARILLO} $TG2  ${CIAN} SALA: ${AMARILLO} $SALA2"
 
-echo  "TG: $TG2\tSALA: $SALA2"
+echo  "${CIAN}TG: $TG2\t${CIAN}SALA: ${AMARILLO}$SALA2"
 
 echo -n "\33[1;36m   3)\33[0m Modificar TG y sala  - \33[1;33m"
 TG3=$(awk "NR==3" /home/pi/.local/tg_ysf.txt)
