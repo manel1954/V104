@@ -1,68 +1,68 @@
 #!/bin/bash
-            cp /home/pi/.local/datos_dvswitch /home/pi/Downloads
+            cp /home/pi/.local/datos_dvswitch /home/pi/.local/COPIA_SEGURIDAD/Downloads
             cd /home/pi/MMDVMHost
-            sudo cp -f TODOS_LOS_INIS.ini /home/pi/Downloads
-            sudo cp -f MMDVM.ini /home/pi/Downloads
-            sudo cp -f MMDVM.ini_copia /home/pi/Downloads
-            sudo cp -f MMDVM.ini_copia2 /home/pi/Downloads
-            sudo cp -f MMDVM.ini_copia3 /home/pi/Downloads
-            sudo cp -f MMDVM.ini_original /home/pi/Downloads
+            sudo cp -f TODOS_LOS_INIS.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVM.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVM.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVM.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVM.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVM.ini_original /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            sudo cp -f MMDVMBM.ini /home/pi/Downloads
-            sudo cp -f MMDVMBM.ini_copia /home/pi/Downloads
-            sudo cp -f MMDVMBM.ini_copia2 /home/pi/Downloads
-            sudo cp -f MMDVMBM.ini_copia3 /home/pi/Downloads
+            sudo cp -f MMDVMBM.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMBM.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMBM.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMBM.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            sudo cp -f MMDVMPLUS.ini /home/pi/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia3 /home/pi/Downloads
+            sudo cp -f MMDVMPLUS.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            sudo cp -f MMDVMESPECIAL.ini /home/pi/Downloads
-            sudo cp -f MMDVMESPECIAL.ini_copia /home/pi/Downloads
-            sudo cp -f MMDVMESPECIAL.ini_copia2 /home/pi/Downloads
-            sudo cp -f MMDVMESPECIAL.ini_copia3 /home/pi/Downloads
+            sudo cp -f MMDVMESPECIAL.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMESPECIAL.ini_copia /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMESPECIAL.ini_copia2 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMESPECIAL.ini_copia3 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            sudo cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
-            sudo cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
-            sudo cp -f MMDVMNXDN.ini /home/pi/Downloads
+            sudo cp -f MMDVMDMR2NXDN.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMDMR2YSF.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            sudo cp -f MMDVMNXDN.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/Downloads
-            cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/Downloads
-            cp -f /home/pi/DMR2YSF/DMR2YSF.ini  /home/pi/Downloads
+            cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f /home/pi/DMR2YSF/DMR2YSF.ini  /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             #solo Dstar y solo Fusion
-            cp -f MMDVMDSTAR.ini /home/pi/Downloads
-            cp -f MMDVMFUSION.ini /home/pi/Downloads
+            cp -f MMDVMDSTAR.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f MMDVMFUSION.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             #fin  Dstar y solo Fusion 
 
             cd  /home/pi/YSF2DMR
-            cp -f YSF2DMR.ini /home/pi/Downloads
-            cp -f YSF2DMR.ini_copia_01 /home/pi/Downloads
-            cp -f YSF2DMR.ini_copia_02 /home/pi/Downloads
-            cp -f YSF2DMR.ini_copia_03 /home/pi/Downloads
-            cp -f YSF2DMR.ini_copia_04 /home/pi/Downloads
+            cp -f YSF2DMR.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f YSF2DMR.ini_copia_01 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f YSF2DMR.ini_copia_02 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f YSF2DMR.ini_copia_03 /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp -f YSF2DMR.ini_copia_04 /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd  /home/pi/DMR2YSF
-            cp -f TG-YSFList.txt /home/pi/Downloads
+            cp -f TG-YSFList.txt /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd  /home/pi/YSFClients/YSFGateway/
-            cp -f YSFGateway.ini /home/pi/Downloads
+            cp -f YSFGateway.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
             
             cd /home/pi/bluedv/
-            cp -f BlueDVconfig.ini /home/pi/Downloads
+            cp -f BlueDVconfig.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd /usr/local/etc/svxlink/
-            cp -f svxlink.conf /home/pi/Downloads
+            cp -f svxlink.conf /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd /usr/local/etc/svxlink/svxlink.d/
-            cp -f ModuleEchoLink.conf /home/pi/Downloads
+            cp -f ModuleEchoLink.conf /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
-            cp /usr/local/etc/opendv/ircddbgateway /home/pi/Downloads
-            cp /usr/local/etc/opendv/dstarrepeater /home/pi/Downloads
+            cp /usr/local/etc/opendv/ircddbgateway /home/pi/.local/COPIA_SEGURIDAD/Downloads
+            cp /usr/local/etc/opendv/dstarrepeater /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
             cd /home/pi
-            cp info_panel_control.ini /home/pi/Downloads
+            cp info_panel_control.ini /home/pi/.local/COPIA_SEGURIDAD/Downloads
 
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
@@ -105,23 +105,23 @@ selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/brandmeister_esp.ini)
 
 reflector_dstar=$(awk "NR==18" /etc/ircddbgateway)
 
-sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
-sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
-sed -i "4c $id2" /home/pi/Downloads/datos_dvswitch
-sed -i "5c $Latitude" /home/pi/Downloads/datos_dvswitch
-sed -i "6c $Longitude" /home/pi/Downloads/datos_dvswitch
-sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
-sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
-sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
-sed -i "10c $password_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "11c $port_especial" /home/pi/Downloads/datos_dvswitch
-sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
-sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
-sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
-sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
+sed -i "1c $indicativo" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "2c $address_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "3c $id" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "4c $id2" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "5c $Latitude" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "6c $Longitude" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "7c $port" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "8c $location" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "9c $url" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "10c $password_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "11c $port_especial" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "12c $sala_fcs" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "13c $sala_nxdn" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "14c $selfcare" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
+sed -i "15c $reflector_dstar" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 
-cd /home/pi/
+cd /home/pi/.local/COPIA_SEGURIDAD
 tar -zcvf copia.tar.gz Downloads
 cp  copia.tar.gz /var/www/html/upload/files
 sudo rm copia.tar.gz
