@@ -7,9 +7,8 @@ cd /home/pi/Downloads
 sudo rm *.*
 cd /home/pi
 tar -xvzf copia.tar.gz
-sudo chmod 777 copia.tar.gz
-sleep 2
-#sudo rm copia.tar.gz
+
+sudo rm copia.tar.gz
 
 cp -R -f Downloads /home/pi/.local/COPIA_SEGURIDAD/
 
@@ -193,7 +192,7 @@ sudo sed -i "74c $selfcare" /opt/MMDVM_Bridge/brandmeister_esp.ini
 reflector_dstar=$(awk "NR==15" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "18c $reflector_dstar" /etc/ircddbgateway
 
- 
+
 
 
 
