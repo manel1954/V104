@@ -30,7 +30,7 @@ indicativo=`expr substr $indicativo 17 7`
 echo "$indicativo"
 
 echo -n "${CIAN}   2)${GRIS} Modificar Ciudad      - ${AMARILLO}"
-ciudad=`grep "Location=" /usr/local/etc/opendv/ircddbgateway`
+ciudad=`grep "description1=" /usr/local/etc/opendv/ircddbgateway`
 ciudad=`expr substr $ciudad 14 20`
 echo "$ciudad"
 
