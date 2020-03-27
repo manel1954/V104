@@ -24,8 +24,8 @@ echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   **************************************************************************"
 
-echo  "${CIAN}   1)${GRIS} Editar ircddbgateway Graficamente"
-echo  "${CIAN}   2)${GRIS} Editar ircddbgateway Consola"
+echo  "${CIAN}   1)${AMARILLO} Editar ircddbgateway Graficamente"
+echo  "${CIAN}   2)${AMARILLO} Editar ircddbgateway Consola"
 
 echo ""
 echo "   ${ROJO}0) Salir"
