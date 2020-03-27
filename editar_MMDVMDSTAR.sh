@@ -390,7 +390,7 @@ echo ""
 echo "${CIAN}  35)\33[1;31m Recuperar el fichero original MMDVM.ini${AMARILLO}"
 
 echo ""
-echo "   ${ROJO}0) Salir"
+echo "   ${ROJO}0) Volver"
 echo ""
 echo -n "${CIAN}   Elige una opción: " 
 read escoger_menu
@@ -403,8 +403,7 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           cd /home/pi/V104
-                          #lxterminal --geometry=80x30 -e sudo sh editar_ircddbgateway.sh
-                          sh editar_ircddbgateway.sh
+                          lxterminal --geometry=80x30 -e sh editar_ircddbgateway.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
