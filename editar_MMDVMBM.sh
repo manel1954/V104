@@ -1323,23 +1323,6 @@ do
 			                  break;;
 esac
 done;;
-o) echo ""
-while true
-do
-
-                          actualizar=S 
-                          case $actualizar in
-                          [sS]* ) echo ""
-                          cd /home/pi/V104
-                          #lxterminal --geometry=80x15 -e; sudo screen sh ejecutar_bm.sh && sleep 2 && exit
-                          #screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh &
-                          #lxterminal -e screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh ; sleep 5 ; exit 
-                          lxterminal -e sh fallo.sh & sleep  5 ; exit
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
-esac
-done;;
 0) echo ""
 clear
 echo "${AMARILLO}   **************************************************"
