@@ -396,7 +396,7 @@ echo -n "${CIAN}   Elige una opción: "
 read escoger_menu
 
 case $escoger_menu in
-a) echo ""
+o) echo ""
 while true
 do
                           actualizar=S 
