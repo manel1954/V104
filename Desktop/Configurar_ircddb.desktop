@@ -1,6 +1,6 @@
 [Desktop Entry]
 Comment=EA3EIZ
-Exec=sh -c "cd /home/pi/V104; lxterminal --geometry=78x18 -e sh editar_ircddbgateway.sh"
+Exec=sh -c "cd /home/pi/V104; lxterminal --geometry=78x18 -e sh editar_ircddbgateway_menu.sh"
 Type=Application
 Terminal=false
 Comment[es_ES]=
