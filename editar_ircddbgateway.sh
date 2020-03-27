@@ -27,9 +27,9 @@ echo "   ***********************************************************************
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 #indicativo= sed -n '2p' /usr/local/etc/opendv/ircddbgateway
 indicativo=`grep -n "gatewayCallsign=" /usr/local/etc/opendv/ircddbgateway`
-indicativo1=`expr substr $indicativo 19 7`
+indicativo=`expr substr $indicativo 19 7`
 echo "$indicativo1"
-read a
+
 echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
@@ -41,12 +41,13 @@ case $escoger_menu in
 while true
 do
 
+                        read -p 'Introduce tu indicativo: ' indicativo
                         actualizar=S 
                         case $actualizar in
 			            [sS]* ) echo ""
                         
                         #Convierte indicativo si se introduce en minúsculas a Mayúsculas
-                        tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
+                        indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
                         sudo sed -i "2c gatewayCallsign=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
                         #Convierte indicativo si se introduce en minúsculas a Mayúsculas
