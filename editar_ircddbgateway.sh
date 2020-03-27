@@ -27,7 +27,7 @@ echo "   ***********************************************************************
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 #indicativo= sed -n '2p' /usr/local/etc/opendv/ircddbgateway
 indicativo=`grep "gatewayCallsign=" /usr/local/etc/opendv/ircddbgateway`
-indicativo=`expr substr $indicativo 19 7`
+indicativo=`expr substr $indicativo 17 7`
 echo "$indicativo"
 
 echo ""
