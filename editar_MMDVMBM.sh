@@ -1330,7 +1330,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          cd /home/pi/V104
+                          cd /home/pi/Desktop
                           lxterminal --geometry=80x15 -e screen sudo sh ejecutar_bm.sh & sleep 2 & exit;
                          
                           break;;
