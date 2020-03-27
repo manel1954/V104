@@ -1330,8 +1330,8 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          cd /home/pi/V104/Desktop
-                          Abrir_MMDVMBM.desktop
+                          cd /home/pi/V104
+                          sudo sh ejecutar_bm.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
