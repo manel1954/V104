@@ -1323,6 +1323,20 @@ do
 			                  break;;
 esac
 done;;
+o) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        cd /home/pi/V104
+                        xdg-open Abrir_MMDVMBM.desktop
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
 0) echo ""
 clear
 echo "${AMARILLO}   **************************************************"
