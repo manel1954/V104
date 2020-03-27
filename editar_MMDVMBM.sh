@@ -1323,6 +1323,20 @@ do
 			                  break;;
 esac
 done;;
+a) echo ""
+clear
+echo "${AMARILLO}   **************************************************"
+echo "   *                                                *"
+echo "   *     CERRANDO SCRIPT                            *"
+echo "   *                                                *"
+echo "   **************************************************"
+sleep 1
+clear
+cd /home/pi/V104
+sudo sh ejecutar_bm.sh
+exit;;  
+esac
+done
 0) echo ""
 clear
 echo "${AMARILLO}   **************************************************"
