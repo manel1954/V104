@@ -396,6 +396,19 @@ echo -n "${CIAN}   Elige una opción: "
 read escoger_menu
 
 case $escoger_menu in
+a) echo ""
+while true
+do
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          cd /home/pi/V104
+                          sh editar_ircddbgateway
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 1) echo ""
 while true
 do
