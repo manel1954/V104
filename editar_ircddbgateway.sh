@@ -39,7 +39,7 @@ sala=`grep "reflector1=" /usr/local/etc/opendv/ircddbgateway`
 loc1=`echo "$loc" | tr -d '[[:space:]]'`
 contenido_location=$(awk "NR==18" /usr/local/etc/opendv/ircddbgateway)
 echo "$contenido_location"
-"
+
 
 echo ""
 echo "   ${ROJO}0) Volver"
