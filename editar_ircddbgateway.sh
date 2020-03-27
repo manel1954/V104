@@ -25,7 +25,6 @@ echo -n "${VERDE}"
 echo "   **************************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
-#indicativo= sed -n '2p' /usr/local/etc/opendv/ircddbgateway
 indicativo=`grep "gatewayCallsign=" /usr/local/etc/opendv/ircddbgateway`
 indicativo=`expr substr $indicativo 17 7`
 echo "$indicativo"
@@ -44,7 +43,7 @@ do
                         read -p 'Introduce tu indicativo: ' indicativo
                         actualizar=S 
                         case $actualizar in
-			            [sS]* ) echo ""
+			[sS]* ) echo ""
                         
                         #Convierte indicativo si se introduce en minúsculas a Mayúsculas
                         indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
@@ -57,20 +56,27 @@ do
                         #Convierte indicativo si se introduce en minúsculas a Mayúsculas
                         indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
                         sed -i "116c dplusLogin=$indicativo  " /usr/local/etc/opendv/ircddbgateway
-			            break;;
-			            [nN]* ) echo ""
-			            break;;
-esac
+			break;;
+			[nN]* ) echo ""
+			break;;
+                        esac
+done;;
+2) echo ""
+while true
+do
+
+                        read -p 'Introduce tu indicativo: ' ciudad
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        sudo sed -i "10c description1=$ciudad" /usr/local/etc/opendv/ircddbgateway
+                        sudo sed -i "27c description_1=$ciudad" /usr/local/etc/opendv/ircddbgateway
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+                        esac
 done;;
 0) echo ""
-clear
-echo "\33[1;33m   **************************************************"
-echo "   *                                                *"
-echo "   *     CERRANDO SCRIPT                            *"
-echo "   *                                                *"
-echo "   **************************************************"
-sleep 1
-clear
 exit;;	
 esac
 done
