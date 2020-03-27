@@ -1017,7 +1017,7 @@ do
                           buscar=":"
                           largo=`expr index $modehang $buscar`
                           echo "Valor actual del RFModeHang = : ${AMARILLO}${modehang1#*=}\33[1;37m"
-                          read -p 'Introcuce el valor para RFModeHang (optimo=3): ' V
+                          read -p 'Introcuce el valor para RFModeHang (optimo=5): ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1334,7 +1334,7 @@ sleep 1
 clear
 cd /home/pi/V104
 lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh
-exit;;  
+exit;  
 esac
 done
 0) echo ""
