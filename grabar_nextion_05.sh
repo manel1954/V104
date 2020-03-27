@@ -33,28 +33,6 @@ read escoger_menu
 echo ""
 case $escoger_menu in
 
-6) echo ""
-while true
-do
-clear
-	                    ejecutar1=S
-		                case $ejecutar1 in
-			            [sS]* ) echo ""
-			            echo ">>>>>>>>> NextionDriver ADER_07.tft >>>>>>>>"
-			            #pasa el fichero nextion.py del Ingles G4KLX al ON7LDS
-			            sudo cp -f /home/pi/MMDVMHost/Nextion_G4KLX/nextion.py /home/pi/MMDVMHost/Nextion_ON7LDS
-			            cd /home/pi/MMDVMHost/Nextion_ON7LDS
-			            sudo rm NX3224T024_2.4_Time_REM.tft
-			            wget http://associacioader.com/NX3224T024_2.4_Time_REM.tft
-                        sudo python nextion.py NX3224T024_2.4_Time_REM.tft /dev/ttyUSB0
-                        sleep 10
-		                break;;
-		                [nN]* ) echo ""
-						clear
-						exit;
-						break;;
-esac
-done;;
 1) echo ""
 while true
 do
@@ -88,7 +66,7 @@ clear
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
 			            sudo cp -f /home/pi/MMDVMHost/Nextion_G4KLX/nextion.py /home/pi/MMDVMHost/Nextion_ON7LDS
                         cd /home/pi/MMDVMHost/Nextion_ON7LDS
-                        sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
+                        sudo python nextion.py NX3224T024-L3.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
 		                [nN]* ) echo ""
@@ -109,7 +87,7 @@ clear
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
 			            sudo cp -f /home/pi/MMDVMHost/Nextion_G4KLX/nextion.py /home/pi/MMDVMHost/Nextion_ON7LDS
                         cd /home/pi/MMDVMHost/Nextion_ON7LDS
-                        sudo python nextion.py NX3224T028.tft /dev/ttyUSB0
+                        sudo python nextion.py NX3224T028-L3.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
 		                [nN]* ) echo ""
@@ -129,7 +107,7 @@ clear
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
 			            sudo cp -f /home/pi/MMDVMHost/Nextion_G4KLX/nextion.py /home/pi/MMDVMHost/Nextion_ON7LDS
                         cd /home/pi/MMDVMHost/Nextion_ON7LDS
-                        sudo python nextion.py NX3224T032.tft /dev/ttyUSB0
+                        sudo python nextion.py NX3224T032-L3.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
 		                [nN]* ) echo ""
@@ -149,7 +127,7 @@ clear
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
 			            sudo cp -f /home/pi/MMDVMHost/Nextion_G4KLX/nextion.py /home/pi/MMDVMHost/Nextion_ON7LDS
                         cd /home/pi/MMDVMHost/Nextion_ON7LDS
-                        sudo python nextion.py NX3224T043.tft /dev/ttyUSB0
+                        sudo python nextion.py NX3224T043-L3.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
 		                [nN]* ) echo ""
@@ -158,7 +136,28 @@ clear
 						break;;
 esac
 done;;
-
+6) echo ""
+while true
+do
+clear
+	                    ejecutar1=S
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> NextionDriver ADER_07.tft >>>>>>>>"
+			            #pasa el fichero nextion.py del Ingles G4KLX al ON7LDS
+			            sudo cp -f /home/pi/MMDVMHost/Nextion_G4KLX/nextion.py /home/pi/MMDVMHost/Nextion_ON7LDS
+			            cd /home/pi/MMDVMHost/Nextion_ON7LDS
+			            sudo rm NX3224T024_2.4_Time_REM.tft
+			            wget http://associacioader.com/NX3224T024_2.4_Time_REM.tft
+                        sudo python nextion.py NX3224T024_2.4_Time_REM.tft /dev/ttyUSB0
+                        sleep 10
+		                break;;
+		                [nN]* ) echo ""
+						clear
+						exit;
+						break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
