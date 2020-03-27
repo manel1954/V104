@@ -31,7 +31,12 @@ sleep 2
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
                         git pull
-                        sleep 3
+                        sleep 1
+
+#Actualiza AUTORRANQUEV104
+                        cd $usuario/AUTOARRANQUEV104
+                        git pull
+                        sleep 1
 
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF 
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
