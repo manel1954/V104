@@ -1332,7 +1332,8 @@ do
                           [sS]* ) echo ""
                           cd /home/pi/V104
                           #lxterminal --geometry=80x15 -e; sudo screen sh ejecutar_bm.sh && sleep 2 && exit
-                          screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh &
+                          #screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh &
+screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh & exit 
 
                           break;;
                           [nN]* ) echo ""
