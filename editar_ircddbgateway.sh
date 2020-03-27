@@ -31,6 +31,7 @@ echo "$indicativo"
 
 echo -n "${CIAN}   2)${GRIS} Modificar Ciudad      - ${AMARILLO}"
 ciudad=`grep "description1=" /usr/local/etc/opendv/ircddbgateway`
+contenido_location=$(awk "NR==10" /usr/local/etc/opendv/ircddbgateway)
 ciudad=`expr substr $ciudad 14 20`
 echo "$ciudad"
 
@@ -76,7 +77,7 @@ done;;
 2) echo ""
 while true
 do
-
+                        echo "Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
                         read -p 'Introduce tu Ciudad: ' ciudad
                         actualizar=S 
                         case $actualizar in
