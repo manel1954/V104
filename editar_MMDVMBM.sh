@@ -1331,7 +1331,7 @@ do
                         [sS]* ) echo ""
                         clear
                         cd /home/pi/Desktop
-                        xdg-open Abrir_MMDVMBM.desktop
+                        xdg-open Abrir_MMDVMBM.desktop &
                         break;;
                         [nN]* ) echo ""
                         break;;
