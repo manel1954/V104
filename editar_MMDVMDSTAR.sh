@@ -403,7 +403,7 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           cd /home/pi/V104
-                          sh editar_ircddbgateway
+                          sh editar_ircddbgateway.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
