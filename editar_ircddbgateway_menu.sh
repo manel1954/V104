@@ -34,6 +34,22 @@ echo -n "\33[1;36m   Elige una opción: "
 
 read escoger_menu
 case $escoger_menu in
+1) echo ""
+while true
+do
+
+                      
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        cd /home/pi/V104
+                        sh popus_editar_ircddb.sh
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+
 2) echo ""
 while true
 do
@@ -50,14 +66,6 @@ do
 esac
 done;;
 0) echo ""
-clear
-echo "\33[1;33m   **************************************************"
-echo "   *                                                *"
-echo "   *     CERRANDO SCRIPT                            *"
-echo "   *                                                *"
-echo "   **************************************************"
-sleep 1
-clear
 exit;;	
 esac
 done
