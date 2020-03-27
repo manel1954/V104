@@ -47,7 +47,7 @@ do
 			            [sS]* ) echo ""
                         
                         #Convierte indicativo si se introduce en minúsculas a Mayúsculas
-                        indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
+                        indicativo=`echo "$indicativo" | tr [:upper:] [:lower:]`
                         sudo sed -i "2c gatewayCallsign=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
                         #Convierte indicativo si se introduce en minúsculas a Mayúsculas
