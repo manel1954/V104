@@ -31,7 +31,7 @@ indicativo=`expr substr $indicativo 17 7`
 echo "$indicativo"
 
 echo ""
-echo "   ${ROJO}0) Salir"
+echo "   ${ROJO}0) Volver"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 
