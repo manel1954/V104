@@ -48,9 +48,9 @@ do
                         
                         #Convierte indicativo si se introduce en minúsculas a Mayúsculas
                         indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
-                        sudo sed -i "2c gatewayCallsign=$indicativo" /usr/local/etc/opendv/ircddbgateway
+                        sed -i "2c gatewayCallsign=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
-                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        #Convierte indicativo si se introduce Mayúsculas a minúsculas 
                         # tu_indicativo=`echo "$tu_indicativo" | tr [:upper:] [:lower:]`
                         # sudo sed -i "95c ircddbUsername=$tu_indicativo" /usr/local/etc/opendv/ircddbgateway
 
