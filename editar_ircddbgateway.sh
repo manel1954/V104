@@ -36,8 +36,10 @@ echo "$ciudad"
 
 echo -n "${CIAN}   3)${GRIS} Modificar Reflector   - ${AMARILLO}"
 sala=`grep "reflector1=" /usr/local/etc/opendv/ircddbgateway`
-sala=`expr substr $sala 12 8`
-echo "$sala"
+loc1=`echo "$loc" | tr -d '[[:space:]]'`
+contenido_location=$(awk "NR==18" /usr/local/etc/opendv/ircddbgateway)
+echo "$contenido_location"
+"
 
 echo ""
 echo "   ${ROJO}0) Volver"
