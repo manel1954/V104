@@ -27,6 +27,7 @@ echo "   ***********************************************************************
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 indicativo= sed -i "2p" /usr/local/etc/opendv/ircddbgateway
 echo "$indicativo"
+read a
 echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
