@@ -51,12 +51,12 @@ do
                         sed -i "2c gatewayCallsign=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
                         #Convierte indicativo si se introduce Mayúsculas a minúsculas 
-                        # tu_indicativo=`echo "$tu_indicativo" | tr [:upper:] [:lower:]`
-                        # sudo sed -i "95c ircddbUsername=$tu_indicativo" /usr/local/etc/opendv/ircddbgateway
+                        indicativo=`echo "$indicativo" | tr [:upper:] [:lower:]`
+                        sudo sed -i "95c ircddbUsername=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
                         #Convierte indicativo si se introduce en minúsculas a Mayúsculas
-                        # tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
-                        # sudo sed -i "116c dplusLogin=$tu_indicativo  " /usr/local/etc/opendv/ircddbgateway
+                        indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
+                        sed -i "116c dplusLogin=$indicativo  " /usr/local/etc/opendv/ircddbgateway
 			            break;;
 			            [nN]* ) echo ""
 			            break;;
