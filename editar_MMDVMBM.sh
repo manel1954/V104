@@ -1334,7 +1334,7 @@ do
                           #lxterminal --geometry=80x15 -e; sudo screen sh ejecutar_bm.sh && sleep 2 && exit
                           #screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh &
                           #lxterminal -e screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh ; sleep 5 ; exit 
-                          lxterminal -e sh fallo.sh & exit
+                          lxterminal -e sh fallo.sh & sleep  5 ; exit
                           break;;
                           [nN]* ) echo ""
                           break;;
