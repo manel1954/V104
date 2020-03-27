@@ -1331,8 +1331,8 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           cd /home/pi/V104
-                          screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh
-                          exit;
+                          screen lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh && exit;
+                         
                           break;;
                           [nN]* ) echo ""
                           break;;
