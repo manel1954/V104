@@ -1333,7 +1333,7 @@ echo "   **************************************************"
 sleep 1
 clear
 cd /home/pi/V104
-sudo sh ejecutar_bm.sh
+lxterminal --geometry=80x15 -e sudo sh ejecutar_bm.sh
 exit;;  
 esac
 done
