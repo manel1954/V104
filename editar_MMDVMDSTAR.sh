@@ -403,7 +403,7 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           cd /home/pi/V104
-                          sudo sh editar_ircddbgateway.sh
+                          lxterminal --geometry=80x30 -e sh editar_ircddbgateway.sh
                           break;;
                           [nN]* ) echo ""
                           break;;
