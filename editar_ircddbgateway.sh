@@ -34,6 +34,11 @@ ciudad=`grep "description1=" /usr/local/etc/opendv/ircddbgateway`
 ciudad=`expr substr $ciudad 14 20`
 echo "$ciudad"
 
+echo -n "${CIAN}   3)${GRIS} Modificar Reflector   - ${AMARILLO}"
+reflector=`grep "reflector1=" /usr/local/etc/opendv/ircddbgateway`
+reflector=`expr substr $reflector 12 10`
+echo "$reflector"
+
 echo ""
 echo "   ${ROJO}0) Volver"
 echo ""
@@ -70,12 +75,26 @@ done;;
 while true
 do
 
-                        read -p 'Introduce tu indicativo: ' ciudad
+                        read -p 'Introduce tu Ciudad: ' ciudad
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
                         sudo sed -i "10c description1=$ciudad" /usr/local/etc/opendv/ircddbgateway
                         sudo sed -i "27c description_1=$ciudad" /usr/local/etc/opendv/ircddbgateway
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+                        esac
+done;;
+3) echo ""
+while true
+do
+
+                        read -p 'Introduce Reflector: ' reflector
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        sudo sed -i "18c reflector1=$reflector" /usr/local/etc/opendv/ircddbgateway
                         break;;
                         [nN]* ) echo ""
                         break;;
