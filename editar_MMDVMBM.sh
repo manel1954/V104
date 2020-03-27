@@ -1017,7 +1017,7 @@ do
                           buscar=":"
                           largo=`expr index $modehang $buscar`
                           echo "Valor actual del RFModeHang = : ${AMARILLO}${modehang1#*=}\33[1;37m"
-                          read -p 'Introcuce el valor para RFModeHang (optimo=3): ' V
+                          read -p 'Introcuce el valor para RFModeHang (optimo=5): ' V
                           letra=c
                           if [ $largo = 2 ]
                           then
@@ -1321,20 +1321,6 @@ do
 			                  break;;
 			                  [nN]* ) echo ""
 			                  break;;
-esac
-done;;
-o) echo ""
-while true
-do
-                        actualizar=S 
-                        case $actualizar in
-                        [sS]* ) echo ""
-                        clear
-                        cd /home/pi/Desktop
-                        xdg-open Abrir_MMDVMBM.desktop &
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
 esac
 done;;
 0) echo ""
