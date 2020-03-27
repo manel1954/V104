@@ -1323,7 +1323,7 @@ do
 			                  break;;
 esac
 done;;
-k) echo ""
+o) echo ""
 clear
 echo "${AMARILLO}   **************************************************"
 echo "   *                                                *"
