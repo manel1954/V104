@@ -35,8 +35,8 @@ ciudad=`expr substr $ciudad 14 20`
 echo "$ciudad"
 
 echo -n "${CIAN}   3)${GRIS} Modificar Reflector   - ${AMARILLO}"
-reflector=`grep "^reflector1=" /usr/local/etc/opendv/ircddbgateway`
-reflector=`expr substr $reflector 12 10`
+reflector=`grep "reflector1=" /usr/local/etc/opendv/ircddbgateway`
+reflector=`expr substr $reflector 12 8`
 echo "$reflector"
 
 echo ""
