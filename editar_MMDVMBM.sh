@@ -1330,7 +1330,7 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         clear
-                        cd /home/pi/V104
+                        cd /home/pi/Desktop
                         xdg-open Abrir_MMDVMBM.desktop
                         break;;
                         [nN]* ) echo ""
