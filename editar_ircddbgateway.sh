@@ -38,7 +38,7 @@ echo "$ciudad"
 echo -n "${CIAN}   3)${GRIS} Modificar Reflector   - ${AMARILLO}"
 sala=`grep "reflector1=" /usr/local/etc/opendv/ircddbgateway`
 contenido_reflector=$(awk "NR==18" /usr/local/etc/opendv/ircddbgateway)
-echo "$contenido_location"
+echo "$sala"
 
 
 echo ""
@@ -97,6 +97,7 @@ do
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
+                        reflector=`echo "$reflector" | tr [:lower:] [:upper:]`
                         sudo sed -i "18c reflector1=$reflector" /usr/local/etc/opendv/ircddbgateway
                         break;;
                         [nN]* ) echo ""
