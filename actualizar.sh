@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+lxterminal & exit
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
@@ -20,6 +21,8 @@ echo "El fichero ya existe"
 else
 cp sala.txt /home/pi/.local
 fi
+
+
 
 # path usuario
 usuario="/home/pi"
@@ -290,8 +293,7 @@ else
 echo ""
 fi
 
-lxterminal
-exit
+
 
 
 
