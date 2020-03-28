@@ -113,6 +113,13 @@ do
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
+
+
+                        #Convierte si se introduce en minúsculas a Mayúsculas 
+                        reflector=`echo "$reflector" | tr [:lower:] [:upper:]`
+                        sudo sed -i "18c reflector1=$reflector" /etc/ircddbgateway
+
+
                         reflector=`echo "$reflector" | tr [:lower:] [:upper:]`
                         sudo sed -i "18c reflector1=$reflector" /usr/local/etc/opendv/ircddbgateway
                         break;;
