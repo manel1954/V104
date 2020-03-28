@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-lxterminal --geometry=0x0 -e exit
+lxterminal --geometry=1x1 -e exit
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
