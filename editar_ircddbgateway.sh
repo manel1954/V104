@@ -26,13 +26,13 @@ echo "   ***********************************************************************
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 indicativo=`grep "gatewayCallsign=" /usr/local/etc/opendv/ircddbgateway`
-indicativo=`expr substr $indicativo 17 7`
+#indicativo=`expr substr $indicativo 17 7`
 echo "$indicativo"
 
 echo -n "${CIAN}   2)${GRIS} Modificar Ciudad      - ${AMARILLO}"
 ciudad=`grep "description1=" /usr/local/etc/opendv/ircddbgateway`
 contenido_ciudad=$(awk "NR==10" /usr/local/etc/opendv/ircddbgateway)
-ciudad=`expr substr $ciudad 14 20`
+#ciudad=`expr substr $ciudad 14 20`
 echo "$ciudad"
 
 echo -n "${CIAN}   3)${GRIS} Modificar Reflector   - ${AMARILLO}"
