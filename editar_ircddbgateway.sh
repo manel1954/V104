@@ -76,7 +76,7 @@ done;;
 2) echo ""
 while true
 do
-                        echo "Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
+                        echo "Valor de la Ciudad: ${AMARILLO}${contenido_ciudad#*=}\33[1;37m"
                         read -p 'Introduce tu Ciudad: ' ciudad
                         actualizar=S 
                         case $actualizar in
