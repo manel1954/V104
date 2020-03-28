@@ -25,7 +25,6 @@ echo -n "${VERDE}"
 echo "   **************************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
-indicativo=`grep "gatewayCallsign=" /usr/local/etc/opendv/ircddbgateway`
 contenido_indicativo=$(awk "NR==2" /usr/local/etc/opendv/ircddbgateway)
 indicativo=${contenido_indicativo#*=}
 
