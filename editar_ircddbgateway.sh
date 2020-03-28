@@ -61,30 +61,41 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-                        echo "Valor del Indicativo: ${AMARILLO}${contenido_indicativo#*=}\33[1;37m"
+                        echo "Valor del Indicativo:    ${AMARILLO}${contenido_indicativo#*=}${AMARILLO}"
                         read -p 'Introduce tu indicativo: ' indicativo
                         actualizar=S 
                         case $actualizar in
 			[sS]* ) echo ""
                         
-
-                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas 
+                        # ========================================================================
+                        #Convierte de minúsculas a mayúsculas 
                         indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
                         sudo sed -i "2c gatewayCallsign=$indicativo" /etc/ircddbgateway
 
+                        #Convierte de mayúsculas a minúsculas
+                        indicativo=`echo "$indicativo" | tr [:upper:] [:lower:]`
+                        sudo sed -i "95c gatewayCallsign=$indicativo" /etc/ircddbgateway
 
-                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        #Convierte de minúsculas a mayúsculas
+                        indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
+                        sudo sed -i "116c gatewayCallsign=$indicativo" /etc/ircddbgateway
+                        # ========================================================================
+
+                        # ========================================================================
+                        #Convierte de minúsculas a mayúsculas
                         indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
                         sed -i "2c gatewayCallsign=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
-                        #Convierte indicativo si se introduce Mayúsculas a minúsculas 
+                        #Convierte de mayúsculas a minúsculas 
                         indicativo=`echo "$indicativo" | tr [:upper:] [:lower:]`
                         sudo sed -i "95c ircddbUsername=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
-                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        #Convierte de minúsculas a mayúsculas
                         indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
                         sed -i "116c dplusLogin=$indicativo  " /usr/local/etc/opendv/ircddbgateway
-			break;;
+                        # ========================================================================
+			
+                        break;;
 			[nN]* ) echo ""
 			break;;
                         esac
