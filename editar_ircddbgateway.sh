@@ -102,7 +102,7 @@ done;;
 2) echo ""
 while true
 do
-                        echo "Valor de la Ciudad: ${AMARILLO}${contenido_ciudad#*=}${BLANCO}"
+                        echo "Valor de la Ciudad:  ${AMARILLO}${contenido_ciudad#*=}${BLANCO}"
                         read -p 'Introduce tu Ciudad: ' ciudad
                         actualizar=S 
                         case $actualizar in
@@ -151,7 +151,7 @@ while true
 do
 
                         echo "Valor de la Url: ${AMARILLO}${contenido_url#*=}${BLANCO}"
-                        read -p 'Introduce Url: ' web
+                        read -p 'Introduce Url:   ' web
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
