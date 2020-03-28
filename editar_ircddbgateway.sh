@@ -74,11 +74,11 @@ do
 
                         #Convierte de mayúsculas a minúsculas
                         indicativo=`echo "$indicativo" | tr [:upper:] [:lower:]`
-                        sudo sed -i "95c gatewayCallsign=$indicativo" /etc/ircddbgateway
+                        sudo sed -i "95c ircddbUsername=$indicativo" /etc/ircddbgateway
 
                         #Convierte de minúsculas a mayúsculas
                         indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
-                        sudo sed -i "116c gatewayCallsign=$indicativo" /etc/ircddbgateway
+                        sudo sed -i "117c dplusLogin=$indicativo" /etc/ircddbgateway
                         # ========================================================================
 
                         # ========================================================================
