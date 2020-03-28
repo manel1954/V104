@@ -31,25 +31,21 @@ indicativo=${contenido_indicativo#*=}
 echo "$indicativo"
 
 echo -n "${CIAN}   2)${GRIS} Modificar Ciudad      - ${AMARILLO}"
-ciudad=`grep "description1=" /usr/local/etc/opendv/ircddbgateway`
 contenido_ciudad=$(awk "NR==10" /usr/local/etc/opendv/ircddbgateway)
 ciudad=${contenido_ciudad#*=}
 echo "$ciudad"
 
 echo -n "${CIAN}   3)${GRIS} Modificar Reflector   - ${AMARILLO}"
-sala=`grep "reflector1=" /usr/local/etc/opendv/ircddbgateway`
 contenido_reflector=$(awk "NR==18" /usr/local/etc/opendv/ircddbgateway)
 sala=${contenido_reflector#*=}
 echo "$sala"
 
 echo -n "${CIAN}   4)${GRIS} Modificar Url         - ${AMARILLO}"
-url=`grep "url=" /usr/local/etc/opendv/ircddbgateway`
 contenido_url=$(awk "NR==12" /usr/local/etc/opendv/ircddbgateway)
 url=${contenido_url#*=}
 echo "$url"
 
 echo -n "${CIAN}   5)${GRIS} Modificar Frecuencia  - ${AMARILLO}"
-frecuencia=`grep "frequency1=" /usr/local/etc/opendv/ircddbgateway`
 contenido_frecuencia=$(awk "NR==21" /usr/local/etc/opendv/ircddbgateway)
 frecuencia=${contenido_frecuencia#*=}
 
