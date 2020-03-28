@@ -628,24 +628,6 @@ clear
 break;;
 esac
 done;;
-a) echo ""
-while true
-do
-clear
-                                ejecutar1=S
-                                case $ejecutar1 in
-                                [sS]* ) echo ""
-                                sudo cp /home/pi/V104/Desktop/*.* /home/pi/Desktop
-                                sudo chmod 777 -R /home/pi/Desktop
-                                echo ""
-                                exit;
-                                break;;
-                                [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
 0) echo ""
 clear
 echo "${AMARILLO}"
