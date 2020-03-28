@@ -94,7 +94,6 @@ do
                         indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
                         sed -i "116c dplusLogin=$indicativo  " /usr/local/etc/opendv/ircddbgateway
                         # ========================================================================
-			
                         break;;
 			[nN]* ) echo ""
 			break;;
@@ -103,13 +102,20 @@ done;;
 2) echo ""
 while true
 do
-                        echo "Valor de la Ciudad: ${AMARILLO}${contenido_ciudad#*=}\33[1;37m"
+                        echo "Valor de la Ciudad: ${AMARILLO}${contenido_ciudad#*=}${BLANCO}"
                         read -p 'Introduce tu Ciudad: ' ciudad
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
+                        # ========================================================================
+                        sudo sed -i "10c description1=$ciudad" /etc/ircddbgateway
+                        sudo sed -i "27c description_1=$ciudad" /etc/ircddbgateway
+                        # ========================================================================
+
+                        # ========================================================================
                         sudo sed -i "10c description1=$ciudad" /usr/local/etc/opendv/ircddbgateway
                         sudo sed -i "27c description_1=$ciudad" /usr/local/etc/opendv/ircddbgateway
+                        # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -119,20 +125,22 @@ done;;
 while true
 do
 
-                        echo "Valor del Reflector: ${AMARILLO}${contenido_reflector#*=}\33[1;37m"
+                        echo "Valor del Reflector: ${AMARILLO}${contenido_reflector#*=}${BLANCO}"
                         read -p 'Introduce Reflector: ' reflector
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
-
-
-                        #Convierte si se introduce en minúsculas a Mayúsculas 
+                        # ========================================================================
+                        #Convierte de minúsculas a mayúsculas 
                         reflector=`echo "$reflector" | tr [:lower:] [:upper:]`
-                        sudo sed -i "18c reflector1=$reflector" /etc/ircddbgateway
+                        sudo sed -i "18c reflector1=$reflector" /etc/ircddbgateway                        
+                        # ========================================================================
 
-
+                        # =======================================================================
+                        #Convierte de minúsculas a mayúsculas
                         reflector=`echo "$reflector" | tr [:lower:] [:upper:]`
                         sudo sed -i "18c reflector1=$reflector" /usr/local/etc/opendv/ircddbgateway
+                        # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -142,13 +150,20 @@ done;;
 while true
 do
 
-                        echo "Valor de la Url: ${AMARILLO}${contenido_url#*=}\33[1;37m"
+                        echo "Valor de la Url: ${AMARILLO}${contenido_url#*=}${BLANCO}"
                         read -p 'Introduce Url: ' web
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
+                        # ========================================================================
+                        sudo sed -i "12c url=$web" /etc/ircddbgateway
+                        sudo sed -i "29c url1=$web" /etc/ircddbgateway
+                        # ========================================================================
+
+                        # ========================================================================
                         sudo sed -i "12c url=$web" /usr/local/etc/opendv/ircddbgateway
                         sudo sed -i "29c url1=$web" /usr/local/etc/opendv/ircddbgateway
+                        # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -157,12 +172,18 @@ done;;
 5) echo ""
 while true
 do
-                        echo "Valor de la Frecuencia: ${AMARILLO}${contenido_frecuencia#*=}\33[1;37m"
+                        echo "Valor de la Frecuencia: ${AMARILLO}${contenido_frecuencia#*=}${BLANCO}"
                         read -p 'Introduce Frecuencia: ' frecuencia
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
+                        # ========================================================================
+                        sudo sed -i "21c frequency1=$frecuencia" /etc/ircddbgateway
+                        # ========================================================================
+
+                        # ========================================================================
                         sudo sed -i "21c frequency1=$frecuencia" /usr/local/etc/opendv/ircddbgateway
+                        # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
