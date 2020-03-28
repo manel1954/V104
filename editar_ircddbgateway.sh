@@ -27,6 +27,7 @@ echo "   ***********************************************************************
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 indicativo=`grep "gatewayCallsign=" /usr/local/etc/opendv/ircddbgateway`
 contenido_indicativo=$(awk "NR==2" /usr/local/etc/opendv/ircddbgateway)
+indicativo={contenido_indicativo#*=}
 
 echo "$indicativo"
 
@@ -42,7 +43,7 @@ echo "$sala"
 
 echo -n "${CIAN}   4)${GRIS} Modificar Url         - ${AMARILLO}"
 url=`grep "url=" /usr/local/etc/opendv/ircddbgateway`
-contenido_url=$(awk "NR==21" /usr/local/etc/opendv/ircddbgateway)
+contenido_url=$(awk "NR==12" /usr/local/etc/opendv/ircddbgateway)
 echo "$url"
 
 echo -n "${CIAN}   5)${GRIS} Modificar Frecuencia  - ${AMARILLO}"
@@ -118,7 +119,6 @@ done;;
 while true
 do
 
-                        echo "Valor de Url: ${AMARILLO}${contenido_url#*=}\33[1;37m"
                         echo "Valor de la Url: ${AMARILLO}${contenido_url#*=}\33[1;37m"
                         read -p 'Introduce Url: ' web
                         actualizar=S 
