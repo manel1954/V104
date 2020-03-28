@@ -31,14 +31,13 @@ echo "$indicativo"
 
 echo -n "${CIAN}   2)${GRIS} Modificar Ciudad      - ${AMARILLO}"
 ciudad=`grep "description1=" /usr/local/etc/opendv/ircddbgateway`
-contenido_location=$(awk "NR==10" /usr/local/etc/opendv/ircddbgateway)
+contenido_ciudad=$(awk "NR==10" /usr/local/etc/opendv/ircddbgateway)
 ciudad=`expr substr $ciudad 14 20`
 echo "$ciudad"
 
 echo -n "${CIAN}   3)${GRIS} Modificar Reflector   - ${AMARILLO}"
 sala=`grep "reflector1=" /usr/local/etc/opendv/ircddbgateway`
-loc1=`echo "$loc" | tr -d '[[:space:]]'`
-contenido_location=$(awk "NR==18" /usr/local/etc/opendv/ircddbgateway)
+contenido_reflector=$(awk "NR==18" /usr/local/etc/opendv/ircddbgateway)
 echo "$contenido_location"
 
 
@@ -93,6 +92,7 @@ done;;
 while true
 do
 
+                        echo "Valor del Reflector: ${AMARILLO}${contenido_reflector#*=}\33[1;37m"
                         read -p 'Introduce Reflector: ' reflector
                         actualizar=S 
                         case $actualizar in
