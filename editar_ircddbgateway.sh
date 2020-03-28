@@ -38,7 +38,7 @@ sala=`grep "reflector1=" /usr/local/etc/opendv/ircddbgateway`
 contenido_reflector=$(awk "NR==18" /usr/local/etc/opendv/ircddbgateway)
 echo "$sala"
 
-echo -n "${CIAN}   4)${GRIS} Modificar Url  - ${AMARILLO}"
+echo -n "${CIAN}   4)${GRIS} Modificar Url         - ${AMARILLO}"
 url=`grep "url=" /usr/local/etc/opendv/ircddbgateway`
 contenido_url=$(awk "NR==21" /usr/local/etc/opendv/ircddbgateway)
 echo "$url"
@@ -105,6 +105,36 @@ do
                         [sS]* ) echo ""
                         reflector=`echo "$reflector" | tr [:lower:] [:upper:]`
                         sudo sed -i "18c reflector1=$reflector" /usr/local/etc/opendv/ircddbgateway
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+                        esac
+done;;
+4) echo ""
+while true
+do
+
+                        echo "Valor de la Url: ${AMARILLO}${contenido_url#*=}\33[1;37m"
+                        read -p 'Introduce Url: ' web
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        sudo sed -i "12c url=$web" /usr/local/etc/opendv/ircddbgateway
+                        sudo sed -i "29c url1=$web" /usr/local/etc/opendv/ircddbgateway
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+                        esac
+done;;
+5) echo ""
+while true
+do
+
+                        read -p 'Introduce Url: ' frecuencia
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        sudo sed -i "21c frequency1=$frecuencia" /usr/local/etc/opendv/ircddbgateway
                         break;;
                         [nN]* ) echo ""
                         break;;
