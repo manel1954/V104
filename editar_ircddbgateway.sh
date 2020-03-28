@@ -26,6 +26,8 @@ echo "   ***********************************************************************
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 indicativo=`grep "gatewayCallsign=" /usr/local/etc/opendv/ircddbgateway`
+contenido_indicativo=$(awk "NR==2" /usr/local/etc/opendv/ircddbgateway)
+
 echo "$indicativo"
 
 echo -n "${CIAN}   2)${GRIS} Modificar Ciudad      - ${AMARILLO}"
@@ -45,6 +47,8 @@ echo "$url"
 
 echo -n "${CIAN}   5)${GRIS} Modificar Frecuencia  - ${AMARILLO}"
 frecuencia=`grep "frequency1=" /usr/local/etc/opendv/ircddbgateway`
+contenido_frecuencia=$(awk "NR==21" /usr/local/etc/opendv/ircddbgateway)
+
 echo "$frecuencia"
 
 echo ""
@@ -57,7 +61,7 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-
+                        echo "Valor del Indicativo: ${AMARILLO}${contenido_indicativo#*=}\33[1;37m"
                         read -p 'Introduce tu indicativo: ' indicativo
                         actualizar=S 
                         case $actualizar in
@@ -114,6 +118,7 @@ done;;
 while true
 do
 
+                        echo "Valor de Url: ${AMARILLO}${contenido_url#*=}\33[1;37m"
                         echo "Valor de la Url: ${AMARILLO}${contenido_url#*=}\33[1;37m"
                         read -p 'Introduce Url: ' web
                         actualizar=S 
@@ -129,8 +134,8 @@ done;;
 5) echo ""
 while true
 do
-
-                        read -p 'Introduce Url: ' frecuencia
+                        echo "Valor de la Frecuencia: ${AMARILLO}${contenido_frecuencia#*=}\33[1;37m"
+                        read -p 'Introduce Frecuencia: ' frecuencia
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
