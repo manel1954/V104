@@ -61,7 +61,7 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-                        echo "Valor del Indicativo:    ${AMARILLO}${contenido_indicativo#*=}${AMARILLO}"
+                        echo "Valor del Indicativo:    ${AMARILLO}${contenido_indicativo#*=}${BLANCO}"
                         read -p 'Introduce tu indicativo: ' indicativo
                         actualizar=S 
                         case $actualizar in
