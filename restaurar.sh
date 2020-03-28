@@ -77,6 +77,9 @@ echo "***************************************************"
             cp ircddbgateway /usr/local/etc/opendv/
             cp dstarrepeater /usr/local/etc/opendv/
 
+            cp ircddbgateway /etc/
+            cp dstarrepeater /etc/
+
             cp info_panel_control.ini /home/pi/
 
 
