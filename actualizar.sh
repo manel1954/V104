@@ -290,6 +290,9 @@ else
 echo ""
 fi
 
+lxterminal
+exit
+
 
 
 
