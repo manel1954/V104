@@ -951,6 +951,8 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
 
             sudo sed -i "8c latitude=$tu_latitud" /usr/local/etc/opendv/ircddbgateway
 
+            sudo sed -i "8c latitude=$tu_latitud" /etc/ircddbgateway
+
 #Latitude YSF
 loc1=`grep -n "^Latitude=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
@@ -1029,6 +1031,8 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
 
             sudo sed -i "9c longitude=$tu_longitud" /usr/local/etc/opendv/ircddbgateway
 
+            sudo sed -i "9c longitude=$tu_longitud" /etc/ircddbgateway
+            
 #Longitude YSF
 loc1=`grep -n "^Longitude=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
