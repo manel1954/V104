@@ -10,7 +10,9 @@ sudo cp /home/pi/V104/remotecontrol /usr/bin/remotecontrol
 
 sudo rm -R /usr/share/opendv
 sudo mkdir /usr/share/opendv
+sudo cp /usr/local/share/opendv/*.ambe /usr/share/opendv/
 sudo cp /usr/share/ircddbgateway/*.* /usr/share/opendv/
+
 
 sudo rm -R /var/log/opendv
 sudo mkdir /var/log/opendv
