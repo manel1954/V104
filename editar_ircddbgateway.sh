@@ -198,6 +198,46 @@ do
                         break;;
                         esac
 done;;
+6) echo ""
+while true
+do
+                        echo "Valor de Latitud: ${AMARILLO}${contenido_latitud#*=}${BLANCO}"
+                        read -p 'Introduce Frecuencia: ' latitud
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        # ========================================================================
+                        sudo sed -i "8c frequency1=$latitud" /etc/ircddbgateway
+                        # ========================================================================
+
+                        # ========================================================================
+                        sudo sed -i "8c frequency1=$latitud" /usr/local/etc/opendv/ircddbgateway
+                        # ========================================================================
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+                        esac
+done;;
+7) echo ""
+while true
+do
+                        echo "Valor de Longitud: ${AMARILLO}${contenido_longitud#*=}${BLANCO}"
+                        read -p 'Introduce Frecuencia: ' longitud
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        # ========================================================================
+                        sudo sed -i "9c frequency1=$longitud" /etc/ircddbgateway
+                        # ========================================================================
+
+                        # ========================================================================
+                        sudo sed -i "9c frequency1=$longitud" /usr/local/etc/opendv/ircddbgateway
+                        # ========================================================================
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+                        esac
+done;;
 0) echo ""
 exit;;	
 esac
