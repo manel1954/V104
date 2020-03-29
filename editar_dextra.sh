@@ -71,8 +71,8 @@ do
                         echo "            *******************************************************"
                         echo "${AMARILLO}"
                         echo "                   NO TIENES LA ÚLTIMA VERSIÓN DE IRCDDBGATEWAY "
-                        echo "                              ACTUALIZA A LA VERSIÓN:${ROJO} 20190402  "
-                        echo "                                  ${BLANCO}OPCIÓN 3 DEL MENÚ"
+                        echo "                         ACTUALIZA A LA VERSIÓN:${ROJO} 20190402  "
+                        echo "                          ${BLANCO}OPCIÓN 3 DEL MENÚ"
                         echo "${VERDE}"
                         echo "            *******************************************************"
                         sleep 3
