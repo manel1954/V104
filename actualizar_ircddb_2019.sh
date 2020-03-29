@@ -1,33 +1,18 @@
 ﻿#!/bin/bash
-						clear
-						echo -n "Quieres actualizar Ircddbgateway a la última versión ? S/N: "
-                        
-                        read siguiente
-                        if [ "$siguiente" = "S" -o "$siguiente" = "s" ]
-                        then
-                        echo "${AMARILLO}"
-                        echo "si actualiza"
-                        read a
-                    	else
-                    	echo "no actualiza"
-                    	read a
-                    	fi
-
-
-
-						  # read -p 'Quieres actualizar Ircddbgateway a la última versión ? S/N ' actualizar             	                           
-        #                   case $actualizar in
-			     #          [sS]* ) echo ""
-						  # echo "Estas actualizando"
-						  # read a
-						  # break;;
-			     #          [nN]* ) echo ""
-						  # echo " No actualiza"
-						  # read a
-			     #          break;;
-						  # esac
-						  # echo "No se te ocurra dar al enter"
-						  # read a
+						  clear
+						  read -p 'Quieres actualizar Ircddbgateway a la última versión ? S/N ' actualizar             	                           
+                          case $actualizar in
+			              [sS]* ) echo ""
+						  echo "Estas actualizando"
+						  read a
+						  break;;
+			              [nN]* ) echo ""
+						  echo " No actualiza"
+						  read a
+			              break;;
+						  esac
+						  echo "No se te ocurra dar al enter"
+						  read a
 
 
 # sudo mv /usr/local/bin/ircddbgateway /usr/local/bin/ircddbgateway_2016
