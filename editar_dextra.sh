@@ -5,7 +5,7 @@ do
 clear
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-version=$(awk "NR==20" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN)
+version=$(awk "NR==20" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
 echo "$version"
 read a
 #Colores
