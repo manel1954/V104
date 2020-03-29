@@ -271,7 +271,7 @@ sed -i "11c Name=$frecuencia" $usuario/RXF_NXDN.desktop
 cd $usuario
 cp RXF_NXDN.desktop $usuario/Desktop
 rm $usuario/RXF_NXDN.desktop
-#=================================================================================
+#================================================================================= 
 
 sudo chmod 777 -R $usuario/Desktop
 
