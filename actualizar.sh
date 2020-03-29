@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+sudo chmod 777 -R $usuario/Desktop
 sudo rm /home/pi/Desktop/st-data
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
