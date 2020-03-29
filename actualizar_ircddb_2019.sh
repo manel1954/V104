@@ -41,15 +41,15 @@
 
 						# sudo rm -R /var/log/opendv
 						# sudo mkdir /var/log/opendv
-						
+
 						sudo sed -i "20c 2019" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini
 						clear
 						echo "${VERDE}"
 						echo "            *******************************************************"
 						echo "${AMARILLO}"
-						echo "                           PROCESO TERMINADO "
+						echo "                               PROCESO TERMINADO "
 						echo ""
-						echo "                  SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN  "
+						echo "                    SE HA ACTUALIZADO A LA VERSIÓN:${CIAN} 20190402 "
 						echo "${VERDE}"
 						echo "            *******************************************************"
 						sleep 2

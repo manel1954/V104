@@ -78,8 +78,13 @@ do
                         [sS]* ) echo ""
                         if [ "$version" = "2019" ]
                         then        
-                        echo "Ya tienes la última"
-                        read a
+                        echo "${VERDE}"
+                        echo "            *******************************************************"
+                        echo "${AMARILLO}"
+                        echo "                     YA TIENES LA ÚLTIMA VERSIÓN:${CIAN} 20190402  "
+                        echo "${VERDE}"
+                        echo "            *******************************************************"
+                        sleep 3
                         else
                         cd /home/pi/V104
                         sh actualizar_ircddb_2019.sh
