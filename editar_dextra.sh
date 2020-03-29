@@ -78,6 +78,8 @@ do
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
+                        echo "$version"
+                        read a
                         #if [ "$siguiente" = "2019" ];then        
                         #echo "Ya tienes la última"
                         #else
