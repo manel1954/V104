@@ -58,7 +58,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""              
                         cd /home/pi/V104
-                        lxterminal --geometry=80x30 -e sudo sh editar_sala_dmr2ysf_prueba.sh
+                        sh editar_ircddbgateway_2019.sh
                         break;;
                         [nN]* ) echo ""
                         break;;
