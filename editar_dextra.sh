@@ -79,8 +79,8 @@ do
                         if [[ $version = "2019" ]]; then
                         echo "Ya tienes la última"
                         else
-                        cd /home/pi/V104
-                        sh actualizar_ircddb_2019.sh
+                        #cd /home/pi/V104
+                        #sh actualizar_ircddb_2019.sh
                         fi
                         break;;
                         [nN]* ) echo ""
