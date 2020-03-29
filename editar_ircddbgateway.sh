@@ -48,8 +48,17 @@ echo "$url"
 echo -n "${CIAN}   5)${GRIS} Modificar Frecuencia  - ${AMARILLO}"
 contenido_frecuencia=$(awk "NR==21" /usr/local/etc/opendv/ircddbgateway)
 frecuencia=${contenido_frecuencia#*=}
-
 echo "$frecuencia"
+
+echo -n "${CIAN}   6)${GRIS} Modificar Latitud     - ${AMARILLO}"
+contenido_latitud=$(awk "NR==8" /usr/local/etc/opendv/ircddbgateway)
+latitud=${contenido_latitud#*=}
+echo "$latitud"
+
+echo -n "${CIAN}   7)${GRIS} Modificar Longitud    - ${AMARILLO}"
+contenido_longitud=$(awk "NR==9" /usr/local/etc/opendv/ircddbgateway)
+longitud=${contenido_longitud#*=}
+echo "$longitud"
 
 echo ""
 echo "   ${ROJO}0) Volver"
