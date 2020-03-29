@@ -78,14 +78,15 @@ do
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
-                        echo "$version"
-                        read a
-                        #if [ "$siguiente" = "2019" ];then        
-                        #echo "Ya tienes la última"
-                        #else
+                        if [ "$version" = "2019" ]
+                        then        
+                        echo "Ya tienes la última"
+                        else
                         #cd /home/pi/V104
                         #sh actualizar_ircddb_2019.sh
-                        #fi
+                        echo "se actualizará"
+                        read a
+                        fi
                         break;;
                         [nN]* ) echo ""
                         break;;
