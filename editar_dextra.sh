@@ -68,14 +68,14 @@ do
                         else  
                         clear       
                         echo "${VERDE}"
-                        echo "            *******************************************************"
+                        echo "            *******************************************************       "
                         echo "${AMARILLO}"
-                        echo "                   NO TIENES LA ÚLTIMA VERSIÓN DE IRCDDBGATEWAY    "
-                        echo "                         ACTUALIZA A LA VERSIÓN:${ROJO} 20190402   "
+                        echo "                   NO TIENES LA ÚLTIMA VERSIÓN DE IRCDDBGATEWAY           "
+                        echo "                         ${CYAN}ACTUALIZA A LA VERSIÓN:${ROJO} 20190402   "
                         echo ""
-                        echo "                                 ${BLANCO}OPCIÓN 3 DEL MENÚ        "
+                        echo "                                 ${BLANCO}OPCIÓN 3 DEL MENÚ               "
                         echo "${VERDE}"
-                        echo "            *******************************************************"
+                        echo "            *******************************************************       "
                         sleep 5
                         fi
                         exit;
