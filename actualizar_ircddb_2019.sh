@@ -42,13 +42,13 @@
 						# sudo rm -R /var/log/opendv
 						# sudo mkdir /var/log/opendv
 						clear
-						echo "${ROJO}"
+						echo "${VERDE}"
 						echo "            *******************************************************"
-						echo "${BLANCO}"
+						echo "${AMARILLO}"
 						echo "                           PROCESO TERMINADO "
 						echo ""
 						echo "                  SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN  "
-						echo "${ROJO}"
+						echo "${VERDE}"
 						echo "            *******************************************************"
 						sleep 2
 						break;;
