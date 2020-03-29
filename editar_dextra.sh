@@ -75,7 +75,7 @@ do
                         echo "                          ${BLANCO}OPCIÓN 3 DEL MENÚ"
                         echo "${VERDE}"
                         echo "            *******************************************************"
-                        sleep 3
+                        read a
                         fi
                         exit;
 			break;;
