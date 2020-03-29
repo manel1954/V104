@@ -25,38 +25,38 @@ echo -n "${VERDE}"
 echo "   **************************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
-contenido_indicativo=$(awk "NR==2" /usr/local/etc/opendv/ircddbgateway)
+contenido_indicativo=$(awk "NR==2" /etc/ircddbgateway)
 indicativo=${contenido_indicativo#*=}
 
 echo "$indicativo"
 
 echo -n "${CIAN}   2)${GRIS} Modificar Ciudad      - ${AMARILLO}"
-contenido_ciudad=$(awk "NR==10" /usr/local/etc/opendv/ircddbgateway)
+contenido_ciudad=$(awk "NR==10" /etc/ircddbgateway)
 ciudad=${contenido_ciudad#*=}
 echo "$ciudad"
 
 echo -n "${CIAN}   3)${GRIS} Modificar Reflector   - ${AMARILLO}"
-contenido_reflector=$(awk "NR==18" /usr/local/etc/opendv/ircddbgateway)
+contenido_reflector=$(awk "NR==18" /etc/ircddbgateway)
 sala=${contenido_reflector#*=}
 echo "$sala"
 
 echo -n "${CIAN}   4)${GRIS} Modificar Url         - ${AMARILLO}"
-contenido_url=$(awk "NR==12" /usr/local/etc/opendv/ircddbgateway)
+contenido_url=$(awk "NR==12" /etc/ircddbgateway)
 url=${contenido_url#*=}
 echo "$url"
 
 echo -n "${CIAN}   5)${GRIS} Modificar Frecuencia  - ${AMARILLO}"
-contenido_frecuencia=$(awk "NR==21" /usr/local/etc/opendv/ircddbgateway)
+contenido_frecuencia=$(awk "NR==21" /etc/ircddbgateway)
 frecuencia=${contenido_frecuencia#*=}
 echo "$frecuencia"
 
 echo -n "${CIAN}   6)${GRIS} Modificar Latitud     - ${AMARILLO}"
-contenido_latitud=$(awk "NR==8" /usr/local/etc/opendv/ircddbgateway)
+contenido_latitud=$(awk "NR==8" /etc/ircddbgateway)
 latitud=${contenido_latitud#*=}
 echo "$latitud"
 
 echo -n "${CIAN}   7)${GRIS} Modificar Longitud    - ${AMARILLO}"
-contenido_longitud=$(awk "NR==9" /usr/local/etc/opendv/ircddbgateway)
+contenido_longitud=$(awk "NR==9" /etc/ircddbgateway)
 longitud=${contenido_longitud#*=}
 echo "$longitud"
 
