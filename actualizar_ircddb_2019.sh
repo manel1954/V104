@@ -1,5 +1,20 @@
 ﻿#!/bin/bash
 
+						  read -p 'Quieres actualizar Ircddbgateway a la última versión ? S/N ' actualizar             	                           
+                          case $actualizar in
+			              [sS]* ) echo ""
+						  echo "Estas actualizando"
+						  break;;
+			              [nN]* ) echo ""
+						  echo " No actualiza"
+						  read a
+						  exit
+			              break;;
+						  esac
+						  echo "No se te ocurra dar al enter"
+						  read a
+
+
 sudo mv /usr/local/bin/ircddbgateway /usr/local/bin/ircddbgateway_2016
 sudo mv /usr/local/bin/ircddbgatewayconfig /usr/local/bin/ircddbgatewayconfig_2016
 sudo mv /usr/local/bin/remotecontrol /usr/local/bin/remotecontrol_2016

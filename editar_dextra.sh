@@ -77,7 +77,7 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         cd /home/pi/V104
-                        sh editar_ircddbgateway.sh
+                        sh actualizar_ircddb_2019.sh
                         break;;
                         [nN]* ) echo ""
                         break;;
