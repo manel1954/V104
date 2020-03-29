@@ -58,7 +58,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""              
                         cd /home/pi/V104
-                        sudo sh editar_ircddbgateway_menu_2019.sh
+                        sh editar_ircddbgateway_menu_2019.sh
                         break;;
                         [nN]* ) echo ""
                         break;;
