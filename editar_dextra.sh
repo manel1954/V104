@@ -71,15 +71,14 @@ do
                         echo "            *******************************************************       "
                         echo "${AMARILLO}"
                         echo "                   NO TIENES LA ÚLTIMA VERSIÓN DE IRCDDBGATEWAY           "
-                        echo "                         ${CYAN}ACTUALIZA A LA VERSIÓN:${ROJO} 20190402   "
+                        echo "                         ${CIAN}ACTUALIZA A LA VERSIÓN:${ROJO} 20190402   "
                         echo ""
                         echo "                                 ${BLANCO}OPCIÓN 3 DEL MENÚ               "
                         echo "${VERDE}"
                         echo "            *******************************************************       "
                         sleep 5
                         fi
-                        exit;
-			break;;
+                        break;;
 			[nN]* ) echo ""
 			break;;
 esac
