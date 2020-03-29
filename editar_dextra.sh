@@ -77,6 +77,7 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         if [ "$siguiente" = "2019" ]
+                        then        
                         echo "Ya tienes la última"
                         else
                         #cd /home/pi/V104
