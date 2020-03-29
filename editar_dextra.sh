@@ -61,8 +61,23 @@ do
                         actualizar=S 
                         case $actualizar in
 			[sS]* ) echo ""
+                        if [ "$version" = "2019" ]
+                        then
                         cd /home/pi/V104
-                        sh editar_ircddbgateway.sh
+                        sh editar_ircddbgateway.sh 
+                        else  
+                        clear       
+                        echo "${VERDE}"
+                        echo "            *******************************************************"
+                        echo "${AMARILLO}"
+                        echo "                   NO TIENES LA ÚLTIMA VERSIÓN DE IRCDDBGATEWAY "
+                        echo "                              ACTUALIZA A LA VERSIÓN:${ROJO} 20190402  "
+                        echo "                                  ${BLANCO}OPCIÓN 3 DEL MENÚ"
+                        echo "${VERDE}"
+                        echo "            *******************************************************"
+                        sleep 3
+                        fi
+                        exit;
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -77,7 +92,8 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         if [ "$version" = "2019" ]
-                        then        
+                        then 
+                        clear       
                         echo "${VERDE}"
                         echo "            *******************************************************"
                         echo "${AMARILLO}"
