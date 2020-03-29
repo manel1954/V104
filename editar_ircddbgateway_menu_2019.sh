@@ -32,7 +32,7 @@ echo ""
 echo  "${BLANCO}   MENU EDITAR IRCDDB NEW 2019"
 echo  "${BLANCO}   ==========================="
 echo  "${CIAN}   3)${AMARILLO} Editar Graficamente"
-echo  "${CIAN}   4)${AMARILLO} Editar desde Consola
+echo  "${CIAN}   4)${AMARILLO} Editar desde Consola"
 echo ""
 echo "   ${ROJO}0) Salir"
 echo ""
