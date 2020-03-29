@@ -179,6 +179,19 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         sudo sed -i "116c dplusLogin=$tu_indicativo  " /usr/local/etc/opendv/ircddbgateway
 
 
+                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
+                        sudo sed -i "2c gatewayCallsign=$tu_indicativo" /etc/ircddbgateway
+
+                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        tu_indicativo=`echo "$tu_indicativo" | tr [:upper:] [:lower:]`
+                        sudo sed -i "95c ircddbUsername=$tu_indicativo" /etc/ircddbgateway
+
+                        #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                        tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
+                        sudo sed -i "117c dplusLogin=$tu_indicativo  " /etc/ircddbgateway
+
+
 #Indicativo YSF
 loc1=`grep -n "^Callsign=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
@@ -455,6 +468,10 @@ do
             sudo sed -i "10c description1=$tu_ciudad" /usr/local/etc/opendv/ircddbgateway
             sudo sed -i "27c description_1=$tu_ciudad" /usr/local/etc/opendv/ircddbgateway
 
+
+            sudo sed -i "10c description1=$tu_ciudad" /etc/ircddbgateway
+            sudo sed -i "27c description_1=$tu_ciudad" /etc/ircddbgateway
+
 #Name YSF
 loc=`grep -n "^Name=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
 loc1=`echo "$loc" | tr -d '[[:space:]]'`
@@ -556,6 +573,10 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
             sudo sed -i "12c url=$tu_url" /usr/local/etc/opendv/ircddbgateway
             sudo sed -i "29c url1=$tu_url" /usr/local/etc/opendv/ircddbgateway
             
+
+            sudo sed -i "12c url=$tu_url" /etc/ircddbgateway
+            sudo sed -i "29c url1=$tu_url" /etc/ircddbgateway
+
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
