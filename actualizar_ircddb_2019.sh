@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+						clear
 						echo -n "Quieres actualizar Ircddbgateway a la última versión ? S/N: "
                         
                         read siguiente
