@@ -50,7 +50,7 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
- b) echo ""
+b) echo ""
 while true
 do
 clear                     
