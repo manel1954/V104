@@ -21,11 +21,11 @@
 						echo "\v\v"
 						echo "${CIAN}"
 
-						echo -n "       Quieres actualizar Ircddbgateway a la última versión ? ${AMARILLO}S/N: "
+						echo -n "          Quieres actualizar Ircddbgateway a la última versión ? ${AMARILLO}S/N: "
 						read actualizar						           	                           
                       	case $actualizar in
 			          	[sS]* ) echo ""
-						echo "Estas actualizando"
+						
 						# sudo mv /usr/local/bin/ircddbgateway /usr/local/bin/ircddbgateway_2016
 						# sudo mv /usr/local/bin/ircddbgatewayconfig /usr/local/bin/ircddbgatewayconfig_2016
 						# sudo mv /usr/local/bin/remotecontrol /usr/local/bin/remotecontrol_2016
@@ -42,11 +42,17 @@
 						# sudo rm -R /var/log/opendv
 						# sudo mkdir /var/log/opendv
 
-						read a
+						echo "${ROJO}"
+						echo "            *******************************************************"
+						echo "${BLANCO}"
+						echo "                           PROCESO TERMINADO "
+						echo ""
+						echo "                  SE HA ACTUALIZADO A LA ÚLTIMA VERSIÓN  "
+						echo "${ROJO}"
+						echo "            *******************************************************"
 						break;;
 			       		[nN]* ) echo ""
-						echo " No actualiza"
-						read a
+						exit
 			       		break;;
 						esac
 
