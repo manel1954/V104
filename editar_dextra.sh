@@ -81,11 +81,8 @@ do
                         echo "Ya tienes la última"
                         read a
                         else
-                        #cd /home/pi/V104
-                        #sh actualizar_ircddb_2019.sh
-                        echo "se actualizará"
-                        sudo sed -i "20c 2019" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini
-                        read a
+                        cd /home/pi/V104
+                        sh actualizar_ircddb_2019.sh
                         fi
                         break;;
                         [nN]* ) echo ""

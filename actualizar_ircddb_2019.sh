@@ -41,6 +41,8 @@
 
 						# sudo rm -R /var/log/opendv
 						# sudo mkdir /var/log/opendv
+						
+						sudo sed -i "20c 2019" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini
 						clear
 						echo "${VERDE}"
 						echo "            *******************************************************"
