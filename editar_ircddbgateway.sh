@@ -185,7 +185,7 @@ done;;
 while true
 do
                         echo "Valor de la Frecuencia: ${AMARILLO}${contenido_frecuencia#*=}${BLANCO}"
-                        read -p 'Introduce Frecuencia: ' frecuencia
+                        read -p 'Introduce Frecuencia:   ' frecuencia
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
