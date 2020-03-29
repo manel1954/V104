@@ -24,16 +24,11 @@ case "$activar" in
 [sS]* )
 clear
 
-read
+read a
 break;;
 [nN]*) 
 exit ;;
 esac
-
-
-
-
-
 
 
 
