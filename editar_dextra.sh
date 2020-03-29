@@ -70,12 +70,13 @@ do
                         echo "${VERDE}"
                         echo "            *******************************************************"
                         echo "${AMARILLO}"
-                        echo "                   NO TIENES LA ÚLTIMA VERSIÓN DE IRCDDBGATEWAY "
-                        echo "                         ACTUALIZA A LA VERSIÓN:${ROJO} 20190402  "
-                        echo "                          ${BLANCO}OPCIÓN 3 DEL MENÚ"
+                        echo "                   NO TIENES LA ÚLTIMA VERSIÓN DE IRCDDBGATEWAY    "
+                        echo "                         ACTUALIZA A LA VERSIÓN:${ROJO} 20190402   "
+                        echo ""
+                        echo "                                 ${BLANCO}OPCIÓN 3 DEL MENÚ        "
                         echo "${VERDE}"
                         echo "            *******************************************************"
-                        read a
+                        sleep 5
                         fi
                         exit;
 			break;;
