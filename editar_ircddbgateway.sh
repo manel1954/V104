@@ -90,19 +90,19 @@ do
                         sudo sed -i "117c dplusLogin=$indicativo" /etc/ircddbgateway
                         # ========================================================================
 
-                        # ========================================================================
-                        #Convierte de minúsculas a mayúsculas
-                        indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
-                        sed -i "2c gatewayCallsign=$indicativo" /usr/local/etc/opendv/ircddbgateway
+                        # # =========================para la versión ircddb 2016==================
+                        # #Convierte de minúsculas a mayúsculas
+                        # indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
+                        # sed -i "2c gatewayCallsign=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
-                        #Convierte de mayúsculas a minúsculas 
-                        indicativo=`echo "$indicativo" | tr [:upper:] [:lower:]`
-                        sudo sed -i "95c ircddbUsername=$indicativo" /usr/local/etc/opendv/ircddbgateway
+                        # #Convierte de mayúsculas a minúsculas 
+                        # indicativo=`echo "$indicativo" | tr [:upper:] [:lower:]`
+                        # sudo sed -i "95c ircddbUsername=$indicativo" /usr/local/etc/opendv/ircddbgateway
 
-                        #Convierte de minúsculas a mayúsculas
-                        indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
-                        sed -i "116c dplusLogin=$indicativo  " /usr/local/etc/opendv/ircddbgateway
-                        # ========================================================================
+                        # #Convierte de minúsculas a mayúsculas
+                        # indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
+                        # sed -i "116c dplusLogin=$indicativo  " /usr/local/etc/opendv/ircddbgateway
+                        # # ========================================================================
                         break;;
 			[nN]* ) echo ""
 			break;;
@@ -121,10 +121,11 @@ do
                         sudo sed -i "27c description_1=$ciudad" /etc/ircddbgateway
                         # ========================================================================
 
-                        # ========================================================================
-                        sudo sed -i "10c description1=$ciudad" /usr/local/etc/opendv/ircddbgateway
-                        sudo sed -i "27c description_1=$ciudad" /usr/local/etc/opendv/ircddbgateway
-                        # ========================================================================
+                        # =========================para la versión ircddb 2016====================
+                        # # ========================================================================
+                        # sudo sed -i "10c description1=$ciudad" /usr/local/etc/opendv/ircddbgateway
+                        # sudo sed -i "27c description_1=$ciudad" /usr/local/etc/opendv/ircddbgateway
+                        # # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -145,11 +146,12 @@ do
                         sudo sed -i "18c reflector1=$reflector" /etc/ircddbgateway                        
                         # ========================================================================
 
-                        # =======================================================================
-                        #Convierte de minúsculas a mayúsculas
-                        reflector=`echo "$reflector" | tr [:lower:] [:upper:]`
-                        sudo sed -i "18c reflector1=$reflector" /usr/local/etc/opendv/ircddbgateway
-                        # ========================================================================
+                        # =========================para la versión ircddb 2016====================
+                        # # =======================================================================
+                        # #Convierte de minúsculas a mayúsculas
+                        # reflector=`echo "$reflector" | tr [:lower:] [:upper:]`
+                        # sudo sed -i "18c reflector1=$reflector" /usr/local/etc/opendv/ircddbgateway
+                        # # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -169,10 +171,11 @@ do
                         sudo sed -i "29c url1=$web" /etc/ircddbgateway
                         # ========================================================================
 
-                        # ========================================================================
-                        sudo sed -i "12c url=$web" /usr/local/etc/opendv/ircddbgateway
-                        sudo sed -i "29c url1=$web" /usr/local/etc/opendv/ircddbgateway
-                        # ========================================================================
+                        # =========================para la versión ircddb 2016====================
+                        # # ========================================================================
+                        # sudo sed -i "12c url=$web" /usr/local/etc/opendv/ircddbgateway
+                        # sudo sed -i "29c url1=$web" /usr/local/etc/opendv/ircddbgateway
+                        # # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -190,9 +193,10 @@ do
                         sudo sed -i "21c frequency1=$frecuencia" /etc/ircddbgateway
                         # ========================================================================
 
-                        # ========================================================================
-                        sudo sed -i "21c frequency1=$frecuencia" /usr/local/etc/opendv/ircddbgateway
-                        # ========================================================================
+                        # =========================para la versión ircddb 2016====================
+                        # # ========================================================================
+                        # sudo sed -i "21c frequency1=$frecuencia" /usr/local/etc/opendv/ircddbgateway
+                        # # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -210,9 +214,10 @@ do
                         sudo sed -i "8c frequency1=$latitud" /etc/ircddbgateway
                         # ========================================================================
 
-                        # ========================================================================
-                        sudo sed -i "8c frequency1=$latitud" /usr/local/etc/opendv/ircddbgateway
-                        # ========================================================================
+                        # =========================para la versión ircddb 2016====================
+                        # # ========================================================================
+                        # sudo sed -i "8c frequency1=$latitud" /usr/local/etc/opendv/ircddbgateway
+                        # # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -230,9 +235,10 @@ do
                         sudo sed -i "9c frequency1=$longitud" /etc/ircddbgateway
                         # ========================================================================
 
-                        # ========================================================================
-                        sudo sed -i "9c frequency1=$longitud" /usr/local/etc/opendv/ircddbgateway
-                        # ========================================================================
+                        # =========================para la versión ircddb 2016====================
+                        # # ========================================================================
+                        # sudo sed -i "9c frequency1=$longitud" /usr/local/etc/opendv/ircddbgateway
+                        # # ========================================================================
                         break;;
                         [nN]* ) echo ""
                         break;;
