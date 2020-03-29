@@ -5,7 +5,9 @@ do
 clear
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-version=$(awk "NR==20" /home/pi/status.ini)
+version=$(awk "NR==20" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN)
+echo "$version"
+read a
 #Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
@@ -76,8 +78,7 @@ do
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
-                        if [ "$siguiente" = "2019" ]
-                        then        
+                        if [ "$siguiente" = "2019" ];then        
                         echo "Ya tienes la última"
                         else
                         #cd /home/pi/V104
