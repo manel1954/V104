@@ -16,9 +16,9 @@ sudo mv /home/pi/.local/ircddb_2019/ircddbgateway /usr/bin/ircddbgateway
 sudo mv /home/pi/.local/ircddb_2019/ircddbgatewayconfig /usr/bin/ircddbgatewayconfig
 sudo mv /home/pi/.local/ircddb_2019/remotecontrol /usr/bin/remotecontrol
 
-#sudo chmod 777 /usr/bin/ircddbgateway
-#sudo chmod 777 /usr/bin/ircddbgatewayconfig
-#sudo chmod 777 /usr/bin/remotecontrol
+sudo chmod 755 /usr/bin/ircddbgateway
+sudo chmod 755 /usr/bin/ircddbgatewayconfig
+sudo chmod 755 /usr/bin/remotecontrol
 
 sudo rm -R /usr/share/opendv
 sudo mkdir /usr/share/opendv
