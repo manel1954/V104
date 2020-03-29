@@ -20,7 +20,9 @@
 						echo "            *******************************************************"
 						echo "\v\v"
 						echo "${CIAN}"
-						read -p 'Quieres actualizar Ircddbgateway a la última versión ? ${AMARILLO}S/N ' actualizar             	                           
+
+						echo -n "       Quieres actualizar Ircddbgateway a la última versión ? ${AMARILLO}S/N: "
+						read actualizar						           	                           
                       	case $actualizar in
 			          	[sS]* ) echo ""
 						echo "Estas actualizando"
