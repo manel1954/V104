@@ -1,7 +1,8 @@
 ﻿#!/bin/bash
 
 echo "${CIAN}"
-read -p 'Quieres actualizar Ircddbgateway a la última versión ? S/N ' actualizar 
+echo -n "Quieres actualizar Ircddbgateway a la última versión ? S/N"
+read actualizar
 case "$actualizar" in
 [sS]* )
 clear
