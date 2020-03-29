@@ -8,7 +8,7 @@
 			              [nN]* ) echo ""
 						  echo " No actualiza"
 						  read a
-						  exit
+						  exit;
 			              break;;
 						  esac
 						  echo "No se te ocurra dar al enter"
