@@ -1,16 +1,41 @@
 ﻿#!/bin/bash
 
-						  read -p 'Quieres actualizar Ircddbgateway a la última versión ? S/N ' actualizar             	                           
-                          case $actualizar in
-			              [sS]* ) echo ""
-						  echo "Estas actualizando"
-						  read a
-						  break;;
-			              [nN]* ) echo ""
-						  echo " No actualiza"
-						  read a
-			              break;;
-						  esac
+
+
+
+echo -n " Quieres Reiniciar S/N ? "
+read activar
+case "$activar" in
+[sS]* )
+echo "SE ACTUALIZA"
+read a
+break;;
+[nN]*) 
+echo "NO SE ACTUALIZA"
+read a
+exit ;;
+esac
+
+
+
+
+
+
+
+
+
+
+						  # read -p 'Quieres actualizar Ircddbgateway a la última versión ? S/N ' actualizar             	                           
+        #                   case $actualizar in
+			     #          [sS]* ) echo ""
+						  # echo "Estas actualizando"
+						  # read a
+						  # break;;
+			     #          [nN]* ) echo ""
+						  # echo " No actualiza"
+						  # read a
+			     #          break;;
+						  # esac
 						  # echo "No se te ocurra dar al enter"
 						  # read a
 
