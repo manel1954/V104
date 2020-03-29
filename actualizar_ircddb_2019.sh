@@ -12,5 +12,5 @@ sudo rm -R /usr/share/opendv
 sudo mkdir /usr/share/opendv
 sudo cp /usr/share/ircddbgateway/*.* /usr/share/opendv/
 
-sudo rm /var/log/opendv
+sudo rm -R /var/log/opendv
 sudo mkdir /var/log/opendv
