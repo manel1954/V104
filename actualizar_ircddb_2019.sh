@@ -23,12 +23,10 @@ read activar
 case "$activar" in
 [sS]* )
 clear
-echo "actualiza"
-read a
+
+read
 break;;
 [nN]*) 
-echo "no actualiza"
-read a
 exit ;;
 esac
 
