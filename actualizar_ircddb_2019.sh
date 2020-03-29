@@ -4,6 +4,7 @@
                           case $actualizar in
 			              [sS]* ) echo ""
 						  echo "Estas actualizando"
+						  read a
 						  break;;
 			              [nN]* ) echo ""
 						  echo " No actualiza"
