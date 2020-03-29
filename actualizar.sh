@@ -289,6 +289,7 @@ sudo systemctl stop nxdngateway.service
 else
 echo ""
 fi
+sudo rm /home/pi/Desktop/st-data
 cp /home/pi/V104/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
 xfdesktop --reload
 
