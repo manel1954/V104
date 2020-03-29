@@ -18,9 +18,9 @@ echo " *                                                                   *"
 echo " *********************************************************************"
 echo ""
 echo "${CIAN}"
-echo -n "Quieres actualizar Ircddbgateway a la última versión ? S/N"
-read actualizar
-case "$actualizar" in
+echo -n " Quieres Reiniciar S/N ? "
+read activar
+case "$activar" in
 [sS]* )
 clear
 echo "actualiza"
