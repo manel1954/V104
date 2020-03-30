@@ -78,7 +78,7 @@ do
                         
                         #Dv4mini
                         cd /usr/local/share/opendv/
-                        sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
+                        sudo cp DExtra_Hosts.txt /home/pi/dv4mini/xref.ip
 
                         sleep 2     
                        
