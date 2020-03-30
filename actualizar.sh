@@ -1,5 +1,7 @@
 ﻿#!/bin/bash
+sudo rm /home/pi/V104/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
+
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
@@ -49,9 +51,16 @@ sed -i "15c DMR2YSF=OFF" $usuario/status.ini
 sed -i "16c DMR2NXDN=OFF" $usuario/status.ini
 sed -i "17c NXDN=OFF" $usuario/status.ini
 
+
+#Actualiza Imagen
+cd $usuario/$SCRIPTS_version
+git pull
+sudo rm /home/pi/V104/Desktop/st-data
+sudo rm /home/pi/Desktop/st-data
 #=================================================================================
 
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
+
 
 sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario/.local #deja el icono en el estado que se reinició
 sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario/.local #deja el icono en el estado que se reinició
@@ -67,12 +76,11 @@ sudo cp $usuario/.local/Activar_dvswitch.desktop $usuario/Desktop #deja el icono
 sudo cp $usuario/.local/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono en el estado que se reinició
 #sudo cp $usuario/Abrir_ircDDBGateway.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
 #sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
-sudo chmod 777 -R $usuario/Desktop
+
 
 sleep 10
-#Actualiza Imagen
-cd $usuario/$SCRIPTS_version
-git pull 
+
+
 #=================================================================================
 
 
