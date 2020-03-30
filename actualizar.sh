@@ -67,6 +67,8 @@ sudo cp $usuario/.local/Activar_dvswitch.desktop $usuario/Desktop #deja el icono
 sudo cp $usuario/.local/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono en el estado que se reinició
 #sudo cp $usuario/Abrir_ircDDBGateway.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
 #sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
+sudo chmod 777 -R $usuario/Desktop
+
 sleep 10
 #Actualiza Imagen
 cd $usuario/$SCRIPTS_version
