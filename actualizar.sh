@@ -1,9 +1,4 @@
 ﻿#!/bin/bash
-sudo rm -R /home/pi/V104/associacioader.com
-sudo rm -R /home/pi/V104/Desktop/associacioader.com
-sudo rm /home/pi/V104/Desktop/st-data
-sudo rm /home/pi/Desktop/st-data
-
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
@@ -57,10 +52,7 @@ sed -i "17c NXDN=OFF" $usuario/status.ini
 #Actualiza Imagen
 cd $usuario/$SCRIPTS_version
 git pull
-sudo rm -R /home/pi/V104/associacioader.com
-sudo rm -R /home/pi/V104/Desktop/associacioader.com
-sudo rm /home/pi/V104/Desktop/st-data
-sudo rm /home/pi/Desktop/st-data
+
 #=================================================================================
 
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
@@ -190,7 +182,13 @@ masterYSFGateway=`echo "$masterYSFGateway" | tr -d '[[:space:]]'`
 
 #ACTUALIZA EL  PANEL DE CONTROL"
 cp $usuario/$SCRIPTS_version/panel_control.php /var/www/html/panel_control
-
+bm=`sed -n '2p'  $usuario/MMDVMHost/MMDVMBM.ini`
+plus=`sed -n '2p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
+dstar=`sed -n '2p'  $usuario/MMDVMHost/MMDVMDSTAR.ini`
+fusion=`sed -n '2p'  $usuario/MMDVMHost/MMDVMFUSION.ini`
+frbm=`sed -n '13p'  $usuario/MMDVMHost/MMDVMBM.ini`
+frplus=`sed -n '13p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
+sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$masterbm'&'masterPLUS=$masterplus'&'radio=$masterradio'&'version=$version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
 #Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
 cd $usuario/Desktop/
@@ -297,6 +295,10 @@ sudo systemctl stop nxdngateway.service
 else
 echo ""
 fi
+sudo rm -R /home/pi/V104/associacioader.com
+sudo rm -R /home/pi/V104/Desktop/associacioader.com
+sudo rm /home/pi/V104/Desktop/st-data
+sudo rm /home/pi/Desktop/st-data
 cp /home/pi/V104/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
 xfdesktop --reload
 
