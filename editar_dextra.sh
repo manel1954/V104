@@ -24,11 +24,13 @@ echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   **************************************************************************"
 echo ""
-echo  "${CIAN}   1)${AMARILLO} Editar salas, fichero DExtra_Host.txt"
+echo  "${CIAN}   1)${AMARILLO} Actualizar salas y reflectores Dstar"
 echo ""
-echo  "${CIAN}   2)${BLANCO} Editar por consola parametros Ircddbgateway"
+echo  "${CIAN}   2)${AMARILLO} Editar salas, fichero DExtra_Host.txt"
 echo ""
-echo  "${CIAN}   3)${VERDE} Actualizar Ircddbgateway"
+echo  "${CIAN}   3)${BLANCO} Editar por consola parametros Ircddbgateway"
+echo ""
+echo  "${CIAN}   4)${VERDE} Actualizar Ircddbgateway"
 echo "\v\v"
 echo "   ${ROJO}0) Salir"
 echo "\v\v"
@@ -44,6 +46,51 @@ do
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
+                        #Actualiza reflectores
+                      
+                        #ircddbgateway -gui 2016
+                        cd /usr/local/share/opendv/
+                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
+                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
+                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
+
+                        #ircddbgateway -gui 2019
+                        cd /usr/share/opendv/
+                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
+                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
+                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
+                        
+                        #ircddbgatewayd 2019
+                        cd /usr/share/ircddbgateway
+                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
+                        sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
+                        sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
+                        
+                        #Dv4mini
+                        sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
+
+                        clear       
+                        echo "${VERDE}"
+                        echo "            ********************************************************"
+                        echo "${AMARILLO}"
+                        echo "             SE HAN ACTUALIZADO TODOS LOS REFLECTORES Y SALAS DSTAR"
+                        echo "${VERDE}"
+                        echo "            ********************************************************"
+                        sleep 4
+
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;   
+2) echo ""
+while true
+do
+
+                      
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
                         sudo geany /usr/local/share/opendv/DExtra_Hosts.txt
                         sudo cp /usr/local/share/opendv/DExtra_Hosts.txt /usr/share/opendv/DExtra_Hosts.txt
                         break;;
@@ -51,7 +98,7 @@ do
                         break;;
 esac
 done;;
-2) echo ""
+3) echo ""
 while true
 do
 
@@ -81,7 +128,7 @@ do
 			break;;
 esac
 done;;
-3) echo ""
+4) echo ""
 while true
 do
 
