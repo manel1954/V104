@@ -185,7 +185,6 @@ sed -i "13c $sala_nxdn" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 sed -i "14c $selfcare" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 sed -i "15c $reflector_dstar" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch
 
-cp -r /home/pi/.local/COPIA_SEGURIDAD/Downloads /home/pi/.local/COPIA_SEGURIDAD
 sudo chmod 777 -R /home/pi/.local/COPIA_SEGURIDAD
 
 exit;
