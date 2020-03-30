@@ -1,4 +1,6 @@
 ﻿#!/bin/bash
+sudo rm -R /home/pi/V104/associacioader.com
+sudo rm -R /home/pi/V104/Desktop/associacioader.com
 sudo rm /home/pi/V104/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
 
@@ -55,6 +57,8 @@ sed -i "17c NXDN=OFF" $usuario/status.ini
 #Actualiza Imagen
 cd $usuario/$SCRIPTS_version
 git pull
+sudo rm -R /home/pi/V104/associacioader.com
+sudo rm -R /home/pi/V104/Desktop/associacioader.com
 sudo rm /home/pi/V104/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
 #=================================================================================
