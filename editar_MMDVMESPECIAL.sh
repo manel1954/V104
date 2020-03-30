@@ -9,7 +9,7 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 # path Versión
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
-#Editor MMDVMPLUS.ini
+#Editor MMDVMESPECIAL.ini
 DIRECTORIO="MMDVMESPECIAL.ini"
 DIRECTORIO_copia="MMDVMESPECIAL.ini_copia"
 DIRECTORIO_copia2="MMDVMESPECIAL.ini_copia2"
@@ -20,13 +20,14 @@ segundo="12c"
 tercero="13c"
 cuarto="14c"
   #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
-primer="31c"
-segun="32c"
-tercer="33c"
+primer="41c"
+segun="42c"
+tercer="43c"
   #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3 
-primer1="31c"
-segun1="32c"
-tercer1="33c"
+primer1="41c"
+segun1="42c"
+tercer1="43c"
+
 # Recoge datos para leer desde el panel de control
 indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "$primero $indi" $usuario/info_panel_control.ini
