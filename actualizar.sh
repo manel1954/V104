@@ -82,7 +82,7 @@ sudo cp $usuario/.local/Activar_NextionDriver.desktop $usuario/Desktop #deja el 
 #sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
 
 
-sleep 10
+sleep 5
 
 
 #=================================================================================
