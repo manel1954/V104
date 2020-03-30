@@ -49,9 +49,7 @@ sed -i "16c DMR2NXDN=OFF" $usuario/status.ini
 sed -i "17c NXDN=OFF" $usuario/status.ini
 
 #=================================================================================
-sleep 5
-cd $usuario/$SCRIPTS_version
-git pull
+
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 
 sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario/.local #deja el icono en el estado que se reinició
@@ -68,9 +66,10 @@ sudo cp $usuario/.local/Activar_dvswitch.desktop $usuario/Desktop #deja el icono
 sudo cp $usuario/.local/Activar_NextionDriver.desktop $usuario/Desktop #deja el icono en el estado que se reinició
 #sudo cp $usuario/Abrir_ircDDBGateway.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
 #sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
-sleep 5
+sleep 10
 #Actualiza Imagen
- 
+cd $usuario/$SCRIPTS_version
+git pull 
 #=================================================================================
 
 
