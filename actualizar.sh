@@ -1,4 +1,9 @@
 ﻿#!/bin/bash
+
+cp /home/pi/V104/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
+sleep 1
+xfdesktop --reload
+
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
@@ -300,9 +305,7 @@ sudo cp $usuario/.local/Activar_NextionDriver.desktop $usuario/Desktop #deja el 
 #sudo cp $usuario/Abrir_D-STARRepeater.desktop $usuario/Desktop #deja con el terminal en el estado que se reinició
 
 
-cp /home/pi/V104/icons.screen0-1904x1023.rc /home/pi/.config/xfce4/desktop
-sleep 3
-xfdesktop --reload
+
 
 
 
