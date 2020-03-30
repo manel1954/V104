@@ -77,6 +77,7 @@ do
                         sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
                         
                         #Dv4mini
+                        cd /usr/local/share/opendv/
                         sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
 
                         sleep 2     
