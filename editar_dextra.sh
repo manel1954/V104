@@ -26,7 +26,7 @@ echo "   ***********************************************************************
 echo ""
 echo  "${CIAN}   1)${AMARILLO} Actualizar salas y reflectores Dstar"
 echo ""
-echo  "${CIAN}   2)${AMARILLO} Editar salas, fichero DExtra_Host.txt"
+echo  "${CIAN}   2)${AMARILLO} Editar fichero DExtra_Host.txt"
 echo ""
 echo  "${CIAN}   3)${BLANCO} Editar por consola parametros Ircddbgateway"
 echo ""
