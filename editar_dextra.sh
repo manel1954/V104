@@ -46,6 +46,16 @@ do
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
+                        
+                        clear
+                        echo "${VERDE}"
+                        echo "            ********************************************************"
+                        echo "${BLANCO}"
+                        echo "                    ACTUALIZANDO REFELECTORES Y SALAS DSTAR"
+                        echo "${VERDE}"
+                        echo "            ********************************************************"
+                        
+
                         #Actualiza reflectores
                       
                         #ircddbgateway -gui 2016
@@ -69,6 +79,8 @@ do
                         #Dv4mini
                         sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
 
+                        sleep 2     
+                       
                         clear       
                         echo "${VERDE}"
                         echo "            ********************************************************"
