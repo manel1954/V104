@@ -31,6 +31,8 @@ echo ""
 echo  "${CIAN}   3)${BLANCO} Editar parámetros principales Ircddbgateway"
 echo ""
 echo  "${CIAN}   4)${VERDE} Actualizar Ircddbgateway"
+echo ""
+echo  "${CIAN}   4)${MARRON} Recuperar configuración Ircddbgateway"
 echo "\v\v"
 echo "   ${ROJO}0) Salir"
 echo "\v\v"
@@ -56,7 +58,7 @@ do
                         echo "            ********************************************************"
                         
 
-                        #Actualiza reflectores
+                        #Actualiza reflectores 
                       
                         #ircddbgateway -gui 2016
                         cd /usr/local/share/opendv/
