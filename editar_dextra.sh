@@ -175,7 +175,8 @@ while true
 do
 
                       
-                        read -p 'Estás seguro S/N?: ' actualizar
+                        echo -n "${AMARILLO}"
+                        read -p '   Estás seguro S/N?: ' actualizar
                         actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
