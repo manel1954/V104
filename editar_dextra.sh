@@ -180,7 +180,7 @@ do
                         case $actualizar in
                         [sS]* ) echo ""
                         cd /home/pi/V104
-                        cp ircddbgateway_inicial /etc/ircddbgateway
+                        cp ircddbgateway_config_inicial /etc/ircddbgateway
                         break;;
                         [nN]* ) echo ""
                         break;;
