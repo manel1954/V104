@@ -170,6 +170,22 @@ do
                         break;;
 esac
 done;;
+5bloqueado) echo ""
+while true
+do
+
+                      
+                        read -p 'Estás seguro S/N?: ' actualizar
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        cd /home/pi/V104
+                        cp ircddbgateway_inicial /etc/ircddbgateway
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
 0) echo ""
 exit;;	
 esac
