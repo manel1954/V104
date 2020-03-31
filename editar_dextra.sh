@@ -170,14 +170,13 @@ do
                         break;;
 esac
 done;;
-5bloqueado) echo ""
+5) echo ""
 while true
 do
 
                       
                         echo -n "${AMARILLO}"
                         read -p '   Estás seguro S/N?: ' actualizar
-                        actualizar=S 
                         case $actualizar in
                         [sS]* ) echo ""
                         cd /home/pi/V104
