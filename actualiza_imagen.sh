@@ -31,7 +31,7 @@ sed -i "13c exec('sudo sed -i '56c rxPort = $\port' /opt/Analog_Bridge/FCS.ini')
 
 
 
-#exec("sudo sed -i '56c rxPort = $port' /opt/Analog_Bridge/FCS.ini"); 
+#exec("sudo sed -i '56c rxPort = $port' /opt/Analog_Bridge/FCS.ini");
 
 
 
