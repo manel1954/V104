@@ -23,6 +23,15 @@ echo "${CIAN}"
 
 sleep 2
 
+# 01-04-2019 arregla no escribe port en FCS.ini
+sudo -i sed '6c exec("sudo sed -i '55c txPort = $port' /opt/Analog_Bridge/FCS.ini");' /var/www/html/cambia_configuracion_port.php
+
+#exec("sudo sed -i '56c rxPort = $port' /opt/Analog_Bridge/FCS.ini");
+
+
+
+
+
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
                         git pull
