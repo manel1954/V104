@@ -25,7 +25,7 @@ sleep 2
 
 # 01-04-2019 arregla no escribe port en FCS.ini
 sed -i "6c exec('sudo sed -i '55c txPort = $\port' /opt/Analog_Bridge/FCS.ini');" /var/www/html/cambia_configuracion_port.php
-sed -i "13c exec('sudo sed -i '55c rxPort = $\port' /opt/Analog_Bridge/FCS.ini');" /var/www/html/cambia_configuracion_port.php
+sed -i "13c exec('sudo sed -i '56c rxPort = $\port' /opt/Analog_Bridge/FCS.ini');" /var/www/html/cambia_configuracion_port.php
 
 # sudo sed -i "2c $ultima" /var/www/html/comprueba_actualizacion.php
 
