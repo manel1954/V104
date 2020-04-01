@@ -24,7 +24,7 @@ echo "${CIAN}"
 sleep 2
 
 # 01-04-2019 arregla no escribe port en FCS.ini
-cp /home/pi/V104/cambia_configuracion_port.php /var/www/html/
+sudo cp /home/pi/V104/cambia_configuracion_port.php /var/www/html/
 
 # sudo sed -i "2c $ultima" /var/www/html/comprueba_actualizacion.php
 
