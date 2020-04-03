@@ -50,23 +50,6 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
-1000) echo ""
-while true
-do
-clear                     
-                        instalarsi=S
-                        case $instalarsi in
-                        [sS]* ) echo ""              
-                        # 03-04-2019 añade el options manual para DMR+
-                        sudo cp /home/pi/V104/sistema_plus.php /var/www/html/
-                        sudo cp /home/pi/V104/cambia_reflector_dmrplus.php /var/www/html/
-                        sudo cp /home/pi/V104/cambia_options_dmrplus.php /var/www/html/
-                        sudo cp /home/pi/V104/panel_configuracion.php /var/www/html/
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
 1) echo ""
 while true
 do
