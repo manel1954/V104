@@ -58,7 +58,9 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""              
                         # 03-04-2019 añade el options manual para DMR+
-                        sudo cp /home/pi/V104/cambia_configuracion_port.php /var/www/html/
+                        sudo cp /home/pi/V104/sistema_plus.php /var/www/html/
+                        sudo cp /home/pi/V104/cambia_reflector.php /var/www/html/
+                        sudo cp /home/pi/V104/cambia_options.php /var/www/html/
                         break;;
                         [nN]* ) echo ""
                         break;;
