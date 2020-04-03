@@ -46,13 +46,19 @@ body{
 .texto_blanco{
     color:#FFFFFF;
     ont-weight: bold;  
-    font-size:  18 px;
+    font-size: 18px;
     text-align: left;
 }
 .texto_negro{
     color:#000000;
     font-weight: bold;  
-    font-size:  18 px;
+    font-size:  18px;
+    text-align: left;
+}
+.fuente_boton1{
+    color:#000000;
+    font-weight: bold;  
+    font-size: 20px;
     text-align: left;
 }
 /*   ========   PARAMETROS CAJA LOGIN 1========================================*/
@@ -222,18 +228,23 @@ body{
     <form method="post" action="cambia_options_dmrplus.php">        
             <label class="texto_blanco">OPTIONS DMR+:</label>      
             <select class="texto_negro" name="options" size="1">
-            <option value="">Elige Options</option>
-            <option value="Options=StartRef=4370;RelinkTime=15;">4370</option>
-            <option value="Options=StartRef=4371;RelinkTime=15;">4371</option>
-            <option value="Options=StartRef=4372;RelinkTime=15;">4372</option>
-            <option value="Options=StartRef=4373;RelinkTime=15;">4373</option>
-            <option value="Options=StartRef=4374;RelinkTime=15;">4374</option>
-            <option value="Options=StartRef=4375;RelinkTime=15;">4375</option>
-            <option value="Options=StartRef=4376;RelinkTime=15;">4376</option>
-            <option value="Options=StartRef=4377;RelinkTime=15;">4377</option>
-            <option value="Options=StartRef=4378;RelinkTime=15;">4378</option>
-            <option value="Options=StartRef=4379;RelinkTime=15;">4379</option>
-            <option value="Options=StartRef=4000;RelinkTime=15;TS2_1=21465">21465</option>
+            <option value="">Elige Reflector de la lista</option>
+            <option value="4370">4370</option>
+            <option value="4371">4371</option>
+            <option value="4372">4372</option>
+            <option value="4373">4373</option>
+            <option value="4374">4374</option>
+            <option value="4375">4375</option>
+            <option value="4376">4376</option>
+            <option value="4377">4377</option>
+            <option value="4378">4378</option>
+            <option value="4379">4379</option>
+            <option value="21404">21404</option>
+            <option value="21410">21410</option>
+            <option value="21418">21418</option>
+            <option value="21421">21421</option>
+            <option value="21423">21423</option>
+            <option value="21465">21465</option>
             <option value="">----------------------------------</option>
             </select>
             <br>
@@ -259,7 +270,7 @@ body{
             <p class="text-center"><img src="img/Logo_plus.png" height="40"></p><br>       
             <label class="texto_blanco">CONFIGURAR OPTIONS MANUALMENTE</label>                 
     <form method="post" action="cambia_options_dmrplus.php"/>
-            <input name="options" class="form-control fuente_boton1" placeholder="Escribe StartRef,  Ej. Options=StartRef=4370;RelinkTime=15;">
+            <input name="options" class="form-control fuente_boton1" placeholder="Introducir reflector,   Ej. 4370">
             <div class="fondo_datos"> 
             <span class="color_verde"><?php echo $options;?></span>
             </div> 
