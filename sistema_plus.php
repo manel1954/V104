@@ -109,7 +109,7 @@ body{
 .caja_login3{
     position: absolute;
     width:430px;
-    top:580px;
+    top:505px;
     left:10px;
     margin-top: 20px;
     padding: 0px 0px 0px 0px;
@@ -224,7 +224,6 @@ body{
     <div class="col-md-4">
         <div class="caja_login2 ">
             <div class="panel-body">
-            <p class="text-center"><img src="img/Logo_plus.png" height="40"></p><br>
     <form method="post" action="cambia_options_dmrplus.php">        
             <label class="texto_blanco">OPTIONS DMR+:</label>      
             <select class="texto_negro" name="options" size="1">
@@ -267,7 +266,6 @@ body{
     <div class="col-md-4">
         <div class="caja_login3 ">
             <div class="panel-body">
-            <p class="text-center"><img src="img/Logo_plus.png" height="40"></p><br>       
             <label class="texto_blanco">CONFIGURAR OPTIONS MANUALMENTE</label>                 
     <form method="post" action="cambia_options_dmrplus.php"/>
             <input name="options" class="form-control fuente_boton1" placeholder="Introducir reflector,   Ej. 4370">
