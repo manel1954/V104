@@ -61,6 +61,7 @@ clear
                         sudo cp /home/pi/V104/sistema_plus.php /var/www/html/
                         sudo cp /home/pi/V104/cambia_reflector_dmrplus.php /var/www/html/
                         sudo cp /home/pi/V104/cambia_options_dmrplus.php /var/www/html/
+                        sudo cp /home/pi/V104/panel_configuracion.php /var/www/html/
                         break;;
                         [nN]* ) echo ""
                         break;;
