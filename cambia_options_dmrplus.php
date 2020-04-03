@@ -9,6 +9,14 @@ exec("sudo cp /opt/MMDVM_Bridge/dmrplus.ini /opt/MMDVM_Bridge/MMDVM_Bridge.ini")
 exec("sudo cp /opt/Analog_Bridge/dmr.ini /opt/Analog_Bridge/Analog_Bridge.ini");
 
 $options=($_POST["options"]);
+$options1=substr("$options",0, 1);
+if ($options1=="4"){
+    $options="Options=StartRef=".$options.";RealinkTime=15;";
+}
+
+else {
+    $options="Options=StartRef=4000;RelinkTime=15;TS2_1=".$options;
+}
 
 exec("sudo sed -i '78c $options' /opt/MMDVM_Bridge/dmrplus.ini");
 exec("sudo cp /opt/MMDVM_Bridge/dmrplus.ini /opt/MMDVM_Bridge/MMDVM_Bridge.ini");
