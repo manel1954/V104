@@ -58,14 +58,8 @@ if ($IPCS22=="Address=212.237.50.28"){
 }
 if ($OPTION1=="4000"){
     $OPTION = substr("$OPTION", 42, 5);
-    
-    
-    
-    //$OPTION="21465";
 }
 //==========================================
-
-
 else {
     $OPTION = substr("$OPTION", 17, 4);
     //$IPCS22="";
@@ -78,11 +72,8 @@ else {
     $IPCS22="";
 }
 
-
 $sistema = exec("sed -n '1p'  /opt/Analog_Bridge/Analog_Bridge.ini");
 $sistema = substr("$sistema", 2, 3);
-
-
 
 if ($sistema=="FCS")
 {
@@ -556,7 +547,6 @@ h6{
 
 <!--============== FIN CAJA LOGIN ====================== -->
 
-
 <!--============== CAJA LOGIN ====================================-->
 
 <div class="col-md-4 ambe">
@@ -689,8 +679,7 @@ h6{
 <!-- FOOTER ==================================== -->
 
       <footer>
-<!-- <p class="ir-arriba pull-right"><a href="#"><span class="glyphicon glyphicon-arrow-up"></span></a></p>
- -->        <p class="color_naranja_izquierd">&copy; DVSWITCH MOBILE ADER 2019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design by:&nbsp;&nbsp;( EA3EIZ )</p>
+        <p class="color_naranja_izquierd">&copy; DVSWITCH MOBILE ADER 2019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design by:&nbsp;&nbsp;( EA3EIZ )</p>
       </footer>
 <!-- FIN  DEL FOOTER ==================================== -->
     </header>
@@ -728,10 +717,6 @@ function visible_div(){
    elemento.style.display = 'block';
 }
 </script>
-
-
-
-
 
 </body>
 </html>
