@@ -34,13 +34,13 @@ sleep 2
 
 
                         # 09-04-2020 copia YSFGateway.ini
-                        comprueba=$(awk "NR==21" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
-                        if [ "$comprueba" = 'YSFGateway_OK' ];then 
-                        eho "No copia el fichero YSFGateway.ini"                       
-                        else
-                        cp $usuario/V104/YSFGateway.ini /$usuario/YSFClients/YSFGateway/
-                        sudo sed -i "21c YSFGateway_OK" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini                        
-                        fi
+                        #comprueba=$(awk "NR==21" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        #if [ "$comprueba" = 'YSFGateway_OK' ];then 
+                        #eho "No copia el fichero YSFGateway.ini"                       
+                        #else
+                        #cp $usuario/V104/YSFGateway.ini /$usuario/YSFClients/YSFGateway/
+                        #sudo sed -i "21c YSFGateway_OK" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini                        
+                        #fi
 
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
