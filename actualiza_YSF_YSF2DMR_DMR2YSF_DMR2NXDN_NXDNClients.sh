@@ -10,35 +10,37 @@ GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
 
-                        #comprueba si la versión a cambiado
-                        cp -R /home/pi/YSFClients/ /home/pi/Documents 
-                        sudo rm -R /home/pi/YSFClients
-                        cd /home/pi
-                        git clone https://github.com/g4klx/YSFClients
-                        cd /home/pi/YSFClients/YSFGateway
-                        version_YSFClients_actual=$(awk "NR==22" /home/pi/YSFClients/YSFGateway/Version.h)
-                        version_YSFClients_instalada=$(awk "NR==1" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
-                        if [ "$version_YSFClients_actual" = "$version_YSFClients_instalada" ];
-                        #=================================
-                        then 
-                        cp -R /home/pi/Documents/YSFClients /home/pi/
-                        clear
+                        # 09-04-2020 copia YSFGateway.ini
+                        comprueba=$(awk "NR==21" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        if [ "$comprueba" = 'YSFGateway_OK' ];then 
+                        echo "${AMARILLO}"                      
+                        echo "**********************************************************"
+                        echo "        YA TIENES LA ÚLTIMA VERSIÓN DE YSFGATEWAY         "
+                        echo "**********************************************************"
+                        sleep 3                      
+                        
+                        else                        
+                        cp $usuario/V104/YSFGateway.ini /$usuario/YSFClients/YSFGateway/
+                        sudo sed -i "21c YSFGateway_OK" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini
+                        echo "${VERDE}"
                         echo "************************************************************"
-                        echo "*   YA TIENES LA ÚLTIMA VERSIÓN YSFClientes/YSFGateway     *"
-                        echo "*   $version_YSFClients_actual                      *"
+                        echo "                                                            "
+                        echo "            ACABAS DE ACTUALIZAR TU YSFGATEWAY              "
+                        echo " CONFIGURA DE NUEVO TUS DATOS DESDE EL BOTÓN EDITAR YSF/FCS "
+                        echo "                                                            "
                         echo "************************************************************"
-                        sleep 4
-                        clear
-                        else
-                        sed -i "1c $version_YSFClients_actual" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini 
-                        echo "${VERDE}DESCARGANDO E INSTALANDO EL ÚLTIMO YSFClients${CIAN}"
-                        sleep 3
-                        sudo rm -R /home/pi/YSFClients
-                        cd /home/pi
-                        git clone https://github.com/g4klx/YSFClients
-                        cd /home/pi/YSFClients/YSFGateway
-                        make clean
-                        make 
+                        echo ""
+                        echo "${ROJO}"
+                        echo "************************************************************"
+                        echo "                                                            "
+                        echo "      ADVERTENCIA!! NO RESTAURES TU COPIA DE SEGURIDAD      "
+                        echo "         YA QUE CONTIENE UN INI ANTIGUO E INVALIDO          "
+                        echo "                                                            "
+                        echo "************************************************************"
+                        echo "${CIAN}"
+                        echo "Pulsa enter para salir"
+                        read a     
+                        fi
 
 echo "${VERDE}"
 clear
