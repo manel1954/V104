@@ -110,9 +110,10 @@ numero_linea=`expr substr $var 1 $largo_linea`
                      
                         if [ "$numero_linea" = '38' ];then 
                         numero_linea=`expr $numero_linea + 4`
-                       
+                        sudo sed -i "39c # Startup=" $usuario/YSFClients/YSFGateway/YSFGateway.ini
+                        sudo sed -i "40c # Startup=" $usuario/YSFClients/YSFGateway/YSFGateway.ini
                         else
-                        numero_linea=`expr $numero_linea + 4`                        
+                        numero_linea=`expr $numero_linea + 2`                        
                         fi
 
 
