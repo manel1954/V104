@@ -32,8 +32,9 @@ sleep 2
                         sudo cp $usuario/V104/cambia_options_dmrplus.php /var/www/html/
                         sudo cp $usuario/V104/panel_configuracion.php /var/www/html/
 
+
                         # 09-04-2020 copia YSFGateway.ini
-                        comprueba=$(wak "NR==21" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        comprueba=$(awk "NR==21" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
                         if [ "$comprueba" = 'YSFGateway_OK' ];then 
                         eho "No copia el fichero YSFGateway.ini"                       
                         else
