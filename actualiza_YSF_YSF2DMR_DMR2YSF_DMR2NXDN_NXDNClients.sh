@@ -11,15 +11,7 @@ MARRON="\33[38;5;138m"
 
 
                         # 09-04-2020 copia YSFGateway.ini
-                        comprueba=$(awk "NR==21" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
-                        if [ "$comprueba" = 'YSFGateway_OK' ];then 
-                        echo "${AMARILLO}"                      
-                        echo "**********************************************************"
-                        echo "        YA TIENES LA ÚLTIMA VERSIÓN DE YSFGATEWAY         "
-                        echo "**********************************************************"
-                        sleep 3                      
-                        
-                        else                        
+                       
                         cp /home/pi/V104/YSFGateway.ini /home/pi/YSFClients/YSFGateway/
                         sudo sed -i "21c YSFGateway_OK" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini
                         echo "${VERDE}"
@@ -40,7 +32,7 @@ MARRON="\33[38;5;138m"
                         echo "${CIAN}"
                         echo "Pulsa enter para salir"
                         read a     
-                        fi
+
 
 echo "${VERDE}"
 clear
