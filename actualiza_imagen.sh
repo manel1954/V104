@@ -24,17 +24,23 @@ echo "${CIAN}"
 sleep 2
 
 			# 01-04-2020 arregla no escribe port en FCS.ini
-			sudo cp /home/pi/V104/cambia_configuracion_port.php /var/www/html/
+			sudo cp $usuario/V104/cambia_configuracion_port.php /var/www/html/
 
                         # 03-04-2012020 añade el options manual para DMR+
-                        sudo cp /home/pi/V104/sistema_plus.php /var/www/html/
-                        sudo cp /home/pi/V104/cambia_reflector_dmrplus.php /var/www/html/
-                        sudo cp /home/pi/V104/cambia_options_dmrplus.php /var/www/html/
-                        sudo cp /home/pi/V104/panel_configuracion.php /var/www/html/
+                        sudo cp $usuario/V104/sistema_plus.php /var/www/html/
+                        sudo cp $usuario/V104/cambia_reflector_dmrplus.php /var/www/html/
+                        sudo cp $usuario/V104/cambia_options_dmrplus.php /var/www/html/
+                        sudo cp $usuario/V104/panel_configuracion.php /var/www/html/
 
-                        # 09-04-2020 YSFGateway.ini 
-                        # cp /home/pi/V104/YSFGateway.ini /home/pi/YSFClients/YSFGateway/
-                        
+                        # 09-04-2020 copia YSFGateway.ini
+                        comprueba=$(wak "NR==21" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN)
+                        if [ "$comprueba" = 'YSFGateway_OK' ];then 
+                        eho "No copia el fichero YSFGateway.ini"                       
+                        else
+                        cp /home/pi/V104/YSFGateway.ini /$usuario/YSFClients/YSFGateway/
+                        sudo sed -i "21c YSFGateway_OK" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN                        
+                        fi
+
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
                         git pull
