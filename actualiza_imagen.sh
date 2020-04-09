@@ -33,12 +33,12 @@ sleep 2
                         sudo cp $usuario/V104/panel_configuracion.php /var/www/html/
 
                         # 09-04-2020 copia YSFGateway.ini
-                        comprueba=$(wak "NR==21" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN)
+                        comprueba=$(wak "NR==21" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
                         if [ "$comprueba" = 'YSFGateway_OK' ];then 
                         eho "No copia el fichero YSFGateway.ini"                       
                         else
-                        cp /home/pi/V104/YSFGateway.ini /$usuario/YSFClients/YSFGateway/
-                        sudo sed -i "21c YSFGateway_OK" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN                        
+                        cp $usuario/V104/YSFGateway.ini /$usuario/YSFClients/YSFGateway/
+                        sudo sed -i "21c YSFGateway_OK" $usuario/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini                        
                         fi
 
 #Actualiza IMAGEN
