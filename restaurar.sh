@@ -178,7 +178,7 @@ sudo sed -i "71c $port_especial" /opt/MMDVM_Bridge/especial.ini
 
 sala_fcs=$(awk "NR==12" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
 sudo sed -i "40c txTg = $sala_fcs" /opt/Analog_Bridge/FCS.ini
-sudo sed -i "39c Startup=$sala_fcs" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+sudo sed -i "42c Startup=$sala_fcs" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 
 
 sala_nxdn=$(awk "NR==13" /home/pi/.local/COPIA_SEGURIDAD/Downloads/datos_dvswitch)
