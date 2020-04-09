@@ -33,6 +33,7 @@ sleep 2
                         sudo cp /home/pi/V104/panel_configuracion.php /var/www/html/
 
                         # 09-04-2020 areegla linea 
+                        cp /home/pi/V104/YSFGateway.ini /home/pi/YSFClients/YSFGateway/
                         # sudo sed -i "39c # Startup=Alabama-Link" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                         # sudo sed -i "42c Revert=0" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 
