@@ -32,11 +32,9 @@ sleep 2
                         sudo cp /home/pi/V104/cambia_options_dmrplus.php /var/www/html/
                         sudo cp /home/pi/V104/panel_configuracion.php /var/www/html/
 
-                        # 09-04-2020 areegla linea 
+                        # 09-04-2020 YSFGateway.ini 
                         cp /home/pi/V104/YSFGateway.ini /home/pi/YSFClients/YSFGateway/
-                        # sudo sed -i "39c # Startup=Alabama-Link" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-                        # sudo sed -i "42c Revert=0" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
-
+                        
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
                         git pull
