@@ -105,9 +105,7 @@ largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 
-
-                        # Modificación 09-04-2020
-                     
+                        # Modificación 09-04-2020                    
                         if [ "$numero_linea" = '38' ];then 
                         numero_linea=`expr $numero_linea + 4`
                         sudo sed -i "39c # Startup=" $usuario/YSFClients/YSFGateway/YSFGateway.ini
@@ -115,10 +113,6 @@ numero_linea=`expr substr $var 1 $largo_linea`
                         else
                         numero_linea=`expr $numero_linea + 2`                        
                         fi
-
-
-
-
 
 STARTUP=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c

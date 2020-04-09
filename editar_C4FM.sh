@@ -104,7 +104,16 @@ buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
+
+                        # Modificación 09-04-2020                    
+                        if [ "$numero_linea" = '38' ];then 
+                        numero_linea=`expr $numero_linea + 4`
+                        sudo sed -i "39c # Startup=" $usuario/YSFClients/YSFGateway/YSFGateway.ini
+                        sudo sed -i "40c # Startup=" $usuario/YSFClients/YSFGateway/YSFGateway.ini
+                        else
+                        numero_linea=`expr $numero_linea + 2`                        
+                        fi
+
 STARTUP=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_ST=$numero_linea$letra
