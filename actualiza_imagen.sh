@@ -33,7 +33,7 @@ sleep 2
                         sudo cp /home/pi/V104/panel_configuracion.php /var/www/html/
 
                         # 09-04-2020 YSFGateway.ini 
-                        cp /home/pi/V104/YSFGateway.ini /home/pi/YSFClients/YSFGateway/
+                        # cp /home/pi/V104/YSFGateway.ini /home/pi/YSFClients/YSFGateway/
                         
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
