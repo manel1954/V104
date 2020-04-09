@@ -11,7 +11,7 @@ MARRON="\33[38;5;138m"
 
 
                         # 09-04-2020 copia YSFGateway.ini
-                        comprueba=$(awk "NR==21"/home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
+                        comprueba=$(awk "NR==21" /home/pi/.local/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini)
                         if [ "$comprueba" = 'YSFGateway_OK' ];then 
                         echo "${AMARILLO}"                      
                         echo "**********************************************************"
