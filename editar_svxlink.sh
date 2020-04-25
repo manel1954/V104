@@ -56,15 +56,15 @@ echo -n "\33[1;36m   14)\33[0m Cambiar a VOX        - \33[1;33m"
 var1= sed -n '186p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   15)\33[0m Modificar VOX_THRESH - \33[1;33m"
 var1= sed -n '168p'  /usr/local/etc/svxlink/svxlink.conf
-echo "\33[1;36m   16)\33[1;32m Utilizar para conectarse a la conferencia *ADER*\33[1;33m"
-echo "\33[1;36m   17)\33[1;32m Utilizar para conectarse a la conferencia *CZR-ESP*\33[1;33m"
-echo "\33[1;36m   18)\33[1;32m Utilizar para conectarse a la conferencia *REM-ESP*\33[1;33m"
-echo "\33[1;36m   19)${GRIS} Utilizar si el modem es sound card o similar (este está por defecto)\33[1;33m"
-echo "\33[1;36m   20)${GRIS} Utilizar si el modem lo haces con transistor y resistencia\33[1;33m"
+echo "\33[1;36m   16)${VERDE} Utilizar para conectarse a la conferencia *ADER*\33[1;33m"
+echo "\33[1;36m   17)${VERDE} Utilizar para conectarse a la conferencia *CZR-ESP*\33[1;33m"
+echo "\33[1;36m   18)${VERDE} Utilizar para conectarse a la conferencia *REM-ESP*\33[1;33m"
+echo "\33[1;36m   19)${VERDE} Utilizar si el modem es sound card o similar (este está por defecto)\33[1;33m"
+echo "\33[1;36m   20)${VERDE} Utilizar si el modem lo haces con transistor y resistencia\33[1;33m"
 echo "\33[1;36m   21)${GRIS} Poner Roger Beep\33[1;33m"
 echo "\33[1;36m   22)${GRIS} Quitar Roger Beep\33[1;33m"
 echo "\33[1;36m   23)${GRIS} Quitar mensaje de Bienvenida\33[1;33m"
-echo "\33[1;36m   24)\33[1;32m Quitar Beep que sale en el echolink\33[1;33m"
+echo "\33[1;36m   24)${GRIS} Quitar Beep que sale en el echolink\33[1;33m"
 echo""
 
 echo "\33[1;36m   25)\33[1;33m Abrir fichero svxlink.conf para hacer cualquier cambio\33[1;33m"
@@ -353,7 +353,7 @@ sed -i "26c AUTOCON_ECHOLINK_ID=3386" /usr/local/etc/svxlink/svxlink.d/ModuleEch
 			break;;
 esac
 done;;
-19bloqueado) echo ""
+19) echo ""
 while true
 do
             actualizar=S 
@@ -370,7 +370,7 @@ sed -i "21c #echo "out" > /sys/class/gpio/gpio17/direction" /etc/rc.local
 			break;;
 esac
 done;;
-20bloqueado) echo ""
+20) echo ""
 while true
 do
             actualizar=S 
