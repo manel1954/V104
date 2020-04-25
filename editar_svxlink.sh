@@ -407,7 +407,7 @@ clear
 			break;;
 esac
 done;;
-22bloqueado) echo ""
+22) echo ""
 while true
 do
 clear
@@ -416,7 +416,7 @@ clear
 			[sS]* ) echo ""
 			echo "Quitando roger beep >>>>>"
 			sleep 3
-			sed -i '185c #playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
+			sed -i '253c #playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
