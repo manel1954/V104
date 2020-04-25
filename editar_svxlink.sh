@@ -398,7 +398,7 @@ clear
 			echo "Poniendo roger beep >>>>>"
 			sleep 3
 			sudo cp -f roger_beep.wav /usr/local/share/svxlink/sounds/en_US/Core/
-			sed -i '185c playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
+			sed -i '253c playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
