@@ -61,8 +61,8 @@ echo "\33[1;36m   17)${VERDE} Utilizar para conectarse a la conferencia *CZR-ESP
 echo "\33[1;36m   18)${VERDE} Utilizar para conectarse a la conferencia *REM-ESP*\33[1;33m"
 echo "\33[1;36m   19)${VERDE} Utilizar si el modem es sound card o similar (este está por defecto)\33[1;33m"
 echo "\33[1;36m   20)${VERDE} Utilizar si el modem lo haces con transistor y resistencia\33[1;33m"
-echo "\33[1;36m   21)${GRIS} Poner Roger Beep\33[1;33m"
-echo "\33[1;36m   22)${GRIS} Quitar Roger Beep\33[1;33m"
+echo "\33[1;36m   21)${VERDE} Poner Roger Beep\33[1;33m"
+echo "\33[1;36m   22)${VERDE} Quitar Roger Beep\33[1;33m"
 echo "\33[1;36m   23)${GRIS} Quitar mensaje de Bienvenida\33[1;33m"
 echo "\33[1;36m   24)${GRIS} Quitar Beep que sale en el echolink\33[1;33m"
 echo""
@@ -388,7 +388,7 @@ sed -i "21c echo "out" > /sys/class/gpio/gpio17/direction" /etc/rc.local
 			break;;
 esac
 done;;
-21bloqueado) echo ""
+21) echo ""
 while true
 do
 clear
@@ -398,7 +398,7 @@ clear
 			echo "Poniendo roger beep >>>>>"
 			sleep 3
 			sudo cp -f /home/pi/V104/roger_beep.wav /usr/local/share/svxlink/sounds/en_US/Core/
-			sed -i '253c playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
+			sed -i '252c playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
@@ -407,7 +407,7 @@ clear
 			break;;
 esac
 done;;
-22bloqueado) echo ""
+22) echo ""
 while true
 do
 clear
@@ -416,7 +416,7 @@ clear
 			[sS]* ) echo ""
 			echo "Quitando roger beep >>>>>"
 			sleep 3
-			#sed -i '253c #playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
+			sed -i '252c #playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
