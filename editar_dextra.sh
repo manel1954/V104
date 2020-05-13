@@ -68,7 +68,7 @@ do
 
                         #ircddbgateway -gui 2019
                         cd /usr/share/opendv/
-                        sudo curl --fail -o AADExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
+                        sudo curl --fail -o DExtra_Hosts.txt -s http://www.arrg.us/HF/DExtra_Hosts.txt
                         #sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
                         sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
                         sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
