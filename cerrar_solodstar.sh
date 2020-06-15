@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo killall MMDVMDSTAR
 sudo killall ircddbgateway
-sudo killall MMDVMBM
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
 
