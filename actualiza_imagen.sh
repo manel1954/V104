@@ -41,7 +41,7 @@ sleep 2
                         sudo cp $usuario/V104/ysf.php /var/www/html/
                         
 
-#Actualiza IMAGEN
+#Actualiza IMAGEN 
                         cd $usuario/$SCRIPTS_version
                         git pull
                         sleep 1

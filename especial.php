@@ -5,7 +5,7 @@ session_start();
 exec("sudo cp /opt/MMDVM_Bridge/especial.ini /opt/MMDVM_Bridge/MMDVM_Bridge.ini");
 exec("sudo cp /opt/Analog_Bridge/especial.ini /opt/Analog_Bridge/Analog_Bridge.ini");
 
-exec("sudo cp /opt/Analog_Bridge/nxdn.ini /opt/Analog_Bridge/Analog_Bridge.ini");
+# exec("sudo cp /opt/Analog_Bridge/nxdn.ini /opt/Analog_Bridge/Analog_Bridge.ini");
 
 # Pone Enable=0 en [DMR]
 #exec("sudo sed -i '44c Enable=0' /opt/MMDVM_Bridge/MMDVM_Bridge.ini");
