@@ -33,12 +33,12 @@ sleep 2
                         sudo cp $usuario/V104/panel_configuracion.php /var/www/html/
 
                         # 11-04-2020 Desloguea de DMR cuando cambiamos de sistema
-                        sudo cp $usuario/V104/brandmeister.php /var/www/html/
-                        sudo cp $usuario/V104/dmrplus.php /var/www/html/
-                        sudo cp $usuario/V104/dstar.php /var/www/html/
-                        sudo cp $usuario/V104/especial.php /var/www/html/
-                        sudo cp $usuario/V104/nxdn.php /var/www/html/
-                        sudo cp $usuario/V104/ysf.php /var/www/html/
+                        # sudo cp $usuario/V104/brandmeister.php /var/www/html/
+                        # sudo cp $usuario/V104/dmrplus.php /var/www/html/
+                        # sudo cp $usuario/V104/dstar.php /var/www/html/
+                        # sudo cp $usuario/V104/especial.php /var/www/html/
+                        # sudo cp $usuario/V104/nxdn.php /var/www/html/
+                        # sudo cp $usuario/V104/ysf.php /var/www/html/
                         
 
 #Actualiza IMAGEN 
