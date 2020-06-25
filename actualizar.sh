@@ -185,7 +185,7 @@ masterYSFGateway=`echo "$masterYSFGateway" | tr -d '[[:space:]]'`
 #=================================================================================
 
 #ACTUALIZA EL  PANEL DE CONTROL"
-cp $usuario/$SCRIPTS_version/panel_control.php /var/www/html/panel_control
+# cp $usuario/$SCRIPTS_version/panel_control.php /var/www/html/panel_control
 bm=`sed -n '2p'  $usuario/MMDVMHost/MMDVMBM.ini`
 plus=`sed -n '2p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
 dstar=`sed -n '2p'  $usuario/MMDVMHost/MMDVMDSTAR.ini`
