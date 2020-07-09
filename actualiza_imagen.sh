@@ -22,6 +22,8 @@ echo "   ***********************************************************************
 echo "${CIAN}"
 
 sleep 2
+                        # 09-07-2020 Ejecutable Ambe Server
+			sudo cp $usuario/V104/AMBEserver /home/pi/AMBE_SEVER
 
 			# 01-04-2020 arregla no escribe port en FCS.ini
 			sudo cp $usuario/V104/cambia_configuracion_port.php /var/www/html/
