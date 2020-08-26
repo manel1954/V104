@@ -55,10 +55,10 @@ sed -i "17c NXDN=OFF" $usuario/status.ini
 
 
 #Actualiza Imagen
-#cd $usuario/$SCRIPTS_version
-#git pull
+cd $usuario/$SCRIPTS_version
+git pull
 
-#sleep 2
+sleep 2
 
 
 #=================================================================================
