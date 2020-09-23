@@ -43,9 +43,11 @@ echo "* ACTUALIZANDO LISTADO DE SALAS YSF *"
 echo "* ***********************************"
 sleep 3
 						cd $usuario/YSFClients/YSFGateway
-						sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
+						sudo chmod 777 -R $usuario/YSFClients/YSFGateway
+						sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php					
+						wget -O FCSRooms.txt https://raw.githubusercontent.com/g4klx/YSFClients/master/YSFGateway/FCSRooms.txt 
 						sleep 3
-clear
+						clear
 
 echo "${AMARILLO}"			
 echo "**********************************************************"
