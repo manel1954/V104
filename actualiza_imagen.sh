@@ -44,10 +44,10 @@ sleep 2
                         # sudo cp $usuario/V104/ysf.php /var/www/html/
                         
                         # Cambio 01-10-2020 para que funcione el cambiar de sistemas desde la app dvswitch
-                        sudo cp $usuario/SCRIPTS_version/ab-restart.sh /usr/local/sbin/
-                        sudo cp $usuario/SCRIPTS_version/call_id.sh /usr/local/sbin/
-                        sudo cp $usuario/SCRIPTS_version/ssz.sh /usr/local/sbin/
-                        sudo cp $usuario/SCRIPTS_version/test.sh /usr/local/sbin/
+                        sudo cp $usuario/$SCRIPTS_version/ab-restart.sh /usr/local/sbin/
+                        sudo cp $usuario/$SCRIPTS_version/call_id.sh /usr/local/sbin/
+                        sudo cp $usuario/$SCRIPTS_version/ssz.sh /usr/local/sbin/
+                        sudo cp $usuario/$SCRIPTS_version/test.sh /usr/local/sbin/
 
                         sudo chmod +x ab-restart.sh
                         sudo chmod +x call_id.sh
