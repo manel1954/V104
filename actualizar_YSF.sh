@@ -17,11 +17,10 @@ GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 echo "${VERDE}"
 echo "   **************************************************************************"
-echo "              Script para actualizar y ver reflectores YSF \33[1;31m by EA3EIZ\33[1;32m   "
+echo "                Script para actualizar listados YSF y FCS  \33[1;31m by EA3EIZ\33[1;32m   "
 echo "   **************************************************************************"
 echo ""
-echo "\33[1;36m   1)\33[1;37m Actualizar YSFHosts.txt (listado de reflectores)"
-echo "\33[1;36m   2)\33[1;37m Ver el listado de reflectores YSF"
+echo "\33[1;36m   1)\33[1;37m Actualiza YSFHosts.txt y FCSRooms.txt (listado de reflectores)"
 echo ""
 echo "   ${ROJO}0) Salir "
 echo ""
@@ -33,24 +32,25 @@ case $escoger_menu in
 while true
 do
 clear
-						read -p ' Quieres actualizar el listado de reflectores YSF S/N ?' ejecutar1
+						read -p ' Quieres actualizar el listado de reflectores S/N ?' ejecutar1
 		    			case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo "${VERDE}"
 clear
-echo "*************************************"
-echo "* ACTUALIZANDO LISTADO DE SALAS YSF *"
-echo "* ***********************************"
+echo "*******************************************"
+echo "* ACTUALIZANDO LISTADO DE SALAS YSF y FCS *"
+echo "* *****************************************"
 sleep 3
 						cd $usuario/YSFClients/YSFGateway
-						sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
+						sudo chmod 777 -R $usuario/YSFClients/YSFGateway
+						sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php					
+						wget -O FCSRooms.txt https://raw.githubusercontent.com/g4klx/YSFClients/master/YSFGateway/FCSRooms.txt 
 						sleep 3
-clear
-
+						clear
 echo "${AMARILLO}"			
-echo "**********************************************************"
-echo "* El fichero YSFHost.txt se ha actualizado correctamente *"
-echo "**********************************************************"
+echo "*************************************************************"
+echo "* Los fichero YSFHost.txt y FCSRooms.txt se han actualizado *"
+echo "*************************************************************"
 sleep 3
 		                break;;
 						[nN]* ) echo ""
@@ -59,7 +59,7 @@ sleep 3
 						break;;
 esac
 done;;
-2) echo ""
+2bloqueado) echo ""
 while true
 do
 clear
