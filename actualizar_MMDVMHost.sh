@@ -1,5 +1,6 @@
-﻿E567U-   452#!/bin/bash
-# -*- ENCODING: UTF-8 -*-
+﻿#!/bin/bash
+/home/pi/V104/./qt-mmdvmhost_off
+exit;
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 #Colores
