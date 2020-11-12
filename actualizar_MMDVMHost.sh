@@ -12,6 +12,24 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
+
+
+echo "   *********************************************************************"
+echo ""
+echo "${AMARILLO}                           Actualizar MMDVMHost "
+echo " "
+echo "${BLANCO}                       DESHABILITADO TEMPORALMENTE "
+echo "${VERDE}"
+echo "   *********************************************************************"
+echo ""
+echo -n "${CIAN}  Pulsa enter para cerrar esta ventana: "
+read a
+exit;
+
+
+
+
+
                     echo "${ROJO}"
                     echo " *********************************************************************"
                     echo " * Si actualizas MMDVMhost desde esta opción, perderás todas las     *"
