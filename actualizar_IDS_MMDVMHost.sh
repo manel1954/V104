@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+/home/pi/V104/./qt-mmdvmhost_off
 clear
 echo "\33[1;32m ACTUALIZANDO IDS INDICATIVOS >>>>>"
 sleep 10
