@@ -18,7 +18,7 @@ else
 echo ""
 fi
 
-#comprueba si el fichero existe
+#comprueba si el fichero existe 
 if [ -f /home/pi/.local/sala.txt ];
 then
 echo "El fichero ya existe"
